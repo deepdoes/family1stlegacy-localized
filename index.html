@@ -2469,23 +2469,21 @@ html { scroll-behavior: smooth; }
   cursor: pointer;
   padding: 24px;
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 }
 .q-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.01);
+  border-color: rgba(0, 0, 0, 0.15);
   transform: translateY(-2px);
 }
 .q-card.active {
-  border-color: var(--green);
-  background: rgba(29, 158, 117, 0.08) !important;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-color: var(--green) !important;
+  background: rgba(29, 158, 117, 0.05) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 .q-card::before {
   content: '';
@@ -3061,16 +3059,16 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- REAL QUESTIONS & CLEAR GUIDANCE ────────────────── -->
-<section id="reviews" style="background:#0b090a; position:relative; overflow:hidden; padding:120px 0;">
-  <div class="tst-orb tst-orb-1" style="background: radial-gradient(circle, rgba(29,158,117,0.15), transparent 70%);"></div>
-  <div class="tst-orb tst-orb-2" style="background: radial-gradient(circle, rgba(74,45,122,0.15), transparent 70%);"></div>
+<section id="reviews" style="background:#f7f5f0; position:relative; overflow:hidden; padding:120px 0; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+  <div class="tst-orb tst-orb-1" style="background: radial-gradient(circle, rgba(29,158,117,0.06), transparent 70%);"></div>
+  <div class="tst-orb tst-orb-2" style="background: radial-gradient(circle, rgba(74,45,122,0.06), transparent 70%);"></div>
 
   <div class="container">
     <div class="tst-header" style="margin-bottom:60px;">
-      <p class="t-label" data-reveal style="color:var(--amber)"><span class="green-dot"></span>REAL QUESTIONS</p>
+      <p class="t-label" data-reveal style="color:var(--green)"><span class="green-dot" style="background:var(--green)"></span>REAL QUESTIONS</p>
       <div class="tst-header-row" data-reveal data-delay="1">
-        <h2 class="t-h1" style="color:#fff">Real Questions.<br><em>Clear Guidance.</em></h2>
-        <div style="max-width:560px; color:rgba(255,255,255,0.7); font-size:16px; line-height:1.6">
+        <h2 class="t-h1" style="color:var(--dark)">Real Questions.<br><em>Clear Guidance.</em></h2>
+        <div style="max-width:560px; color:var(--muted); font-size:16px; line-height:1.6">
           Families do not always come to us with perfect plans. Many come with questions, concerns, and uncertainty. Our role is to help them understand their options clearly, so they can make decisions with confidence.
         </div>
       </div>
@@ -3083,66 +3081,66 @@ html { scroll-behavior: smooth; }
       <div class="qa-selectors-list">
         
         <div class="q-card active" onclick="selectQuestion(0)">
-          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--amber-lt); letter-spacing:1px; margin-bottom:8px;">01 • Family Protection</div>
-          <div style="font-size:16px; font-weight:600; color:#fff; line-height:1.4;">“If my income stopped tomorrow...”</div>
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">01 • Family Protection</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“If my income stopped tomorrow...”</div>
           <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
             <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
-            <span style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:600">Guidance with care</span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Guidance with care</span>
           </div>
         </div>
 
         <div class="q-card" onclick="selectQuestion(1)">
-          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--amber-lt); letter-spacing:1px; margin-bottom:8px;">02 • Living Benefits</div>
-          <div style="font-size:16px; font-weight:600; color:#fff; line-height:1.4;">“If illness stopped my income...”</div>
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">02 • Living Benefits</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“If illness stopped my income...”</div>
           <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
             <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
-            <span style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:600">Living benefits guidance</span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Living benefits guidance</span>
           </div>
         </div>
 
         <div class="q-card" onclick="selectQuestion(2)">
-          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--amber-lt); letter-spacing:1px; margin-bottom:8px;">03 • Retirement Planning</div>
-          <div style="font-size:16px; font-weight:600; color:#fff; line-height:1.4;">“Preparing or just hoping?”</div>
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">03 • Retirement Planning</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Preparing or just hoping?”</div>
           <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
             <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
-            <span style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:600">Retirement guidance</span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Retirement guidance</span>
           </div>
         </div>
 
         <div class="q-card" onclick="selectQuestion(3)">
-          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--amber-lt); letter-spacing:1px; margin-bottom:8px;">04 • Business Strategies</div>
-          <div style="font-size:16px; font-weight:600; color:#fff; line-height:1.4;">“What happens to my business?”</div>
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">04 • Business Strategies</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“What happens to my business?”</div>
           <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
             <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
-            <span style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:600">Business protection</span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Business protection</span>
           </div>
         </div>
 
         <div class="q-card" onclick="selectQuestion(4)">
-          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--amber-lt); letter-spacing:1px; margin-bottom:8px;">05 • Education Planning</div>
-          <div style="font-size:16px; font-weight:600; color:#fff; line-height:1.4;">“Help my children with fewer limits?”</div>
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">05 • Education Planning</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Help my children with fewer limits?”</div>
           <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
             <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
-            <span style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:600">Education guidance</span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Education guidance</span>
           </div>
         </div>
 
         <div class="q-card" onclick="selectQuestion(5)">
-          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--amber-lt); letter-spacing:1px; margin-bottom:8px;">06 • Legacy Planning</div>
-          <div style="font-size:16px; font-weight:600; color:#fff; line-height:1.4;">“Will my family have clarity?”</div>
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">06 • Legacy Planning</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Will my family have clarity?”</div>
           <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
             <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
-            <span style="font-size:11px; color:rgba(255,255,255,0.5); font-weight:600">Legacy planning</span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Legacy planning</span>
           </div>
         </div>
 
       </div>
 
       <!-- Right Column: Answer Display Card Stage -->
-      <div class="qa-display-card-stage" style="position:relative; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:24px; overflow:hidden; min-height:460px; backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); box-shadow:0 20px 50px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);">
+      <div class="qa-display-card-stage" style="position:relative; background:#ffffff; border:1px solid rgba(0,0,0,0.06); border-radius:24px; overflow:hidden; min-height:460px; box-shadow:0 20px 50px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.6);">
         
         <!-- Large Quote Icon Background decoration -->
-        <span style="position:absolute; top:20px; right:40px; font-family:var(--font-head); font-size:180px; font-weight:800; color:rgba(255,255,255,0.02); line-height:1; pointer-events:none; user-select:none;">”</span>
+        <span style="position:absolute; top:20px; right:40px; font-family:var(--font-head); font-size:180px; font-weight:800; color:rgba(0,0,0,0.015); line-height:1; pointer-events:none; user-select:none;">”</span>
 
         <div class="tst-track" id="qTrack" style="height:100%; width:100%; position:relative;">
 
@@ -3150,13 +3148,13 @@ html { scroll-behavior: smooth; }
           <div class="tst-slide q-slide active" data-qindex="0" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
-                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--amber-lt); letter-spacing:1.5px; text-transform:uppercase;">01 of 06 • FAMILY PROTECTION</span>
-                <span style="background:rgba(29,158,117,0.15); border:1px solid rgba(29,158,117,0.25); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Guidance with care</span>
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">01 of 06 • FAMILY PROTECTION</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Guidance with care</span>
               </div>
-              <h3 style="font-family:var(--font-head); font-size:28px; color:#fff; margin-bottom:20px; font-weight:700; line-height:1.35; text-shadow:0 2px 10px rgba(0,0,0,0.2);">
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
                 “If my income stopped tomorrow, how long would my family be okay?”
               </h3>
-              <p style="color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.8; font-weight:300;">
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
                 Many families have some coverage through work, but they are not sure if it is enough — or if it would stay with them if life changed. A simple review can help identify possible gaps, explain available protection options, and help families understand what may fit their needs, budget, and responsibilities.
               </p>
             </div>
@@ -3169,13 +3167,13 @@ html { scroll-behavior: smooth; }
           <div class="tst-slide q-slide" data-qindex="1" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
-                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--amber-lt); letter-spacing:1.5px; text-transform:uppercase;">02 of 06 • LIVING BENEFITS</span>
-                <span style="background:rgba(29,158,117,0.15); border:1px solid rgba(29,158,117,0.25); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Living benefits guidance</span>
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">02 of 06 • LIVING BENEFITS</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Living benefits guidance</span>
               </div>
-              <h3 style="font-family:var(--font-head); font-size:28px; color:#fff; margin-bottom:20px; font-weight:700; line-height:1.35; text-shadow:0 2px 10px rgba(0,0,0,0.2);">
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
                 “What if I survive the illness — but my income does not?”
               </h3>
-              <p style="color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.8; font-weight:300;">
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
                 A serious illness can affect more than health. It can affect income, bills, and the whole household. Some life insurance policies may include living benefits that can help provide support if someone qualifies due to a covered critical, chronic, or terminal illness.
               </p>
             </div>
@@ -3188,13 +3186,13 @@ html { scroll-behavior: smooth; }
           <div class="tst-slide q-slide" data-qindex="2" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
-                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--amber-lt); letter-spacing:1.5px; text-transform:uppercase;">03 of 06 • RETIREMENT PLANNING</span>
-                <span style="background:rgba(29,158,117,0.15); border:1px solid rgba(29,158,117,0.25); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Retirement guidance with care</span>
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">03 of 06 • RETIREMENT PLANNING</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Retirement guidance with care</span>
               </div>
-              <h3 style="font-family:var(--font-head); font-size:28px; color:#fff; margin-bottom:20px; font-weight:700; line-height:1.35; text-shadow:0 2px 10px rgba(0,0,0,0.2);">
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
                 “Am I preparing for retirement — or just hoping it works out?”
               </h3>
-              <p style="color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.8; font-weight:300;">
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
                 Many hardworking families save what they can, but still wonder if they are doing enough. Clear guidance can help them understand retirement options, possible risks, and steps that may support their long-term goals.
               </p>
             </div>
@@ -3207,13 +3205,13 @@ html { scroll-behavior: smooth; }
           <div class="tst-slide q-slide" data-qindex="3" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
-                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--amber-lt); letter-spacing:1.5px; text-transform:uppercase;">04 of 06 • BUSINESS STRATEGIES</span>
-                <span style="background:rgba(29,158,117,0.15); border:1px solid rgba(29,158,117,0.25); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Business protection guidance</span>
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">04 of 06 • BUSINESS STRATEGIES</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Business protection guidance</span>
               </div>
-              <h3 style="font-family:var(--font-head); font-size:28px; color:#fff; margin-bottom:20px; font-weight:700; line-height:1.35; text-shadow:0 2px 10px rgba(0,0,0,0.2);">
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
                 “If something happened to me, what would happen to the business I built?”
               </h3>
-              <p style="color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.8; font-weight:300;">
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
                 Business owners carry responsibility for their family, employees, clients, and years of hard work. We help them understand protection options, including key-person coverage and business planning strategies that may strengthen their overall plan.
               </p>
             </div>
@@ -3226,13 +3224,13 @@ html { scroll-behavior: smooth; }
           <div class="tst-slide q-slide" data-qindex="4" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
-                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--amber-lt); letter-spacing:1.5px; text-transform:uppercase;">05 of 06 • EDUCATION PLANNING</span>
-                <span style="background:rgba(29,158,117,0.15); border:1px solid rgba(29,158,117,0.25); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Education planning guidance</span>
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">05 of 06 • EDUCATION PLANNING</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Education planning guidance</span>
               </div>
-              <h3 style="font-family:var(--font-head); font-size:28px; color:#fff; margin-bottom:20px; font-weight:700; line-height:1.35; text-shadow:0 2px 10px rgba(0,0,0,0.2);">
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
                 “How can I help my children pursue education with fewer financial limits?”
               </h3>
-              <p style="color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.8; font-weight:300;">
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
                 Many parents want to support their children’s future, but they are not sure which education planning option gives the right balance of growth, flexibility, and control. Clear guidance can help families understand choices that may fit their goals.
               </p>
             </div>
@@ -3245,13 +3243,13 @@ html { scroll-behavior: smooth; }
           <div class="tst-slide q-slide" data-qindex="5" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
-                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--amber-lt); letter-spacing:1.5px; text-transform:uppercase;">06 of 06 • LEGACY PLANNING</span>
-                <span style="background:rgba(29,158,117,0.15); border:1px solid rgba(29,158,117,0.25); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Legacy planning guidance</span>
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">06 of 06 • LEGACY PLANNING</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Legacy planning guidance</span>
               </div>
-              <h3 style="font-family:var(--font-head); font-size:28px; color:#fff; margin-bottom:20px; font-weight:700; line-height:1.35; text-shadow:0 2px 10px rgba(0,0,0,0.2);">
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
                 “Will my family receive clarity and support — or be left searching for help?”
               </h3>
-              <p style="color:rgba(255,255,255,0.72); font-size:16.5px; line-height:1.8; font-weight:300;">
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
                 Some families want to leave more than money. They want to leave direction, support, and a meaningful legacy for the people they love. A thoughtful plan can help reduce confusion and help loved ones know what to do next.
               </p>
             </div>
@@ -3267,7 +3265,7 @@ html { scroll-behavior: smooth; }
     </div>
 
     <!-- Small compliance note below -->
-    <div style="margin-top:40px; font-size:12px; color:rgba(255,255,255,0.4); text-align:center;" data-reveal>
+    <div style="margin-top:40px; font-size:12px; color:var(--muted); text-align:center;" data-reveal>
       These examples are for educational purposes and show common concerns families may face. Individual needs, eligibility, and results may vary.
     </div>
 
