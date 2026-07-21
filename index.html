@@ -1859,47 +1859,43 @@ p { letter-spacing:.1px; }
 }
 
 /* Orbs scale up from nothing */
-#cta-banner .cta-orb { opacity: 0; transform: scale(.3); transition: opacity 1.2s ease, transform 1.6s cubic-bezier(.2,.8,.2,1); }
-#cta-banner.cta-on .cta-orb-1 { opacity: .4; transform: none; transition-delay: .15s; }
-#cta-banner.cta-on .cta-orb-2 { opacity: .2; transform: none; transition-delay: .3s; }
-#cta-banner.cta-on .cta-orb-3 { opacity: .15; transform: none; transition-delay: .45s; }
+#cta-banner .cta-orb { opacity: 0.35; transform: scale(1); }
+#cta-banner .cta-orb-1 { opacity: .4; }
+#cta-banner .cta-orb-2 { opacity: .2; }
+#cta-banner .cta-orb-3 { opacity: .15; }
 
 .cta-inner {
   position:relative; z-index:2;
   display:grid; grid-template-columns: 1.4fr 1fr; gap:60px; align-items:center;
 }
 .cta-left { position:relative; }
-/* Content reveal on scroll-in */
+/* Content visible by default to prevent blank section bugs */
 #cta-banner .cta-badge {
-  opacity:0; transform:translateY(24px);
-  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+  opacity:1; transform:none;
 }
 #cta-banner.cta-on .cta-badge {
-  opacity:1; transform:none; transition-delay:.35s;
+  opacity:1; transform:none;
 }
 
 #cta-banner .cta-text h2 {
-  opacity:0; transform:translateY(30px);
-  transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1);
+  opacity:1; transform:none;
 }
 #cta-banner.cta-on .cta-text h2 {
-  opacity:1; transform:none; transition-delay:.5s;
+  opacity:1; transform:none;
 }
 
 #cta-banner .cta-text p {
-  opacity:0; transform:translateY(20px);
-  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+  opacity:1; transform:none;
 }
 #cta-banner.cta-on .cta-text p {
-  opacity:1; transform:none; transition-delay:.7s;
+  opacity:1; transform:none;
 }
 
 #cta-banner .cta-right {
-  opacity:0; transform:translateX(40px);
-  transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1);
+  opacity:1; transform:none;
 }
 #cta-banner.cta-on .cta-right {
-  opacity:1; transform:none; transition-delay:.6s;
+  opacity:1; transform:none;
 }
 
 /* Accent mark */
