@@ -2449,24 +2449,274 @@ html { scroll-behavior: smooth; }
 </style>
 
 <style>
-#blog-article { padding: 140px 0 100px; background: var(--bg); }
-.article-header { max-width: 800px; margin: 0 auto 56px; text-align: center; }
-.article-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 24px; }
-.article-title { font-family: var(--font-head); font-size: clamp(40px, 5vw, 64px); font-weight: 800; line-height: 1.1; letter-spacing: -2px; color: var(--dark); margin-bottom: 24px; }
-.article-meta { font-size: 14px; color: var(--muted); font-weight: 500; }
-.article-hero-wrap { max-width: 1000px; margin: 0 auto 64px; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-.article-hero-img { width: 100%; aspect-ratio: 21/9; object-fit: cover; display: block; }
-.article-body { max-width: 760px; margin: 0 auto; background: var(--white); padding: 64px 80px; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
-.article-body p { font-size: 18px; line-height: 1.8; color: var(--muted); margin-bottom: 24px; font-weight: 300; }
-.article-body h2 { font-family: var(--font-head); font-size: 32px; font-weight: 700; color: var(--dark); margin: 48px 0 24px; letter-spacing: -1px; }
-.article-body h3 { font-family: var(--font-head); font-size: 24px; font-weight: 700; color: var(--dark); margin: 32px 0 16px; letter-spacing: -0.5px; }
-.article-body ul { margin-bottom: 24px; padding-left: 24px; }
-.article-body li { font-size: 18px; line-height: 1.8; color: var(--muted); font-weight: 300; margin-bottom: 12px; }
-.article-body blockquote { font-size: 24px; font-style: italic; color: var(--green); border-left: 4px solid var(--amber); padding-left: 24px; margin: 40px 0; }
-@media(max-width: 768px) {
-  .article-body { padding: 40px 32px; }
+/* Force ALL animated elements visible on subpages */
+[data-reveal], [data-reveal].on,
+[data-stagger] > *,
+.service-row, .service-row.on,
+.sm-item, .number-item, .ps, .rv-card,
+.faq-item, .glass-card,
+#contact, #contact [data-reveal], #contact [data-stagger] > *,
+#cta-banner, #cta-banner [data-reveal], #cta-banner [data-stagger] > *,
+footer, footer [data-reveal], footer [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
 }
+
+/* Mobile hamburger menu support */
+@media(max-width:768px) {
+  .nav-toggle { display:block !important; }
+  .nav-links { display:none !important; }
+  .static-hero { padding-top: 140px !important; min-height: auto !important; }
+}
+
+/* ──────────────────────────────────────────────────────
+   LIQUID GLASS HERO (FULL SCREEN + PARALLAX)
+────────────────────────────────────────────────────── */
+.static-hero { 
+    position: relative; 
+    min-height: 100vh; /* Full screen */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-end; /* Push content down slightly */
+    padding: 200px 20px 60px; 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; /* Parallax effect */
+    overflow: hidden;
+}
+.static-hero::before { 
+    content: ''; 
+    position: absolute; 
+    inset: 0; 
+    /* Beautiful deep gradient */
+    background: linear-gradient(to bottom, rgba(10,10,15,0.75) 0%, rgba(10,10,15,0.4) 40%, rgba(10,10,15,0.95) 100%); 
+    z-index: 1; 
+}
+.sh-content { 
+    position: relative; 
+    z-index: 2; 
+    max-width: 900px; 
+    text-align: center; 
+    margin-bottom: 60px;
+    animation: fadeInDown 1s cubic-bezier(0.2,0.8,0.2,1) forwards;
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.sh-badge { 
+    display: inline-block; font-family: var(--font-body); font-size: 13px; font-weight: 700; 
+    letter-spacing: 0.18em; text-transform: uppercase; color: #fff; 
+    padding: 10px 24px; 
+    background: rgba(29,158,117,0.35);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.25); 
+    border-radius: 30px; margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.15);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+.sh-title { font-family: var(--font-head); font-size: clamp(36px, 5vw, 56px); font-weight: 400; color: #fff; line-height: 1.1; margin-bottom: 24px; }
+.sh-sub { font-family: var(--font-body); font-size: clamp(16px, 2vw, 20px); color: rgba(255,255,255,0.7); line-height: 1.6; margin-bottom: 32px; }
+.sh-hook { font-family: var(--font-head); font-size: 22px; color: var(--amber); font-style: italic; border-left: 2px solid var(--amber); padding-left: 20px; text-align: left; max-width: 700px; margin: 0 auto; }
+
+/* Liquid Glass Cards */
+.sh-stats-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+}
+.numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+@media (max-width: 900px) {
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+    .numbers-grid { grid-template-columns: 1fr; }
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03); /* Extremely transparent */
+    backdrop-filter: blur(24px); /* Heavy glass blur */
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Subtle white edge */
+    border-radius: 24px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.1);
+    transition: transform 0.5s cubic-bezier(0.2,0.8,0.2,1), background 0.5s, border-color 0.5s, box-shadow 0.5s;
+    transform: translateY(60px);
+    opacity: 0;
+    animation: slideUpGlass 1s cubic-bezier(0.2,0.8,0.2,1) forwards;
+}
+
+/* Staggered entry */
+.glass-card:nth-child(1) { animation-delay: 0.2s; }
+.glass-card:nth-child(2) { animation-delay: 0.35s; }
+.glass-card:nth-child(3) { animation-delay: 0.5s; }
+.glass-card:nth-child(4) { animation-delay: 0.65s; }
+
+@keyframes slideUpGlass {
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.glass-card:hover {
+    transform: translateY(-12px) !important;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.glass-num {
+    font-family: var(--font-head);
+    font-size: clamp(36px, 4vw, 52px);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.glass-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+}
+
+/* ──────────────────────────────────────────────────────
+   MICRO-INTERACTIONS & BODY ANIMATIONS
+────────────────────────────────────────────────────── */
+.service-row {
+    transition: transform 0.6s cubic-bezier(0.2,0.8,0.2,1);
+}
+.sr-photo-wrap {
+    overflow: hidden; 
+    border-radius: 24px;
+    transform: translateY(0) scale(1);
+    transition: transform 0.7s cubic-bezier(0.2,0.8,0.2,1), box-shadow 0.7s;
+}
+.sr-photo {
+    transition: transform 1.2s cubic-bezier(0.2,0.8,0.2,1);
+}
+
+/* Hover effects */
+.service-row:hover .sr-photo-wrap {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+.service-row:hover .sr-photo {
+    transform: scale(1.08);
+}
+.service-row:hover .sr-title {
+    color: var(--amber); /* Subtle color shift on hover */
+    transition: color 0.4s ease;
+}
+
 </style>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Service", "FAQPage"],
+  "name": "Financial Strategy",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Family First Legacy",
+    "image": "https://family1stlegacy.com/images/FamilyFirstLogo.png"
+  },
+  "description": "The wealthy don't put all their money in a checking account or risk it all on the stock market. They use sophisticated financial vehicles to protect, grow, and transfer wealth efficiently.",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Rule of 72?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Rule of 72 is a simple formula to estimate how long it takes for an investment to double. Divide 72 by your annual rate of return. For example, at a 7% return, your money doubles in about 10 years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you help with debt management?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We analyze your current debts and implement strategies like the 'snowball' or 'avalanche' methods to accelerate payoff, freeing up cash flow to redirect into wealth-building vehicles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean to be your own bank?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This concept involves using a high-cash-value life insurance policy to finance major purchases (cars, homes, business expenses) by borrowing against your own policy while your underlying cash value continues to grow."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I protect my assets from market crashes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We utilize indexed products, such as Fixed Indexed Annuities (FIAs) and Indexed Universal Life (IUL), which credit interest based on a market index but feature a 0% floor to protect against losses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a 'tax-free retirement'?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It refers to structuring your savings in vehicles like Roth IRAs or cash-value life insurance so that your withdrawals in retirement are not subject to federal or state income taxes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is compound interest so important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Compound interest is when you earn interest on both your original money and the interest it has already earned. Over time, it creates an exponential growth curve that is the foundation of wealth building."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a financial strategy if I'm not wealthy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes! A financial strategy is exactly how you *become* wealthy. We help everyday families optimize their budgets, eliminate debt, and start saving efficiently, regardless of their current income."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is sequence of returns risk?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's the danger of experiencing negative market returns early in your retirement. If the market crashes right after you stop working, withdrawing money compounds the losses and can destroy your portfolio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does an IUL compare to a Roth IRA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both offer tax-free growth and tax-free withdrawals. However, an IUL has no contribution limits, no income restrictions, and includes a death benefit, whereas a Roth IRA has strict IRS limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a Financial Needs Analysis (FNA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An FNA is our free, comprehensive review of your current financial situation, debts, goals, and existing policies, allowing us to build a customized roadmap to get you to your goals."
+      }
+    }
+  ]
+}
+</script>
 
 </head>
 <body>
@@ -2477,7 +2727,7 @@ html { scroll-behavior: smooth; }
 <header id="nav">
   <div style="width:100%; padding:0 48px; box-sizing:border-box;">
     <div class="nav-bar">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" style="height: 90px; width: auto; object-fit: contain; margin-top: 4px;">
       </a>
       <ul class="nav-links">
@@ -2485,7 +2735,7 @@ html { scroll-behavior: smooth; }
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#services">Services</a></li>
         <li><a href="index.html#process">How It Works</a></li>
-        <li><a href="opportunity.html">Opportunity</a></li>
+        <li><a href="opportunity.html" class="nav-active">Opportunity</a></li>
         <li><a href="index.html#reviews">Stories</a></li>
         <li><a href="#blog">Knowledgebase</a></li>
         <li>
@@ -2523,68 +2773,375 @@ html { scroll-behavior: smooth; }
 </div>
 
 
-    <section id="blog-article">
-      <div class="container">
-        <div class="article-header" data-reveal>
-          <div class="article-badge"><span class="green-dot"></span>Retirement Planning</div>
-          <h1 class="article-title">Could Taxes Reduce the Retirement Income You’re Counting On?</h1>
-          <div class="article-meta">6 min read</div>
+    
+    <!-- HERO HEADER ───────────────────── -->
+    <section class="static-hero" style="background-image:url('images/slide6.jpg'); background-position: center 30%;">
+      <div class="static-hero-overlay"></div>
+      <div class="sh-container">
+        <div class="sh-content" style="max-width:840px;">
+          <div class="sh-badge">THE CAREER OPPORTUNITY</div>
+          <h1 class="sh-title">Build a Purpose-Driven<br>Business in <em>Financial Services</em></h1>
+          <p class="sh-sub">At Family First Legacy, we believe financial education can help families make better decisions and feel more prepared for the future. If you have a heart for helping people, we provide training, mentorship, and support to help you learn the financial services business with confidence.</p>
+          <div class="sh-hook" style="margin-bottom:32px;">
+            Right now, someone in your life may need to make an important financial decision — they just don’t know where to start yet. Could you become the person who shows up with guidance, education, and care?
+          </div>
+          <div class="slide-actions" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-green">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Schedule an Information Session
+            </a>
+            <a href="#contact" class="btn btn-ghost" style="color:#fff; border-color:rgba(255,255,255,0.4);">Start With a Conversation</a>
+          </div>
         </div>
-        
-        <div class="article-hero-wrap" data-reveal data-delay="1">
-          <img src="images/hero_retirement_diverse_1777335727638.png" class="article-hero-img" alt="Could Taxes Reduce the Retirement Income You’re Counting On?">
-        </div>
-        
-        <div class="article-body" data-reveal data-delay="2" style="color:var(--dark); font-size:17px; line-height:1.8;">
-          
-<p>A 401(k) can be a valuable retirement tool. For many working families, it is one of the first places they begin saving for the future, especially when an employer offers matching contributions.</p>
-<p>But there is one question many people do not ask early enough: <em>How much of that retirement money will I actually keep after taxes?</em></p>
-<p>Saving for retirement is important. But retirement planning is not only about the balance you see on a statement. It is also about understanding how taxes, market changes, and income needs may affect the money you count on later.</p>
 
-<h2 style="font-family:var(--font-head); font-size:24px; font-weight:700; margin-top:36px; margin-bottom:16px;">The Balance You See May Not Be the Amount You Keep</h2>
-<p>Traditional 401(k) and IRA accounts can offer tax advantages today because contributions may be made before taxes are paid. That can help many families save more during their working years.</p>
-<p>But those taxes are not gone. In many cases, they are delayed.</p>
-<p>When money is withdrawn from a traditional 401(k) or IRA in retirement, those withdrawals are generally taxable. That means the amount shown on your statement may not be the same amount you can spend.</p>
-<p>That does not make a 401(k) bad. It simply means families should understand the difference between what they have saved and what they may actually keep.</p>
-
-<h2 style="font-family:var(--font-head); font-size:24px; font-weight:700; margin-top:36px; margin-bottom:16px;">The Tax Question Many Families Overlook</h2>
-<p>Many people plan around the retirement balance they hope to build. But fewer people stop to ask what taxes may look like when that money is needed most.</p>
-<p>A family may see a large retirement account and feel confident. But if withdrawals create taxable income, taxes can affect how far that money goes.</p>
-<p>A helpful question is: <em>If my retirement income is taxable later, how will that affect my monthly lifestyle, healthcare costs, and long-term plans?</em></p>
-
-<blockquote style="border-left:4px solid var(--amber); padding-left:20px; font-style:italic; font-size:18px; color:var(--dark); margin:32px 0;">
-  "Do not plan retirement only around the balance you see. Plan around the income you may actually keep."
-  <footer style="margin-top:8px; font-size:14px; font-style:normal; font-weight:600; color:var(--muted);">— Family First Legacy</footer>
-</blockquote>
-
-<h2 style="font-family:var(--font-head); font-size:24px; font-weight:700; margin-top:36px; margin-bottom:16px;">Why Tax-Aware Planning Matters</h2>
-<p>Tax-aware planning does not mean trying to avoid taxes in an improper way. It means understanding how different types of retirement income may be treated and how they may work together.</p>
-<p>Some families may benefit from learning about options such as Roth accounts, Roth conversions, annuities, or properly structured cash-value life insurance. Each option works differently, and each has rules, costs, benefits, and limitations.</p>
-<p>For example, Roth accounts may offer tax advantages when certain requirements are met. Cash-value life insurance may also offer tax-advantaged access through policy loans or withdrawals, depending on policy design and how the policy is managed.</p>
-<p>The goal is not to replace every retirement tool. The goal is to build a strategy that gives the family more clarity, flexibility, and understanding.</p>
-
-<h2 style="font-family:var(--font-head); font-size:24px; font-weight:700; margin-top:36px; margin-bottom:16px;">Taxes Are Not the Only Retirement Risk</h2>
-<p>Taxes are important, but they are not the only issue families should consider. Market timing can also matter. If the market drops near retirement or during the early years of withdrawals, it may affect how long savings last. This is often called sequence of returns risk.</p>
-<p>That is why some families explore strategies designed to reduce exposure to direct market losses. Certain annuities or indexed insurance products may help provide protection features, depending on the contract or policy terms.</p>
-<p>A thoughtful retirement strategy should consider:</p>
-<ul style="margin-left:24px; margin-bottom:24px; list-style:disc;">
-  <li><strong>Income</strong> — Where will retirement income come from?</li>
-  <li><strong>Taxes</strong> — How much of that income may be taxable?</li>
-  <li><strong>Market risk</strong> — What happens if the market drops when withdrawals begin?</li>
-  <li><strong>Longevity</strong> — What if retirement lasts longer than expected?</li>
-  <li><strong>Flexibility</strong> — What options are available if life changes?</li>
-</ul>
-
-<h2 style="font-family:var(--font-head); font-size:24px; font-weight:700; margin-top:36px; margin-bottom:16px;">Before Retirement Begins, Know What You May Keep</h2>
-<p>A strong retirement plan should do more than help you save. It should help you understand how your money may work when it is time to use it.</p>
-<p>Your 401(k) may be an important part of your future. But it should be reviewed as part of a bigger picture that includes taxes, income, market risk, and your family’s long-term needs.</p>
-<p>A simple retirement review can help you understand where your income may come from, how taxes may affect it, and what options may fit your goals — with clear answers and no pressure.</p>
-<div style="margin-top:32px;"><a href="#contact" class="btn btn-green">Schedule a No-Cost Review</a></div>
-
+        <div class="sh-stats-container" style="margin-top:50px;">
+          <div class="numbers-grid">
+            <div class="glass-card">
+              <div class="glass-num" style="font-size:16px; letter-spacing:0.5px;">PURPOSE-DRIVEN WORK</div>
+              <div class="glass-label" style="font-size:11px; text-transform:none; margin-top:8px;">Help families understand decisions that affect generations.</div>
+            </div>
+            <div class="glass-card">
+              <div class="glass-num" style="font-size:16px; letter-spacing:0.5px;">TRAINING &amp; MENTORSHIP</div>
+              <div class="glass-label" style="font-size:11px; text-transform:none; margin-top:8px;">Learn with guidance, support, and practical tools.</div>
+            </div>
+            <div class="glass-card">
+              <div class="glass-num" style="font-size:16px; letter-spacing:0.5px;">FLEXIBLE START</div>
+              <div class="glass-label" style="font-size:11px; text-transform:none; margin-top:8px;">Begin part-time or grow as your goals allow.</div>
+            </div>
+            <div class="glass-card">
+              <div class="glass-num" style="font-size:16px; letter-spacing:0.5px;">BUILD YOUR BUSINESS</div>
+              <div class="glass-label" style="font-size:11px; text-transform:none; margin-top:8px;">Grow through learning, consistency, and personal effort.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- CTA BANNER ──────────────────────────────────────── -->
+
+    <!-- MAIN OPPORTUNITY CONTENT ─────────────────────── -->
+    <section id="services" style="padding:100px 0; background:#fff;">
+      <div class="container">
+        
+        <!-- Section 1 -->
+        <div style="margin-bottom:80px;" data-reveal>
+          <p class="t-label"><span class="green-dot"></span>WHY THIS OPPORTUNITY MATTERS</p>
+          <h2 class="t-h1" style="margin-top:12px">More Than Business.<br><em>A Mission to Educate Families.</em></h2>
+          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-top:20px; max-width:840px;">
+            Many families want to make better financial decisions, but they do not always know where to start. They may have questions about life insurance, retirement planning, education planning, income protection, or leaving a legacy.
+          </p>
+          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-top:16px; max-width:840px;">
+            That is where the right person can make a difference.
+          </p>
+          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-top:16px; max-width:840px;">
+            At Family First Legacy, we are looking for people who care about families, are willing to learn, and want to be part of a mission built on education, trust, and service.
+          </p>
+        </div>
+
+        <!-- Section 2: Who This May Be For -->
+        <div style="margin-bottom:80px; padding:48px; background:rgba(74,45,122,0.03); border:1px solid rgba(74,45,122,0.08); border-radius:16px;" data-reveal>
+          <p class="t-label"><span class="green-dot"></span>WHO THIS MAY BE FOR</p>
+          <h2 class="t-h2" style="margin-top:12px; margin-bottom:28px;">This Opportunity May Be a Good Fit If You:</h2>
+          
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Care about helping families</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You enjoy listening, encouraging others, and helping people understand important decisions.</p>
+            </div>
+            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Want to build something of your own</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You understand that growth takes effort, patience, consistency, and a willingness to learn.</p>
+            </div>
+            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Do not want to pressure people</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You believe families deserve to be educated, respected, and guided — not pushed. When you focus on serving people the right way, the business can grow naturally through trust, consistency, and care.</p>
+            </div>
+            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Need flexibility</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You may want to start part-time while balancing work, family, school, or other responsibilities.</p>
+            </div>
+            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06); grid-column: 1 / -1;">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Believe in education before recommendation</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You want people to understand their options before making decisions.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3: A Real Opportunity to Grow and Serve -->
+        <div style="margin-bottom:80px;" data-reveal>
+          <p class="t-label"><span class="green-dot"></span>A REAL OPPORTUNITY TO GROW AND SERVE</p>
+          <h2 class="t-h2" style="margin-top:12px">A Real Opportunity to Grow and Serve</h2>
+          <p style="color:var(--muted); font-size:16px; line-height:1.8; margin-top:20px; max-width:840px;">
+            This opportunity is for people who want to build in financial services while helping families make informed decisions. It is not a traditional salaried job — it is a commission-based business opportunity. Before serving families as a licensed professional, proper licensing is required. Growth depends on learning, consistency, effort, and the ability to serve people well.
+          </p>
+          <p style="color:var(--muted); font-size:16px; line-height:1.8; margin-top:16px; max-width:840px;">
+            For the right person, this can be a meaningful path to personal growth, professional development, and income opportunity. Results are not guaranteed and may vary based on individual effort, training, consistency, time commitment, client needs, product availability, carrier approval, and other business factors.
+          </p>
+          <p style="color:var(--muted); font-size:16px; line-height:1.8; margin-top:16px; max-width:840px;">
+            Most importantly, this work is about people. There is real satisfaction in helping families understand their options, protect what matters most, and feel more prepared for the future.
+          </p>
+        </div>
+
+        <!-- Section 4: What You Can Expect -->
+        <div style="margin-bottom:80px; padding:48px; background:var(--cream); border-radius:16px;" data-reveal>
+          <p class="t-label"><span class="green-dot"></span>WHAT YOU CAN EXPECT</p>
+          <h2 class="t-h2" style="margin-top:12px; margin-bottom:28px;">Learn While You Build</h2>
+          
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
+            <div style="background:#fff; padding:24px; border-radius:12px;">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Learn While You Build</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You do not have to know everything before you start. We provide guidance to help you understand the basics of financial services, client conversations, licensing steps, and how to serve families with professionalism.</p>
+            </div>
+            <div style="background:#fff; padding:24px; border-radius:12px;">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Mentorship Along the Way</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You will have access to training, mentorship, practical resources, and support from people who want to see you grow.</p>
+            </div>
+            <div style="background:#fff; padding:24px; border-radius:12px;">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">A Mission-Focused Environment</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">This is not just about products. It is about helping families ask better questions, understand their options, and feel more confident about their future.</p>
+            </div>
+            <div style="background:#fff; padding:24px; border-radius:12px;">
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Growth With Responsibility</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">As you learn and grow, you may have opportunities to develop leadership skills, support others, and build something meaningful over time. Results vary and depend on individual effort, training, consistency, time commitment, ability to serve families well, client needs, product availability, carrier approval, and other business factors.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 5: Our Simple Starting Process -->
+        <div style="margin-bottom:80px;" data-reveal>
+          <p class="t-label"><span class="green-dot"></span>OUR SIMPLE STARTING PROCESS</p>
+          <h2 class="t-h1" style="margin-top:12px; margin-bottom:40px;">How to Get Started</h2>
+          
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px;">
+            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
+              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">01</div>
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Information Session</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">We start with a simple conversation so you can learn what the opportunity is, how the business works, how compensation works, and whether it may fit your goals.</p>
+            </div>
+            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
+              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">02</div>
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Licensing Guidance</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">Before you can recommend life insurance options or help families apply for coverage, you must be properly licensed. We help explain the licensing steps clearly and guide you as you prepare to meet the requirements.</p>
+            </div>
+            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
+              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">03</div>
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Training &amp; Mentorship</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You begin learning how to speak with families, understand basic financial concepts, and serve people with care and professionalism.</p>
+            </div>
+            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
+              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">04</div>
+              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Build With Support</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6;">As you grow, you receive continued guidance, tools, and support to help you develop your skills and confidence.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <div style="margin-bottom:80px;" data-reveal>
+          <p class="t-label"><span class="green-dot"></span>FREQUENTLY ASKED QUESTIONS</p>
+          <h2 class="t-h1" style="margin-top:12px; margin-bottom:32px;">Opportunity FAQs</h2>
+          
+          <div class="faq-list">
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                Is this a job or a business opportunity?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>This is a commission-based business opportunity in the financial services industry, not a traditional salaried job. We start with an information session so you can understand how the opportunity works, what licensing is required, how compensation works, and whether it may fit your goals.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                What if I’m not good at selling or convincing people?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>That is okay. We are not looking for pushy salespeople. We are looking for people who care, listen, learn, and want to help families understand their options. This opportunity is built around education, not pressure. You will learn how to ask good questions, explain financial concepts clearly, and help families make informed decisions at their own pace. This work does involve conversations and recommendations when appropriate, but it should always be done with honesty, respect, and professionalism.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                Do I need a license?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>Yes. To recommend life insurance options or help families apply for coverage, you must be properly licensed. We guide you through the licensing steps so you can understand what is required before serving families as a licensed professional.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                Do I need experience in financial services?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>No. Many people begin without prior financial services experience. What matters most is your willingness to learn, follow the process, and serve families with honesty and care.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                Can I start part-time?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>Yes. Many people begin part-time while balancing work, family, school, or other responsibilities.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                Will I receive training?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>Yes. Training, mentorship, and ongoing support are part of the process.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                Is income guaranteed?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>No. This is a commission-based business opportunity, so income, advancement, and business results are not guaranteed. Results may vary based on individual effort, training, consistency, time commitment, ability to serve families well, client needs, product availability, carrier approval, and other business factors.</p></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+                Who is a good fit for this opportunity?
+                <div class="faq-icon"></div>
+              </button>
+              <div class="faq-a"><p>Someone who cares about helping families, is coachable, communicates well, understands that results require effort, and is willing to learn how to serve people with professionalism and integrity.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- FINAL CALL TO ACTION -->
+        <div style="padding:60px; background:var(--dark); border-radius:20px; color:#fff; text-align:center;" data-reveal>
+          <p class="t-label" style="color:var(--amber); justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>FINAL CALL TO ACTION</p>
+          <h2 style="font-family:var(--font-head); font-size:36px; font-weight:800; margin-top:16px; margin-bottom:16px;">Ready to Learn More?</h2>
+          <p style="color:rgba(255,255,255,0.85); font-size:16px; max-width:640px; margin:0 auto 32px auto; line-height:1.7;">
+            If you are looking for a meaningful opportunity, personal growth, and a way to build in financial services while helping families make informed decisions, we would love to talk with you.
+          </p>
+          <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+            <a href="#contact" class="btn btn-green">Schedule an Information Session</a>
+            <a href="#contact" class="btn btn-ghost" style="color:#fff; border-color:rgba(255,255,255,0.4);">Start With a Conversation</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="t-label" data-reveal><span class="green-dot"></span>Get in Touch</p>
+        <h2 class="t-h1" data-reveal data-delay="1" style="margin-top:16px">Your Legacy<br>Starts with One<br>Conversation.</h2>
+        <p data-reveal data-delay="2">Whether you're looking to protect your family, plan for retirement, explore a career with us, or simply want answers — we're here. No pressure, just honest guidance.</p>
+
+        <div class="contact-trust" data-reveal data-delay="2">
+          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>Licensed &amp; Insured</span>
+          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>24hr Response</span>
+          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>100% Private</span>
+        </div>
+
+        <div class="contact-info-list" data-reveal data-delay="3">
+          <a href="mailto:info@family1stlegacy.com" class="ci-row">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Email Us</div>
+              <div class="ci-val">info@family1stlegacy.com</div>
+            </div>
+            <div class="ci-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </a>
+          <a href="tel:+12145550100" class="ci-row">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Call or Text</div>
+              <div class="ci-val">(214) 555-0100</div>
+            </div>
+            <div class="ci-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </a>
+          <div class="ci-row" style="cursor:default">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Service Area</div>
+              <div class="ci-val">Dallas-Fort Worth Metro, TX &amp; Nationwide</div>
+            </div>
+          </div>
+          <div class="ci-row" style="cursor:default">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Office Hours</div>
+              <div class="ci-val">Mon–Fri: 9am – 7pm · Sat: 10am – 4pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right" data-reveal data-delay="2">
+        <div class="contact-form">
+          <div class="cf-tag">Free · No Obligation</div>
+          <div class="cf-heading">Request a Consultation</div>
+          <div class="cf-sub">Fill out the form below and we'll get back to you within 24 hours.</div>
+          <form onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="fg">
+                <label>First Name</label>
+                <input type="text" name="FirstName" placeholder="John" required>
+              </div>
+              <div class="fg">
+                <label>Last Name</label>
+                <input type="text" name="LastName" placeholder="Smith" required>
+              </div>
+            </div>
+            <div class="fg">
+              <label>Email Address</label>
+              <input type="email" name="Email" placeholder="john@email.com" required>
+            </div>
+            <div class="form-row">
+              <div class="fg">
+                <label>Phone</label>
+                <input type="tel" name="Phone" placeholder="(214) 000-0000">
+              </div>
+              <div class="fg">
+                <label>State</label>
+                <input type="text" name="State" placeholder="Texas">
+              </div>
+            </div>
+            <div class="fg">
+              <label>I'm Interested In</label>
+              <select name="Service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option>Life Insurance Protection</option>
+                <option>Retirement Planning</option>
+                <option>Education Planning</option>
+                <option>Estate Preservation</option>
+                <option>Business Strategies</option>
+                <option>Career Opportunity</option>
+                <option>General Financial Review</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Message (Optional)</label>
+              <textarea name="Message" placeholder="Tell us about your goals or questions…"></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Send My Request
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="cf-note">
+              <svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              Your information is handled with care and kept private. We do not sell your personal information.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER ──────────────────────────────────────── -->
 <section id="cta-banner">
   <div class="cta-scanline"></div>
   <div class="cta-orb cta-orb-1"></div>
@@ -2659,7 +3216,7 @@ html { scroll-behavior: smooth; }
     <div class="container">
       <div class="footer-grid">
         <div class="f-brand">
-          <a href="#" class="nav-logo" style="text-decoration:none">
+          <a href="index.html" class="nav-logo" style="text-decoration:none">
             <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" style="height: 40px; width: auto; object-fit: contain; margin-top: 4px;">
           </a>
           <p>Empowering families to build a stronger financial future, help protect their loved ones, and create a meaningful legacy for generations to come.</p>
@@ -2742,7 +3299,8 @@ html { scroll-behavior: smooth; }
   const hero = document.getElementById('hero');
   if(!hero) return; // Only run on homepage
   
-  const SLIDE_DURATION = 6500; // ms per slide
+  if(document.getElementById('hero')){
+const SLIDE_DURATION = 6500; // ms per slide
   const slides   = document.querySelectorAll('.slide');
   if(!slides.length) return;
   
@@ -2836,6 +3394,7 @@ html { scroll-behavior: smooth; }
   hero.classList.add('loaded');
 })();
 
+}
 // ── Navbar + active pills ────────────────────────────
 const nav = document.getElementById('nav');
 const navAnchors = document.querySelectorAll('.nav-links a:not(.nav-cta)');
@@ -3132,7 +3691,10 @@ function submitSubscribe(e) {
     progressFill.style.width = Math.max(25, progress) + '%';
 
     // Disabled states
-    prevBtn.disabled = currentIdx === 0;
+    
+    if (prevBtn) prevBtn.disabled = currentIdx === 0;
+    if (nextBtn) 
+
     nextBtn.disabled = currentIdx >= maxIndex;
   }
 
