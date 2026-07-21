@@ -2469,7 +2469,7 @@ html { scroll-behavior: smooth; }
   gap: 16px;
   max-height: 380px;
   overflow-y: auto;
-  padding-right: 8px;
+  padding: 8px 8px 8px 4px; /* added padding to prevent hover cropping */
 }
 .qa-selectors-list::-webkit-scrollbar {
   width: 6px;
@@ -2487,13 +2487,14 @@ html { scroll-behavior: smooth; }
 }
 .q-card {
   cursor: pointer;
-  padding: 24px;
+  padding: 20px 24px;
   border-radius: 16px;
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: #ffffff;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
+  flex-shrink: 0; /* prevents cards from collapsing/shrinking in flex list */
 }
 .q-card:hover {
   background: rgba(0, 0, 0, 0.01);
@@ -3305,7 +3306,7 @@ html { scroll-behavior: smooth; }
     </div>
     <div class="opp-content">
       <p class="t-label" data-reveal><span style="display:inline-block;width:8px;height:8px;background:var(--amber);border-radius:50%;margin-right:10px;"></span>The Career Opportunity</p>
-      <h2 class="t-h2" data-reveal data-delay="1" style="color:#fff;margin-top:16px">Build a Purpose-Driven<br>Business in Financial Services.</h2>
+      <h2 class="t-h2" data-reveal data-delay="1" style="color:#fff;margin-top:16px;line-height:1.25;"><span style="white-space:nowrap;">Build a Purpose-Driven</span><br>Business in Financial<br>Services.</h2>
       <p data-reveal data-delay="2">At Family First Legacy, we believe financial education can help families make better decisions and feel more prepared for the future. If you have a heart for helping people, we provide training, mentorship, and support to help you learn the financial services business with confidence.</p>
       <p style="color:var(--amber-lt); font-style:italic; margin-top:12px; font-size:15px;" data-reveal data-delay="3">
         Right now, someone in your life may need to make an important financial decision — they just don’t know where to start yet. Could you become the person who shows up with guidance, education, and care?
