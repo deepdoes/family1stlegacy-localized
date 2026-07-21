@@ -2446,7 +2446,79 @@ html { scroll-behavior: smooth; }
 }
 .mobile-menu a:hover { color:var(--green); }
 .mobile-close { position:absolute; top:24px; right:28px; background:none; border:none; font-size:28px; cursor:pointer; color:var(--muted); }
+
+/* Navigation Dropdown styling */
+.nav-dropdown-wrap {
+  position: relative;
+}
+.nav-dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav-dropdown-toggle svg.chevron {
+  width: 10px;
+  height: 10px;
+  stroke: currentColor;
+  stroke-width: 3px;
+  fill: none;
+  transition: transform 0.25s ease;
+  display: inline-block;
+  margin-top: 1px;
+}
+.nav-dropdown-wrap:hover .nav-dropdown-toggle svg.chevron {
+  transform: rotate(180deg);
+}
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 220px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(74, 45, 122, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(74, 45, 122, 0.08);
+  padding: 8px 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 1000;
+  margin: 0;
+}
+.nav-dropdown-wrap:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.nav-dropdown li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.nav-dropdown a {
+  display: block;
+  padding: 8px 20px !important;
+  color: var(--dark) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0 !important;
+  text-align: left;
+}
+.nav-dropdown a:hover {
+  background: rgba(74, 45, 122, 0.04) !important;
+  color: var(--purple) !important;
+}
+#nav.stuck .nav-dropdown {
+  background: rgba(255, 255, 255, 0.98);
+}
 </style>
+
 
 <style>
 #legal-page { padding: 140px 0 100px; background: var(--bg); }
@@ -2478,7 +2550,17 @@ html { scroll-behavior: smooth; }
       <ul class="nav-links">
         <div class="nav-pill"></div>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#services">Services</a></li>
+                <li class="nav-dropdown-wrap">
+          <a href="index.html#services" class="nav-dropdown-toggle">Services <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+          <ul class="nav-dropdown">
+            <li><a href="family_protection.html" class="no-pill">Life Insurance</a></li>
+            <li><a href="retirement_planning.html" class="no-pill">Retirement Planning</a></li>
+            <li><a href="education_planning.html" class="no-pill">Education Planning</a></li>
+            <li><a href="estate_planning.html" class="no-pill">Estate Preservation</a></li>
+            <li><a href="financial_strategy.html" class="no-pill">Financial Strategy</a></li>
+            <li><a href="business_strategies.html" class="no-pill">Business Strategies</a></li>
+          </ul>
+        </li>
         <li><a href="index.html#process">How It Works</a></li>
         <li><a href="opportunity.html">Opportunity</a></li>
         <li><a href="index.html#reviews">Stories</a></li>
@@ -2508,7 +2590,17 @@ html { scroll-behavior: smooth; }
   <button class="mobile-close" onclick="this.parentElement.classList.remove('open')">✕</button>
   <nav>
     <a href="index.html#about"       onclick="this.closest('.mobile-menu').classList.remove('open')">About</a>
-    <a href="index.html#services"    onclick="this.closest('.mobile-menu').classList.remove('open')">Services</a>
+        <div class="mobile-dropdown-parent">
+      <a href="index.html#services" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-weight: 700;">Services</a>
+      <div style="padding-left: 20px; display: flex; flex-direction: column; gap: 10px; margin: 5px 0 15px 0;">
+        <a href="family_protection.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Life Insurance</a>
+        <a href="retirement_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Retirement Planning</a>
+        <a href="education_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Education Planning</a>
+        <a href="estate_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Estate Preservation</a>
+        <a href="financial_strategy.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Financial Strategy</a>
+        <a href="business_strategies.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Business Strategies</a>
+      </div>
+    </div>
     <a href="index.html#process"     onclick="this.closest('.mobile-menu').classList.remove('open')">How It Works</a>
     <a href="index.html#opportunity" onclick="this.closest('.mobile-menu').classList.remove('open')">Opportunity</a>
     <a href="index.html#reviews"     onclick="this.closest('.mobile-menu').classList.remove('open')">Stories</a>
