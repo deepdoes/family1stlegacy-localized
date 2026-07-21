@@ -2446,6 +2446,18 @@ html { scroll-behavior: smooth; }
 }
 .mobile-menu a:hover { color:var(--green); }
 .mobile-close { position:absolute; top:24px; right:28px; background:none; border:none; font-size:28px; cursor:pointer; color:var(--muted); }
+
+/* Opportunity page visual updates */
+.expect-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+  border-color: var(--green) !important;
+}
+.expect-card-dark:hover {
+  transform: translateY(-8px);
+  border-color: var(--amber) !important;
+  background: rgba(255,255,255,0.05) !important;
+}
 </style>
 
 <style>
@@ -2619,6 +2631,18 @@ footer, footer [data-reveal], footer [data-stagger] > * {
     transition: color 0.4s ease;
 }
 
+
+/* Opportunity page visual updates */
+.expect-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+  border-color: var(--green) !important;
+}
+.expect-card-dark:hover {
+  transform: translateY(-8px);
+  border-color: var(--amber) !important;
+  background: rgba(255,255,255,0.05) !important;
+}
 </style>
 
 
@@ -2818,129 +2842,165 @@ footer, footer [data-reveal], footer [data-stagger] > * {
     </section>
 
     <!-- MAIN OPPORTUNITY CONTENT ─────────────────────── -->
-    <section id="services" style="padding:100px 0; background:#fff;">
-      <div class="container">
+    <section id="services" style="padding:0; background:var(--white);">
+      
+      <!-- Section 1: Intro Grid (Why This Matters & Grow/Serve) -->
+      <div style="padding:120px 0 80px;">
+        <div class="container">
+          <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:start;">
+            <div data-reveal>
+              <p class="t-label"><span class="green-dot"></span>WHY THIS OPPORTUNITY MATTERS</p>
+              <h2 class="t-h1" style="margin-top:16px; margin-bottom:24px;">More Than Business.<br><em>A Mission to Educate.</em></h2>
+              <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-bottom:20px;">
+                Many families want to make better financial decisions, but they do not always know where to start. They may have questions about life insurance, retirement planning, education planning, income protection, or leaving a legacy.
+              </p>
+              <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-bottom:20px;">
+                That is where the right person can make a difference. At Family First Legacy, we are looking for people who care about families, are willing to learn, and want to be part of a mission built on education, trust, and service.
+              </p>
+            </div>
+            
+            <div style="background:var(--cream); border-left:4px solid var(--green); padding:40px; border-radius:0 20px 20px 0; box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="2">
+              <p class="t-label" style="color:var(--green); margin-bottom:12px;"><span class="green-dot" style="background:var(--green);"></span>GROW &amp; SERVE</p>
+              <h3 style="font-family:var(--font-head); font-size:22px; color:var(--dark); margin-bottom:16px; font-weight:700;">A Real Opportunity to Grow</h3>
+              <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:16px;">
+                This is a commission-based business opportunity in financial services, not a traditional salaried job. Before serving families as a licensed professional, proper state licensing is required. 
+              </p>
+              <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">
+                Growth depends on learning, consistency, effort, and the ability to serve people well. For the right person, this can be a meaningful path to personal and professional development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Who This May Be For (Premium Grid) -->
+      <div style="background:rgba(247,244,239,0.5); padding:100px 0;">
+        <div class="container">
+          <div style="text-align:center; margin-bottom:60px;" data-reveal>
+            <p class="t-label" style="justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>WHO THIS MAY BE FOR</p>
+            <h2 class="t-h1" style="margin-top:16px;">Is This a Good Fit For You?</h2>
+            <p style="color:var(--muted); margin-top:8px;">We look for alignment in values, dedication, and care.</p>
+          </div>
+          
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
+            
+            <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal>
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Care about helping families</h3>
+              <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">You enjoy listening, encouraging others, and helping people understand important decisions that affect their future.</p>
+            </div>
+
+            <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="1">
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Want to build your own business</h3>
+              <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">You understand that growth takes effort, patience, consistency, and a continuous willingness to learn and improve.</p>
+            </div>
+
+            <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="2">
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">No-pressure approach</h3>
+              <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">You believe families deserve to be educated and guided — not pushed. Serving families the right way builds long-term trust.</p>
+            </div>
+
+            <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal>
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Desire for flexibility</h3>
+              <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">You want the option to start part-time while balancing current career, family, school, or other daily commitments.</p>
+            </div>
+
+            <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); grid-column:span 2;" data-reveal data-delay="1">
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Believe in education first</h3>
+              <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">You want people to fully understand how their options work before making decisions. Education is the foundation of our entire agency.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: What You Can Expect (Cohesive Dark Section with Ambient Glow) -->
+      <div style="background:#0b090a; padding:120px 0; position:relative; overflow:hidden; color:#fff;">
+        <div class="tst-orb tst-orb-1" style="background: radial-gradient(circle, rgba(29,158,117,0.12), transparent 70%);"></div>
+        <div class="tst-orb tst-orb-2" style="background: radial-gradient(circle, rgba(74,45,122,0.12), transparent 70%);"></div>
         
-        <!-- Section 1 -->
-        <div style="margin-bottom:80px;" data-reveal>
-          <p class="t-label"><span class="green-dot"></span>WHY THIS OPPORTUNITY MATTERS</p>
-          <h2 class="t-h1" style="margin-top:12px">More Than Business.<br><em>A Mission to Educate Families.</em></h2>
-          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-top:20px; max-width:840px;">
-            Many families want to make better financial decisions, but they do not always know where to start. They may have questions about life insurance, retirement planning, education planning, income protection, or leaving a legacy.
-          </p>
-          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-top:16px; max-width:840px;">
-            That is where the right person can make a difference.
-          </p>
-          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-top:16px; max-width:840px;">
-            At Family First Legacy, we are looking for people who care about families, are willing to learn, and want to be part of a mission built on education, trust, and service.
-          </p>
-        </div>
+        <div class="container" style="position:relative; z-index:2;">
+          <div style="text-align:center; margin-bottom:70px;" data-reveal>
+            <p class="t-label" style="color:var(--amber); justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>WHAT YOU CAN EXPECT</p>
+            <h2 class="t-h1" style="color:#fff; margin-top:16px;">Support as You Build</h2>
+            <p style="color:rgba(255,255,255,0.6); margin-top:8px;">We equip you with training, systems, and mentorship.</p>
+          </div>
 
-        <!-- Section 2: Who This May Be For -->
-        <div style="margin-bottom:80px; padding:48px; background:rgba(74,45,122,0.03); border:1px solid rgba(74,45,122,0.08); border-radius:16px;" data-reveal>
-          <p class="t-label"><span class="green-dot"></span>WHO THIS MAY BE FOR</p>
-          <h2 class="t-h2" style="margin-top:12px; margin-bottom:28px;">This Opportunity May Be a Good Fit If You:</h2>
-          
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Care about helping families</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You enjoy listening, encouraging others, and helping people understand important decisions.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px;">
+            
+            <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal>
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Learn While You Build</h3>
+              <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">You do not have to know everything before you start. We provide structured guidance to help you learn financial services basics and professional client relations.</p>
             </div>
-            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Want to build something of your own</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You understand that growth takes effort, patience, consistency, and a willingness to learn.</p>
+
+            <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="1">
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Mentorship Along the Way</h3>
+              <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">Gain access to training sessions, direct mentorship from experienced professionals, and resources to help support your growth steps.</p>
             </div>
-            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Do not want to pressure people</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You believe families deserve to be educated, respected, and guided — not pushed. When you focus on serving people the right way, the business can grow naturally through trust, consistency, and care.</p>
+
+            <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="2">
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Mission-Focused Work</h3>
+              <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">This is about helping families ask better questions, understand their options, and feel more prepared for the future. Purpose drives our progress.</p>
             </div>
-            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06);">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Need flexibility</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You may want to start part-time while balancing work, family, school, or other responsibilities.</p>
+
+            <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="3">
+              <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Growth &amp; Leadership</h3>
+              <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">As you develop skills, you may have opportunities to build a team, support others, and grow a business. Results depend entirely on your personal effort and commitment.</p>
             </div>
-            <div style="background:#fff; padding:24px; border-radius:12px; border:1px solid rgba(0,0,0,0.06); grid-column: 1 / -1;">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Believe in education before recommendation</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You want people to understand their options before making decisions.</p>
-            </div>
+
           </div>
         </div>
+      </div>
 
-        <!-- Section 3: A Real Opportunity to Grow and Serve -->
-        <div style="margin-bottom:80px;" data-reveal>
-          <p class="t-label"><span class="green-dot"></span>A REAL OPPORTUNITY TO GROW AND SERVE</p>
-          <h2 class="t-h2" style="margin-top:12px">A Real Opportunity to Grow and Serve</h2>
-          <p style="color:var(--muted); font-size:16px; line-height:1.8; margin-top:20px; max-width:840px;">
-            This opportunity is for people who want to build in financial services while helping families make informed decisions. It is not a traditional salaried job — it is a commission-based business opportunity. Before serving families as a licensed professional, proper licensing is required. Growth depends on learning, consistency, effort, and the ability to serve people well.
-          </p>
-          <p style="color:var(--muted); font-size:16px; line-height:1.8; margin-top:16px; max-width:840px;">
-            For the right person, this can be a meaningful path to personal growth, professional development, and income opportunity. Results are not guaranteed and may vary based on individual effort, training, consistency, time commitment, client needs, product availability, carrier approval, and other business factors.
-          </p>
-          <p style="color:var(--muted); font-size:16px; line-height:1.8; margin-top:16px; max-width:840px;">
-            Most importantly, this work is about people. There is real satisfaction in helping families understand their options, protect what matters most, and feel more prepared for the future.
-          </p>
-        </div>
+      <!-- Section 4: Our Simple Starting Process (Sleek Connection Steps) -->
+      <div style="padding:120px 0; background:var(--white);">
+        <div class="container">
+          <div style="text-align:center; margin-bottom:75px;" data-reveal>
+            <p class="t-label" style="justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>OUR SIMPLE PROCESS</p>
+            <h2 class="t-h1" style="margin-top:16px;">How to Get Started</h2>
+            <p style="color:var(--muted); margin-top:8px;">Four simple steps to join our agency and start learning.</p>
+          </div>
 
-        <!-- Section 4: What You Can Expect -->
-        <div style="margin-bottom:80px; padding:48px; background:var(--cream); border-radius:16px;" data-reveal>
-          <p class="t-label"><span class="green-dot"></span>WHAT YOU CAN EXPECT</p>
-          <h2 class="t-h2" style="margin-top:12px; margin-bottom:28px;">Learn While You Build</h2>
-          
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-            <div style="background:#fff; padding:24px; border-radius:12px;">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Learn While You Build</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You do not have to know everything before you start. We provide guidance to help you understand the basics of financial services, client conversations, licensing steps, and how to serve families with professionalism.</p>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:32px;">
+            
+            <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal>
+              <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">01</div>
+              <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Information Session</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">A brief discussion so you can understand the opportunity, licensing details, how compensation works, and if it aligns with your goals.</p>
             </div>
-            <div style="background:#fff; padding:24px; border-radius:12px;">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Mentorship Along the Way</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You will have access to training, mentorship, practical resources, and support from people who want to see you grow.</p>
+
+            <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="1">
+              <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">02</div>
+              <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Licensing Guidance</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">Before you can recommend coverage options or help families, you must obtain a state license. We guide you through the preparation process.</p>
             </div>
-            <div style="background:#fff; padding:24px; border-radius:12px;">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">A Mission-Focused Environment</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">This is not just about products. It is about helping families ask better questions, understand their options, and feel more confident about their future.</p>
+
+            <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="2">
+              <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">03</div>
+              <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Training &amp; Mentorship</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">You begin learning how to speak with families, understand basic financial concepts, and represent products with professional care.</p>
             </div>
-            <div style="background:#fff; padding:24px; border-radius:12px;">
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Growth With Responsibility</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">As you learn and grow, you may have opportunities to develop leadership skills, support others, and build something meaningful over time. Results vary and depend on individual effort, training, consistency, time commitment, ability to serve families well, client needs, product availability, carrier approval, and other business factors.</p>
+
+            <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="3">
+              <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">04</div>
+              <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Build Your Business</h3>
+              <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">With active mentorship and direct support systems, start serving families and building your business at your own pace.</p>
             </div>
+
           </div>
         </div>
+      </div>
 
-        <!-- Section 5: Our Simple Starting Process -->
-        <div style="margin-bottom:80px;" data-reveal>
-          <p class="t-label"><span class="green-dot"></span>OUR SIMPLE STARTING PROCESS</p>
-          <h2 class="t-h1" style="margin-top:12px; margin-bottom:40px;">How to Get Started</h2>
-          
-          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px;">
-            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
-              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">01</div>
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Information Session</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">We start with a simple conversation so you can learn what the opportunity is, how the business works, how compensation works, and whether it may fit your goals.</p>
-            </div>
-            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
-              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">02</div>
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Licensing Guidance</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">Before you can recommend life insurance options or help families apply for coverage, you must be properly licensed. We help explain the licensing steps clearly and guide you as you prepare to meet the requirements.</p>
-            </div>
-            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
-              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">03</div>
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Training &amp; Mentorship</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">You begin learning how to speak with families, understand basic financial concepts, and serve people with care and professionalism.</p>
-            </div>
-            <div style="padding:28px; background:#fff; border:1px solid rgba(0,0,0,0.08); border-radius:12px;">
-              <div style="font-size:32px; font-weight:800; color:var(--green); margin-bottom:8px;">04</div>
-              <h3 style="font-size:18px; font-weight:700; color:var(--dark); margin-bottom:8px;">Build With Support</h3>
-              <p style="color:var(--muted); font-size:14px; line-height:1.6;">As you grow, you receive continued guidance, tools, and support to help you develop your skills and confidence.</p>
-            </div>
+      <!-- Section 5: FAQ Accordion -->
+      <div style="background:rgba(247,244,239,0.5); padding:100px 0;">
+        <div class="container" style="max-width:900px;">
+          <div style="text-align:center; margin-bottom:60px;" data-reveal>
+            <p class="t-label" style="justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>FAQ</p>
+            <h2 class="t-h1" style="margin-top:16px;">Opportunity FAQs</h2>
           </div>
-        </div>
 
-        <!-- FAQ SECTION -->
-        <div style="margin-bottom:80px;" data-reveal>
-          <p class="t-label"><span class="green-dot"></span>FREQUENTLY ASKED QUESTIONS</p>
-          <h2 class="t-h1" style="margin-top:12px; margin-bottom:32px;">Opportunity FAQs</h2>
-          
           <div class="faq-list">
-            <div class="faq-item">
+            
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 Is this a job or a business opportunity?
                 <div class="faq-icon"></div>
@@ -2948,7 +3008,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
               <div class="faq-a"><p>This is a commission-based business opportunity in the financial services industry, not a traditional salaried job. We start with an information session so you can understand how the opportunity works, what licensing is required, how compensation works, and whether it may fit your goals.</p></div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 What if I’m not good at selling or convincing people?
                 <div class="faq-icon"></div>
@@ -2956,7 +3016,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
               <div class="faq-a"><p>That is okay. We are not looking for pushy salespeople. We are looking for people who care, listen, learn, and want to help families understand their options. This opportunity is built around education, not pressure. You will learn how to ask good questions, explain financial concepts clearly, and help families make informed decisions at their own pace. This work does involve conversations and recommendations when appropriate, but it should always be done with honesty, respect, and professionalism.</p></div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 Do I need a license?
                 <div class="faq-icon"></div>
@@ -2964,7 +3024,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
               <div class="faq-a"><p>Yes. To recommend life insurance options or help families apply for coverage, you must be properly licensed. We guide you through the licensing steps so you can understand what is required before serving families as a licensed professional.</p></div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 Do I need experience in financial services?
                 <div class="faq-icon"></div>
@@ -2972,7 +3032,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
               <div class="faq-a"><p>No. Many people begin without prior financial services experience. What matters most is your willingness to learn, follow the process, and serve families with honesty and care.</p></div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 Can I start part-time?
                 <div class="faq-icon"></div>
@@ -2980,7 +3040,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
               <div class="faq-a"><p>Yes. Many people begin part-time while balancing work, family, school, or other responsibilities.</p></div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 Will I receive training?
                 <div class="faq-icon"></div>
@@ -2988,7 +3048,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
               <div class="faq-a"><p>Yes. Training, mentorship, and ongoing support are part of the process.</p></div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 Is income guaranteed?
                 <div class="faq-icon"></div>
@@ -2996,34 +3056,40 @@ footer, footer [data-reveal], footer [data-stagger] > * {
               <div class="faq-a"><p>No. This is a commission-based business opportunity, so income, advancement, and business results are not guaranteed. Results may vary based on individual effort, training, consistency, time commitment, ability to serve families well, client needs, product availability, carrier approval, and other business factors.</p></div>
             </div>
 
-            <div class="faq-item">
+            <div class="faq-item" data-reveal>
               <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
                 Who is a good fit for this opportunity?
                 <div class="faq-icon"></div>
               </button>
               <div class="faq-a"><p>Someone who cares about helping families, is coachable, communicates well, understands that results require effort, and is willing to learn how to serve people with professionalism and integrity.</p></div>
             </div>
+
           </div>
         </div>
-
-        <!-- FINAL CALL TO ACTION -->
-        <div style="padding:60px; background:var(--dark); border-radius:20px; color:#fff; text-align:center;" data-reveal>
-          <p class="t-label" style="color:var(--amber); justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>FINAL CALL TO ACTION</p>
-          <h2 style="font-family:var(--font-head); font-size:36px; font-weight:800; margin-top:16px; margin-bottom:16px;">Ready to Learn More?</h2>
-          <p style="color:rgba(255,255,255,0.85); font-size:16px; max-width:640px; margin:0 auto 32px auto; line-height:1.7;">
-            If you are looking for a meaningful opportunity, personal growth, and a way to build in financial services while helping families make informed decisions, we would love to talk with you.
-          </p>
-          <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-            <a href="#contact" class="btn btn-green">Schedule an Information Session</a>
-            <a href="#contact" class="btn btn-ghost" style="color:#fff; border-color:rgba(255,255,255,0.4);">Start With a Conversation</a>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Section 6: Final CTA Banner (High-end Glassmorphic Box) -->
+      <div style="padding:100px 0; background:var(--white);">
+        <div class="container" style="max-width:1000px;">
+          <div style="padding:80px 60px; background:linear-gradient(135deg, #1A0F26 0%, var(--green) 100%); border-radius:24px; color:#fff; text-align:center; position:relative; overflow:hidden; box-shadow:0 20px 50px rgba(0,0,0,0.15);" data-reveal>
+            <div class="cta-scanline" style="opacity:0.04;"></div>
+            <div style="position:relative; z-index:2;">
+              <p class="t-label" style="color:var(--amber); justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>GET IN TOUCH</p>
+              <h2 style="font-family:var(--font-head); font-size:38px; font-weight:800; margin-top:20px; margin-bottom:20px; line-height:1.2;">Ready to Learn More?</h2>
+              <p style="color:rgba(255,255,255,0.8); font-size:16.5px; max-width:640px; margin:0 auto 40px auto; line-height:1.75;">
+                If you are looking for a meaningful opportunity, personal growth, and a way to build in financial services while helping families make informed decisions, we would love to talk with you.
+              </p>
+              <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a href="#contact" class="btn btn-green">Schedule an Information Session</a>
+                <a href="#contact" class="btn btn-ghost" style="color:#fff; border-color:rgba(255,255,255,0.4);">Start With a Conversation</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
-
-
-<section id="contact">
+<!-- CONTACT -->
   <div class="container">
     <div class="contact-grid">
       <div class="contact-left">
