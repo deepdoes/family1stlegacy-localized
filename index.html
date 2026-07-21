@@ -2452,18 +2452,38 @@ html { scroll-behavior: smooth; }
   display: grid;
   grid-template-columns: 1fr 1.6fr;
   gap: 40px;
-  align-items: stretch;
+  align-items: flex-start;
   margin-top: 40px;
 }
 @media (max-width: 900px) {
   .qa-dashboard-grid {
     grid-template-columns: 1fr;
   }
+  .qa-selectors-list {
+    max-height: 320px !important;
+  }
 }
 .qa-selectors-list {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.qa-selectors-list::-webkit-scrollbar {
+  width: 6px;
+}
+.qa-selectors-list::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.02);
+  border-radius: 10px;
+}
+.qa-selectors-list::-webkit-scrollbar-thumb {
+  background: rgba(29, 158, 117, 0.2);
+  border-radius: 10px;
+}
+.qa-selectors-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 158, 117, 0.4);
 }
 .q-card {
   cursor: pointer;
@@ -3137,7 +3157,7 @@ html { scroll-behavior: smooth; }
       </div>
 
       <!-- Right Column: Answer Display Card Stage -->
-      <div class="qa-display-card-stage" style="position:relative; background:#ffffff; border:1px solid rgba(0,0,0,0.06); border-radius:24px; overflow:hidden; min-height:460px; box-shadow:0 20px 50px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.6);">
+      <div class="qa-display-card-stage" style="position:relative; background:#ffffff; border:1px solid rgba(0,0,0,0.06); border-radius:24px; overflow:hidden; min-height:380px; box-shadow:0 20px 50px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.6);">
         
         <!-- Large Quote Icon Background decoration -->
         <span style="position:absolute; top:20px; right:40px; font-family:var(--font-head); font-size:180px; font-weight:800; color:rgba(0,0,0,0.015); line-height:1; pointer-events:none; user-select:none;">”</span>
@@ -3145,7 +3165,7 @@ html { scroll-behavior: smooth; }
         <div class="tst-track" id="qTrack" style="height:100%; width:100%; position:relative;">
 
           <!-- Question 1 -->
-          <div class="tst-slide q-slide active" data-qindex="0" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+          <div class="tst-slide q-slide active" data-qindex="0" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
                 <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">01 of 06 • FAMILY PROTECTION</span>
@@ -3164,7 +3184,7 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Question 2 -->
-          <div class="tst-slide q-slide" data-qindex="1" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+          <div class="tst-slide q-slide" data-qindex="1" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
                 <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">02 of 06 • LIVING BENEFITS</span>
@@ -3183,7 +3203,7 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Question 3 -->
-          <div class="tst-slide q-slide" data-qindex="2" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+          <div class="tst-slide q-slide" data-qindex="2" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
                 <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">03 of 06 • RETIREMENT PLANNING</span>
@@ -3202,7 +3222,7 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Question 4 -->
-          <div class="tst-slide q-slide" data-qindex="3" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+          <div class="tst-slide q-slide" data-qindex="3" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
                 <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">04 of 06 • BUSINESS STRATEGIES</span>
@@ -3221,7 +3241,7 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Question 5 -->
-          <div class="tst-slide q-slide" data-qindex="4" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+          <div class="tst-slide q-slide" data-qindex="4" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
                 <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">05 of 06 • EDUCATION PLANNING</span>
@@ -3240,7 +3260,7 @@ html { scroll-behavior: smooth; }
           </div>
 
           <!-- Question 6 -->
-          <div class="tst-slide q-slide" data-qindex="5" style="padding:48px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+          <div class="tst-slide q-slide" data-qindex="5" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
             <div>
               <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
                 <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">06 of 06 • LEGACY PLANNING</span>
