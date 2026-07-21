@@ -650,7 +650,7 @@ p { letter-spacing:.1px; }
    ABOUT
 ────────────────────────────────────────────────────── */
 #about { padding:120px 0; overflow:hidden; background:var(--white); }
-.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:center; }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:flex-start; }
 .about-photo-col { position:relative; }
 .about-photo-wrap {
   position:relative;
@@ -2728,6 +2728,10 @@ html { scroll-behavior: smooth; }
             <div class="ab-text">Serving families across DFW &amp; Nationwide</div>
           </div>
         </div>
+        <div class="about-pull" data-reveal data-delay="3" style="border-radius:16px; margin-top:32px;">
+          <p>“We do more than offer insurance — we build relationships, educate families, and help them create plans focused on protecting what matters most.”</p>
+          <cite>— Family First Legacy Team</cite>
+        </div>
       </div>
 
       <div class="about-content">
@@ -2745,10 +2749,6 @@ html { scroll-behavior: smooth; }
         <p class="t-body" style="color:var(--muted)" data-reveal data-delay="2">
           Whether you’re protecting your family, preparing for retirement, planning for your children’s future, or building a legacy, our goal is to provide honest guidance, clear explanations, and the information you need to make confident decisions — without pressure and at your own pace.
         </p>
-        <div class="about-pull" data-reveal data-delay="3">
-          <p>“We do more than offer insurance — we build relationships, educate families, and help them create plans focused on protecting what matters most.”</p>
-          <cite>— Family First Legacy Team</cite>
-        </div>
         <a href="#contact" class="btn btn-green" data-reveal data-delay="4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           Schedule a Free Review
