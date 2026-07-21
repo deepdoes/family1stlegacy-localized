@@ -3323,27 +3323,19 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- BLOG / INSIGHTS ─────────────────────────────────── -->
-<section id="blog">
+<section id="blog" style="padding:120px 0; background:var(--bg); border-top: 1px solid rgba(74,45,122,.05);">
   <div class="container">
-    <div class="blog-header">
+    <div class="blog-header" style="margin-bottom:56px; display:flex; justify-content:space-between; align-items:flex-end;">
       <div class="blog-header-left">
         <p class="t-label" data-reveal><span class="green-dot"></span>Financial Insights</p>
         <h2 class="t-h1" data-reveal data-delay="1">Latest Articles &<br>Strategies.</h2>
       </div>
-      <div class="blog-nav" data-reveal data-delay="2">
-        <button class="blog-nav-btn blog-prev" disabled aria-label="Previous articles">
-          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        </button>
-        <button class="blog-nav-btn blog-next" aria-label="Next articles">
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </button>
-      </div>
     </div>
     
-    <div class="blog-slider-wrap">
-      <div class="blog-slider">
-      <a href="blog_family_protection.html" class="blog-card" data-reveal>
-        <div class="bc-img-wrap"><img src="images/hero_life_insurance_diverse_1777335713599.png" alt="Family Protection" class="bc-img"></div>
+    <div class="blog-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px;" data-reveal data-delay="2">
+      <!-- Card 1 -->
+      <a href="blog_family_protection.html" class="blog-card" style="flex:none;">
+        <div class="bc-img-wrap"><img src="images/family_protection_black_1777333563521.png" alt="Family Protection" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Family Protection</div>
           <h3 class="bc-title">Is Your Family Counting on Work Benefits Alone?</h3>
@@ -3352,8 +3344,9 @@ html { scroll-behavior: smooth; }
         </div>
       </a>
       
-      <a href="blog_retirement.html" class="blog-card" data-reveal data-delay="1">
-        <div class="bc-img-wrap"><img src="images/hero_retirement_diverse_1777335727638.png" alt="Retirement Planning" class="bc-img"></div>
+      <!-- Card 2 -->
+      <a href="blog_retirement.html" class="blog-card" style="flex:none;">
+        <div class="bc-img-wrap"><img src="images/retirement_planning_black_1777333576986.png" alt="Retirement Planning" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Retirement</div>
           <h3 class="bc-title">Could Taxes Reduce the Retirement Income You’re Counting On?</h3>
@@ -3362,8 +3355,9 @@ html { scroll-behavior: smooth; }
         </div>
       </a>
       
-      <a href="blog_education.html" class="blog-card" data-reveal data-delay="2">
-        <div class="bc-img-wrap"><img src="images/hero_education_diverse_1777335740128.png" alt="Education Planning" class="bc-img"></div>
+      <!-- Card 3 -->
+      <a href="blog_education.html" class="blog-card" style="flex:none;">
+        <div class="bc-img-wrap"><img src="images/education_planning_hispanic_1777333593369.png" alt="Education Planning" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Education</div>
           <h3 class="bc-title">What If Your Child’s Path Changes After You Save?</h3>
@@ -3371,8 +3365,20 @@ html { scroll-behavior: smooth; }
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
+
+      <!-- Card 4: Living Benefits (New 6th Article) -->
+      <a href="blog_living_benefits.html" class="blog-card" style="flex:none;">
+        <div class="bc-img-wrap"><img src="images/critical_illness_diverse_1777393231898.png" alt="Living Benefits" class="bc-img"></div>
+        <div class="bc-content">
+          <div class="bc-cat">Living Benefits</div>
+          <h3 class="bc-title">What If You Survive the Illness - But Your Income Does Not?</h3>
+          <p class="bc-excerpt">A stroke, cancer, heart attack, or chronic illness can affect more than health — it can affect your income. Learn how living benefits can help provide financial support when you need it most.</p>
+          <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </a>
       
-      <a href="blog_financial_strategy.html" class="blog-card" data-reveal>
+      <!-- Card 5 -->
+      <a href="blog_financial_strategy.html" class="blog-card" style="flex:none;">
         <div class="bc-img-wrap"><img src="images/financial_strategy_hispanic_1777333606672.png" alt="Financial Strategy" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Wealth Building</div>
@@ -3382,8 +3388,9 @@ html { scroll-behavior: smooth; }
         </div>
       </a>
       
-      <a href="blog_legacy.html" class="blog-card" data-reveal data-delay="1">
-        <div class="bc-img-wrap"><img src="images/hero_estate_diverse_1777335759302.png" alt="Legacy Building" class="bc-img"></div>
+      <!-- Card 6 -->
+      <a href="blog_legacy.html" class="blog-card" style="flex:none;">
+        <div class="bc-img-wrap"><img src="images/wealth_transfer_diverse_1777393288351.png" alt="Legacy Building" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Estate Planning</div>
           <h3 class="bc-title">Will Your Family Wait for the Money They Need?</h3>
@@ -3391,14 +3398,9 @@ html { scroll-behavior: smooth; }
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
-      </div>
-    </div>
-    <div class="blog-progress data-reveal data-delay="2">
-      <div class="blog-progress-bar"></div>
     </div>
   </div>
 </section>
-
 <!-- FAQ ─────────────────────────────────────────────── -->
 <section id="faq">
   <div class="container">
@@ -4232,74 +4234,7 @@ function submitSubscribe(e) {
   ctaIO.observe(cta);
 })();
 
-// ── Blog Slider ───────────────────
-(function(){
-  const wrap = document.querySelector('.blog-slider-wrap');
-  const slider = document.querySelector('.blog-slider');
-  const prev = document.querySelector('.blog-prev');
-  const next = document.querySelector('.blog-next');
-  const progBar = document.querySelector('.blog-progress-bar');
-  
-  if(!slider) return;
-  let idx = 0;
-  
-  function update() {
-    const card = slider.children[0];
-    if(!card) return;
-    const cardW = card.offsetWidth;
-    const gap = window.innerWidth <= 1024 ? 32 : 32;
-    const move = cardW + gap;
-    const maxScroll = slider.scrollWidth - wrap.clientWidth;
-    const maxIdx = Math.max(0, Math.ceil(maxScroll / move));
-    
-    if (idx > maxIdx) idx = maxIdx;
-    
-    let targetX = idx * move;
-    if (targetX > maxScroll) targetX = maxScroll;
-    
-    slider.style.transform = `translateX(-${targetX}px)`;
-    
-    if(prev) prev.disabled = idx === 0;
-    if(next) next.disabled = idx >= maxIdx || maxScroll <= 0;
-    
-    if(progBar) {
-      if(maxScroll <= 0) {
-        progBar.parentElement.style.display = 'none';
-      } else {
-        progBar.parentElement.style.display = 'block';
-        progBar.style.width = `${100 / (maxIdx + 1)}%`;
-        progBar.style.transform = `translateX(${idx * 100}%)`;
-      }
-    }
-  }
-  
-  if(prev) prev.addEventListener('click', () => { if(idx > 0) { idx--; update(); } });
-  if(next) next.addEventListener('click', () => { 
-    const card = slider.children[0];
-    const move = card.offsetWidth + 32;
-    const maxScroll = slider.scrollWidth - wrap.clientWidth;
-    const maxIdx = Math.ceil(maxScroll / move);
-    if(idx < maxIdx) { idx++; update(); } 
-  });
-  
-  let touchX = 0;
-  slider.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, {passive:true});
-  slider.addEventListener('touchend', e => {
-    const dx = e.changedTouches[0].clientX - touchX;
-    if (Math.abs(dx) > 50) {
-      const card = slider.children[0];
-      const move = card.offsetWidth + 32;
-      const maxScroll = slider.scrollWidth - wrap.clientWidth;
-      const maxIdx = Math.ceil(maxScroll / move);
-      if (dx < 0 && idx < maxIdx) idx++;
-      else if (dx > 0 && idx > 0) idx--;
-      update();
-    }
-  }, {passive:true});
-  
-  window.addEventListener('resize', update);
-  setTimeout(update, 100);
-})();
+
 </script>
 <!-- LANGUAGE SELECTOR MODAL -->
 <div id="language-modal" style="display:none; position:fixed; inset:0; background:rgba(244,242,246,0.85); z-index:99999; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); align-items:center; justify-content:center; flex-direction:column; text-align:center;">
