@@ -1,5 +1,6 @@
 // api/contact.js
 // Vercel Serverless Function to securely handle contact submissions & subscriptions via Resend
+// Trigger Vercel rebuild to inject the new environment variables (RESEND_API_KEY, CONTACT_RECEIVER_EMAIL)
 
 export default async function handler(req, res) {
   // CORS Headers
