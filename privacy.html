@@ -3106,9 +3106,7 @@ document.querySelectorAll('.btn-white, .btn-green').forEach(btn => {
 });
 
 // ── Form ─────────────────────────────────────────────
-// ── Form Handling (Google Apps Script) ───────────────
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxDep_dj1IqNVGHj40JtiJ0M4znGWEPEsQBv9HZpbl4uj984KA9qq2J4wt0LuyVGCIoJw/exec'; // User will provide this
-
+// ── Form Handling (Vercel Serverless + Resend) ───────────────
 function submitForm(e) {
   e.preventDefault();
   const form = e.target;
@@ -3118,17 +3116,30 @@ function submitForm(e) {
   btn.style.background = '#6B4A9C';
   btn.innerHTML = 'Sending...';
   
-  if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-    // Fallback if URL isn't set yet
-    setTimeout(() => {
-      btn.innerHTML = '✓ Setup Required (Waiting on URL)';
-      setTimeout(() => { btn.style.background = ''; btn.innerHTML = originalHtml; }, 3000);
-    }, 1000);
-    return;
-  }
+  const formData = new FormData(form);
+  const data = {
+    firstName: formData.get('FirstName'),
+    lastName: formData.get('LastName'),
+    email: formData.get('Email'),
+    phone: formData.get('Phone'),
+    state: formData.get('State'),
+    service: formData.get('Service'),
+    message: formData.get('Message'),
+    type: 'consultation'
+  };
   
-  fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
     .then(response => {
+      if (!response.ok) throw new Error('Failed to send');
+      return response.json();
+    })
+    .then(result => {
       btn.innerHTML = '✓ Request Received — We\'ll be in touch shortly!';
       setTimeout(() => {
         btn.style.background = '';
@@ -3151,12 +3162,30 @@ function submitSubscribe(e) {
   
   btn.innerHTML = 'Subscribing...';
   
-  if (SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') return;
+  const formData = new FormData(form);
+  const data = {
+    email: formData.get('email') || formData.get('Email'),
+    type: 'subscription'
+  };
   
-  fetch(SCRIPT_URL, { method: 'POST', body: new FormData(form) })
+  fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  })
     .then(response => {
+      if (!response.ok) throw new Error('Failed to subscribe');
+      return response.json();
+    })
+    .then(result => {
       btn.innerHTML = '✓ Subscribed';
       form.reset();
+      setTimeout(() => { btn.innerHTML = originalHtml; }, 3000);
+    })
+    .catch(error => {
+      btn.innerHTML = 'Error';
       setTimeout(() => { btn.innerHTML = originalHtml; }, 3000);
     });
 }
