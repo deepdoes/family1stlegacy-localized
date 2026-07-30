@@ -2636,18 +2636,7 @@ html { scroll-behavior: smooth; }
         <li><a href="opportunity.html">Opportunity</a></li>
         <li><a href="#reviews">Stories</a></li>
         <li><a href="#blog">Knowledgebase</a></li>
-        <li>
-          <a href="#" class="nav-lang no-pill" onclick="showLanguageModal(event)" title="Switch Language">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            <span class="lang-text-cycle">
-              <span class="lt-item">English</span>
-              <span class="lt-item">Español</span>
-              <span class="lt-item">Português</span>
-              <span class="lt-item">Kiswahili</span>
-              <span class="lt-item">Kinyarwanda</span>
-            </span>
-          </a>
-        </li>
+        
         <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Open menu">
@@ -4325,35 +4314,15 @@ function submitSubscribe(e) {
 
 
 </script>
-<!-- LANGUAGE SELECTOR MODAL -->
-<div id="language-modal" style="display:none; position:fixed; inset:0; background:rgba(244,242,246,0.85); z-index:99999; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); align-items:center; justify-content:center; flex-direction:column; text-align:center;">
-  <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" style="max-width:180px; margin-bottom:32px;">
-  <h2 style="color:var(--dark); font-family:var(--font-head); font-size:32px; margin-bottom:10px;">Select Your Language</h2>
-  <p style="color:var(--muted); font-family:var(--font-body); margin-bottom:40px;">Choose a language to view the Family First Legacy website.</p>
-  <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:400px; width:100%; padding:0 20px;">
-    <button onclick="setLanguage('en')" style="background:var(--green); color:#fff; border:none; padding:16px; border-radius:12px; font-weight:600; cursor:pointer; font-size:16px; transition:transform 0.2s;">English</button>
-    <button onclick="window.location.href='index_es.html'" style="background:#fff; color:var(--dark); border:none; padding:16px; border-radius:12px; font-weight:600; cursor:pointer; font-size:16px; transition:transform 0.2s;">Español</button>
-    <button onclick="window.location.href='index_pt.html'" style="background:#fff; color:var(--dark); border:none; padding:16px; border-radius:12px; font-weight:600; cursor:pointer; font-size:16px; transition:transform 0.2s;">Português</button>
-    <button onclick="window.location.href='index_sw.html'" style="background:#fff; color:var(--dark); border:none; padding:16px; border-radius:12px; font-weight:600; cursor:pointer; font-size:16px; transition:transform 0.2s;">Kiswahili</button>
-    <button onclick="window.location.href='index_rw.html'" style="background:#fff; color:var(--dark); border:none; padding:16px; border-radius:12px; font-weight:600; cursor:pointer; font-size:16px; transition:transform 0.2s;">Kinyarwanda</button>
-  </div>
-</div>
+
 
 <script type="text/javascript">
-function showLanguageModal(e) {
-  if(e) e.preventDefault();
-  document.getElementById('language-modal').style.display = 'flex';
-}
 
-function setLanguage(lang) {
-  localStorage.setItem('lang_selected', 'true');
-  document.getElementById('language-modal').style.display = 'none';
-}
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
-  if (!localStorage.getItem('lang_selected')) {
-    document.getElementById('language-modal').style.display = 'flex';
-  }
+  
 
   // Fluid Nav Pill Animation
   const links = document.querySelectorAll('.nav-links a:not(.nav-cta):not(.no-pill)');
