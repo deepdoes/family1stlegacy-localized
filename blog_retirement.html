@@ -3359,9 +3359,12 @@ document.addEventListener("DOMContentLoaded", function() {
     let activeEl = document.querySelector('.nav-links a.nav-active:not(.nav-cta)');
     if(activeEl) movePill(activeEl);
 
+    // Attach hover events to parent LI to support dropdown navigation without sliding back
     links.forEach(link => {
-      link.addEventListener('mouseenter', e => movePill(e.target));
-      link.addEventListener('mouseleave', () => {
+      const parentLi = link.closest('li');
+      const hoverTarget = parentLi || link;
+      hoverTarget.addEventListener('mouseenter', () => movePill(link));
+      hoverTarget.addEventListener('mouseleave', () => {
         movePill(document.querySelector('.nav-links a.nav-active:not(.nav-cta)'));
       });
     });
