@@ -15,7 +15,7 @@
   "logo": "https://family1stlegacy.com/images/FamilyFirstLogo.png",
   "image": "https://family1stlegacy.com/images/hero_life_insurance_diverse_1777335713599.png",
   "description": "Family First Legacy is an independent financial services agency providing life insurance, retirement planning, education planning, and estate legacy strategies nationwide.",
-  "telephone": "+1-214-555-0100",
+  "telephone": "+1-469-608-1595",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Dallas-Fort Worth Metro",
@@ -613,7 +613,7 @@ p { letter-spacing:.1px; }
 
 @media(max-width:768px) {
   .slide-content { padding:0 28px; padding-top:68px; }
-  .hero-stats-bar { left:28px; gap:28px; bottom:70px; }
+  .hero-stats-bar { display: none; }
   .slide-counter { display:none; }
   .slide-arrow { width:40px; height:40px; }
   .slide-arrow.prev { left:12px; }
@@ -3389,7 +3389,7 @@ html { scroll-behavior: smooth; }
         Right now, someone in your life may need to make an important financial decision — they just don’t know where to start yet. Could you become the person who shows up with guidance, education, and care?
       </p>
       <div style="display:flex; gap:16px; flex-wrap:wrap; margin-top:24px;" data-reveal data-delay="4">
-        <a href="business_strategies.html" class="sr-link">
+        <a href="opportunity.html" class="sr-link">
           Learn How It Works
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -3595,13 +3595,13 @@ html { scroll-behavior: smooth; }
             </div>
             <div class="ci-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
           </a>
-          <a href="tel:+12145550100" class="ci-row">
+          <a href="tel:+14696081595" class="ci-row">
             <div class="ci-icon">
               <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
             </div>
             <div class="ci-body">
               <div class="ci-label">Call or Text</div>
-              <div class="ci-val">(214) 555-0100</div>
+              <div class="ci-val">(469) 608-1595</div>
             </div>
             <div class="ci-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
           </a>
@@ -3806,7 +3806,7 @@ html { scroll-behavior: smooth; }
         <div>
           <div class="f-col-head">Get in Touch</div>
           <ul class="f-links">
-            <li><a href="tel:+12145550100">(214) 555-0100</a></li>
+            <li><a href="tel:+14696081595">(469) 608-1595</a></li>
             <li><a href="mailto:info@family1stlegacy.com">info@family1stlegacy.com</a></li>
             <li><a href="https://family1stlegacy.com">family1stlegacy.com</a></li>
             <li><a href="#contact">Book a Consultation</a></li>
@@ -4192,7 +4192,7 @@ function submitSubscribe(e) {
   const nextBtn = document.getElementById('tstNext');
   const pagerCurrent = document.querySelector('.tst-pager-current');
   const progressFill = document.getElementById('tstProgress');
-  if (!slides.length) return;
+  if (!slides.length || !document.getElementById('tstStage')) return;
 
   const total = slides.length;
   let current = 0;
