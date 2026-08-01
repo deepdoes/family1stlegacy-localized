@@ -26,7 +26,8 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Server configuration error. Missing API key." });
   }
 
-  const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || 'info@family1stlegacy.com';
+  const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || 'andresindayi@gmail.com';
+  const ccEmail = process.env.CONTACT_CC_EMAIL || 'dfwbranding@gmail.com';
 
   try {
     // Parse request body
@@ -76,6 +77,7 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           from: 'Family First Legacy <leads@family1stlegacy.com>',
           to: [receiverEmail],
+          cc: ccEmail ? [ccEmail] : undefined,
           subject: emailSubject,
           html: emailHtml,
           reply_to: email
@@ -151,6 +153,7 @@ export default async function handler(req, res) {
         body: JSON.stringify({
           from: 'Family First Legacy <leads@family1stlegacy.com>',
           to: [receiverEmail],
+          cc: ccEmail ? [ccEmail] : undefined,
           subject: emailSubject,
           html: emailHtml,
           reply_to: email
