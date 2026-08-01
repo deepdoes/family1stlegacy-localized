@@ -2433,19 +2433,126 @@ html { scroll-behavior: smooth; }
 
 /* mobile menu */
 .mobile-menu {
-  display:none; position:fixed; inset:0; z-index:600;
-  background:var(--white); flex-direction:column;
-  align-items:flex-start; justify-content:center;
-  padding:48px;
+  display:none; position:fixed; inset:0; z-index:900;
+  background: linear-gradient(135deg, rgba(30,15,50,0.98) 0%, rgba(10,16,12,0.99) 100%);
+  backdrop-filter: blur(15px);
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:flex-start;
+  padding: 80px 32px 40px 32px;
+  overflow-y: auto;
 }
 .mobile-menu.open { display:flex; }
-.mobile-menu nav { display:flex; flex-direction:column; gap:28px; }
-.mobile-menu a {
-  font-family:var(--font-head); font-size:36px; font-weight:800;
-  color:var(--dark); text-decoration:none; transition:color .2s;
+.mobile-menu nav { display:flex; flex-direction:column; gap:20px; }
+
+/* header inside menu */
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 20px;
 }
-.mobile-menu a:hover { color:var(--green); }
-.mobile-close { position:absolute; top:24px; right:28px; background:none; border:none; font-size:28px; cursor:pointer; color:var(--muted); }
+.mobile-menu-logo { height: 38px; }
+
+/* links */
+.mobile-menu a, .mobile-menu-summary {
+  font-family:var(--font-head); font-size:22px; font-weight:700;
+  color:#fff; text-decoration:none; transition:all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-menu a:hover, .mobile-menu-summary:hover { color:var(--amber); }
+
+/* details and summary styling */
+.mobile-menu-details {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu-summary {
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+.mobile-menu-summary::-webkit-details-marker {
+  display: none;
+}
+.summary-arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  color: rgba(255,255,255,0.5);
+}
+.mobile-menu-details[open] .summary-arrow {
+  transform: rotate(180deg);
+  color: var(--amber);
+}
+.mobile-menu-sublinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 20px;
+  margin-top: 12px;
+  border-left: 2px solid rgba(255,255,255,0.1);
+}
+.mobile-menu-sublinks a {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  padding: 4px 0;
+}
+.mobile-menu-sublinks a:hover {
+  color: var(--amber);
+  padding-left: 4px;
+}
+
+/* close button */
+.mobile-close {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+.mobile-close:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* contact section at bottom */
+.mobile-menu-footer {
+  margin-top: auto;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mm-contact-link {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.6) !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+}
+.mm-contact-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--amber);
+  fill: none;
+  stroke-width: 2;
+}
 
 /* Navigation Dropdown styling */
 .nav-dropdown-wrap {
@@ -2834,26 +2941,42 @@ footer, footer [data-reveal], footer [data-stagger] > * {
 </header>
 
 <div class="mobile-menu">
-  <button class="mobile-close" onclick="this.parentElement.classList.remove('open')">✕</button>
+  <div class="mobile-menu-header">
+    <img class="mobile-menu-logo" src="images/FamilyFirstLogo.png" alt="Family First Legacy">
+    <button class="mobile-close" onclick="this.closest('.mobile-menu').classList.remove('open')">✕</button>
+  </div>
   <nav>
-    <a href="index.html#about"       onclick="this.closest('.mobile-menu').classList.remove('open')">About</a>
-        <div class="mobile-dropdown-parent">
-      <a href="index.html#services" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-weight: 700;">Services</a>
-      <div style="padding-left: 20px; display: flex; flex-direction: column; gap: 10px; margin: 5px 0 15px 0;">
-        <a href="family_protection.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Life Insurance</a>
-        <a href="retirement_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Retirement Planning</a>
-        <a href="education_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Education Planning</a>
-        <a href="estate_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Estate Preservation</a>
-        <a href="financial_strategy.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Financial Strategy</a>
-        <a href="business_strategies.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="font-size: 16px; opacity: 0.8; padding: 5px 0;">Business Strategies</a>
+    <a href="index.html#about" onclick="this.closest('.mobile-menu').classList.remove('open')">About</a>
+    
+    <details class="mobile-menu-details">
+      <summary class="mobile-menu-summary">Services <span class="summary-arrow">▼</span></summary>
+      <div class="mobile-menu-sublinks">
+        <a href="family_protection.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Life Insurance</a>
+        <a href="retirement_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Retirement Planning</a>
+        <a href="education_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Education Planning</a>
+        <a href="estate_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Estate Preservation</a>
+        <a href="financial_strategy.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Financial Strategy</a>
+        <a href="business_strategies.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Business Strategies</a>
       </div>
-    </div>
-    <a href="index.html#process"     onclick="this.closest('.mobile-menu').classList.remove('open')">How It Works</a>
+    </details>
+
+    <a href="index.html#process" onclick="this.closest('.mobile-menu').classList.remove('open')">How It Works</a>
     <a href="index.html#opportunity" onclick="this.closest('.mobile-menu').classList.remove('open')">Opportunity</a>
-    <a href="index.html#reviews"     onclick="this.closest('.mobile-menu').classList.remove('open')">Stories</a>
-    <a href="index.html#blog"        onclick="this.closest('.mobile-menu').classList.remove('open')">Knowledgebase</a>
-    <a href="index.html#contact"     onclick="this.closest('.mobile-menu').classList.remove('open')" style="color:var(--green)">Get Started →</a>
+    <a href="index.html#reviews" onclick="this.closest('.mobile-menu').classList.remove('open')">Stories</a>
+    <a href="index.html#blog" onclick="this.closest('.mobile-menu').classList.remove('open')">Knowledgebase</a>
+    <a href="index.html#contact" onclick="this.closest('.mobile-menu').classList.remove('open')" style="color:var(--green)">Get Started →</a>
   </nav>
+  
+  <div class="mobile-menu-footer">
+    <a href="tel:+14696081595" class="mm-contact-link">
+      <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      (469) 608-1595
+    </a>
+    <a href="mailto:info@family1stlegacy.com" class="mm-contact-link">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zM22 6l-10 7L2 6"/></svg>
+      info@family1stlegacy.com
+    </a>
+  </div>
 </div>
 
 
