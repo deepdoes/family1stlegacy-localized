@@ -1,6 +1,6 @@
 // api/contact.js
 // Vercel Serverless Function to securely handle contact submissions & subscriptions via Resend
-// Trigger Vercel rebuild (Updated receiver to info@family1stlegacy.com)
+// Trigger Vercel rebuild (Updated receiver to info@family1stlegacy.com - Final Production)
 
 export default async function handler(req, res) {
   // CORS Headers
