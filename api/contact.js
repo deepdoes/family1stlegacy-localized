@@ -48,6 +48,79 @@ export default async function handler(req, res) {
         return res.status(400).json({ error: "Missing email address for newsletter subscription." });
       }
 
+      // 1. Insert/Upsert into Supabase subscribers table
+      const supabaseUrl = process.env.SUPABASE_URL;
+      const supabaseKey = process.env.SUPABASE_ANON_KEY;
+      
+      if (supabaseUrl && supabaseKey) {
+        try {
+          const dbResponse = await fetch(`${supabaseUrl}/rest/v1/subscribers?on_conflict=email`, {
+            method: 'POST',
+            headers: {
+              'apikey': supabaseKey,
+              'Authorization': `Bearer ${supabaseKey}`,
+              'Content-Type': 'application/json',
+              'Prefer': 'resolution=merge-duplicates,return=representation'
+            },
+            body: JSON.stringify({
+              email: email,
+              status: 'subscribed',
+              unsubscribed_at: null
+            })
+          });
+          
+          if (!dbResponse.ok) {
+            console.error("Supabase Database error during subscription insert:", await dbResponse.text());
+          }
+        } catch (dbErr) {
+          console.error("Database connection error during subscription:", dbErr);
+        }
+      }
+
+      // 2. Send Subscriber confirmation email
+      const confirmationHtml = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 30px; border: 1px solid #e2e8f0; border-radius: 16px; background-color: #ffffff; color: #1e293b;">
+          <div style="text-align: center; margin-bottom: 24px;">
+            <img src="https://family1stlegacy.com/images/FamilyFirstLogo.png" alt="Family First Legacy" style="height: 50px;">
+          </div>
+          <h2 style="color: #4A2D7A; text-align: center; margin-top: 0; font-size: 24px;">Subscription Confirmed!</h2>
+          <p style="font-size: 16px; line-height: 1.6;">Thank you for subscribing to the Family First Legacy newsletter. We are thrilled to have you join our community.</p>
+          <p style="font-size: 16px; line-height: 1.6;">You'll receive periodic updates, financial insights, tips on legacy planning, and strategies to help protect what matters most to you and your family.</p>
+          
+          <div style="text-align: center; margin: 30px 0;">
+            <a href="https://family1stlegacy.com" style="display: inline-block; background: linear-gradient(135deg, #4A2D7A 0%, #6b46a1 100%); color: #ffffff; text-decoration: none; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 16px;">Visit Our Website</a>
+          </div>
+
+          <p style="font-size: 14px; line-height: 1.6; color: #64748b;">If you have any questions or want to learn more about our services (Life Insurance, Retirement, Education, and Estate Planning), feel free to reply to this email directly.</p>
+          
+          <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0;">
+          
+          <p style="font-size: 12px; color: #94a3b8; text-align: center; line-height: 1.5; margin: 0;">
+            You are receiving this email because you subscribed to the newsletter at family1stlegacy.com.<br>
+            If you did not sign up or wish to unsubscribe, you can <a href="https://family1stlegacy.com/api/unsubscribe?email=${encodeURIComponent(email)}" style="color: #4A2D7A; text-decoration: underline;">unsubscribe here</a> or reply to this email with "unsubscribe".
+          </p>
+        </div>
+      `;
+
+      try {
+        await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${apiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'Family First Legacy <leads@family1stlegacy.com>',
+            to: [email],
+            subject: 'Subscription Confirmed - Family First Legacy',
+            html: confirmationHtml
+          })
+        });
+      } catch (confirmErr) {
+        console.error("Error sending subscriber confirmation email:", confirmErr);
+      }
+
+      // 3. Send Alert notification to the admins
       const emailSubject = `New Newsletter Subscription: ${email}`;
       const emailHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background-color: #fcfcfd;">
@@ -67,7 +140,6 @@ export default async function handler(req, res) {
         </div>
       `;
 
-      // Send to Resend
       const resendResponse = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
@@ -87,7 +159,7 @@ export default async function handler(req, res) {
       const resendResult = await resendResponse.json();
 
       if (!resendResponse.ok) {
-        console.error("Resend API Error (Subscription):", resendResult);
+        console.error("Resend API Error (Subscription Alert):", resendResult);
         return res.status(resendResponse.status).json({ error: resendResult.message || "Failed to send email." });
       }
 
