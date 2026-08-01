@@ -74,7 +74,7 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: 'Family First Legacy <onboarding@resend.dev>',
+          from: 'Family First Legacy <leads@family1stlegacy.com>',
           to: [receiverEmail],
           subject: emailSubject,
           html: emailHtml,
@@ -149,7 +149,7 @@ export default async function handler(req, res) {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          from: 'Family First Legacy <onboarding@resend.dev>',
+          from: 'Family First Legacy <leads@family1stlegacy.com>',
           to: [receiverEmail],
           subject: emailSubject,
           html: emailHtml,
