@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 fix_nav_and_mobile_ui.py
-1. Fixes the Language Switcher Dropdown CSS (solving white-on-white invisible text bug).
+1. Fixes the Language Switcher Button & Dropdown UI (horizontal inline flex button, pill badges for language codes, active checkmarks).
 2. Fixes the Nav Pill sliding animation bug so the pill locks onto 'Services' (and other links) 
    without sliding back to 'About' when hovering over dropdowns or language switchers.
 3. Injects a comprehensive Mobile UI/UX CSS overhaul across ALL pages (English & Spanish), 
@@ -16,17 +16,79 @@ BASE = "/Users/deepankarakasajoo/Downloads/Trace's Projects/Family First Legacy/
 
 # --- Complete Global Style Overhaul (Nav Pill, Language Dropdown, & Mobile UI/UX) ---
 GLOBAL_OVERHAUL_CSS = """
-/* ─── LANGUAGE SWITCHER & NAV PILL FIXES ─── */
+/* ─── LANGUAGE SWITCHER PREMIUM UI FIXES ─── */
+#nav .lang-switcher {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+#nav .lang-btn {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  height: 36px !important;
+  padding: 0 14px !important;
+  border-radius: 20px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  font-family: var(--font-body) !important;
+  transition: all 0.2s ease !important;
+}
+#nav:not(.stuck) .lang-btn {
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  color: #FFFFFF !important;
+}
+#nav.stuck .lang-btn {
+  background: rgba(74,45,122,0.08) !important;
+  border: 1px solid rgba(74,45,122,0.2) !important;
+  color: #0A0A0F !important;
+}
+#nav .lang-btn svg { width: 14px !important; height: 14px !important; flex-shrink: 0 !important; }
+#nav .lang-btn .lang-chevron { width: 10px !important; height: 10px !important; transition: transform 0.2s !important; }
+#nav .lang-switcher.open .lang-chevron { transform: rotate(180deg) !important; }
+
 #nav .lang-dropdown {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
   background: #FFFFFF !important;
   border: 1px solid #E8E4EF !important;
-  box-shadow: 0 12px 32px rgba(74,45,122,0.18) !important;
+  border-radius: 16px !important;
+  padding: 8px !important;
+  min-width: 195px !important;
+  box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
+  z-index: 10000 !important;
 }
 #nav .lang-dropdown a {
-  color: #222222 !important;
-  text-decoration: none !important;
   display: flex !important;
   align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #222222 !important;
+  text-decoration: none !important;
+  transition: background 0.15s ease, color 0.15s ease !important;
+  white-space: nowrap !important;
+}
+#nav .lang-dropdown a span:first-child {
+  background: rgba(74,45,122,0.08) !important;
+  color: #4A2D7A !important;
+  padding: 2px 7px !important;
+  border-radius: 6px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  min-width: 28px !important;
+  text-align: center !important;
 }
 #nav .lang-dropdown a:hover {
   background: #EDE6F5 !important;
@@ -35,16 +97,12 @@ GLOBAL_OVERHAUL_CSS = """
 #nav .lang-dropdown a.active {
   font-weight: 700 !important;
   color: #4A2D7A !important;
+  background: rgba(74,45,122,0.05) !important;
 }
-#nav:not(.stuck) .lang-btn {
-  color: #FFFFFF !important;
-  border-color: rgba(255,255,255,0.3) !important;
-  background: rgba(255,255,255,0.12) !important;
-}
-#nav.stuck .lang-btn {
-  color: #0A0A0F !important;
-  border-color: rgba(74,45,122,0.2) !important;
-  background: rgba(74,45,122,0.08) !important;
+#nav .lang-dropdown a .lang-check {
+  margin-left: auto !important;
+  font-size: 13px !important;
+  color: #4A2D7A !important;
 }
 
 /* ─── COMPREHENSIVE MOBILE RESPONSIVE OVERHAUL (max-width: 768px) ─── */
@@ -181,8 +239,9 @@ def update_file(filepath):
                 content = re.sub(pattern2, FIXED_NAV_PILL_JS.strip(), content, flags=re.DOTALL)
 
     # 2. Inject or Update Overhaul CSS
-    if 'LANGUAGE SWITCHER & NAV PILL FIXES' in content:
-        # Replace existing block
+    if 'LANGUAGE SWITCHER PREMIUM UI FIXES' in content:
+        content = re.sub(r'/\* ─── LANGUAGE SWITCHER PREMIUM UI FIXES ─── \*/.*?</style>', GLOBAL_OVERHAUL_CSS.strip() + '\n</style>', content, flags=re.DOTALL)
+    elif 'LANGUAGE SWITCHER & NAV PILL FIXES' in content:
         content = re.sub(r'/\* ─── LANGUAGE SWITCHER & NAV PILL FIXES ─── \*/.*?</style>', GLOBAL_OVERHAUL_CSS.strip() + '\n</style>', content, flags=re.DOTALL)
     elif 'COMPREHENSIVE MOBILE RESPONSIVE OVERHAUL' in content:
         content = re.sub(r'/\* ─── COMPREHENSIVE MOBILE RESPONSIVE OVERHAUL.*? \*/.*?</style>', GLOBAL_OVERHAUL_CSS.strip() + '\n</style>', content, flags=re.DOTALL)
