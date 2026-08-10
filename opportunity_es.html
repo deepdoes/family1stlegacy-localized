@@ -148,6 +148,117 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--dark);
   color: #fff !important; 
 }
 
+
+/* ─── LANGUAGE SWITCHER & NAV PILL FIXES ─── */
+#nav .lang-dropdown {
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4EF !important;
+  box-shadow: 0 12px 32px rgba(74,45,122,0.18) !important;
+}
+#nav .lang-dropdown a {
+  color: #222222 !important;
+  text-decoration: none !important;
+  display: flex !important;
+  align-items: center !important;
+}
+#nav .lang-dropdown a:hover {
+  background: #EDE6F5 !important;
+  color: #4A2D7A !important;
+}
+#nav .lang-dropdown a.active {
+  font-weight: 700 !important;
+  color: #4A2D7A !important;
+}
+#nav:not(.stuck) .lang-btn {
+  color: #FFFFFF !important;
+  border-color: rgba(255,255,255,0.3) !important;
+  background: rgba(255,255,255,0.12) !important;
+}
+#nav.stuck .lang-btn {
+  color: #0A0A0F !important;
+  border-color: rgba(74,45,122,0.2) !important;
+  background: rgba(74,45,122,0.08) !important;
+}
+
+/* ─── COMPREHENSIVE MOBILE RESPONSIVE OVERHAUL (max-width: 768px) ─── */
+@media (max-width: 768px) {
+  /* Layout & Container Padding */
+  body { overflow-x: hidden !important; }
+  .nav-bar { padding: 0 16px !important; height: 70px !important; }
+  .page-hero { padding: 120px 0 60px !important; }
+  .hero-content { padding: 0 20px !important; text-align: left !important; }
+  
+  /* Typography Scaling for Mobile */
+  .t-h1 { font-size: clamp(28px, 7vw, 38px) !important; letter-spacing: -1px !important; line-height: 1.15 !important; }
+  .t-h2 { font-size: clamp(22px, 6vw, 30px) !important; letter-spacing: -0.5px !important; line-height: 1.2 !important; }
+  .t-h3 { font-size: clamp(18px, 5vw, 22px) !important; }
+  .t-lead, .slide-sub, p.t-body { font-size: 15px !important; line-height: 1.6 !important; }
+  
+  /* Stack 2-Column Grids & Card Grids Vertically */
+  div[style*="grid-template-columns"], 
+  div[style*="minmax"],
+  div[style*="repeat("],
+  .tiles-grid, 
+  #rq-preview-grid,
+  .hero-content > div[style*="display:flex"],
+  div[style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  /* Reset Card Grid Column Spans on Mobile */
+  .expect-card,
+  div[style*="grid-column:span 2"],
+  div[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+    grid-column: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 24px 20px !important;
+  }
+  
+  /* Reset Desktop Margins & Borders */
+  .tiles-grid { margin-top: 20px !important; padding: 0 20px !important; }
+  .tile-card { padding: 24px !important; width: 100% !important; box-sizing: border-box !important; }
+  
+  /* Fix Featured Cards & Q&A Interactive Component */
+  #rq-featured-box { padding: 24px !important; border-radius: 20px !important; }
+  #rq-featured-box > div { grid-template-columns: 1fr !important; gap: 24px !important; }
+  #rq-card-display { padding: 24px !important; min-height: auto !important; }
+  #rq-preview-grid { grid-template-columns: 1fr !important; }
+  
+  /* Fix Vertical Lines & Dividers Overlapping Text */
+  div[style*="border-left"], 
+  div[style*="border-right"] {
+    border-left: none !important;
+    border-right: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Section Spacing */
+  section { padding: 60px 0 !important; }
+  div[style*="padding:0 32px"], 
+  div[style*="padding: 0 32px"],
+  div[style*="padding:0 48px"] {
+    padding: 0 20px !important;
+  }
+
+  /* Buttons on Mobile */
+  .btn, .btn-cta, a[class*="btn"] {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Mobile Header & Logo Fix */
+  .nav-logo img { height: 45px !important; width: auto !important; }
+  .mobile-menu-header { padding: 20px !important; }
+  .mobile-menu-logo { height: 40px !important; }
+}
 </style>
 </head>
 <body>
