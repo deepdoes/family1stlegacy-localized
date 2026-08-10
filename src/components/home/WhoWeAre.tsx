@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, BookOpen, UserCheck, Heart, Award } from "lucide-react";
+import Image from "next/image";
 
 interface WhoWeAreProps {
   lang: "en" | "es";
@@ -11,135 +11,107 @@ interface WhoWeAreProps {
 export default function WhoWeAre({ lang }: WhoWeAreProps) {
   const isEs = lang === "es";
 
-  const tilesEn = [
-    {
-      icon: BookOpen,
-      title: "EDUCATION FIRST",
-      desc: "Clear explanations before decisions",
-    },
-    {
-      icon: UserCheck,
-      title: "1-ON-1 GUIDANCE",
-      desc: "Personal support that starts with listening",
-    },
-    {
-      icon: Heart,
-      title: "FAMILY FOCUSED",
-      desc: "Planning around the people you love",
-    },
-    {
-      icon: Award,
-      title: "LICENSED GUIDANCE",
-      desc: "Professionals who explain before recommending",
-    },
-  ];
-
-  const tilesEs = [
-    {
-      icon: BookOpen,
-      title: "EDUCACIÓN PRIMERO",
-      desc: "Explicaciones claras antes de tomar decisiones",
-    },
-    {
-      icon: UserCheck,
-      title: "ORIENTACIÓN 1 A 1",
-      desc: "Apoyo personal que comienza escuchándote",
-    },
-    {
-      icon: Heart,
-      title: "ENFOQUE FAMILIAR",
-      desc: "Planificación centrada en las personas que amas",
-    },
-    {
-      icon: Award,
-      title: "GUÍA CON LICENCIA",
-      desc: "Profesionales que explican antes de recomendar",
-    },
-  ];
-
-  const tiles = isEs ? tilesEs : tilesEn;
-
   return (
-    <section id="about" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-left">
-          <span className="text-xs font-bold tracking-[3px] text-purple-900 uppercase block mb-3">
-            {isEs ? "QUIÉNES SOMOS" : "WHO WE ARE"}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8">
-            {isEs ? "Ponemos a la familia primero. Siempre." : "We Put Family First. Always."}
-          </h2>
+    <section id="about" className="py-28 bg-white overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 md:px-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          
+          {/* Photo Column */}
+          <div className="relative">
+            <div className="relative rounded-3xl overflow-visible">
+              <Image
+                className="w-full aspect-[4/5] object-cover rounded-3xl shadow-2xl block"
+                src="/images/about.jpg"
+                alt="Professional financial advisor"
+                width={600}
+                height={750}
+                priority
+              />
 
-          <p className="text-lg md:text-xl font-medium text-gray-800 leading-relaxed mb-6">
-            {isEs
-              ? "Toda familia merece la oportunidad de proteger lo que ha construido, prepararse para el mañana y perseguir el futuro que sueña."
-              : "Every family deserves the opportunity to protect what they’ve built, prepare for tomorrow, and pursue the future they dream of."}
-          </p>
-
-          <p className="text-base text-gray-600 leading-relaxed mb-6 font-light">
-            {isEs
-              ? "Creemos que toda familia, sin importar su origen o nivel de ingresos, merece acceso a orientación honesta y bien informada que le ayude a tomar decisiones financieras con conocimiento."
-              : "We believe every family — regardless of background or income — deserves access to honest, knowledgeable guidance to help them make informed financial decisions."}
-          </p>
-
-          <p className="text-base text-gray-600 leading-relaxed mb-6 font-light">
-            {isEs
-              ? "Family First Legacy es una agencia independiente de servicios financieros con raíces en la comunidad de Dallas-Fort Worth y que sirve a familias en todo Estados Unidos. Ayudamos a individuos, familias y dueños de negocios a explorar opciones de seguros y servicios financieros a través de una red de compañías bien establecidas."
-              : "Family First Legacy is an independent financial services agency rooted in the Dallas–Fort Worth community and serving families across the United States. We help individuals, families, and business owners explore insurance and financial options from a network of well-established insurance and financial services companies."}
-          </p>
-
-          <p className="text-base text-gray-600 leading-relaxed mb-6 font-light">
-            {isEs
-              ? "Nuestros profesionales con licencia se toman el tiempo para escucharte, entender tus metas y preocupaciones, y conocer a las personas que más importan en tu vida antes de ayudarte a explorar opciones que puedan alinearse con tus necesidades."
-              : "Our licensed professionals take the time to listen, understand your goals and concerns, and learn about the people who matter most to you before helping you explore options that may align with your needs."}
-          </p>
-
-          <p className="text-base text-gray-600 leading-relaxed mb-8 font-light">
-            {isEs
-              ? "Ya sea que estés protegiendo a tu familia, preparándote para la jubilación, planificando el futuro de tus hijos o construyendo un legado, nuestra meta es brindarte orientación honesta, explicaciones claras y la información que necesitas para tomar decisiones con confianza, sin presión y a tu propio ritmo."
-              : "Whether you’re protecting your family, preparing for retirement, planning for your children’s future, or building a legacy, our goal is to provide honest guidance, clear explanations, and the information you need to make confident decisions — without pressure and at your own pace."}
-          </p>
-
-          {/* 4 PDF Feature Tiles Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-10">
-            {tiles.map((t, idx) => {
-              const Icon = t.icon;
-              return (
-                <div
-                  key={idx}
-                  className="bg-purple-50/70 border border-purple-100/80 rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-purple-300 transition-all"
-                >
-                  <div className="w-10 h-10 bg-purple-900/10 rounded-xl flex items-center justify-center text-purple-900 mb-3">
-                    <Icon className="w-5 h-5" />
-                  </div>
-                  <h4 className="text-xs font-extrabold text-purple-900 tracking-wider uppercase mb-1">
-                    {t.title}
-                  </h4>
-                  <p className="text-xs text-gray-600 font-light">{t.desc}</p>
+              {/* Floating Badge Tag (Bottom Right) */}
+              <div className="absolute -bottom-6 -right-4 sm:bottom-10 sm:-right-6 bg-purple-900 text-white p-5 sm:p-6 rounded-2xl shadow-2xl z-20">
+                <div className="font-extrabold text-3xl sm:text-4xl leading-none">2,000+</div>
+                <div className="text-[11px] font-semibold tracking-wider uppercase mt-1 opacity-90">
+                  {isEs ? "Familias atendidas" : "Families Served"}
                 </div>
-              );
-            })}
+              </div>
+
+              {/* Floating Badge (Top Right) */}
+              <div className="absolute top-6 -right-2 sm:-right-4 bg-white text-gray-900 px-4 py-3 rounded-xl shadow-xl flex items-center gap-3 z-20 border border-gray-100">
+                <span className="w-2.5 h-2.5 rounded-full bg-purple-600 animate-pulse" />
+                <span className="text-xs font-bold whitespace-nowrap">
+                  {isEs
+                    ? "Sirviendo a familias en DFW y a nivel nacional"
+                    : "Serving families across DFW & Nationwide"}
+                </span>
+              </div>
+            </div>
+
+            {/* Quote pull box under photo */}
+            <div className="mt-8 p-8 bg-purple-50/80 border-l-4 border-purple-800 rounded-r-2xl">
+              <p className="font-semibold text-lg sm:text-xl text-purple-950 italic leading-snug">
+                {isEs
+                  ? "“Hacemos más que ofrecer seguros: construimos relaciones, educamos a las familias y les ayudamos a crear planes centrados en proteger lo que más importa.”"
+                  : "“We do more than offer insurance — we build relationships, educate families, and help them create plans focused on protecting what matters most.”"}
+              </p>
+              <cite className="block mt-3 text-xs font-bold tracking-widest uppercase text-purple-800 not-italic opacity-80">
+                — Family First Legacy Team
+              </cite>
+            </div>
           </div>
 
-          {/* Quote Box */}
-          <blockquote className="border-l-4 border-purple-900 pl-6 py-2 italic text-purple-950 font-serif text-lg leading-relaxed mb-10 bg-purple-50/50 rounded-r-2xl">
-            {isEs
-              ? "“Hacemos más que ofrecer seguros: construimos relaciones, educamos a las familias y les ayudamos a crear planes enfocados en proteger lo que más importa.”"
-              : "“We do more than offer insurance — we build relationships, educate families, and help them create plans focused on protecting what matters most.”"}
-            <footer className="not-italic text-xs font-sans font-bold text-gray-500 mt-2 uppercase tracking-widest">
-              {isEs ? "— Equipo de Family First Legacy" : "— Family First Legacy Team"}
-            </footer>
-          </blockquote>
+          {/* Content Column */}
+          <div className="lg:pl-8 py-4">
+            <p className="text-xs font-bold tracking-[3.2px] uppercase text-purple-700 mb-4 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-purple-600" />
+              {isEs ? "Quiénes somos" : "Who We Are"}
+            </p>
 
-          <div>
+            <h2 className="font-extrabold text-4xl sm:text-5xl lg:text-6xl text-gray-950 leading-tight mb-7 tracking-tight">
+              {isEs ? (
+                <>Ponemos a la familia<br />primero. Siempre.</>
+              ) : (
+                <>We Put Family<br />First. Always.</>
+              )}
+            </h2>
+
+            <div className="space-y-5 text-gray-600 text-base sm:text-lg font-light leading-relaxed mb-8">
+              <p>
+                {isEs
+                  ? "Cada familia merece la oportunidad de proteger lo que ha construido, prepararse para el mañana y perseguir el futuro con el que sueña. Creemos que cada familia, independientemente de sus antecedentes o ingresos, merece acceso a orientación honesta y experta para ayudarla a tomar decisiones financieras informadas."
+                  : "Every family deserves the opportunity to protect what they’ve built, prepare for tomorrow, and pursue the future they dream of. We believe every family — regardless of background or income — deserves access to honest, knowledgeable guidance to help them make informed financial decisions."}
+              </p>
+
+              <p>
+                {isEs
+                  ? "Family First Legacy es una agencia independiente de servicios financieros arraigada en la comunidad de Dallas-Fort Worth que presta servicios a familias en todo Estados Unidos. Ayudamos a personas, familias y dueños de negocios a explorar opciones financieras y de seguros de una red de compañías bien establecidas."
+                  : "Family First Legacy is an independent financial services agency rooted in the Dallas–Fort Worth community and serving families across the United States. We help individuals, families, and business owners explore insurance and financial options from a network of well-established insurance and financial services companies."}
+              </p>
+
+              <p>
+                {isEs
+                  ? "Nuestros profesionales con licencia se toman el tiempo para escuchar, comprender sus metas y preocupaciones, y conocer a las personas que más le importan antes de ayudarle a explorar opciones que puedan alinearse con sus necesidades."
+                  : "Our licensed professionals take the time to listen, understand your goals and concerns, and learn about the people who matter most to you before helping you explore options that may align with your needs."}
+              </p>
+
+              <p>
+                {isEs
+                  ? "Ya sea que esté protegiendo a su familia, preparándose para la jubilación, planificando el futuro de sus hijos o construyendo un legado, nuestra meta es brindarle orientación honesta, explicaciones claras y la información que necesita para tomar decisiones con confianza, sin presión y a su propio ritmo."
+                  : "Whether you’re protecting your family, preparing for retirement, planning for your children’s future, or building a legacy, our goal is to provide honest guidance, clear explanations, and the information you need to make confident decisions — without pressure and at your own pace."}
+              </p>
+            </div>
+
             <Link
               href={isEs ? "/es#contact" : "/#contact"}
-              className="bg-purple-900 hover:bg-purple-800 text-white font-bold px-8 py-4 rounded-full text-sm inline-flex items-center gap-2 transition-all shadow-md"
+              className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-purple-900 text-white font-semibold text-sm shadow-xl hover:bg-purple-800 transition-all hover:-translate-y-0.5"
             >
-              {isEs ? "Programa una revisión gratuita" : "Schedule a Free Review"}
-              <ArrowRight className="w-4 h-4" />
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+              {isEs ? "Programe una revisión gratuita" : "Schedule a Free Review"}
             </Link>
           </div>
+
         </div>
       </div>
     </section>

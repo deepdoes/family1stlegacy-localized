@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { ArrowRight, Clock } from "lucide-react";
 
 interface FourStepsProps {
   lang: "en" | "es";
@@ -11,110 +9,120 @@ interface FourStepsProps {
 export default function FourSteps({ lang }: FourStepsProps) {
   const isEs = lang === "es";
 
-  const stepsEn = [
-    {
-      num: "STEP ONE",
-      title: "Discovery Call",
-      desc: "A no-obligation conversation to understand your family, your goals, and where you stand financially — at no cost.",
-      time: "30 minutes",
-    },
-    {
-      num: "STEP TWO",
-      title: "Understand Your Needs",
-      desc: "We use a Financial Needs Analysis to review your current picture and help identify where protection, savings, or retirement options may fit your needs.",
-      time: "45–60 minutes",
-    },
-    {
-      num: "STEP THREE",
-      title: "Your Personalized Options",
-      desc: "We present clear options from well-established insurance and financial services companies — explained in simple language, with no pressure.",
-      time: "1 week follow-up",
-    },
-    {
-      num: "ONGOING",
-      title: "Ongoing Guidance",
-      desc: "Life changes — and your plan may need to change with it. We stay available to review your plan, answer questions, and help you adjust as your family grows.",
-      time: "Support over time",
-    },
-  ];
-
-  const stepsEs = [
-    {
-      num: "PASO UNO",
-      title: "Llamada de descubrimiento",
-      desc: "Una conversación sin compromiso para entender a tu familia, tus metas y tu situación financiera actual, sin costo.",
-      time: "30 minutos",
-    },
-    {
-      num: "PASO DOS",
-      title: "Entender tus necesidades",
-      desc: "Utilizamos un Análisis de Necesidades Financieras para revisar tu panorama actual e identificar dónde pueden ajustarse opciones de protección o jubilación.",
-      time: "45–60 minutos",
-    },
-    {
-      num: "PASO TRES",
-      title: "Tus opciones personalizadas",
-      desc: "Presentamos opciones claras de compañías de seguros y servicios financieros bien establecidas, explicadas en lenguaje sencillo y sin presión.",
-      time: "Seguimiento de 1 semana",
-    },
-    {
-      num: "CONTINUO",
-      title: "Orientación continua",
-      desc: "La vida cambia y tu plan puede necesitar cambiar con ella. Nos mantenemos disponibles para revisar tu plan y ayudarte a hacer ajustes a medida que tu familia crece.",
-      time: "Apoyo continuo",
-    },
-  ];
-
-  const steps = isEs ? stepsEs : stepsEn;
-
   return (
-    <section id="process" className="py-24 bg-white border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs font-bold tracking-[3px] text-purple-900 uppercase block mb-3">
-            {isEs ? "NUESTRO PROCESO" : "OUR PROCESS"}
-          </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-            {isEs ? "4 pasos hacia la claridad financiera" : "Four Steps to Financial Clarity"}
-          </h2>
-          <p className="text-base text-gray-600 font-light leading-relaxed">
-            {isEs
-              ? "Hacemos que las conversaciones financieras sean sencillas, honestas y personales."
-              : "We make financial conversations simple, honest, and personal."}
+    <section id="process">
+      <div className="container">
+        <div className="process-header">
+          <p className="t-label" style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px" }}>
+            <span className="green-dot"></span>
+            {isEs ? "Cómo funciona" : "How It Works"}
           </p>
+          <h2 className="t-h1" style={{ marginTop: "16px" }}>
+            {isEs ? (
+              <>Cuatro pasos para la<br />claridad financiera</>
+            ) : (
+              <>Four Steps to<br />Financial Clarity</>
+            )}
+          </h2>
+          <p>{isEs ? "Hacemos que las conversaciones financieras sean sencillas, honestas y personales." : "We make financial conversations simple, honest, and personal."}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, idx) => (
-            <div
-              key={idx}
-              className="bg-purple-50/50 border border-purple-100 rounded-3xl p-8 flex flex-col justify-between hover:shadow-lg transition-all duration-300 relative"
-            >
-              <div>
-                <div className="flex justify-between items-center mb-4">
-                  <span className="text-xs font-bold tracking-wider text-purple-900 uppercase">
-                    {step.num}
-                  </span>
-                  <span className="inline-flex items-center gap-1 text-[11px] bg-purple-900/10 text-purple-900 px-2.5 py-1 rounded-full font-semibold">
-                    <Clock className="w-3 h-3" />
-                    {step.time}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed font-light">{step.desc}</p>
+        <div className="process-steps">
+          {/* Step 1 */}
+          <div className="ps">
+            <div className="ps-photo-wrap">
+              <div
+                className="ps-photo"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80')" }}
+              ></div>
+            </div>
+            <div className="ps-num">01</div>
+            <div className="ps-content">
+              <div className="ps-step-label">{isEs ? "Paso uno" : "Step One"}</div>
+              <div className="ps-title">{isEs ? "Llamada de descubrimiento" : "Discovery Call"}</div>
+              <div className="ps-body">
+                {isEs
+                  ? "Una conversación sin compromiso para comprender a su familia, sus metas y su situación financiera actual, sin costo alguno."
+                  : "A no-obligation conversation to understand your family, your goals, and where you stand financially — at no cost."}
+              </div>
+              <div className="ps-duration">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                <span>30 minutes</span>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
 
-        <div className="text-center mt-12">
-          <Link
-            href={isEs ? "/es#contact" : "/#contact"}
-            className="bg-purple-900 hover:bg-purple-800 text-white font-bold px-8 py-4 rounded-full text-sm inline-flex items-center gap-2 transition-all shadow-md"
-          >
-            {isEs ? "Comienza con el Paso Uno hoy" : "Start Step One Today"}
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          {/* Step 2 */}
+          <div className="ps">
+            <div className="ps-photo-wrap">
+              <div
+                className="ps-photo"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80')" }}
+              ></div>
+            </div>
+            <div className="ps-num">02</div>
+            <div className="ps-content">
+              <div className="ps-step-label">{isEs ? "Paso dos" : "Step Two"}</div>
+              <div className="ps-title">{isEs ? "Entienda sus necesidades" : "Understand Your Needs"}</div>
+              <div className="ps-body">
+                {isEs
+                  ? "Utilizamos un análisis de necesidades financieras para revisar su panorama actual y ayudar a identificar dónde pueden encajar las opciones de protección o ahorro."
+                  : "We use a Financial Needs Analysis to review your current picture and help identify where protection, savings, or retirement options may fit your needs."}
+              </div>
+              <div className="ps-duration">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                <span>45–60 minutes</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="ps">
+            <div className="ps-photo-wrap">
+              <div
+                className="ps-photo"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80')" }}
+              ></div>
+            </div>
+            <div className="ps-num">03</div>
+            <div className="ps-content">
+              <div className="ps-step-label">{isEs ? "Paso tres" : "Step Three"}</div>
+              <div className="ps-title">{isEs ? "Sus opciones personalizadas" : "Your Personalized Options"}</div>
+              <div className="ps-body">
+                {isEs
+                  ? "Presentamos opciones claras de compañías de servicios financieros bien establecidas, explicadas en un lenguaje sencillo y sin presión."
+                  : "We present clear options from well-established insurance and financial services companies — explained in simple language, with no pressure."}
+              </div>
+              <div className="ps-duration">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                <span>1 week follow-up</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Step 4 */}
+          <div className="ps">
+            <div className="ps-photo-wrap">
+              <div
+                className="ps-photo"
+                style={{ backgroundImage: "url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80')" }}
+              ></div>
+            </div>
+            <div className="ps-num">04</div>
+            <div className="ps-content">
+              <div className="ps-step-label">{isEs ? "En curso" : "Ongoing"}</div>
+              <div className="ps-title">{isEs ? "Orientación continua" : "Ongoing Guidance"}</div>
+              <div className="ps-body">
+                {isEs
+                  ? "La vida cambia y su plan puede necesitar cambiar con ella. Permanecemos disponibles para revisar su plan y responder preguntas a medida que su familia crece."
+                  : "Life changes — and your plan may need to change with it. We stay available to review your plan, answer questions, and help you adjust as your family grows."}
+              </div>
+              <div className="ps-duration">
+                <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                <span>Support over time</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
