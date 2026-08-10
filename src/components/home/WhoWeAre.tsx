@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen, UserCheck, Heart, Award } from "lucide-react";
 
 interface WhoWeAreProps {
   lang: "en" | "es";
@@ -11,10 +11,61 @@ interface WhoWeAreProps {
 export default function WhoWeAre({ lang }: WhoWeAreProps) {
   const isEs = lang === "es";
 
+  const tilesEn = [
+    {
+      icon: BookOpen,
+      title: "EDUCATION FIRST",
+      desc: "Clear explanations before decisions",
+    },
+    {
+      icon: UserCheck,
+      title: "1-ON-1 GUIDANCE",
+      desc: "Personal support that starts with listening",
+    },
+    {
+      icon: Heart,
+      title: "FAMILY FOCUSED",
+      desc: "Planning around the people you love",
+    },
+    {
+      icon: Award,
+      title: "LICENSED GUIDANCE",
+      desc: "Professionals who explain before recommending",
+    },
+  ];
+
+  const tilesEs = [
+    {
+      icon: BookOpen,
+      title: "EDUCACIÓN PRIMERO",
+      desc: "Explicaciones claras antes de tomar decisiones",
+    },
+    {
+      icon: UserCheck,
+      title: "ORIENTACIÓN 1 A 1",
+      desc: "Apoyo personal que comienza escuchándote",
+    },
+    {
+      icon: Heart,
+      title: "ENFOQUE FAMILIAR",
+      desc: "Planificación centrada en las personas que amas",
+    },
+    {
+      icon: Award,
+      title: "GUÍA CON LICENCIA",
+      desc: "Profesionales que explican antes de recomendar",
+    },
+  ];
+
+  const tiles = isEs ? tilesEs : tilesEn;
+
   return (
     <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="max-w-4xl mx-auto text-left">
+          <span className="text-xs font-bold tracking-[3px] text-purple-900 uppercase block mb-3">
+            {isEs ? "QUIÉNES SOMOS" : "WHO WE ARE"}
+          </span>
           <h2 className="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-8">
             {isEs ? "Ponemos a la familia primero. Siempre." : "We Put Family First. Always."}
           </h2>
@@ -48,6 +99,27 @@ export default function WhoWeAre({ lang }: WhoWeAreProps) {
               ? "Ya sea que estés protegiendo a tu familia, preparándote para la jubilación, planificando el futuro de tus hijos o construyendo un legado, nuestra meta es brindarte orientación honesta, explicaciones claras y la información que necesitas para tomar decisiones con confianza, sin presión y a tu propio ritmo."
               : "Whether you’re protecting your family, preparing for retirement, planning for your children’s future, or building a legacy, our goal is to provide honest guidance, clear explanations, and the information you need to make confident decisions — without pressure and at your own pace."}
           </p>
+
+          {/* 4 PDF Feature Tiles Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-10">
+            {tiles.map((t, idx) => {
+              const Icon = t.icon;
+              return (
+                <div
+                  key={idx}
+                  className="bg-purple-50/70 border border-purple-100/80 rounded-2xl p-5 text-center flex flex-col items-center justify-center hover:border-purple-300 transition-all"
+                >
+                  <div className="w-10 h-10 bg-purple-900/10 rounded-xl flex items-center justify-center text-purple-900 mb-3">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <h4 className="text-xs font-extrabold text-purple-900 tracking-wider uppercase mb-1">
+                    {t.title}
+                  </h4>
+                  <p className="text-xs text-gray-600 font-light">{t.desc}</p>
+                </div>
+              );
+            })}
+          </div>
 
           {/* Quote Box */}
           <blockquote className="border-l-4 border-purple-900 pl-6 py-2 italic text-purple-950 font-serif text-lg leading-relaxed mb-10 bg-purple-50/50 rounded-r-2xl">
