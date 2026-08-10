@@ -20,8 +20,8 @@ export default function HeroSlider({ lang }: HeroSliderProps) {
       ctaPrimaryText: "Get Protected Today",
       ctaPrimaryLink: "/#contact",
       ctaSecondaryText: "Explore Coverage",
-      ctaSecondaryLink: "/services/family-protection",
-      bgImage: "/images/FamilyFirstHero1.jpg",
+      ctaSecondaryLink: "/business-strategies",
+      bgImage: "/images/hero_life_insurance_diverse_1777335713599.png",
     },
     {
       eyebrow: "RETIREMENT PLANNING",
@@ -30,8 +30,8 @@ export default function HeroSlider({ lang }: HeroSliderProps) {
       ctaPrimaryText: "Plan My Retirement",
       ctaPrimaryLink: "/#contact",
       ctaSecondaryText: "Learn More",
-      ctaSecondaryLink: "/services/retirement-planning",
-      bgImage: "/images/FamilyFirstHero2.jpg",
+      ctaSecondaryLink: "/business-strategies",
+      bgImage: "/images/hero_retirement_diverse_1777335727638.png",
     },
     {
       eyebrow: "EDUCATION PLANNING",
@@ -40,8 +40,8 @@ export default function HeroSlider({ lang }: HeroSliderProps) {
       ctaPrimaryText: "Start an Education Fund",
       ctaPrimaryLink: "/#contact",
       ctaSecondaryText: "Learn More",
-      ctaSecondaryLink: "/services/education-planning",
-      bgImage: "/images/FamilyFirstHero3.jpg",
+      ctaSecondaryLink: "/business-strategies",
+      bgImage: "/images/hero_education_diverse_1777335740128.png",
     },
     {
       eyebrow: "ESTATE & LEGACY PLANNING",
@@ -50,166 +50,189 @@ export default function HeroSlider({ lang }: HeroSliderProps) {
       ctaPrimaryText: "Preserve My Legacy",
       ctaPrimaryLink: "/#contact",
       ctaSecondaryText: "Learn More",
-      ctaSecondaryLink: "/services/estate-planning",
-      bgImage: "/images/FamilyFirstHero4.jpg",
+      ctaSecondaryLink: "/business-strategies",
+      bgImage: "/images/hero_estate_diverse_1777335759302.png",
     },
     {
       eyebrow: "BUSINESS STRATEGIES",
       title: "Protect the Business You Built",
       desc: "You worked hard to build your business. From key-person coverage and buy-sell planning to executive benefits and succession strategies, we help business owners explore ways to protect what they have worked so hard to create.\n\nBecause your business is more than income — it is responsibility, sacrifice, and legacy.",
       ctaPrimaryText: "Protect My Business",
-      ctaPrimaryLink: "/business-strategies",
-      ctaSecondaryText: "Learn More",
+      ctaPrimaryLink: "/#contact",
+      ctaSecondaryText: "Explore Business Solutions",
       ctaSecondaryLink: "/business-strategies",
-      bgImage: "/images/small_business_hero_1777398700055.png",
+      bgImage: "/images/hero_business_diverse_1777335776243.png",
     },
     {
-      eyebrow: "THE CAREER OPPORTUNITY",
-      title: "Build Your Own Financial Legacy",
-      desc: "Turn your passion for helping families into a meaningful financial services career. Start part-time or grow full-time — with training, mentorship, and support along the way.\n\nBuild something with purpose while helping families understand how to protect what matters most.",
-      ctaPrimaryText: "Explore the Opportunity",
-      ctaPrimaryLink: "/opportunity",
-      ctaSecondaryText: "Talk to Us",
-      ctaSecondaryLink: "/#contact",
-      bgImage: "/images/FamilyFirstHero5.jpg",
+      eyebrow: "CAREER OPPORTUNITY",
+      title: "Build a Meaningful Business Serving Others",
+      desc: "Looking for a career where your effort directly impacts families in your community? We empower motivated individuals to build licensed, flexible financial services careers with mentorship and four potential revenue streams.\n\nNo prior financial experience required — we provide the education and support to help you get started.",
+      ctaPrimaryText: "Explore Opportunity",
+      ctaPrimaryLink: "/#contact",
+      ctaSecondaryText: "Learn How It Works",
+      ctaSecondaryLink: "/business-strategies",
+      bgImage: "/images/hero_career_diverse_1777335790957.png",
     },
   ];
 
   const slidesEs = [
     {
-      eyebrow: "PROTECCIÓN CON SEGURO DE VIDA",
-      title: "Protege a las personas que más importan",
-      desc: "La vida puede cambiar en un momento. Las personas que amas merecen un plan que ayude a protegerlas cuando más lo necesiten.\n\nTe ayudamos a explorar opciones de cobertura de compañías bien establecidas, diseñadas para ajustarse a tus necesidades, tu presupuesto y tu vida.",
-      ctaPrimaryText: "Obtén protección hoy",
+      eyebrow: "PROTECCIÓN DE SEGURO DE VIDA",
+      title: "Proteja a las personas que más importan",
+      desc: "La vida puede cambiar en un momento. Las personas que amas merecen un plan que ayude a protegerlas cuando más lo necesitan.\n\nTe ayudamos a explorar opciones de cobertura de compañías bien establecidas, diseñadas para adaptarse a tus necesidades, presupuesto y vida.",
+      ctaPrimaryText: "Obtenga protección hoy",
       ctaPrimaryLink: "/es#contact",
-      ctaSecondaryText: "Conoce la cobertura",
-      ctaSecondaryLink: "/es/services/family-protection",
-      bgImage: "/images/FamilyFirstHero1.jpg",
+      ctaSecondaryText: "Explorar cobertura",
+      ctaSecondaryLink: "/es/business-strategies",
+      bgImage: "/images/hero_life_insurance_diverse_1777335713599.png",
     },
     {
       eyebrow: "PLANIFICACIÓN PARA LA JUBILACIÓN",
-      title: "Tus años dorados, planificados con cuidado",
-      desc: "La jubilación debería sentirse tranquila, no incierta. Ya sea que estés comenzando a ahorrar o ajustando un plan existente, te ayudamos a crear una estrategia de jubilación adaptada a tu tiempo.\n\nPara que puedas avanzar hacia el futuro que has imaginado con más claridad y confianza.",
-      ctaPrimaryText: "Comienza mi plan de jubilación",
+      title: "Sus años dorados, planificados con cuidado",
+      desc: "La jubilación debe sentirse tranquila, no incierta. Ya sea que estés comenzando a ahorrar o perfeccionando un plan existente, te ayudamos a construir una estrategia de jubilación adaptada a tu cronograma.\n\nPara que puedas avanzar hacia el futuro que has imaginado con mayor claridad y confianza.",
+      ctaPrimaryText: "Planificar mi jubilación",
       ctaPrimaryLink: "/es#contact",
       ctaSecondaryText: "Aprende más",
-      ctaSecondaryLink: "/es/services/retirement-planning",
-      bgImage: "/images/FamilyFirstHero2.jpg",
+      ctaSecondaryLink: "/es/business-strategies",
+      bgImage: "/images/hero_retirement_diverse_1777335727638.png",
     },
     {
       eyebrow: "PLANIFICACIÓN EDUCATIVA",
-      title: "Invierte en su futuro brillante",
-      desc: "Cada niño merece la oportunidad de soñar en grande. Comienza a planificar hoy para que tus hijos puedan seguir cualquier sueño — cualquier escuela, cualquier camino — con menos límites financieros en el camino.\n\nDales oportunidades, sin perder de vista el futuro de tu familia.",
-      ctaPrimaryText: "Comienza un fondo educativo",
+      title: "Invierta en su brillante futuro",
+      desc: "Cada niño merece la oportunidad de soñar en grande. Comienza a planificar hoy para que tus hijos puedan seguir cualquier sueño, cualquier escuela o cualquier camino con menos límites financieros.\n\nDales la oportunidad, mientras mantienes en mente el futuro de tu familia.",
+      ctaPrimaryText: "Iniciar un fondo educativo",
       ctaPrimaryLink: "/es#contact",
       ctaSecondaryText: "Aprende más",
-      ctaSecondaryLink: "/es/services/education-planning",
-      bgImage: "/images/FamilyFirstHero3.jpg",
+      ctaSecondaryLink: "/es/business-strategies",
+      bgImage: "/images/hero_education_diverse_1777335740128.png",
     },
     {
       eyebrow: "PLANIFICACIÓN PATRIMONIAL Y DE LEGADO",
-      title: "Deja un legado que pueda durar generaciones",
-      desc: "Todo por lo que has trabajado cuenta una historia. Te ayudamos a explorar estrategias patrimoniales y de legado que honren tus valores y ayuden a tu familia a estar mejor preparada.\n\nTu legado no es solo lo que dejas atrás; también es la manera en que cuidas a las personas y causas que más importan.",
-      ctaPrimaryText: "Protege mi legado",
+      title: "Deje un legado que perdure generaciones",
+      desc: "Todo aquello por lo que has trabajado cuenta una historia. Te ayudamos a explorar estrategias patrimoniales y de legado que honren tus valores y ayuden a tu familia a estar mejor preparada.\n\nTu legado no es solo lo que dejas atrás: es cómo cuidas a las personas y causas que más importan.",
+      ctaPrimaryText: "Preservar mi legado",
       ctaPrimaryLink: "/es#contact",
       ctaSecondaryText: "Aprende más",
-      ctaSecondaryLink: "/es/services/estate-planning",
-      bgImage: "/images/FamilyFirstHero4.jpg",
+      ctaSecondaryLink: "/es/business-strategies",
+      bgImage: "/images/hero_estate_diverse_1777335759302.png",
     },
     {
       eyebrow: "ESTRATEGIAS PARA NEGOCIOS",
-      title: "Protege el negocio que construiste",
-      desc: "Trabajaste con esfuerzo para construir tu negocio. Desde cobertura para personas clave y planificación buy-sell hasta beneficios ejecutivos y estrategias de sucesión, ayudamos a dueños de negocios a explorar formas de proteger lo que han construido con tanto esfuerzo.\n\nPorque tu negocio es más que ingresos: es responsabilidad, sacrificio y legado.",
-      ctaPrimaryText: "Protege mi negocio",
-      ctaPrimaryLink: "/es/business-strategies",
-      ctaSecondaryText: "Aprende más",
+      title: "Proteja el negocio que ha construido",
+      desc: "Trabajaste duro para construir tu negocio. Desde cobertura para personas clave y planificación de compra-venta hasta beneficios ejecutivos y estrategias de sucesión, ayudamos a los dueños de negocios a explorar formas de proteger lo que tanto les costó crear.\n\nPorque tu negocio es más que ingresos: es responsabilidad, sacrificio y legado.",
+      ctaPrimaryText: "Proteger mi negocio",
+      ctaPrimaryLink: "/es#contact",
+      ctaSecondaryText: "Explorar soluciones empresariales",
       ctaSecondaryLink: "/es/business-strategies",
-      bgImage: "/images/small_business_hero_1777398700055.png",
+      bgImage: "/images/hero_business_diverse_1777335776243.png",
     },
     {
-      eyebrow: "LA OPORTUNIDAD DE CARRERA",
-      title: "Construye tu propio legado financiero",
-      desc: "Convierte tu pasión por ayudar a las familias en una carrera significativa en servicios financieros. Puedes comenzar a tiempo parcial o crecer a tiempo completo, con capacitación, mentoría y apoyo en el camino.\n\nConstruye algo con propósito mientras ayudas a las familias a entender cómo proteger lo que más importa.",
-      ctaPrimaryText: "Explora la oportunidad",
-      ctaPrimaryLink: "/es/opportunity",
-      ctaSecondaryText: "Habla con nosotros",
-      ctaSecondaryLink: "/es#contact",
-      bgImage: "/images/FamilyFirstHero5.jpg",
+      eyebrow: "OPORTUNIDAD DE CARRERA",
+      title: "Construya un negocio significativo al servicio de los demás",
+      desc: "¿Buscas una carrera donde tu esfuerzo impacte directamente a las familias de tu comunidad? Empoderamos a personas motivadas para construir carreras en servicios financieros flexibles y con licencia, con tutoría y cuatro fuentes de ingresos potenciales.\n\nNo se requiere experiencia financiera previa: brindamos la educación y el apoyo para ayudarte a comenzar.",
+      ctaPrimaryText: "Explorar la oportunidad",
+      ctaPrimaryLink: "/es#contact",
+      ctaSecondaryText: "Conozca cómo funciona",
+      ctaSecondaryLink: "/es/business-strategies",
+      bgImage: "/images/hero_career_diverse_1777335790957.png",
     },
   ];
 
   const slides = isEs ? slidesEs : slidesEn;
+  const totalSlides = slides.length;
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % totalSlides);
     }, 7000);
-    return () => clearInterval(interval);
-  }, [slides.length]);
+    return () => clearInterval(timer);
+  }, [totalSlides]);
+
+  const handlePrev = () => {
+    setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+  };
+
+  const handleNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % totalSlides);
+  };
 
   const slide = slides[currentSlide];
 
   return (
-    <section className="relative min-h-screen bg-[#0A0A0F] text-white flex items-center pt-28 pb-16 overflow-hidden">
-      {/* Background Image Carousel */}
-      <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-1000 transform scale-105"
-        style={{
-          backgroundImage: `url(${slide.bgImage})`,
-          opacity: 0.35,
-        }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0F] via-[#0A0A0F]/80 to-transparent" />
+    <section className="relative w-full min-h-[90vh] bg-purple-950 text-white flex items-center overflow-hidden">
+      {/* Background Image Slideshow */}
+      {slides.map((s, idx) => (
+        <div
+          key={idx}
+          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+            idx === currentSlide ? "opacity-40 scale-100" : "opacity-0 scale-105 pointer-events-none"
+          }`}
+          style={{
+            backgroundImage: `url(${s.bgImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+      ))}
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative z-10">
-        <div className="max-w-3xl">
-          <span className="text-xs md:text-sm font-bold tracking-[3px] text-purple-300 uppercase block mb-4">
+      {/* Dark Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-950 via-purple-950/80 to-transparent z-10" />
+
+      {/* Slide Content */}
+      <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-12 py-24 flex flex-col justify-center w-full">
+        <div className="max-w-2xl">
+          <span className="text-xs font-bold tracking-[3px] text-purple-200 uppercase mb-4 inline-block">
             {slide.eyebrow}
           </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+
+          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight text-white mb-6">
             {slide.title}
           </h1>
-          <p className="text-base md:text-lg text-gray-300 font-light leading-relaxed mb-8 whitespace-pre-line">
-            {slide.desc}
-          </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="text-base md:text-lg text-gray-200 font-light leading-relaxed mb-8 whitespace-pre-line">
+            {slide.desc}
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4">
             <Link
               href={slide.ctaPrimaryLink}
-              className="bg-purple-900 hover:bg-purple-800 text-white font-bold px-8 py-4 rounded-full text-sm inline-flex items-center gap-2 transition-all shadow-lg hover:shadow-purple-900/30"
+              className="bg-purple-900 hover:bg-purple-800 text-white font-bold px-8 py-4 rounded-full text-xs inline-flex items-center gap-2 transition-all shadow-lg hover:shadow-purple-900/40"
             >
               {slide.ctaPrimaryText}
               <ArrowRight className="w-4 h-4" />
             </Link>
+
             <Link
               href={slide.ctaSecondaryLink}
-              className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-full text-sm backdrop-blur-md border border-white/20 transition-all"
+              className="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-full text-xs transition-all backdrop-blur-md"
             >
               {slide.ctaSecondaryText}
             </Link>
           </div>
         </div>
-      </div>
 
-      {/* Slide Navigation Controls */}
-      <div className="absolute bottom-8 right-8 z-20 flex items-center gap-3">
-        <button
-          onClick={() => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
-          className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/15 transition-all"
-          aria-label="Previous slide"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <span className="text-xs font-bold tracking-widest text-white/70 px-2">
-          {String(currentSlide + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
-        </span>
-        <button
-          onClick={() => setCurrentSlide((prev) => (prev + 1) % slides.length)}
-          className="p-3 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md border border-white/15 transition-all"
-          aria-label="Next slide"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
+        {/* Slide Counter & Controls */}
+        <div className="absolute bottom-8 right-6 md:right-12 flex items-center gap-4 z-30">
+          <button
+            onClick={handlePrev}
+            aria-label="Previous Slide"
+            className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center transition-all backdrop-blur-md"
+          >
+            <ChevronLeft className="w-5 h-5 text-white" />
+          </button>
+
+          <span className="text-xs font-mono tracking-widest text-purple-200">
+            {String(currentSlide + 1).padStart(2, "0")} / {String(totalSlides).padStart(2, "0")}
+          </span>
+
+          <button
+            onClick={handleNext}
+            aria-label="Next Slide"
+            className="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center transition-all backdrop-blur-md"
+          >
+            <ChevronRight className="w-5 h-5 text-white" />
+          </button>
+        </div>
       </div>
     </section>
   );
