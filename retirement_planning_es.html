@@ -4106,5 +4106,31 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener('click', function(){ s.classList.remove('open'); });
 })();
 </script>
+
+<script>
+function selectQuestion(idx) {
+  var slides = document.querySelectorAll('.q-slide');
+  var cards = document.querySelectorAll('.q-card');
+  if (slides.length && cards.length) {
+    slides.forEach(function(s, i) {
+      if (i === idx) {
+        s.classList.add('active');
+      } else {
+        s.classList.remove('active');
+      }
+    });
+    cards.forEach(function(c, i) {
+      if (i === idx) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
+      }
+    });
+  }
+}
+var switchRqCard = selectQuestion;
+window.selectQuestion = selectQuestion;
+window.switchRqCard = selectQuestion;
+</script>
 </body>
 </html>
