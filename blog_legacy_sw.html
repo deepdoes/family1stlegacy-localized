@@ -2609,7 +2609,21 @@ html { scroll-behavior: smooth; }
 </a>
 
 </li>
-<li><a class="nav-cta" href="#contact">Ushauri wa Bure</a></li>
+<li class="lang-switcher" id="lang-switcher-desktop">
+          <button class="lang-btn" aria-label="Select language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            SW
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown">
+              <a href="blog_legacy.html" class="no-pill"><span>EN</span> English<span class="lang-check">✓</span></a>
+              <a href="blog_legacy_es.html" class="no-pill"><span>ES</span> Español<span class="lang-check">✓</span></a>
+              <a href="blog_legacy_pt.html" class="no-pill"><span>PT</span> Português<span class="lang-check">✓</span></a>
+              <a href="blog_legacy_rw.html" class="no-pill"><span>RW</span> Kinyarwanda<span class="lang-check">✓</span></a>
+              <a href="blog_legacy_sw.html" class="no-pill active"><span>SW</span> Kiswahili<span class="lang-check">✓</span></a>
+          </div>
+        </li>
+        <li><a class="nav-cta" href="#contact">Ushauri wa Bure</a></li>
 </ul>
 <button aria-label="Open menu" class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.add('open')">
 <span></span><span></span><span></span>
@@ -3373,6 +3387,18 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     });
   });
+</script>
+<script>
+// Language switcher toggle
+(function(){
+  var s = document.querySelector('.lang-switcher');
+  if (!s) return;
+  s.querySelector('.lang-btn').addEventListener('click', function(e){
+    e.stopPropagation();
+    s.classList.toggle('open');
+  });
+  document.addEventListener('click', function(){ s.classList.remove('open'); });
+})();
 </script>
 </body>
 </html>
