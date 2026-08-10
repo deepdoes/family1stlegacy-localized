@@ -3176,88 +3176,215 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- MORE REVIEWS ─────────────────────────────────────── -->
-<!-- ── REAL QUESTIONS. CLEAR GUIDANCE. SECTION (ES) ── -->
-<section id="reviews" style="padding:120px 0; background:var(--bg); position:relative;">
-  <div style="max-width:1280px; margin:0 auto; padding:0 32px; box-sizing:border-box;">
-    
-    <!-- Top Purple Featured Rotating Section -->
-    <div id="rq-featured-box" style="background:linear-gradient(135deg, #3A2060 0%, #201238 100%); border-radius:32px; padding:56px; color:#fff; position:relative; overflow:hidden; box-shadow:0 24px 64px rgba(32,18,56,0.35); margin-bottom:40px;">
-      <div style="position:absolute; top:-100px; right:-100px; width:400px; height:400px; background:radial-gradient(circle, rgba(139,125,168,0.2) 0%, transparent 70%); pointer-events:none;"></div>
-      
-      <div style="display:grid; grid-template-columns: 1fr 1.3fr; gap:48px; align-items:start;">
-        <!-- Left Side Intro -->
-        <div>
-          <div class="t-label" style="color:var(--amber-lt); margin-bottom:12px; letter-spacing:3px;">PREGUNTAS REALES</div>
-          <h2 class="t-h2" style="color:#fff; margin-bottom:20px; font-size:clamp(32px, 3.8vw, 48px); line-height:1.1;">Preguntas reales.<br>Orientación clara.</h2>
-          <p style="color:rgba(255,255,255,0.8); font-size:16px; line-height:1.7; font-weight:300;">Las familias no siempre llegan a nosotros con planes perfectos. Muchas vienen con preguntas, preocupaciones e incertidumbre. Nuestro papel es ayudarlas a entender sus opciones con claridad para que puedan tomar decisiones con confianza.</p>
-        </div>
+<!-- PREGUNTAS REALES & CLEAR GUIDANCE ────────────────── -->
+<section id="reviews" style="background:#f7f5f0; position:relative; overflow:hidden; padding:120px 0; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+  <div class="tst-orb tst-orb-1" style="background: radial-gradient(circle, rgba(29,158,117,0.06), transparent 70%);"></div>
+  <div class="tst-orb tst-orb-2" style="background: radial-gradient(circle, rgba(74,45,122,0.06), transparent 70%);"></div>
 
-        <!-- Right Side Dynamic Display Card -->
-        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,0.12); border-radius:24px; padding:40px; position:relative; min-height:340px; display:flex; flex-direction:column; justify-content:space-between; transition:opacity 0.3s ease, transform 0.3s ease;" id="rq-card-display">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-              <span id="rq-counter" style="font-size:13px; font-weight:700; color:var(--amber-lt); letter-spacing:1px;">01 de 06 - Protección familiar</span>
-              <span id="rq-badge" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); padding:4px 14px; border-radius:20px; font-size:12px; font-weight:600; color:#fff;">Orientación con cuidado</span>
-            </div>
-            <h3 id="rq-question" style="font-family:var(--font-head); font-size:clamp(20px, 2.2vw, 26px); font-weight:700; color:#fff; line-height:1.3; margin-bottom:16px;">“Si mis ingresos se detuvieran mañana, ¿por cuánto tiempo estaría bien mi familia?”</h3>
-            <p id="rq-desc" style="color:rgba(255,255,255,0.82); font-size:15px; line-height:1.7; margin-bottom:28px; font-weight:300;">Muchas familias tienen cierta cobertura a través del trabajo, pero no están seguras de si es suficiente o si permanecería con ellas si la vida cambiara. Una revisión sencilla puede ayudar a identificar posibles brechas, explicar opciones de protección disponibles y ayudar a las familias a entender qué puede ajustarse a sus necesidades, presupuesto y responsabilidades.</p>
-          </div>
-          <div>
-            <a href="#contact" class="btn" style="background:#fff; color:var(--dark); font-weight:700; padding:14px 28px; border-radius:30px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:all 0.2s ease;" id="rq-btn">Comienza con una revisión sencilla →</a>
-          </div>
+  <div class="container">
+    <div class="tst-header" style="margin-bottom:60px;">
+      <p class="t-label" data-reveal style="color:var(--green)"><span class="green-dot" style="background:var(--green)"></span>PREGUNTAS REALES</p>
+      <div class="tst-header-row" data-reveal data-delay="1">
+        <h2 class="t-h1" style="color:var(--dark)">Preguntas reales.<br><em>Orientación clara.</em></h2>
+        <div style="max-width:560px; color:var(--muted); font-size:16px; line-height:1.6">
+          Las familias no siempre llegan a nosotros con planes perfectos. Muchas vienen con preguntas, preocupaciones e incertidumbre. Nuestro papel es ayudarlas a entender sus opciones con claridad para que puedan tomar decisiones con confianza.
         </div>
       </div>
     </div>
 
-    <!-- Bottom White Preview Section -->
-    <div style="background:#fff; border:1px solid var(--line); border-radius:28px; padding:48px; box-shadow:0 12px 40px rgba(0,0,0,0.04);">
-      <div style="text-align:center; margin-bottom:36px;">
-        <div class="t-label" style="color:var(--green); margin-bottom:8px;">PREOCUPACIONES COMUNES</div>
-        <h3 class="t-h3" style="color:var(--dark);">Preocupaciones que las familias nos traen</h3>
-      </div>
-
-      <!-- 6 Clickable Preview Cards -->
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:20px;" id="rq-preview-grid">
+    <!-- Dashboard Layout Grid -->
+    <div class="qa-dashboard-grid" data-reveal data-delay="2">
+      
+      <!-- Left Column: Clickable List of Questions (Tabs) -->
+      <div class="qa-selectors-list">
         
-        <div class="rq-preview-card active" onclick="switchRqCard(0)" style="background:var(--green-lite); border:2px solid var(--green); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--green); margin-bottom:6px; text-transform:uppercase;">Protección familiar</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“Si mis ingresos se detuvieran mañana...”</div>
-          <span style="font-size:11px; background:rgba(74,45,122,0.1); color:var(--green); padding:3px 10px; border-radius:12px; font-weight:600;">Orientación con cuidado</span>
+        <div class="q-card active" onclick="selectQuestion(0)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">01 • Protección familiar</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Si mis ingresos se detuvieran mañana...”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Orientación con cuidado</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(1)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Beneficios en vida</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“Si una enfermedad detuviera mis ingresos...”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Orientación sobre beneficios en vida</span>
+        <div class="q-card" onclick="selectQuestion(1)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">02 • Beneficios en vida</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Si una enfermedad detuviera mis ingresos...”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Orientación sobre beneficios en vida</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(2)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Planificación para la jubilación</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“¿Preparándome o solo esperando?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Orientación de jubilación con cuidado</span>
+        <div class="q-card" onclick="selectQuestion(2)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">03 • Planificación de jubilación</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“¿Preparándome o solo esperando?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Orientación de jubilación</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(3)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Estrategias para negocios</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“¿Qué pasa con mi negocio?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Orientación para proteger el negocio</span>
+        <div class="q-card" onclick="selectQuestion(3)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">04 • Estrategias para negocios</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“¿Qué pasa con mi negocio?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Protección del negocio</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(4)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Planificación educativa</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“¿Ayudar a mis hijos con menos límites?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Orientación de planificación educativa</span>
+        <div class="q-card" onclick="selectQuestion(4)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">05 • Planificación educativa</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“¿Ayudar a mis hijos con menos límites?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Orientación educativa</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(5)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Planificación de legado</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“¿Mi familia tendrá claridad?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Orientación de planificación de legado</span>
+        <div class="q-card" onclick="selectQuestion(5)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">06 • Planificación de legado</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“¿Mi familia tendrá claridad?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Planificación de legado</span>
+          </div>
         </div>
 
       </div>
 
-      <p style="font-size:12px; color:var(--muted); margin-top:28px; text-align:center; font-style:italic;">Estos ejemplos son solo para fines educativos y muestran preocupaciones comunes que las familias pueden enfrentar. Las necesidades, elegibilidad y resultados individuales pueden variar.</p>
+      <!-- Right Column: Answer Display Card Stage -->
+      <div class="qa-display-card-stage" style="position:relative; background:#ffffff; border:1px solid rgba(0,0,0,0.06); border-radius:24px; overflow:hidden; min-height:380px; box-shadow:0 20px 50px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.6);">
+        
+        <!-- Large Quote Icon Background decoration -->
+        <span style="position:absolute; top:20px; right:40px; font-family:var(--font-head); font-size:180px; font-weight:800; color:rgba(0,0,0,0.015); line-height:1; pointer-events:none; user-select:none;">”</span>
+
+        <div class="tst-track" id="qTrack" style="height:100%; width:100%; position:relative;">
+
+          <!-- Question 1 -->
+          <div class="tst-slide q-slide active" data-qindex="0" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">01 de 06 • PROTECCIÓN FAMILIAR</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Orientación con cuidado</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “Si mis ingresos se detuvieran mañana, ¿por cuánto tiempo estaría bien mi familia?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Muchas familias tienen cierta cobertura a través del trabajo, pero no están seguras de si es suficiente o si permanecería con ellas si la vida cambiara. Una revisión sencilla puede ayudar a identificar posibles brechas, explicar opciones de protección disponibles y ayudar a las familias a entender qué puede ajustarse a sus necesidades, presupuesto y responsabilidades.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Comienza con una revisión sencilla</a>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="tst-slide q-slide" data-qindex="1" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">02 de 06 • BENEFICIOS EN VIDA</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Orientación sobre beneficios en vida</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “¿Qué pasa si sobrevivo a la enfermedad, pero mis ingresos no?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Una enfermedad grave puede afectar más que la salud. Puede afectar los ingresos, las facturas y todo el hogar. Algunas pólizas de seguro de vida pueden incluir beneficios en vida que pueden ayudar a brindar apoyo si alguien califica debido a una enfermedad crítica, crónica o terminal cubierta.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Comienza con una revisión sencilla</a>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="tst-slide q-slide" data-qindex="2" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">03 de 06 • PLANIFICACIÓN DE JUBILACIÓN</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Orientación de jubilación with care</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “¿Me estoy preparando para la jubilación, o solo espero que todo salga bien?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Muchas familias trabajadoras ahorran lo que pueden, pero aún se preguntan si están haciendo lo suficiente. Una orientación clara puede ayudarles a entender opciones de jubilación, posibles riesgos y pasos que pueden apoyar sus metas a largo plazo.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Comienza con una revisión sencilla</a>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="tst-slide q-slide" data-qindex="3" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">04 de 06 • ESTRATEGIAS PARA NEGOCIOS</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Protección del negocio guidance</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “Si algo me pasara, ¿qué ocurriría con el negocio que construí?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Los dueños de negocios cargan responsabilidad por su familia, empleados, clientes y años de trabajo duro. Les ayudamos a entender opciones de protección, incluyendo cobertura para personas clave y estrategias de planificación empresarial que pueden fortalecer su plan general.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Comienza con una revisión sencilla</a>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="tst-slide q-slide" data-qindex="4" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">05 de 06 • PLANIFICACIÓN EDUCATIVA</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Education planning guidance</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “¿Cómo puedo ayudar a mis hijos a seguir su educación con menos límites financieros?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Muchos padres quieren apoyar el futuro de sus hijos, pero no están seguros de qué opción de planificación educativa ofrece el equilibrio adecuado de crecimiento, flexibilidad y control. Una orientación clara puede ayudar a las familias a entender opciones que puedan ajustarse a sus metas.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Comienza con una revisión sencilla</a>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="tst-slide q-slide" data-qindex="5" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">06 de 06 • PLANIFICACIÓN DE LEGADO</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Planificación de legado guidance</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “¿Mi familia recibirá claridad y apoyo, o quedará buscando ayuda?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Algunas familias desean dejar más que dinero. Quieren dejar dirección, apoyo y un legado significativo para las personas que aman. Un plan bien pensado puede ayudar a reducir la confusión y ayudar a los seres queridos a saber qué hacer después.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Comienza con una revisión sencilla</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Small compliance note below -->
+    <div style="margin-top:40px; font-size:12px; color:var(--muted); text-align:center;" data-reveal>
+      Estos ejemplos son solo para fines educativos y muestran preocupaciones comunes que las familias pueden enfrentar. Las necesidades, elegibilidad y resultados individuales pueden variar.
     </div>
 
   </div>
