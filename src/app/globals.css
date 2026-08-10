@@ -1,9 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --font-head: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --purple: #4A2D7A;
+  --purple-dark: #201238;
+  --green: #1D9E75;
+}
+
 @layer base {
-  body {
-    @apply bg-white text-gray-900 antialiased font-sans;
+  html {
+    font-family: var(--font-head);
+    scroll-behavior: smooth;
   }
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: var(--font-head);
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
 }
