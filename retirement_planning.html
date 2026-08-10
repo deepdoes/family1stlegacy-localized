@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Family First Legacy | Protecting What Matters Most</title>
-<meta name="description" content="Family First Legacy helps families build a stronger financial future, protect their loved ones, and create lasting legacies through life insurance, retirement planning, and wealth-building strategies.">
+<meta name="description" content="Family First Legacy helps families build financial security, protect their loved ones, and create lasting legacies through life insurance, retirement planning, and wealth-building strategies.">
 
 <script type="application/ld+json">
 {
@@ -2624,104 +2624,6 @@ html { scroll-behavior: smooth; }
 #nav.stuck .nav-dropdown {
   background: rgba(255, 255, 255, 0.98);
 }
-
-/* ─── Language Switcher ─── */
-.lang-switcher {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-.lang-btn {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(74,45,122,0.08);
-  border: 1px solid rgba(74,45,122,0.2);
-  border-radius: 20px;
-  padding: 5px 12px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--dark);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s;
-  text-transform: uppercase;
-  font-family: var(--font-body, sans-serif);
-}
-.lang-btn:hover {
-  background: rgba(74,45,122,0.15);
-  border-color: rgba(74,45,122,0.4);
-}
-.lang-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
-.lang-btn .lang-chevron { width: 10px; height: 10px; transition: transform 0.2s; }
-.lang-switcher.open .lang-chevron { transform: rotate(180deg); }
-.lang-dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  background: #fff;
-  border: 1px solid #E8E4EF;
-  border-radius: 12px;
-  padding: 6px;
-  min-width: 160px;
-  box-shadow: 0 8px 32px rgba(74,45,122,0.15);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-6px);
-  transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
-  z-index: 10000;
-}
-.lang-switcher.open .lang-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.lang-dropdown a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
-  text-decoration: none;
-  transition: background 0.15s;
-}
-.lang-dropdown a:hover { background: #F0EBF8; color: var(--green, #4A2D7A); }
-.lang-dropdown a.active { font-weight: 700; color: var(--green, #4A2D7A); }
-.lang-dropdown a .lang-check { margin-left: auto; font-size: 12px; opacity: 0; }
-.lang-dropdown a.active .lang-check { opacity: 1; }
-
-/* Mobile language switcher */
-.mobile-lang-switcher {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding: 12px 20px 4px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  margin-top: 4px;
-}
-.mobile-lang-switcher a {
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 4px 10px !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(255,255,255,0.2) !important;
-  color: rgba(255,255,255,0.65) !important;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.mobile-lang-switcher a:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
-.mobile-lang-switcher a.active { 
-  background: rgba(74,45,122,0.6) !important; 
-  border-color: rgba(255,255,255,0.4) !important; 
-  color: #fff !important; 
-}
-
 </style>
 
 
@@ -3029,20 +2931,6 @@ footer, footer [data-reveal], footer [data-stagger] > * {
         <li><a href="index.html#reviews">Stories</a></li>
         <li><a href="index.html#blog">Knowledgebase</a></li>
         
-        <li class="lang-switcher" id="lang-switcher-desktop">
-          <button class="lang-btn" aria-label="Select language">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            EN
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="lang-dropdown">
-              <a href="retirement_planning.html" class="no-pill active"><span>EN</span> English<span class="lang-check">✓</span></a>
-              <a href="retirement_planning_es.html" class="no-pill"><span>ES</span> Español<span class="lang-check">✓</span></a>
-              <a href="retirement_planning_pt.html" class="no-pill"><span>PT</span> Português<span class="lang-check">✓</span></a>
-              <a href="retirement_planning_rw.html" class="no-pill"><span>RW</span> Kinyarwanda<span class="lang-check">✓</span></a>
-              <a href="retirement_planning_sw.html" class="no-pill"><span>SW</span> Kiswahili<span class="lang-check">✓</span></a>
-          </div>
-        </li>
         <li><a href="index.html#contact" class="nav-cta">Free Consultation</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Open menu">
@@ -4132,17 +4020,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<script>
-// Language switcher toggle
-(function(){
-  var s = document.querySelector('.lang-switcher');
-  if (!s) return;
-  s.querySelector('.lang-btn').addEventListener('click', function(e){
-    e.stopPropagation();
-    s.classList.toggle('open');
-  });
-  document.addEventListener('click', function(){ s.classList.remove('open'); });
-})();
-</script>
 </body>
 </html>

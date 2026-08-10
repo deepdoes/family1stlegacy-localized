@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Family First Legacy | Protecting What Matters Most</title>
-<meta name="description" content="Family First Legacy helps families build a stronger financial future, protect their loved ones, and create lasting legacies through life insurance, retirement planning, and wealth-building strategies.">
+<meta name="description" content="Family First Legacy helps families build financial security, protect their loved ones, and create lasting legacies through life insurance, retirement planning, and wealth-building strategies.">
 
 <script type="application/ld+json">
 {
@@ -2711,104 +2711,6 @@ html { scroll-behavior: smooth; }
 #nav.stuck .nav-dropdown {
   background: rgba(255, 255, 255, 0.98);
 }
-
-/* ─── Language Switcher ─── */
-.lang-switcher {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-}
-.lang-btn {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(74,45,122,0.08);
-  border: 1px solid rgba(74,45,122,0.2);
-  border-radius: 20px;
-  padding: 5px 12px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--dark);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s;
-  text-transform: uppercase;
-  font-family: var(--font-body, sans-serif);
-}
-.lang-btn:hover {
-  background: rgba(74,45,122,0.15);
-  border-color: rgba(74,45,122,0.4);
-}
-.lang-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
-.lang-btn .lang-chevron { width: 10px; height: 10px; transition: transform 0.2s; }
-.lang-switcher.open .lang-chevron { transform: rotate(180deg); }
-.lang-dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  background: #fff;
-  border: 1px solid #E8E4EF;
-  border-radius: 12px;
-  padding: 6px;
-  min-width: 160px;
-  box-shadow: 0 8px 32px rgba(74,45,122,0.15);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-6px);
-  transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
-  z-index: 10000;
-}
-.lang-switcher.open .lang-dropdown {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-.lang-dropdown a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
-  text-decoration: none;
-  transition: background 0.15s;
-}
-.lang-dropdown a:hover { background: #F0EBF8; color: var(--green, #4A2D7A); }
-.lang-dropdown a.active { font-weight: 700; color: var(--green, #4A2D7A); }
-.lang-dropdown a .lang-check { margin-left: auto; font-size: 12px; opacity: 0; }
-.lang-dropdown a.active .lang-check { opacity: 1; }
-
-/* Mobile language switcher */
-.mobile-lang-switcher {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding: 12px 20px 4px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  margin-top: 4px;
-}
-.mobile-lang-switcher a {
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 4px 10px !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(255,255,255,0.2) !important;
-  color: rgba(255,255,255,0.65) !important;
-  text-decoration: none;
-  transition: all 0.2s;
-}
-.mobile-lang-switcher a:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
-.mobile-lang-switcher a.active { 
-  background: rgba(74,45,122,0.6) !important; 
-  border-color: rgba(255,255,255,0.4) !important; 
-  color: #fff !important; 
-}
-
 </style>
 
 </head>
@@ -2842,20 +2744,6 @@ html { scroll-behavior: smooth; }
         <li><a href="#reviews">Stories</a></li>
         <li><a href="#blog">Knowledgebase</a></li>
         
-        <li class="lang-switcher" id="lang-switcher-desktop">
-          <button class="lang-btn" aria-label="Select language">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-            EN
-            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-          <div class="lang-dropdown">
-              <a href="index.html" class="no-pill active"><span>EN</span> English<span class="lang-check">✓</span></a>
-              <a href="index_es.html" class="no-pill"><span>ES</span> Español<span class="lang-check">✓</span></a>
-              <a href="index_pt.html" class="no-pill"><span>PT</span> Português<span class="lang-check">✓</span></a>
-              <a href="index_rw.html" class="no-pill"><span>RW</span> Kinyarwanda<span class="lang-check">✓</span></a>
-              <a href="index_sw.html" class="no-pill"><span>SW</span> Kiswahili<span class="lang-check">✓</span></a>
-          </div>
-        </li>
         <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
       </ul>
       <button class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Open menu">
@@ -2917,8 +2805,8 @@ html { scroll-behavior: smooth; }
     <div class="slide-content">
       <div class="slide-inner">
         <div class="slide-eyebrow">Life Insurance Protection</div>
-          <h1 class="slide-title">Protect the People<br>Who <em>Matter Most</em></h1>
-          <p class="slide-sub">Life can change in a moment. The people you love deserve a plan that helps protect them when they need it most.<br><br>We help you explore coverage options from well-established carriers — designed to fit your needs, budget, and life.</p>
+        <h1 class="slide-title">Protect the People<br>Who <em>Matter Most</em></h1>
+        <p class="slide-sub">Life can change in a moment. The people you love deserve a plan that helps protect them when they need it most. We help you explore coverage options from well-established carriers — designed to fit your needs, budget, and life.</p>
         <div class="slide-actions">
           <a href="#contact" class="btn btn-green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2940,8 +2828,8 @@ html { scroll-behavior: smooth; }
     <div class="slide-content">
       <div class="slide-inner">
         <div class="slide-eyebrow">Retirement Planning</div>
-          <h1 class="slide-title">Your Golden Years,<br><em>Planned With Care</em></h1>
-          <p class="slide-sub">Retirement should feel peaceful, not uncertain. Whether you’re just starting to save or fine-tuning an existing plan, we help you build a retirement strategy tailored to your timeline.<br><br>So you can move toward the future you’ve imagined with more clarity and confidence.</p>
+        <h1 class="slide-title">Your Golden Years,<br>Planned <em>With Care</em></h1>
+        <p class="slide-sub">Retirement should feel peaceful, not uncertain. Whether you’re just starting to save or fine-tuning an existing plan, we help you build a retirement strategy tailored to your timeline — so you can move toward the future you’ve imagined with more clarity and confidence.</p>
         <div class="slide-actions">
           <a href="#contact" class="btn btn-green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2963,8 +2851,8 @@ html { scroll-behavior: smooth; }
     <div class="slide-content">
       <div class="slide-inner">
         <div class="slide-eyebrow">Education Planning</div>
-          <h1 class="slide-title">Invest in Their<br><em>Brilliant Future</em></h1>
-          <p class="slide-sub">Every child deserves the chance to dream bigger. Start planning today so your children can pursue any dream — any school, any path — with fewer financial limits standing in the way.<br><br>Give them opportunity, while keeping your family’s future in mind.</p>
+        <h1 class="slide-title">Invest in Their<br><em>Brilliant Future</em></h1>
+        <p class="slide-sub">Every child deserves the chance to dream bigger. Start planning today so your children can pursue any dream — any school, any path — with fewer financial limits standing in the way. Give them opportunity, while keeping your family’s future in mind.</p>
         <div class="slide-actions">
           <a href="#contact" class="btn btn-green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -2986,8 +2874,8 @@ html { scroll-behavior: smooth; }
     <div class="slide-content">
       <div class="slide-inner">
         <div class="slide-eyebrow">Estate &amp; Legacy Planning</div>
-          <h1 class="slide-title">Leave a Legacy That<br>Can <em>Last Generations</em></h1>
-          <p class="slide-sub">Everything you worked for tells a story. We help you explore estate and legacy strategies that honor your values and help your family be better prepared.<br><br>Your legacy is not just what you leave behind — it is how you care for the people and causes that matter most.</p>
+        <h1 class="slide-title">Leave a Legacy That<br>Can <em>Last Generations</em></h1>
+        <p class="slide-sub">Everything you worked for tells a story. We help you explore estate and legacy strategies that honor your values and help your family be better prepared. Your legacy is not just what you leave behind — it is how you care for the people and causes that matter most.</p>
         <div class="slide-actions">
           <a href="#contact" class="btn btn-green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3009,8 +2897,8 @@ html { scroll-behavior: smooth; }
     <div class="slide-content">
       <div class="slide-inner">
         <div class="slide-eyebrow">Business Strategies</div>
-          <h1 class="slide-title">Protect the Business<br>You <em>Built</em></h1>
-          <p class="slide-sub">You worked hard to build your business. From key-person coverage and buy-sell planning to executive benefits and succession strategies, we help business owners explore ways to protect what they have worked so hard to create.<br><br>Because your business is more than income — it is responsibility, sacrifice, and legacy.</p>
+        <h1 class="slide-title">Protect the Business<br>You <em>Built</em></h1>
+        <p class="slide-sub">You worked hard to build your business. From key-person coverage and buy-sell planning to executive benefits and succession strategies, we help business owners explore ways to protect what they have worked so hard to create. Because your business is more than income — it is responsibility, sacrifice, and legacy.</p>
         <div class="slide-actions">
           <a href="#contact" class="btn btn-green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3033,8 +2921,8 @@ html { scroll-behavior: smooth; }
     <div class="slide-content">
       <div class="slide-inner">
         <div class="slide-eyebrow">The Career Opportunity</div>
-          <h1 class="slide-title">Build Your Own<br><em>Financial Legacy</em></h1>
-          <p class="slide-sub">Turn your passion for helping families into a meaningful financial services career. Start part-time or grow full-time — with training, mentorship, and support along the way.<br><br>Build something with purpose while helping families understand how to protect what matters most.</p>
+        <h1 class="slide-title">Build Your Own<br><em>Financial Legacy</em></h1>
+        <p class="slide-sub">Turn your passion for helping families into a meaningful financial services career. Start part-time or grow full-time — with training, mentorship, and support along the way. Build something with purpose while helping families understand how to protect what matters most.</p>
         <div class="slide-actions">
           <a href="opportunity.html" class="btn btn-green">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -3392,167 +3280,218 @@ html { scroll-behavior: smooth; }
 </section>
 
 <!-- REAL QUESTIONS & CLEAR GUIDANCE ────────────────── -->
-<!-- ── REAL QUESTIONS. CLEAR GUIDANCE. SECTION ── -->
-<section id="reviews" style="padding:120px 0; background:var(--bg); position:relative;">
-  <div style="max-width:1280px; margin:0 auto; padding:0 32px; box-sizing:border-box;">
-    
-    <!-- Top Purple Featured Rotating Section -->
-    <div id="rq-featured-box" style="background:linear-gradient(135deg, #3A2060 0%, #201238 100%); border-radius:32px; padding:56px; color:#fff; position:relative; overflow:hidden; box-shadow:0 24px 64px rgba(32,18,56,0.35); margin-bottom:40px;">
-      <div style="position:absolute; top:-100px; right:-100px; width:400px; height:400px; background:radial-gradient(circle, rgba(139,125,168,0.2) 0%, transparent 70%); pointer-events:none;"></div>
-      
-      <div style="display:grid; grid-template-columns: 1fr 1.3fr; gap:48px; align-items:start;">
-        <!-- Left Side Intro -->
-        <div>
-          <div class="t-label" style="color:var(--amber-lt); margin-bottom:12px; letter-spacing:3px;">REAL QUESTIONS</div>
-          <h2 class="t-h2" style="color:#fff; margin-bottom:20px; font-size:clamp(32px, 3.8vw, 48px); line-height:1.1;">Real Questions.<br>Clear Guidance.</h2>
-          <p style="color:rgba(255,255,255,0.8); font-size:16px; line-height:1.7; font-weight:300;">Families do not always come to us with perfect plans. Many come with questions, concerns, and uncertainty. Our role is to help them understand their options clearly, so they can make decisions with confidence.</p>
-        </div>
+<section id="reviews" style="background:#f7f5f0; position:relative; overflow:hidden; padding:120px 0; border-top: 1px solid rgba(0,0,0,0.05); border-bottom: 1px solid rgba(0,0,0,0.05);">
+  <div class="tst-orb tst-orb-1" style="background: radial-gradient(circle, rgba(29,158,117,0.06), transparent 70%);"></div>
+  <div class="tst-orb tst-orb-2" style="background: radial-gradient(circle, rgba(74,45,122,0.06), transparent 70%);"></div>
 
-        <!-- Right Side Dynamic Display Card -->
-        <div style="background:rgba(255,255,255,0.06); backdrop-filter:blur(16px); border:1px solid rgba(255,255,255,0.12); border-radius:24px; padding:40px; position:relative; min-height:340px; display:flex; flex-direction:column; justify-content:space-between; transition:opacity 0.3s ease, transform 0.3s ease;" id="rq-card-display">
-          <div>
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-              <span id="rq-counter" style="font-size:13px; font-weight:700; color:var(--amber-lt); letter-spacing:1px;">01 of 06 - Family Protection</span>
-              <span id="rq-badge" style="background:rgba(255,255,255,0.12); border:1px solid rgba(255,255,255,0.2); padding:4px 14px; border-radius:20px; font-size:12px; font-weight:600; color:#fff;">Guidance with care</span>
-            </div>
-            <h3 id="rq-question" style="font-family:var(--font-head); font-size:clamp(20px, 2.2vw, 26px); font-weight:700; color:#fff; line-height:1.3; margin-bottom:16px;">“If my income stopped tomorrow, how long would my family be okay?”</h3>
-            <p id="rq-desc" style="color:rgba(255,255,255,0.82); font-size:15px; line-height:1.7; margin-bottom:28px; font-weight:300;">Many families have some coverage through work, but they are not sure if it is enough — or if it would stay with them if life changed. A simple review can help identify possible gaps, explain available protection options, and help families understand what may fit their needs, budget, and responsibilities.</p>
-          </div>
-          <div>
-            <a href="#contact" class="btn" style="background:#fff; color:var(--dark); font-weight:700; padding:14px 28px; border-radius:30px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:all 0.2s ease;" id="rq-btn">Start with a Simple Review →</a>
-          </div>
+  <div class="container">
+    <div class="tst-header" style="margin-bottom:60px;">
+      <p class="t-label" data-reveal style="color:var(--green)"><span class="green-dot" style="background:var(--green)"></span>REAL QUESTIONS</p>
+      <div class="tst-header-row" data-reveal data-delay="1">
+        <h2 class="t-h1" style="color:var(--dark)">Real Questions.<br><em>Clear Guidance.</em></h2>
+        <div style="max-width:560px; color:var(--muted); font-size:16px; line-height:1.6">
+          Families do not always come to us with perfect plans. Many come with questions, concerns, and uncertainty. Our role is to help them understand their options clearly, so they can make decisions with confidence.
         </div>
       </div>
     </div>
 
-    <!-- Bottom White Preview Section -->
-    <div style="background:#fff; border:1px solid var(--line); border-radius:28px; padding:48px; box-shadow:0 12px 40px rgba(0,0,0,0.04);">
-      <div style="text-align:center; margin-bottom:36px;">
-        <div class="t-label" style="color:var(--green); margin-bottom:8px;">COMMON CONCERNS</div>
-        <h3 class="t-h3" style="color:var(--dark);">Concerns Families Bring to Us</h3>
-      </div>
-
-      <!-- 6 Clickable Preview Cards -->
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:20px;" id="rq-preview-grid">
+    <!-- Dashboard Layout Grid -->
+    <div class="qa-dashboard-grid" data-reveal data-delay="2">
+      
+      <!-- Left Column: Clickable List of Questions (Tabs) -->
+      <div class="qa-selectors-list">
         
-        <div class="rq-preview-card active" onclick="switchRqCard(0)" style="background:var(--green-lite); border:2px solid var(--green); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--green); margin-bottom:6px; text-transform:uppercase;">Family Protection</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“If my income stopped tomorrow...”</div>
-          <span style="font-size:11px; background:rgba(74,45,122,0.1); color:var(--green); padding:3px 10px; border-radius:12px; font-weight:600;">Guidance with care</span>
+        <div class="q-card active" onclick="selectQuestion(0)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">01 • Family Protection</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“If my income stopped tomorrow...”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Guidance with care</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(1)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Living Benefits</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“If illness stopped my income...”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Living benefits guidance</span>
+        <div class="q-card" onclick="selectQuestion(1)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">02 • Living Benefits</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“If illness stopped my income...”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Living benefits guidance</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(2)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Retirement Planning</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“Preparing or just hoping?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Retirement guidance with care</span>
+        <div class="q-card" onclick="selectQuestion(2)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">03 • Retirement Planning</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Preparing or just hoping?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Retirement guidance</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(3)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Business Strategies</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“What happens to my business?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Business protection guidance</span>
+        <div class="q-card" onclick="selectQuestion(3)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">04 • Business Strategies</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“What happens to my business?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Business protection</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(4)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Education Planning</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“Help my children with fewer limits?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Education planning guidance</span>
+        <div class="q-card" onclick="selectQuestion(4)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">05 • Education Planning</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Help my children with fewer limits?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Education guidance</span>
+          </div>
         </div>
 
-        <div class="rq-preview-card" onclick="switchRqCard(5)" style="background:#F9F8FA; border:1px solid var(--line); border-radius:18px; padding:24px; cursor:pointer; transition:all 0.25s ease;">
-          <div style="font-size:12px; font-weight:700; color:var(--muted); margin-bottom:6px; text-transform:uppercase;">Legacy Planning</div>
-          <div style="font-size:15px; font-weight:600; color:var(--dark); margin-bottom:12px;">“Will my family have clarity?”</div>
-          <span style="font-size:11px; background:rgba(0,0,0,0.05); color:var(--muted); padding:3px 10px; border-radius:12px; font-weight:600;">Legacy planning guidance</span>
+        <div class="q-card" onclick="selectQuestion(5)">
+          <div style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--green); letter-spacing:1px; margin-bottom:8px;">06 • Legacy Planning</div>
+          <div style="font-size:16px; font-weight:600; color:var(--dark); line-height:1.4;">“Will my family have clarity?”</div>
+          <div style="display:flex; align-items:center; gap:6px; margin-top:12px;">
+            <span style="display:inline-block; width:6px; height:6px; background:var(--green); border-radius:50%"></span>
+            <span style="font-size:11px; color:var(--muted); font-weight:600">Legacy planning</span>
+          </div>
         </div>
 
       </div>
 
-      <p style="font-size:12px; color:var(--muted); margin-top:28px; text-align:center; font-style:italic;">These examples are for educational purposes and show common concerns families may face. Individual needs, eligibility, and results may vary.</p>
+      <!-- Right Column: Answer Display Card Stage -->
+      <div class="qa-display-card-stage" style="position:relative; background:#ffffff; border:1px solid rgba(0,0,0,0.06); border-radius:24px; overflow:hidden; min-height:380px; box-shadow:0 20px 50px rgba(0,0,0,0.04), inset 0 1px 0 rgba(255,255,255,0.6);">
+        
+        <!-- Large Quote Icon Background decoration -->
+        <span style="position:absolute; top:20px; right:40px; font-family:var(--font-head); font-size:180px; font-weight:800; color:rgba(0,0,0,0.015); line-height:1; pointer-events:none; user-select:none;">”</span>
+
+        <div class="tst-track" id="qTrack" style="height:100%; width:100%; position:relative;">
+
+          <!-- Question 1 -->
+          <div class="tst-slide q-slide active" data-qindex="0" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">01 of 06 • FAMILY PROTECTION</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Guidance with care</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “If my income stopped tomorrow, how long would my family be okay?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Many families have some coverage through work, but they are not sure if it is enough — or if it would stay with them if life changed. A simple review can help identify possible gaps, explain available protection options, and help families understand what may fit their needs, budget, and responsibilities.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Start with a Simple Review</a>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="tst-slide q-slide" data-qindex="1" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">02 of 06 • LIVING BENEFITS</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Living benefits guidance</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “What if I survive the illness — but my income does not?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                A serious illness can affect more than health. It can affect income, bills, and the whole household. Some life insurance policies may include living benefits that can help provide support if someone qualifies due to a covered critical, chronic, or terminal illness.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Start with a Simple Review</a>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="tst-slide q-slide" data-qindex="2" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">03 of 06 • RETIREMENT PLANNING</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Retirement guidance with care</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “Am I preparing for retirement — or just hoping it works out?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Many hardworking families save what they can, but still wonder if they are doing enough. Clear guidance can help them understand retirement options, possible risks, and steps that may support their long-term goals.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Start with a Simple Review</a>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="tst-slide q-slide" data-qindex="3" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">04 of 06 • BUSINESS STRATEGIES</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Business protection guidance</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “If something happened to me, what would happen to the business I built?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Business owners carry responsibility for their family, employees, clients, and years of hard work. We help them understand protection options, including key-person coverage and business planning strategies that may strengthen their overall plan.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Start with a Simple Review</a>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="tst-slide q-slide" data-qindex="4" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">05 of 06 • EDUCATION PLANNING</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Education planning guidance</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “How can I help my children pursue education with fewer financial limits?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Many parents want to support their children’s future, but they are not sure which education planning option gives the right balance of growth, flexibility, and control. Clear guidance can help families understand choices that may fit their goals.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Start with a Simple Review</a>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="tst-slide q-slide" data-qindex="5" style="padding:36px 40px; display:flex; flex-direction:column; justify-content:space-between; height:100%;">
+            <div>
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:28px;">
+                <span style="font-family:var(--font-body); font-size:12px; font-weight:700; color:var(--green); letter-spacing:1.5px; text-transform:uppercase;">06 of 06 • LEGACY PLANNING</span>
+                <span style="background:rgba(29,158,117,0.08); border:1px solid rgba(29,158,117,0.15); color:var(--green); padding:6px 16px; border-radius:100px; font-size:11px; font-weight:700; letter-spacing:0.5px;">Legacy planning guidance</span>
+              </div>
+              <h3 style="font-family:var(--font-head); font-size:28px; color:var(--dark); margin-bottom:20px; font-weight:700; line-height:1.35;">
+                “Will my family receive clarity and support — or be left searching for help?”
+              </h3>
+              <p style="color:var(--muted); font-size:16.5px; line-height:1.8; font-weight:300;">
+                Some families want to leave more than money. They want to leave direction, support, and a meaningful legacy for the people they love. A thoughtful plan can help reduce confusion and help loved ones know what to do next.
+              </p>
+            </div>
+            <div style="margin-top:32px;">
+              <a href="#contact" class="btn btn-green" style="display:inline-flex;">Start with a Simple Review</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Small compliance note below -->
+    <div style="margin-top:40px; font-size:12px; color:var(--muted); text-align:center;" data-reveal>
+      These examples are for educational purposes and show common concerns families may face. Individual needs, eligibility, and results may vary.
     </div>
 
   </div>
 </section>
-
-<script>
-const rqData = [
-  {
-    counter: "01 of 06 - Family Protection",
-    badge: "Guidance with care",
-    question: "“If my income stopped tomorrow, how long would my family be okay?”",
-    desc: "Many families have some coverage through work, but they are not sure if it is enough — or if it would stay with them if life changed. A simple review can help identify possible gaps, explain available protection options, and help families understand what may fit their needs, budget, and responsibilities."
-  },
-  {
-    counter: "02 of 06 - Living Benefits",
-    badge: "Living benefits guidance",
-    question: "“What if I survive the illness — but my income does not?”",
-    desc: "A serious illness can affect more than health. It can affect income, bills, and the whole household. Some life insurance policies may include living benefits that can help provide support if someone qualifies due to a covered critical, chronic, or terminal illness."
-  },
-  {
-    counter: "03 of 06 - Retirement Planning",
-    badge: "Retirement guidance with care",
-    question: "“Am I preparing for retirement — or just hoping it works out?”",
-    desc: "Many hardworking families save what they can, but still wonder if they are doing enough. Clear guidance can help them understand retirement options, possible risks, and steps that may support their long-term goals."
-  },
-  {
-    counter: "04 of 06 - Business Strategies",
-    badge: "Business protection guidance",
-    question: "“If something happened to me, what would happen to the business I built?”",
-    desc: "Business owners carry responsibility for their family, employees, clients, and years of hard work. We help them understand protection options, including key-person coverage and business planning strategies that may strengthen their overall plan."
-  },
-  {
-    counter: "05 of 06 - Education Planning",
-    badge: "Education planning guidance",
-    question: "“How can I help my children pursue education with fewer financial limits?”",
-    desc: "Many parents want to support their children’s future, but they are not sure which education planning option gives the right balance of growth, flexibility, and control. Clear guidance can help families understand choices that may fit their goals."
-  },
-  {
-    counter: "06 of 06 - Legacy Planning",
-    badge: "Legacy planning guidance",
-    question: "“Will my family receive clarity and support — or be left searching for help?”",
-    desc: "Some families want to leave more than money. They want to leave direction, support, and a meaningful legacy for the people they love. A thoughtful plan can help reduce confusion and help loved ones know what to do next."
-  }
-];
-
-function switchRqCard(idx) {
-  const display = document.getElementById('rq-card-display');
-  display.style.opacity = '0';
-  display.style.transform = 'translateY(8px)';
-  
-  setTimeout(() => {
-    document.getElementById('rq-counter').textContent = rqData[idx].counter;
-    document.getElementById('rq-badge').textContent = rqData[idx].badge;
-    document.getElementById('rq-question').textContent = rqData[idx].question;
-    document.getElementById('rq-desc').textContent = rqData[idx].desc;
-
-    display.style.opacity = '1';
-    display.style.transform = 'translateY(0)';
-  }, 200);
-
-  const cards = document.querySelectorAll('#rq-preview-grid .rq-preview-card');
-  cards.forEach((card, i) => {
-    if (i === idx) {
-      card.style.background = 'var(--green-lite)';
-      card.style.borderColor = 'var(--green)';
-      card.style.borderWidth = '2px';
-      card.querySelector('span').style.background = 'rgba(74,45,122,0.1)';
-      card.querySelector('span').style.color = 'var(--green)';
-    } else {
-      card.style.background = '#F9F8FA';
-      card.style.borderColor = 'var(--line)';
-      card.style.borderWidth = '1px';
-      card.querySelector('span').style.background = 'rgba(0,0,0,0.05)';
-      card.querySelector('span').style.color = 'var(--muted)';
-    }
-  });
-}
-</script>
-
 <!-- OPPORTUNITY ─────────────────────────────────────── -->
 <section id="opportunity">
   <div class="opp-grid">
@@ -4566,17 +4505,5 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<script>
-// Language switcher toggle
-(function(){
-  var s = document.querySelector('.lang-switcher');
-  if (!s) return;
-  s.querySelector('.lang-btn').addEventListener('click', function(e){
-    e.stopPropagation();
-    s.classList.toggle('open');
-  });
-  document.addEventListener('click', function(){ s.classList.remove('open'); });
-})();
-</script>
 </body>
 </html>
