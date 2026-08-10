@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Family First Legacy | Protecting What Matters Most</title>
-<meta content="Family First Legacy helps families build financial security, protect their loved ones, and create lasting legacies through life insurance, retirement planning, and wealth-building strategies." name="description"/>
+<title>Blog: Proteccion Familiar | Family First Legacy</title>
+<link rel="alternate" hreflang="en" href="https://family1stlegacy.com/blog_family_protection.html"/>
+<link rel="alternate" hreflang="es" href="https://family1stlegacy.com/blog_family_protection_es.html"/>
+<link rel="alternate" hreflang="x-default" href="https://family1stlegacy.com/blog_family_protection.html"/>
+<meta name="description" content="Consejos expertos sobre seguros de vida, beneficios en vida y como asegurar el futuro financiero de su familia ante cualquier eventualidad."/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -15,7 +18,7 @@
   "logo": "https://family1stlegacy.com/images/FamilyFirstLogo.png",
   "image": "https://family1stlegacy.com/images/hero_life_insurance_diverse_1777335713599.png",
   "description": "Family First Legacy is an independent financial services agency providing life insurance, retirement planning, education planning, and estate legacy strategies nationwide.",
-  "telephone": "+1-214-555-0100",
+  "telephone": "+1-469-608-1595",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Dallas-Fort Worth Metro",
@@ -2446,6 +2449,104 @@ html { scroll-behavior: smooth; }
 }
 .mobile-menu a:hover { color:var(--green); }
 .mobile-close { position:absolute; top:24px; right:28px; background:none; border:none; font-size:28px; cursor:pointer; color:var(--muted); }
+
+/* ─── Language Switcher ─── */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(74,45,122,0.08);
+  border: 1px solid rgba(74,45,122,0.2);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--dark);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s;
+  text-transform: uppercase;
+  font-family: var(--font-body, sans-serif);
+}
+.lang-btn:hover {
+  background: rgba(74,45,122,0.15);
+  border-color: rgba(74,45,122,0.4);
+}
+.lang-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+.lang-btn .lang-chevron { width: 10px; height: 10px; transition: transform 0.2s; }
+.lang-switcher.open .lang-chevron { transform: rotate(180deg); }
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #fff;
+  border: 1px solid #E8E4EF;
+  border-radius: 12px;
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 8px 32px rgba(74,45,122,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+  z-index: 10000;
+}
+.lang-switcher.open .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lang-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.lang-dropdown a:hover { background: #F0EBF8; color: var(--green, #4A2D7A); }
+.lang-dropdown a.active { font-weight: 700; color: var(--green, #4A2D7A); }
+.lang-dropdown a .lang-check { margin-left: auto; font-size: 12px; opacity: 0; }
+.lang-dropdown a.active .lang-check { opacity: 1; }
+
+/* Mobile language switcher */
+.mobile-lang-switcher {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 20px 4px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 4px;
+}
+.mobile-lang-switcher a {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  color: rgba(255,255,255,0.65) !important;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.mobile-lang-switcher a:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
+.mobile-lang-switcher a.active { 
+  background: rgba(74,45,122,0.6) !important; 
+  border-color: rgba(255,255,255,0.4) !important; 
+  color: #fff !important; 
+}
+
 </style>
 <style>
 #blog-article { padding: 140px 0 100px; background: var(--bg); }
@@ -2486,7 +2587,7 @@ html { scroll-behavior: smooth; }
 <li><a href="#blog">Base de conocimientos</a></li>
 <li>
 
-<a class="nav-lang no-pill" href="#" onclick="showLanguageModal(event)" title="Switch Language">
+<a class="nav-lang no-pill" href="#" onclick="showLanguageModal(event)" title="Cambiar idioma">
 <svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
 <span class="lang-text-cycle">
 <span class="lt-item">Inglés</span>
@@ -2498,7 +2599,21 @@ html { scroll-behavior: smooth; }
 </a>
 
 </li>
-<li><a class="nav-cta" href="#contact">Consulta Gratuita</a></li>
+<li class="lang-switcher" id="lang-switcher-desktop">
+          <button class="lang-btn" aria-label="Select language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            ES
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown">
+              <a href="blog_family_protection.html" class="no-pill"><span>EN</span> English<span class="lang-check">✓</span></a>
+              <a href="blog_family_protection_es.html" class="no-pill active"><span>ES</span> Español<span class="lang-check">✓</span></a>
+              <a href="blog_family_protection_pt.html" class="no-pill"><span>PT</span> Português<span class="lang-check">✓</span></a>
+              <a href="blog_family_protection_rw.html" class="no-pill"><span>RW</span> Kinyarwanda<span class="lang-check">✓</span></a>
+              <a href="blog_family_protection_sw.html" class="no-pill"><span>SW</span> Kiswahili<span class="lang-check">✓</span></a>
+          </div>
+        </li>
+        <li><a class="nav-cta" href="#contact">Consulta Gratuita</a></li>
 </ul>
 <button aria-label="Open menu" class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.add('open')">
 <span></span><span></span><span></span>
@@ -2570,8 +2685,8 @@ html { scroll-behavior: smooth; }
 <div class="cta-actions">
 <a class="btn-white" href="#contact">
 <svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Comience gratis</a>
-<a class="btn-outline-white" href="tel:+12145550100">
-<svg viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>Llama al (214) 555-0100</a>
+<a class="btn-outline-white" href="tel:+14696081595">
+<svg viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>Llama al (469) 608-1595</a>
 </div>
 <div class="cta-stats">
 <div class="cts-item">
@@ -2602,7 +2717,7 @@ html { scroll-behavior: smooth; }
 <div class="fn-sub">Información mensual sobre cómo proteger y hacer crecer el patrimonio de su familia. Nada de spam, nunca.</div>
 </div>
 <form class="fn-form" onsubmit="submitSubscribe(event)">
-<input name="Email" placeholder="Enter your email address" required="" type="email"/>
+<input name="Email" placeholder="Ingrese su correo electrónico" required="" type="email"/>
 <input name="FormType" type="hidden" value="Newsletter Subscription"/>
 <button type="submit">Suscribir<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
 </button>
@@ -2654,9 +2769,9 @@ html { scroll-behavior: smooth; }
 <div>
 <div class="f-col-head">Ponte en contacto</div>
 <ul class="f-links">
-<li><a href="tel:+12145550100">(214) 555-0100</a></li>
+<li><a href="tel:+14696081595">(469) 608-1595</a></li>
 <li><a href="mailto:info@family1stlegacy.com">info@family1stlegacy.com</a></li>
-<li><a href="https://family1stlegacy.com">familia1stlegacy.com</a></li>
+<li><a href="https://family1stlegacy.com">family1stlegacy.com</a></li>
 <li><a href="#contact">Reserve una consulta</a></li>
 </ul>
 
@@ -2666,7 +2781,7 @@ html { scroll-behavior: smooth; }
 <div class="fb-left">
 <span>© 2026 Family First Legacy</span>
 <span class="fb-sep">·</span>
-<a href="https://family1stlegacy.com">familia1stlegacy.com</a>
+<a href="https://family1stlegacy.com">family1stlegacy.com</a>
 <span class="fb-sep">·</span>
 <a href="privacy_es.html">política de privacidad</a>
 <span class="fb-sep">·</span>
@@ -3255,6 +3370,18 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+</script>
+<script>
+// Language switcher toggle
+(function(){
+  var s = document.querySelector('.lang-switcher');
+  if (!s) return;
+  s.querySelector('.lang-btn').addEventListener('click', function(e){
+    e.stopPropagation();
+    s.classList.toggle('open');
+  });
+  document.addEventListener('click', function(){ s.classList.remove('open'); });
+})();
 </script>
 </body>
 </html>
