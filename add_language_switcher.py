@@ -193,8 +193,8 @@ PAGE_MAP = {
     "blog_legacy": {"en": "blog_legacy.html", "es": "blog_legacy_es.html", "pt": "blog_legacy_pt.html", "rw": "blog_legacy_rw.html", "sw": "blog_legacy_sw.html"},
     "blog_retirement": {"en": "blog_retirement.html", "es": "blog_retirement_es.html", "pt": "blog_retirement_pt.html", "rw": "blog_retirement_rw.html", "sw": "blog_retirement_sw.html"},
     # Pages that only have English (no language variants yet)
-    "business_strategies": {"en": "business_strategies.html"},
-    "opportunity": {"en": "opportunity.html"},
+    "business_strategies": {"en": "business_strategies.html", "es": "business_strategies_es.html"},
+    "opportunity": {"en": "opportunity.html", "es": "opportunity_es.html"},
 }
 
 def get_page_info(filename):
