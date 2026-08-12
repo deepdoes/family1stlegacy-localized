@@ -2673,6 +2673,18 @@ html { scroll-behavior: smooth; }
   min-width: 195px !important;
   box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
   z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 #nav .lang-dropdown a {
   display: flex !important;
@@ -2901,6 +2913,13 @@ html { scroll-behavior: smooth; }
 }
 </style>
 
+<style>.nav-lang { display: none !important; }</style>
+
+<style>
+#nav .lang-dropdown { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transform: translateY(-8px) !important; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important; }
+#nav .lang-switcher:hover .lang-dropdown, #nav .lang-switcher.open .lang-dropdown { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
+</style>
+
 </head>
 <body>
 
@@ -3006,116 +3025,48 @@ html { scroll-behavior: smooth; }
           <div class="legal-meta" style="color:var(--muted); font-size:14px; font-weight:600; margin-bottom:40px;">Last Updated: January 2026</div>
         </div>
         
-        <div class="legal-body" data-reveal data-delay="1" style="color:var(--dark); font-size:16px; line-height:1.8;">
-          <p style="margin-bottom:24px;">
-            Family First Legacy respects your privacy. This Privacy Policy explains how we collect, use, protect, and share information when you visit our website, submit a form, request a consultation, or communicate with us.
-          </p>
-          <p style="margin-bottom:32px;">
-            By using this website, you agree to the practices described below.
-          </p>
+        <div class="legal-body" data-delay="1" data-reveal="">
+<p><strong>Last Updated: January 2026</strong></p>
+<p>Family First Legacy respects your privacy. This Privacy Policy explains how we collect, use, protect, and share information when you visit our website, submit a form, request a consultation, or communicate with us.</p>
+<p>By using this website, you agree to the practices described below.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Information We Collect</h2>
-          <p style="margin-bottom:16px;">We may collect information you choose to provide, such as:</p>
-          <ul style="margin-left:24px; margin-bottom:24px; list-style:disc;">
-            <li>Your name</li>
-            <li>Email address</li>
-            <li>Phone number</li>
-            <li>State of residence</li>
-            <li>Service interests</li>
-            <li>Questions or messages submitted through our forms</li>
-          </ul>
-          <p style="margin-bottom:32px;">
-            We may also collect basic website usage information, such as browser type, device information, pages visited, cookies, or general website activity to help improve the website experience.
-          </p>
+<h2>Information We Collect</h2>
+<p>We may collect information you choose to provide, such as:</p>
+<ul>
+<li>Your name</li>
+<li>Email address</li>
+<li>Phone number</li>
+<li>State of residence</li>
+<li>Service interests</li>
+<li>Questions or messages submitted through our forms</li>
+</ul>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">How We Use Your Information</h2>
-          <p style="margin-bottom:16px;">We may use your information to:</p>
-          <ul style="margin-left:24px; margin-bottom:24px; list-style:disc;">
-            <li>Respond to your questions or consultation requests</li>
-            <li>Schedule appointments or follow-ups</li>
-            <li>Provide information about services you requested</li>
-            <li>Understand your goals and protection needs</li>
-            <li>Improve our website and communication</li>
-            <li>Comply with legal, regulatory, or business requirements</li>
-          </ul>
-          <p style="font-weight:700; margin-bottom:32px;">We do not sell your personal information.</p>
+<h2>How We Use Your Information</h2>
+<p>We may use your information to:</p>
+<ul>
+<li>Respond to your questions or consultation requests</li>
+<li>Schedule appointments or follow-ups</li>
+<li>Provide information about services you requested</li>
+<li>Understand your goals and protection needs</li>
+<li>Improve our website and communication</li>
+<li>Comply with legal, regulatory, or business requirements</li>
+<li><strong>We do not sell your personal information.</strong></li>
+</ul>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">How We Share Your Information</h2>
-          <p style="margin-bottom:16px;">
-            We may share information only as reasonably needed to respond to your request, provide services, operate our business, or comply with the law.
-          </p>
-          <p style="margin-bottom:16px;">
-            This may include sharing information with licensed agents or team members, insurance carriers or financial service providers, website tools, CRM systems, scheduling tools, email/text communication providers, or other trusted service providers.
-          </p>
-          <p style="font-weight:700; margin-bottom:32px;">We do not sell your personal information to third parties.</p>
+<h2>How We Share Your Information</h2>
+<p>We may share information only as reasonably needed to respond to your request, provide services, operate our business, or comply with the law.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Website Forms and Data Storage</h2>
-          <p style="margin-bottom:16px;">
-            Family First Legacy does not intentionally store personal information directly on this website, except for information visitors choose to submit through contact forms, consultation request forms, or message fields.
-          </p>
-          <p style="margin-bottom:16px;">
-            Form submissions may be sent to us through email, CRM, scheduling tools, or other service providers so we can respond to the visitor’s request.
-          </p>
-          <p style="margin-bottom:32px; background:rgba(74,45,122,0.05); padding:16px; border-left:4px solid var(--green); border-radius:4px;">
-            Please do not submit Social Security numbers, medical records, bank account information, or other highly sensitive information through general website forms unless we specifically request it through a secure process.
-          </p>
+<h2>Website Forms and Data Storage</h2>
+<p>Family First Legacy does not intentionally store personal information directly on this website, except for information visitors choose to submit through contact forms, consultation request forms, or message fields.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Data Security</h2>
-          <p style="margin-bottom:16px;">
-            We take reasonable steps to help protect information submitted through this website.
-          </p>
-          <p style="margin-bottom:16px;">
-            However, no website, internet transmission, email, text message, or electronic system can be guaranteed to be 100% secure. Visitors should avoid sending highly sensitive information through general website forms unless requested through a secure process.
-          </p>
-          <p style="margin-bottom:32px;">
-            If we become aware of a security incident involving personal information, we will take appropriate steps as required by applicable law.
-          </p>
+<h2>Data Security</h2>
+<p>We take reasonable steps to help protect information submitted through this website. However, no website, internet transmission, email, text message, or electronic system can be guaranteed to be 100% secure.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Cookies and Website Tracking</h2>
-          <p style="margin-bottom:16px;">
-            Our website may use cookies, analytics tools, or similar technologies to understand website traffic and improve user experience.
-          </p>
-          <p style="margin-bottom:32px;">
-            You may be able to disable cookies through your browser settings, but some website features may not work properly if cookies are disabled.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Email, Phone, and Text Communications</h2>
-          <p style="margin-bottom:16px;">
-            If you provide your contact information, we may contact you by phone, text, email, or other communication methods to respond to your request, schedule appointments, provide information, or follow up on services you expressed interest in.
-          </p>
-          <p style="margin-bottom:16px;">
-            You may ask us to stop contacting you at any time.
-          </p>
-          <p style="margin-bottom:32px;">
-            We do not sell or share mobile phone numbers or SMS consent information with third parties for their marketing purposes.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Your Privacy Choices</h2>
-          <p style="margin-bottom:16px;">
-            You may contact us to request that we update, correct, or remove your personal information from our records, subject to legal, regulatory, business, or contractual requirements.
-          </p>
-          <p style="margin-bottom:32px;">
-            Where applicable, Texas residents may have rights to request access to personal data, correct inaccuracies, request deletion, and opt out of certain data uses.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Links to Other Websites</h2>
-          <p style="margin-bottom:32px;">
-            Our website may contain links to third-party websites or tools. We are not responsible for the privacy practices, content, or security of third-party websites. Visitors should review the privacy policies of any third-party sites they visit.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Changes to This Privacy Policy</h2>
-          <p style="margin-bottom:32px;">
-            We may update this Privacy Policy from time to time. Any changes will be posted on this page with a new “Last Updated” date.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">Contact Us</h2>
-          <p style="margin-bottom:12px;">If you have questions about this Privacy Policy or how your information is handled, please contact us:</p>
-          <p style="margin-bottom:4px; font-weight:700;">Family First Legacy</p>
-          <p style="margin-bottom:4px;">Email: <a href="mailto:info@family1stlegacy.com" style="color:var(--green);">info@family1stlegacy.com</a></p>
-          <p style="margin-bottom:32px;">Website: <a href="https://family1stlegacy.com" style="color:var(--green);">family1stlegacy.com</a></p>
-        </div>
-      </div>
-    </section>
+<h2>Contact Us</h2>
+<p>Family First Legacy<br/>Email: info@family1stlegacy.com<br/>Website: family1stlegacy.com</p>
+</div>
+</div>
+</section>
 
     <!-- CTA BANNER ──────────────────────────────────────── -->
 <section id="cta-banner">

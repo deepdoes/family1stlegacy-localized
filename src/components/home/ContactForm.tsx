@@ -105,6 +105,12 @@ export default function ContactForm({ lang }: ContactFormProps) {
                     </>
                   )}
                 </button>
+
+                <p className="text-white/60 text-xs text-center mt-3 font-light">
+                  {isEs
+                    ? "Tu información se maneja con cuidado y se mantiene privada. No vendemos tu información personal."
+                    : "Your information is handled with care and kept private. We do not sell your personal information."}
+                </p>
               </form>
             )}
           </div>

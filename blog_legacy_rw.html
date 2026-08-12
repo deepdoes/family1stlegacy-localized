@@ -2495,6 +2495,18 @@ html { scroll-behavior: smooth; }
   min-width: 195px !important;
   box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
   z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 #nav .lang-dropdown a {
   display: flex !important;
@@ -2725,6 +2737,13 @@ html { scroll-behavior: smooth; }
   .article-body { padding: 40px 32px; }
 }
 </style>
+<style>.nav-lang { display: none !important; }</style>
+
+<style>
+#nav .lang-dropdown { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transform: translateY(-8px) !important; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important; }
+#nav .lang-switcher:hover .lang-dropdown, #nav .lang-switcher.open .lang-dropdown { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
+</style>
+
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -2743,20 +2762,7 @@ html { scroll-behavior: smooth; }
 <li><a href="index_rw.html#opportunity">Amahirwe</a></li>
 <li><a href="index_rw.html#reviews">Inkuru</a></li>
 <li><a href="#blog">Ubumenyi</a></li>
-<li>
 
-<a class="nav-lang no-pill" href="#" onclick="showLanguageModal(event)" title="Switch Language">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span class="lang-text-cycle">
-<span class="lt-item">Icyongereza</span>
-<span class="lt-item">Ikihiyipaniya</span>
-<span class="lt-item">Igiportugali</span>
-<span class="lt-item">Igiswahili</span>
-<span class="lt-item">Kinyarwanda</span>
-</span>
-</a>
-
-</li>
 <li class="lang-switcher" id="lang-switcher-desktop">
           <button class="lang-btn" aria-label="Select language">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>

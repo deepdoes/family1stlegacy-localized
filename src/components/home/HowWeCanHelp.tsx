@@ -33,14 +33,14 @@ export default function HowWeCanHelp({ lang }: HowWeCanHelpProps) {
             <div className="st-accent"></div>
             <p>
               {isEs
-                ? "Diseñamos estrategias personalizadas adaptadas al camino único de su familia, brindándole claridad y confianza en cada hito."
-                : "We design tailored strategies aligned with your family’s unique path, helping bring clarity and confidence to every milestone."}
+                ? "Desde proteger a tu familia hoy hasta prepararte para la jubilación y planificar el legado que deseas dejar, estamos aquí para ayudarte a entender tus opciones y crear una estrategia que se ajuste a cada capítulo de tu vida."
+                : "From protecting your family today to preparing for retirement and planning the legacy you want to leave behind, we’re here to help you understand your options and build a strategy that fits each chapter of your life."}
             </p>
             <Link
-              href={isEs ? "/es/business-strategies" : "/business-strategies"}
+              href={isEs ? "/es#contact" : "/#contact"}
               className="st-link"
             >
-              {isEs ? "Explorar todos los servicios" : "Explore All Services"}
+              {isEs ? "Comienza con una conversación" : "Start With a Conversation"}
               <svg viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
@@ -62,15 +62,15 @@ export default function HowWeCanHelp({ lang }: HowWeCanHelpProps) {
           <div className="sr-content">
             <div className="sr-num">01</div>
             <h3 className="sr-title">
-              {isEs ? <>Protección de<br />seguro de vida</> : <>Life Insurance<br />Protection</>}
+              {isEs ? <>Protección con<br />seguro de vida</> : <>Life Insurance<br />Protection</>}
             </h3>
             <p className="sr-body">
               {isEs
-                ? "El seguro de vida no se trata de usted; se trata de proteger a las personas que dependen de usted. Le ayudamos a explorar opciones de cobertura de compañías bien establecidas para ayudar a reemplazar ingresos, cubrir deudas y brindar estabilidad."
-                : "Life insurance isn’t about you — it’s about protecting the people who depend on you. We help you explore coverage options from well-established carriers to help replace income, cover debts, and provide stability."}
+                ? "Tu familia depende de ti todos los días. Te ayudamos a entender el seguro de término, seguro de vida entera e indexed universal life en un lenguaje sencillo, para que puedas elegir una cobertura que apoye a las personas que amas, tu presupuesto y tus metas futuras."
+                : "Your family depends on you every day. We help explain term, whole life, and indexed universal life in simple language, so you can choose coverage that supports the people you love, your budget, and your future goals."}
             </p>
             <Link href={isEs ? "/es/business-strategies" : "/business-strategies"} className="sr-link">
-              {isEs ? "Aprende más" : "Learn How It Works"}
+              {isEs ? "Conoce cómo funciona" : "Learn How It Works"}
               <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
           </div>
@@ -94,11 +94,11 @@ export default function HowWeCanHelp({ lang }: HowWeCanHelpProps) {
             </h3>
             <p className="sr-body">
               {isEs
-                ? "La jubilación debe sentirse como una recompensa, no como una interrogante. Le ayudamos a explorar estrategias de ahorro e ingresos que buscan proteger su capital contra caídas del mercado y generar flujos de ingresos confiables."
-                : "Retirement should feel like a reward, not a question mark. We help you explore savings and income strategies designed to seek principal protection from market downturns and support reliable income streams."}
+                ? "La jubilación no debería sentirse como una adivinanza. Ya sea que estés comenzando a ahorrar o revisando un plan que ya tienes, te ayudamos a entender tus opciones y crear un plan diseñado para apoyar el futuro que deseas."
+                : "Retirement should not feel like a guess. Whether you’re just starting to save or reviewing a plan you already have, we help you understand your options and create a plan designed to support the future you want."}
             </p>
             <Link href={isEs ? "/es/business-strategies" : "/business-strategies"} className="sr-link">
-              {isEs ? "Aprende más" : "Learn How It Works"}
+              {isEs ? "Conoce cómo funciona" : "Learn How It Works"}
               <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
           </div>
@@ -122,17 +122,17 @@ export default function HowWeCanHelp({ lang }: HowWeCanHelpProps) {
             </h3>
             <p className="sr-body">
               {isEs
-                ? "El costo de la educación continúa aumentando. Le ayudamos a explorar opciones de planificación flexible que brindan crecimiento con ventajas impositivas y flexibilidad para apoyar los sueños de sus hijos."
-                : "The cost of education continues to rise. We help you explore flexible planning choices designed to offer tax-advantaged growth and flexibility to support your children’s dreams."}
+                ? "Todo padre desea darle a su hijo más oportunidades para el futuro. Ya sea que tu hijo elija la universidad, una escuela técnica u otro camino, te ayudamos a entender opciones de ahorro educativo y crear un plan diseñado para apoyar sus metas sin perder de vista tu jubilación."
+                : "Every parent wants to give their child more opportunities for the future. Whether your child chooses college, trade school, or another path, we help you understand education savings options and build a plan designed to support their goals while keeping your retirement in mind."}
             </p>
             <Link href={isEs ? "/es/business-strategies" : "/business-strategies"} className="sr-link">
-              {isEs ? "Aprende más" : "Learn How It Works"}
+              {isEs ? "Conoce cómo funciona" : "Learn How It Works"}
               <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
           </div>
         </div>
 
-        {/* Service Row 4: Estate Preservation (Flip) */}
+        {/* Service Row 4: Estate & Legacy Planning (Flip) */}
         <div className="service-row flip">
           <div className="sr-photo-wrap">
             <Image
@@ -146,15 +146,15 @@ export default function HowWeCanHelp({ lang }: HowWeCanHelpProps) {
           <div className="sr-content">
             <div className="sr-num">04</div>
             <h3 className="sr-title">
-              {isEs ? <>Preservación<br />patrimonial</> : <>Estate<br />Preservation</>}
+              {isEs ? <>Planificación patrimonial<br />y de legado</> : <>Estate &amp; Legacy<br />Planning</>}
             </h3>
             <p className="sr-body">
               {isEs
-                ? "Construir riqueza requiere tiempo; preservarla requiere planificación. Ayudamos a las familias a estructurar estrategias de transferencia de activos que buscan minimizar costos de legalización y transmitir su legado."
-                : "Building wealth takes time; preserving it takes planning. We help families explore asset transfer strategies aimed at avoiding probate friction and passing on your legacy clearly."}
+                ? "Tu legado es más que dinero: son las personas, los valores y el futuro que te importan. Te ayudamos a entender formas de organizar tus activos y trabajamos junto con tus profesionales legales y de impuestos para ayudar a crear un plan enfocado en lo que más importa."
+                : "Your legacy is more than money — it’s the people, values, and future you care about. We help you understand ways to organize your assets and work alongside your legal and tax professionals to help create a plan focused on what matters most."}
             </p>
             <Link href={isEs ? "/es/business-strategies" : "/business-strategies"} className="sr-link">
-              {isEs ? "Aprende más" : "Learn How It Works"}
+              {isEs ? "Inicia una conversación sobre tu legado" : "Start a Legacy Conversation"}
               <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
           </div>
@@ -178,11 +178,11 @@ export default function HowWeCanHelp({ lang }: HowWeCanHelpProps) {
             </h3>
             <p className="sr-body">
               {isEs
-                ? "Su negocio lleva su trabajo, sus ingresos y las personas que dependen de él. Ayudamos a los dueños de negocios a comprender opciones de protección, estrategias de sucesión y herramientas de planificación."
-                : "Your business carries your work, your income, and the people who depend on it. We help business owners understand protection options, succession strategies, and planning tools."}
+                ? "Su negocio representa su trabajo, sus ingresos y a las personas que dependen de él. Ayudamos a los dueños de negocios a entender opciones de protección, estrategias de sucesión y herramientas de planificación que pueden ayudar a apoyar la estabilidad a largo plazo."
+                : "Your business carries your work, your income, and the people who depend on it. We help business owners understand protection options, succession strategies, and planning tools that may help support long-term stability."}
             </p>
             <Link href={isEs ? "/es/business-strategies" : "/business-strategies"} className="sr-link">
-              {isEs ? "Aprende más" : "Learn How It Works"}
+              {isEs ? "Conoce cómo funciona" : "Learn How It Works"}
               <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
             </Link>
           </div>

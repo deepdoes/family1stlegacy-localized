@@ -2596,6 +2596,18 @@ html { scroll-behavior: smooth; }
   min-width: 195px !important;
   box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
   z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 #nav .lang-dropdown a {
   display: flex !important;
@@ -2821,6 +2833,13 @@ html { scroll-behavior: smooth; }
   .legal-body { padding: 40px 32px; }
 }
 </style>
+<style>.nav-lang { display: none !important; }</style>
+
+<style>
+#nav .lang-dropdown { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transform: translateY(-8px) !important; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important; }
+#nav .lang-switcher:hover .lang-dropdown, #nav .lang-switcher.open .lang-dropdown { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
+</style>
+
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -2839,20 +2858,7 @@ html { scroll-behavior: smooth; }
 <li><a href="index_es.html#opportunity">Oportunidad</a></li>
 <li><a href="index_es.html#reviews">Historias</a></li>
 <li><a href="index_es.html#blog">Base de conocimientos</a></li>
-<li>
 
-<a class="nav-lang no-pill" href="#" onclick="showLanguageModal(event)" title="Cambiar idioma">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span class="lang-text-cycle">
-<span class="lt-item">Inglés</span>
-<span class="lt-item">Español</span>
-<span class="lt-item">Portugués</span>
-<span class="lt-item">Kiswahili</span>
-<span class="lt-item">Kinyarwanda</span>
-</span>
-</a>
-
-</li>
 
         <li class="lang-switcher" id="lang-switcher-desktop">
           <button class="lang-btn" aria-label="Select language">
@@ -2892,29 +2898,57 @@ html { scroll-behavior: smooth; }
 <div class="legal-meta">Última actualización: enero de 2026</div>
 </div>
 <div class="legal-body" data-delay="1" data-reveal="">
-<p>Family First Legacy ("nosotros", "nos" o "nuestro") respeta su privacidad y se compromete a protegerla mediante el cumplimiento de esta Política de privacidad. Esta política describe los tipos de información que podemos recopilar de usted o que usted puede proporcionar cuando visita el sitio web family1stlegacy.com.</p>
+<p><strong>Última actualización: Enero de 2026</strong></p>
+<p>Family First Legacy respeta tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, protegemos y compartimos información cuando visitas nuestro sitio web, envías un formulario, solicitas una consulta o te comunicas con nosotros.</p>
+<p>Al usar este sitio web, aceptas las prácticas descritas a continuación.</p>
+
 <h2>Información que recopilamos</h2>
-<p>Recopilamos varios tipos de información de y sobre los usuarios de nuestro sitio web, incluida información:</p>
+<p>Podemos recopilar información que tú decidas proporcionarnos, como:</p>
 <ul>
-<li>Por los cuales usted puede ser identificado personalmente, como nombre, dirección postal, dirección de correo electrónico, número de teléfono ("información personal");</li>
-<li>Eso se trata de ti pero individualmente no te identifica; y/o</li>
-<li>Acerca de su conexión a Internet, el equipo que utiliza para acceder a nuestro sitio web y detalles de uso.</li>
+<li>Tu nombre</li>
+<li>Correo electrónico</li>
+<li>Número de teléfono</li>
+<li>Estado de residencia</li>
+<li>Intereses de servicio</li>
+<li>Preguntas o mensajes enviados a través de nuestros formularios</li>
 </ul>
-<h2>Cómo utilizamos su información</h2>
-<p>Usamos la información que recopilamos sobre usted o que usted nos proporciona, incluida cualquier información personal:</p>
+<p>También podemos recopilar información básica sobre el uso del sitio web, como tipo de navegador, información del dispositivo, páginas visitadas, cookies o actividad general del sitio web para ayudar a mejorar la experiencia del usuario.</p>
+
+<h2>Cómo usamos tu información</h2>
+<p>Podemos usar tu información para:</p>
 <ul>
-<li>Para presentarle nuestro sitio web y sus contenidos.</li>
-<li>Para proporcionarle información, productos o servicios que nos solicite.</li>
-<li>Para cumplir con cualquier otra finalidad para la que usted lo proporcione.</li>
-<li>Para llevar a cabo nuestras obligaciones y hacer cumplir nuestros derechos derivados de cualquier contrato celebrado entre usted y nosotros.</li>
-<li>Para notificarle sobre cambios en nuestro sitio web o cualquier producto o servicio que ofrecemos o proporcionamos a través de él.</li>
+<li>Responder a tus preguntas o solicitudes de consulta</li>
+<li>Programar citas o seguimientos</li>
+<li>Proporcionar información sobre los servicios que solicitaste</li>
+<li>Entender tus metas y necesidades de protección</li>
+<li>Mejorar nuestro sitio web y nuestras comunicaciones</li>
+<li>Cumplir con requisitos legales, regulatorios o comerciales</li>
+<li><strong>No vendemos tu información personal.</strong></li>
 </ul>
-<h2>Divulgación de su información</h2>
-<p>Podemos revelar información agregada sobre nuestros usuarios e información que no identifica a ningún individuo, sin restricciones. No vendemos, comercializamos ni transferimos de otro modo a terceros su información de identificación personal a menos que proporcionemos a los usuarios un aviso previo.</p>
-<h2>Cambios en nuestra política de privacidad</h2>
-<p>Es nuestra política publicar cualquier cambio que realicemos en nuestra política de privacidad en esta página. Si realizamos cambios sustanciales en la forma en que tratamos la información personal de nuestros usuarios, se lo notificaremos a través de un aviso en la página de inicio del sitio web.</p>
-<h2>Información del contacto</h2>
-<p>Para hacer preguntas o comentar sobre esta política de privacidad y nuestras prácticas de privacidad, contáctenos en: info@family1stlegacy.com</p>
+
+<h2>Cómo compartimos tu información</h2>
+<p>Podemos compartir información solo cuando sea razonablemente necesario para responder a tu solicitud, proporcionar servicios, operar nuestro negocio o cumplir con la ley.</p>
+<p>Esto puede incluir compartir información con agentes con licencia o miembros del equipo, compañías de seguros o proveedores de servicios financieros, herramientas del sitio web, sistemas CRM, herramientas de programación, proveedores de comunicación por correo electrónico o mensajes de texto, u otros proveedores de servicios confiables.</p>
+<p><strong>No vendemos tu información personal a terceros.</strong></p>
+
+<h2>Formularios del sitio web y almacenamiento de datos</h2>
+<p>Family First Legacy no almacena intencionalmente información personal directamente en este sitio web, excepto la información que los visitantes deciden enviar a través de formularios de contacto, formularios de solicitud de consulta o campos de mensaje.</p>
+<p>Los envíos de formularios pueden enviarse a nosotros por correo electrónico, CRM, herramientas de programación u otros proveedores de servicios para que podamos responder a la solicitud del visitante.</p>
+<p>Por favor no envíes números de Seguro Social, registros médicos, información de cuentas bancarias u otra información altamente sensible a través de formularios generales del sitio web, a menos que la solicitemos específicamente mediante un proceso seguro.</p>
+
+<h2>Seguridad de datos</h2>
+<p>Tomamos medidas razonables para ayudar a proteger la información enviada a través de este sitio web.</p>
+<p>Sin embargo, ningún sitio web, transmisión por internet, correo electrónico, mensaje de texto o sistema electrónico puede garantizarse como 100% seguro. Los visitantes deben evitar enviar información altamente sensible a través de formularios generales del sitio web, a menos que se solicite mediante un proceso seguro.</p>
+
+<h2>Cookies y seguimiento del sitio web</h2>
+<p>Nuestro sitio web puede usar cookies, herramientas de análisis o tecnologías similares para entender el tráfico del sitio web y mejorar la experiencia del usuario.</p>
+
+<h2>Comunicaciones por correo electrónico, teléfono y mensajes de texto</h2>
+<p>Si proporcionas tu información de contacto, podemos comunicarnos contigo por teléfono, mensaje de texto, correo electrónico u otros métodos de comunicación para responder a tu solicitud, programar citas, proporcionar información o dar seguimiento a servicios en los que expresaste interés.</p>
+<p>Puedes pedirnos que dejemos de contactarte en cualquier momento. No vendemos ni compartimos números de teléfono móvil ni información de consentimiento para SMS con terceros para sus fines de marketing.</p>
+
+<h2>Contáctanos</h2>
+<p>Family First Legacy<br/>Email: info@family1stlegacy.com<br/>Sitio web: family1stlegacy.com</p>
 </div>
 </div>
 </section>

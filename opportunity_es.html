@@ -197,6 +197,18 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--dark);
   min-width: 195px !important;
   box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
   z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 #nav .lang-dropdown a {
   display: flex !important;
@@ -408,6 +420,13 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--dark);
   transform: translateY(0);
 }
 </style>
+<style>.nav-lang { display: none !important; }</style>
+
+<style>
+#nav .lang-dropdown { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transform: translateY(-8px) !important; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important; }
+#nav .lang-switcher:hover .lang-dropdown, #nav .lang-switcher.open .lang-dropdown { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
+</style>
+
 </head>
 <body>
 

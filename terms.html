@@ -2673,6 +2673,18 @@ html { scroll-behavior: smooth; }
   min-width: 195px !important;
   box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
   z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 #nav .lang-dropdown a {
   display: flex !important;
@@ -2901,6 +2913,13 @@ html { scroll-behavior: smooth; }
 }
 </style>
 
+<style>.nav-lang { display: none !important; }</style>
+
+<style>
+#nav .lang-dropdown { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transform: translateY(-8px) !important; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important; }
+#nav .lang-switcher:hover .lang-dropdown, #nav .lang-switcher.open .lang-dropdown { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
+</style>
+
 </head>
 <body>
 
@@ -3006,143 +3025,35 @@ html { scroll-behavior: smooth; }
           <div class="legal-meta" style="color:var(--muted); font-size:14px; font-weight:600; margin-bottom:40px;">Last Updated: January 2026</div>
         </div>
         
-        <div class="legal-body" data-reveal data-delay="1" style="color:var(--dark); font-size:16px; line-height:1.8;">
-          <p style="margin-bottom:32px;">
-            Welcome to Family First Legacy. These Terms of Service explain how you may use this website and the information provided on it. By accessing or using this website, you agree to these Terms. If you do not agree, please do not use the website.
-          </p>
+        <div class="legal-body" data-delay="1" data-reveal="">
+<p><strong>Last Updated: January 2026</strong></p>
+<p>Welcome to Family First Legacy. These Terms of Service explain how you may use this website and the information provided on it. By accessing or using this website, you agree to these Terms.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">1. Purpose of This Website</h2>
-          <p style="margin-bottom:16px;">
-            Family First Legacy provides educational information related to life insurance, family protection, retirement planning, education planning, estate and legacy planning, business protection, and related financial topics.
-          </p>
-          <p style="margin-bottom:16px;">
-            The information on this website is provided for general educational purposes only. It should not be considered legal, tax, investment, or personalized financial advice.
-          </p>
-          <p style="margin-bottom:32px;">
-            Family First Legacy is not a law firm, tax firm, bank, or government agency. For legal, tax, or estate planning advice, you should speak with a qualified attorney, tax professional, or other appropriate advisor.
-          </p>
+<h2>1. Purpose of This Website</h2>
+<p>Family First Legacy provides educational information related to life insurance, family protection, retirement planning, education planning, estate and legacy planning, business protection, and related financial topics.</p>
+<p>The information on this website is provided for general educational purposes only. It should not be considered legal, tax, investment, or personalized financial advice.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">2. Services Provided</h2>
-          <p style="margin-bottom:16px;">
-            Family First Legacy may help individuals and families understand available insurance and financial options. This may include education, needs-based conversations, appointment scheduling, and connecting visitors with licensed professionals when appropriate.
-          </p>
-          <p style="margin-bottom:16px;">
-            Any insurance or financial product discussed is subject to product availability, eligibility, underwriting, carrier approval, policy terms, and applicable laws.
-          </p>
-          <p style="margin-bottom:32px;">
-            Family First Legacy does not represent that every product described on this website will be available in every state or to every person.
-          </p>
+<h2>2. Services Provided</h2>
+<p>Family First Legacy may help individuals and families understand available insurance and financial options. Any insurance or financial product discussed is subject to product availability, eligibility, underwriting, carrier approval, policy terms, and applicable laws.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">3. No Guarantee of Coverage, Approval, Rates, or Results</h2>
-          <p style="margin-bottom:16px;">
-            Submitting a form, booking an appointment, requesting information, or speaking with a representative does not guarantee that you will qualify for insurance coverage, receive a specific rate, obtain a specific product, or achieve a specific financial result.
-          </p>
-          <p style="margin-bottom:16px;">
-            Any approval, premium, benefit, cash value, rider, or policy feature depends on the insurance company, underwriting review, eligibility, product availability, applicable laws, and the official policy documents.
-          </p>
-          <p style="margin-bottom:32px;">
-            Nothing on this website should be interpreted as a promise or guarantee of future performance, tax treatment, protection level, or financial outcome.
-          </p>
+<h2>3. No Guarantee of Coverage, Approval, Rates, or Results</h2>
+<p>Submitting a form, booking an appointment, requesting information, or speaking with a representative does not guarantee that you will qualify for insurance coverage, receive a specific rate, obtain a specific product, or achieve a specific financial result.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">4. Quotes, Illustrations, and Examples</h2>
-          <p style="margin-bottom:16px;">
-            Any quotes, illustrations, examples, or educational scenarios shown on this website are for general educational purposes only and may not reflect your exact situation.
-          </p>
-          <p style="margin-bottom:16px;">
-            Actual premiums, benefits, fees, limitations, exclusions, cash value growth, riders, and policy features vary by product, carrier, underwriting, and policy terms.
-          </p>
-          <p style="margin-bottom:32px;">
-            You should carefully review all official policy documents before making any decision.
-          </p>
+<h2>4. Quotes, Illustrations, and Examples</h2>
+<p>Any quotes, illustrations, examples, or educational scenarios shown on this website are for general educational purposes only and may not reflect your exact situation.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">5. Use of the Website</h2>
-          <p style="margin-bottom:16px;">You agree to use this website only for lawful and appropriate purposes. You agree not to:</p>
-          <ul style="margin-left:24px; margin-bottom:32px; list-style:disc;">
-            <li>Use the website in any way that violates applicable federal, state, local, or international law or regulation;</li>
-            <li>Submit false, misleading, or incomplete information;</li>
-            <li>Attempt to damage, disrupt, or interfere with the website or its operation;</li>
-            <li>Copy, reproduce, modify, publish, or misuse website content without permission;</li>
-            <li>Use the website for spam, fraud, unauthorized commercial activity, or any other unlawful purpose.</li>
-          </ul>
+<h2>5. Governing Law</h2>
+<p>These Terms are governed by the laws of the State of Texas.</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">6. Contact Forms and Communication</h2>
-          <p style="margin-bottom:16px;">
-            When you submit a contact form, appointment request, or message through this website, you authorize Family First Legacy or its representatives to contact you regarding your request using the information you provide, subject to applicable law.
-          </p>
-          <p style="margin-bottom:16px;">
-            Submitting a form does not create a client relationship, insurance policy, or obligation to purchase any product.
-          </p>
-          <p style="margin-bottom:32px;">
-            Please do not send sensitive personal, financial, or medical information through the website unless it is requested through an appropriate and secure process.
-          </p>
+<h2>6. Contact Us</h2>
+<p>Family First Legacy<br/>Email: info@family1stlegacy.com<br/>Phone: (469) 608-1595<br/>Location: Dallas–Fort Worth, Texas</p>
 
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">7. Third-Party Links and Services</h2>
-          <p style="margin-bottom:16px;">
-            This website may include links to third-party websites, insurance companies, scheduling tools, payment platforms, or other services.
-          </p>
-          <p style="margin-bottom:32px;">
-            These third parties are responsible for their own websites, content, privacy practices, terms, and services. Family First Legacy is not responsible for the content, security, or actions of third-party websites or services.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">8. Intellectual Property Rights</h2>
-          <p style="margin-bottom:16px;">
-            The text, design, branding, graphics, images, layout, and other content on this website belong to Family First Legacy or are used with permission, unless otherwise stated.
-          </p>
-          <p style="margin-bottom:32px;">
-            You may not copy, reproduce, modify, publish, or distribute website content for commercial use without written permission.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">9. Privacy</h2>
-          <p style="margin-bottom:32px;">
-            Your use of this website is also subject to our Privacy Policy. Please review it to understand how information submitted through this website may be handled.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">10. Disclaimer of Warranties</h2>
-          <p style="margin-bottom:16px;">
-            Family First Legacy works to provide helpful and accurate information. However, we do not guarantee that all website content will always be complete, current, accurate, or error-free.
-          </p>
-          <p style="margin-bottom:32px;">
-            This website and its content are provided "as is" and "as available," without warranties of any kind, either express or implied.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">11. Limitation of Liability</h2>
-          <p style="margin-bottom:16px;">
-            To the fullest extent allowed by law, Family First Legacy is not responsible for any losses, damages, or claims that may result from using this website, relying only on general website information, or being unable to access the website.
-          </p>
-          <p style="margin-bottom:32px;">
-            This includes direct, indirect, incidental, consequential, special, or punitive damages.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">12. Governing Law</h2>
-          <p style="margin-bottom:32px;">
-            These Terms are governed by the laws of the State of Texas. Any dispute related to this website or these Terms will be handled according to applicable Texas and federal law.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">13. Changes to These Terms</h2>
-          <p style="margin-bottom:16px;">
-            Family First Legacy may update these Terms of Service from time to time. Any updates will be posted on this page with a revised "Last Updated" date.
-          </p>
-          <p style="margin-bottom:32px;">
-            Your continued use of the website after changes are posted means you accept the updated Terms.
-          </p>
-
-          <h2 style="font-family:var(--font-head); font-size:22px; font-weight:700; margin-top:36px; margin-bottom:16px;">14. Contact Us</h2>
-          <p style="margin-bottom:12px;">If you have questions about these Terms of Service, please contact us:</p>
-          <p style="margin-bottom:4px; font-weight:700;">Family First Legacy</p>
-          <p style="margin-bottom:4px;">Email: <a href="mailto:info@family1stlegacy.com" style="color:var(--green);">info@family1stlegacy.com</a></p>
-          <p style="margin-bottom:4px;">Phone: (469) 608-1595</p>
-          <p style="margin-bottom:32px;">Location: Dallas–Fort Worth, Texas</p>
-
-          <div style="background:rgba(74,45,122,0.05); padding:24px; border-left:4px solid var(--amber); border-radius:8px; margin-top:40px;">
-            <h4 style="font-family:var(--font-head); font-size:16px; font-weight:700; color:var(--dark); margin-bottom:8px; text-transform:uppercase;">IMPORTANT WEBSITE DISCLAIMER</h4>
-            <p style="color:var(--dark); font-size:14px; margin:0;">
-              Information on this website is for educational purposes only and does not guarantee insurance approval, coverage, rates, or specific financial results.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
+<div style="background:var(--green-lite); border-left:4px solid var(--green); padding:20px; border-radius:12px; margin-top:32px;">
+<p style="font-size:13px; font-weight:600; color:var(--dark); margin:0;">IMPORTANT WEBSITE DISCLAIMER: Information on this website is for educational purposes only and does not guarantee insurance approval, coverage, rates, or specific financial results.</p>
+</div>
+</div>
+</div>
+</section>
 
     <!-- CTA BANNER ──────────────────────────────────────── -->
 <section id="cta-banner">

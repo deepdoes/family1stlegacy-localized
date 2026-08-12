@@ -15,7 +15,7 @@ export default function FourSteps({ lang }: FourStepsProps) {
         <div className="process-header">
           <p className="t-label" style={{ justifyContent: "center", display: "flex", alignItems: "center", gap: "8px" }}>
             <span className="green-dot"></span>
-            {isEs ? "Cómo funciona" : "How It Works"}
+            {isEs ? "CUATRO PASOS HACIA LA CLARIDAD FINANCIERA" : "How It Works"}
           </p>
           <h2 className="t-h1" style={{ marginTop: "16px" }}>
             {isEs ? (
@@ -38,16 +38,16 @@ export default function FourSteps({ lang }: FourStepsProps) {
             </div>
             <div className="ps-num">01</div>
             <div className="ps-content">
-              <div className="ps-step-label">{isEs ? "Paso uno" : "Step One"}</div>
+              <div className="ps-step-label">{isEs ? "PASO UNO" : "Step One"}</div>
               <div className="ps-title">{isEs ? "Llamada de descubrimiento" : "Discovery Call"}</div>
               <div className="ps-body">
                 {isEs
-                  ? "Una conversación sin compromiso para comprender a su familia, sus metas y su situación financiera actual, sin costo alguno."
+                  ? "Una conversación sin obligación para entender tu familia, tus metas y tu situación financiera actual, sin costo."
                   : "A no-obligation conversation to understand your family, your goals, and where you stand financially — at no cost."}
               </div>
               <div className="ps-duration">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-                <span>30 minutes</span>
+                <span>{isEs ? "30 minutos" : "30 minutes"}</span>
               </div>
             </div>
           </div>
@@ -62,16 +62,16 @@ export default function FourSteps({ lang }: FourStepsProps) {
             </div>
             <div className="ps-num">02</div>
             <div className="ps-content">
-              <div className="ps-step-label">{isEs ? "Paso dos" : "Step Two"}</div>
-              <div className="ps-title">{isEs ? "Entienda sus necesidades" : "Understand Your Needs"}</div>
+              <div className="ps-step-label">{isEs ? "PASO DOS" : "Step Two"}</div>
+              <div className="ps-title">{isEs ? "Entender tus necesidades" : "Understand Your Needs"}</div>
               <div className="ps-body">
                 {isEs
-                  ? "Utilizamos un análisis de necesidades financieras para revisar su panorama actual y ayudar a identificar dónde pueden encajar las opciones de protección o ahorro."
+                  ? "Usamos un Análisis de Necesidades Financieras para revisar tu situación actual y ayudar a identificar dónde la protección, el ahorro o las opciones de jubilación pueden ajustarse a tus necesidades."
                   : "We use a Financial Needs Analysis to review your current picture and help identify where protection, savings, or retirement options may fit your needs."}
               </div>
               <div className="ps-duration">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-                <span>45–60 minutes</span>
+                <span>{isEs ? "45–60 minutos" : "45–60 minutes"}</span>
               </div>
             </div>
           </div>
@@ -86,16 +86,16 @@ export default function FourSteps({ lang }: FourStepsProps) {
             </div>
             <div className="ps-num">03</div>
             <div className="ps-content">
-              <div className="ps-step-label">{isEs ? "Paso tres" : "Step Three"}</div>
-              <div className="ps-title">{isEs ? "Sus opciones personalizadas" : "Your Personalized Options"}</div>
+              <div className="ps-step-label">{isEs ? "PASO TRES" : "Step Three"}</div>
+              <div className="ps-title">{isEs ? "Tus opciones personalizadas" : "Your Personalized Options"}</div>
               <div className="ps-body">
                 {isEs
-                  ? "Presentamos opciones claras de compañías de servicios financieros bien establecidas, explicadas en un lenguaje sencillo y sin presión."
+                  ? "Te presentamos opciones claras de compañías de seguros y servicios financieros bien establecidas, explicadas en un lenguaje sencillo y sin presión."
                   : "We present clear options from well-established insurance and financial services companies — explained in simple language, with no pressure."}
               </div>
               <div className="ps-duration">
                 <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-                <span>1 week follow-up</span>
+                <span>{isEs ? "Seguimiento en 1 semana" : "1 week follow-up"}</span>
               </div>
             </div>
           </div>
@@ -110,16 +110,16 @@ export default function FourSteps({ lang }: FourStepsProps) {
             </div>
             <div className="ps-num">04</div>
             <div className="ps-content">
-              <div className="ps-step-label">{isEs ? "En curso" : "Ongoing"}</div>
+              <div className="ps-step-label">{isEs ? "CONTINUO" : "Ongoing"}</div>
               <div className="ps-title">{isEs ? "Orientación continua" : "Ongoing Guidance"}</div>
               <div className="ps-body">
                 {isEs
-                  ? "La vida cambia y su plan puede necesitar cambiar con ella. Permanecemos disponibles para revisar su plan y responder preguntas a medida que su familia crece."
+                  ? "La vida cambia, y tu plan puede necesitar cambiar con ella. Seguimos disponibles para revisar tu plan, responder preguntas y ayudarte a hacer ajustes a medida que tu familia crece."
                   : "Life changes — and your plan may need to change with it. We stay available to review your plan, answer questions, and help you adjust as your family grows."}
               </div>
               <div className="ps-duration">
                 <svg viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-                <span>Support over time</span>
+                <span>{isEs ? "Apoyo con el tiempo" : "Support over time"}</span>
               </div>
             </div>
           </div>

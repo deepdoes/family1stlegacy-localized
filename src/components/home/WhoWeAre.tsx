@@ -78,25 +78,31 @@ export default function WhoWeAre({ lang }: WhoWeAreProps) {
             <div className="space-y-5 text-gray-600 text-base sm:text-lg font-light leading-relaxed mb-8">
               <p>
                 {isEs
-                  ? "Cada familia merece la oportunidad de proteger lo que ha construido, prepararse para el mañana y perseguir el futuro con el que sueña. Creemos que cada familia, independientemente de sus antecedentes o ingresos, merece acceso a orientación honesta y experta para ayudarla a tomar decisiones financieras informadas."
-                  : "Every family deserves the opportunity to protect what they’ve built, prepare for tomorrow, and pursue the future they dream of. We believe every family — regardless of background or income — deserves access to honest, knowledgeable guidance to help them make informed financial decisions."}
+                  ? "Toda familia merece la oportunidad de proteger lo que ha construido, prepararse para el mañana y perseguir el futuro que sueña."
+                  : "Every family deserves the opportunity to protect what they’ve built, prepare for tomorrow, and pursue the future they dream of."}
               </p>
 
               <p>
                 {isEs
-                  ? "Family First Legacy es una agencia independiente de servicios financieros arraigada en la comunidad de Dallas-Fort Worth que presta servicios a familias en todo Estados Unidos. Ayudamos a personas, familias y dueños de negocios a explorar opciones financieras y de seguros de una red de compañías bien establecidas."
+                  ? "Creemos que toda familia, sin importar su origen o nivel de ingresos, merece acceso a orientación honesta y bien informada que le ayude a tomar decisiones financieras con conocimiento."
+                  : "We believe every family — regardless of background or income — deserves access to honest, knowledgeable guidance to help them make informed financial decisions."}
+              </p>
+
+              <p>
+                {isEs
+                  ? "Family First Legacy es una agencia independiente de servicios financieros con raíces en la comunidad de Dallas-Fort Worth y que sirve a familias en todo Estados Unidos. Ayudamos a individuos, familias y dueños de negocios a explorar opciones de seguros y servicios financieros a través de una red de compañías bien establecidas."
                   : "Family First Legacy is an independent financial services agency rooted in the Dallas–Fort Worth community and serving families across the United States. We help individuals, families, and business owners explore insurance and financial options from a network of well-established insurance and financial services companies."}
               </p>
 
               <p>
                 {isEs
-                  ? "Nuestros profesionales con licencia se toman el tiempo para escuchar, comprender sus metas y preocupaciones, y conocer a las personas que más le importan antes de ayudarle a explorar opciones que puedan alinearse con sus necesidades."
+                  ? "Nuestros profesionales con licencia se toman el tiempo para escucharte, entender tus metas y preocupaciones, y conocer a las personas que más importan en tu vida antes de ayudarte a explorar opciones que puedan alinearse con tus necesidades."
                   : "Our licensed professionals take the time to listen, understand your goals and concerns, and learn about the people who matter most to you before helping you explore options that may align with your needs."}
               </p>
 
               <p>
                 {isEs
-                  ? "Ya sea que esté protegiendo a su familia, preparándose para la jubilación, planificando el futuro de sus hijos o construyendo un legado, nuestra meta es brindarle orientación honesta, explicaciones claras y la información que necesita para tomar decisiones con confianza, sin presión y a su propio ritmo."
+                  ? "Ya sea que estés protegiendo a tu familia, preparándote para la jubilación, planificando el futuro de tus hijos o construyendo un legado, nuestra meta es brindarte orientación honesta, explicaciones claras y la información que necesitas para tomar decisiones con confianza, sin presión y a tu propio ritmo."
                   : "Whether you’re protecting your family, preparing for retirement, planning for your children’s future, or building a legacy, our goal is to provide honest guidance, clear explanations, and the information you need to make confident decisions — without pressure and at your own pace."}
               </p>
             </div>
@@ -108,7 +114,7 @@ export default function WhoWeAre({ lang }: WhoWeAreProps) {
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-              {isEs ? "Programe una revisión gratuita" : "Schedule a Free Review"}
+              {isEs ? "Programa una revisión gratuita" : "Schedule a Free Review"}
             </Link>
           </div>
 

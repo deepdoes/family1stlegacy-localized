@@ -2596,6 +2596,18 @@ html { scroll-behavior: smooth; }
   min-width: 195px !important;
   box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
   z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 #nav .lang-dropdown a {
   display: flex !important;
@@ -3074,6 +3086,13 @@ footer, footer [data-reveal], footer [data-stagger] > * {
   ]
 }
 </script>
+<style>.nav-lang { display: none !important; }</style>
+
+<style>
+#nav .lang-dropdown { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transform: translateY(-8px) !important; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important; }
+#nav .lang-switcher:hover .lang-dropdown, #nav .lang-switcher.open .lang-dropdown { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
+</style>
+
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -3092,20 +3111,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
 <li><a href="index_es.html#opportunity">Oportunidad</a></li>
 <li><a href="index_es.html#reviews">Historias</a></li>
 <li><a href="#blog">Base de conocimientos</a></li>
-<li>
 
-<a class="nav-lang no-pill" href="#" onclick="showLanguageModal(event)" title="Cambiar idioma">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span class="lang-text-cycle">
-<span class="lt-item">Inglés</span>
-<span class="lt-item">Español</span>
-<span class="lt-item">Portugués</span>
-<span class="lt-item">Kiswahili</span>
-<span class="lt-item">Kinyarwanda</span>
-</span>
-</a>
-
-</li>
 
         <li class="lang-switcher" id="lang-switcher-desktop">
           <button class="lang-btn" aria-label="Select language">
@@ -3141,28 +3147,28 @@ footer, footer [data-reveal], footer [data-stagger] > * {
 <section class="static-hero" style="background-image:url('images/hero_life_insurance_diverse_1777335713599.png');">
 <div class="sh-content">
 <div class="sh-badge">Protección familiar</div>
-<h1 class="sh-title">Trabajas duro todos los días para cuidar de tu familia. ¿Pero qué pasa si no puedes?</h1>
-<p class="sh-sub">Pagas la hipoteca. Mantén las luces encendidas. Pones comida en la mesa. El mundo entero de tu familia funciona porque tú apareces, todos los días.</p>
-<div class="sh-hook">Si mis ingresos se detuvieran mañana, por cualquier motivo, ¿por cuánto tiempo mi familia estaría bien?</div>
+<h1 class="sh-title">Trabajas duro todos los días para cuidar de tu familia. Pero ¿qué pasa si no puedes?</h1>
+<p class="sh-sub">Tú pagas la hipoteca o la renta. Mantienes las luces encendidas. Pones comida en la mesa. Todo el mundo de tu familia funciona porque tú estás presente, todos los días.</p>
+<div class="sh-hook">Si mis ingresos se detuvieran mañana — por cualquier razón — ¿por cuánto tiempo estaría realmente bien mi familia?</div>
 </div>
 <div class="sh-stats-container">
 <div class="container-full">
 <div class="numbers-grid">
 <div class="glass-card">
 <div class="glass-num">60%</div>
-<div class="glass-label">Peligrosamente insuficientemente asegurado</div>
+<div class="glass-label">La cobertura del trabajo puede dejar brechas</div>
 </div>
 <div class="glass-card">
 <div class="glass-num">1 de cada 4</div>
-<div class="glass-label">Enfrentar la enfermedad antes de la jubilación</div>
+<div class="glass-label">Si los ingresos se detienen</div>
 </div>
 <div class="glass-card">
 <div class="glass-num">9-24m</div>
-<div class="glass-label">Espera promedio de sucesión</div>
+<div class="glass-label">Probate puede retrasar el dinero</div>
 </div>
 <div class="glass-card">
 <div class="glass-num">$0</div>
-<div class="glass-label">Costo de una revisión</div>
+<div class="glass-label">Revisión sin costo</div>
 </div>
 </div>
 </div>

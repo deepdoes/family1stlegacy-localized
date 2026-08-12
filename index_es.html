@@ -2596,6 +2596,18 @@ html { scroll-behavior: smooth; }
   min-width: 195px !important;
   box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
   z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
 }
 #nav .lang-dropdown a {
   display: flex !important;
@@ -2807,6 +2819,13 @@ html { scroll-behavior: smooth; }
   transform: translateY(0);
 }
 </style>
+<style>.nav-lang { display: none !important; }</style>
+
+<style>
+#nav .lang-dropdown { opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; transform: translateY(-8px) !important; transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important; }
+#nav .lang-switcher:hover .lang-dropdown, #nav .lang-switcher.open .lang-dropdown { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; transform: translateY(0) !important; }
+</style>
+
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -2825,20 +2844,7 @@ html { scroll-behavior: smooth; }
 <li><a href="#opportunity">Oportunidad</a></li>
 <li><a href="#reviews">Historias</a></li>
 <li><a href="#blog">Base de conocimientos</a></li>
-<li>
 
-<a class="nav-lang no-pill" href="#" onclick="showLanguageModal(event)" title="Cambiar idioma">
-<svg viewbox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-<span class="lang-text-cycle">
-<span class="lt-item">Inglés</span>
-<span class="lt-item">Español</span>
-<span class="lt-item">Portugués</span>
-<span class="lt-item">Kiswahili</span>
-<span class="lt-item">Kinyarwanda</span>
-</span>
-</a>
-
-</li>
 
         <li class="lang-switcher" id="lang-switcher-desktop">
           <button class="lang-btn" aria-label="Select language">
@@ -3067,21 +3073,24 @@ html { scroll-behavior: smooth; }
 </div>
 <div class="about-badge">
 <div class="ab-dot"></div>
-<div class="ab-text">Sirviendo activamente en DFW y en todo el país</div>
+<div class="ab-text">Sirviendo a familias en todo el país</div>
 </div>
 </div>
 </div>
 <div class="about-content">
-<p class="t-label" data-reveal=""><span class="green-dot"></span>Quienes somos</p>
-<h2 class="t-h1" data-delay="1" data-reveal="">ponemos familia<br/>Primero. Siempre.</h2>
-<p class="t-body" data-delay="2" data-reveal="" style="color:var(--muted)">Family First Legacy es una agencia de servicios financieros independiente con raíces en la comunidad de Dallas-Fort Worth. Creemos que todas las familias, independientemente de sus antecedentes o ingresos, merecen acceso a orientación financiera experta.</p>
-<p class="t-body" data-delay="2" data-reveal="" style="color:var(--muted)">Le acercamos directamente el poder de una plataforma financiera norteamericana confiable. Nuestros agentes autorizados se toman el tiempo para comprender verdaderamente su situación antes de diseñar una estrategia que se adapte a su vida.</p>
+<p class="t-label" data-reveal=""><span class="green-dot"></span>QUIÉNES SOMOS</p>
+<h2 class="t-h1" data-delay="1" data-reveal="">Ponemos a la familia<br/>primero. Siempre.</h2>
+<p class="t-body" data-delay="2" data-reveal="" style="color:var(--muted); margin-bottom:16px;">Toda familia merece la oportunidad de proteger lo que ha construido, prepararse para el mañana y perseguir el futuro que sueña.</p>
+<p class="t-body" data-delay="2" data-reveal="" style="color:var(--muted); margin-bottom:16px;">Creemos que toda familia, sin importar su origen o nivel de ingresos, merece acceso a orientación honesta y bien informada que le ayude a tomar decisiones financieras con conocimiento.</p>
+<p class="t-body" data-delay="2" data-reveal="" style="color:var(--muted); margin-bottom:16px;">Family First Legacy es una agencia independiente de servicios financieros con raíces en la comunidad de Dallas-Fort Worth y que sirve a familias en todo Estados Unidos. Ayudamos a individuos, familias y dueños de negocios a explorar opciones de seguros y servicios financieros a través de una red de compañías bien establecidas.</p>
+<p class="t-body" data-delay="2" data-reveal="" style="color:var(--muted); margin-bottom:16px;">Nuestros profesionales con licencia se toman el tiempo para escucharte, entender tus metas y preocupaciones, y conocer a las personas que más importan en tu vida antes de ayudarte a explorar opciones que puedan alinearse con tus necesidades.</p>
+<p class="t-body" data-delay="2" data-reveal="" style="color:var(--muted); margin-bottom:24px;">Ya sea que estés protegiendo a tu familia, preparándote para la jubilación, planificando el futuro de tus hijos o construyendo un legado, nuestra meta es brindarte orientación honesta, explicaciones claras y la información que necesitas para tomar decisiones con confianza, sin presión y a tu propio ritmo.</p>
 <div class="about-pull" data-delay="3" data-reveal="">
-<p>"No sólo vendemos seguros: construimos relaciones, educamos a las familias y creamos planes que protegen lo más importante".</p>
-<cite>— El Equipo de Family First Legacy</cite>
+<p>“Hacemos más que ofrecer seguros: construimos relaciones, educamos a las familias y les ayudamos a crear planes enfocados en proteger lo que más importa.”</p>
+<cite>— Equipo de Family First Legacy</cite>
 </div>
 <a class="btn btn-green" data-delay="4" data-reveal="" href="#contact">
-<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Programe una revisión gratuita</a>
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Programa una revisión gratuita</a>
 </div>
 </div>
 </div>
@@ -3091,14 +3100,14 @@ html { scroll-behavior: smooth; }
 <div class="container">
 <div class="services-top">
 <div class="services-top-left">
-<p class="t-label" data-reveal=""><span class="green-dot"></span>Soluciones para clientes</p>
-<h2 class="t-h1 services-big-title" data-delay="1" data-reveal="">Protección para<br/>Cada etapa<br/>de<em>Vida.</em>
+<p class="t-label" data-reveal=""><span class="green-dot"></span>CÓMO PODEMOS AYUDAR</p>
+<h2 class="t-h1 services-big-title" data-delay="1" data-reveal="">Orientación para<br/>Cada etapa<br/>de<em>Vida.</em>
 </h2>
 </div>
 <div class="services-top-right" data-delay="2" data-reveal="">
 <div class="st-accent"></div>
 <p>Desde su primera póliza hasta su jubilación y el legado que deja atrás, hemos elaborado una estrategia para cada capítulo de su historia.</p>
-<a class="st-link" href="#contact">Habla con un agente<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<a class="st-link" href="#contact">Comienza con una conversación<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
 </a>
 </div>
 </div>
