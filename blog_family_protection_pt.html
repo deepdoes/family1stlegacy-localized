@@ -9160,6 +9160,33 @@ body.mobile-menu-active .nav-toggle {
   background: transparent !important;
 }
 </style>
+<style>
+/* ─── Services Navigation Touch & Mouseover Dropdown ─── */
+.nav-dropdown-wrap {
+  position: relative !important;
+}
+.nav-dropdown-wrap:hover .nav-dropdown,
+.nav-dropdown-wrap.open .nav-dropdown {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+.nav-dropdown-wrap:hover .nav-dropdown-toggle svg.chevron,
+.nav-dropdown-wrap.open .nav-dropdown-toggle svg.chevron {
+  transform: rotate(180deg) !important;
+}
+.nav-dropdown-wrap::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: -20px !important;
+  right: -20px !important;
+  height: 20px !important;
+  z-index: 999 !important;
+}
+</style>
 </head>
 <body>
 <div id="scroll-progress"></div>

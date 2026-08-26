@@ -9594,6 +9594,33 @@ footer, footer [data-reveal], footer [data-stagger] > * {
   background: transparent !important;
 }
 </style>
+<style>
+/* ─── Services Navigation Touch & Mouseover Dropdown ─── */
+.nav-dropdown-wrap {
+  position: relative !important;
+}
+.nav-dropdown-wrap:hover .nav-dropdown,
+.nav-dropdown-wrap.open .nav-dropdown {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+.nav-dropdown-wrap:hover .nav-dropdown-toggle svg.chevron,
+.nav-dropdown-wrap.open .nav-dropdown-toggle svg.chevron {
+  transform: rotate(180deg) !important;
+}
+.nav-dropdown-wrap::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: -20px !important;
+  right: -20px !important;
+  height: 20px !important;
+  z-index: 999 !important;
+}
+</style>
 </head>
 <body>
 
@@ -9610,7 +9637,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
         <div class="nav-pill"></div>
         <li><a href="index.html#about">About</a></li>
                 <li class="nav-dropdown-wrap">
-          <a href="index.html#services" class="nav-dropdown-toggle">Services <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+          <a href="javascript:void(0)" class="nav-dropdown-toggle" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('open');">Services <svg class="chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
           <ul class="nav-dropdown">
             <li><a href="family_protection.html" class="no-pill">Life Insurance</a></li>
             <li><a href="retirement_planning.html" class="no-pill">Retirement Planning</a></li>

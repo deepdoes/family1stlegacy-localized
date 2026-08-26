@@ -101,15 +101,27 @@ export default function Navbar({ lang = "en" }: NavbarProps) {
             <ul className="flex items-center gap-6 list-none relative">
               {navLinks.map((item, idx) => (
                 <li key={idx} className="relative group">
-                  <Link
-                    href={item.href}
-                    className={`text-sm font-medium transition-colors hover:text-purple-600 flex items-center gap-1 ${
-                      isStuck ? "text-gray-700" : "text-white/90"
-                    }`}
-                  >
-                    {item.label}
-                    {item.dropdown && <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />}
-                  </Link>
+                  {item.dropdown ? (
+                    <button
+                      type="button"
+                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                      className={`text-sm font-medium transition-colors hover:text-purple-600 flex items-center gap-1 bg-transparent border-none cursor-pointer ${
+                        isStuck ? "text-gray-700" : "text-white/90"
+                      }`}
+                    >
+                      {item.label}
+                      <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className={`text-sm font-medium transition-colors hover:text-purple-600 flex items-center gap-1 ${
+                        isStuck ? "text-gray-700" : "text-white/90"
+                      }`}
+                    >
+                      {item.label}
+                    </Link>
+                  )}
 
                   {item.dropdown && (
                     <div className="absolute top-full left-0 mt-2 w-64 bg-white border border-gray-100 rounded-2xl shadow-xl p-2 opacity-0 group-hover:opacity-100 pointer-events-none group-hover:pointer-events-auto transition-all duration-200 translate-y-2 group-hover:translate-y-0 z-50">
