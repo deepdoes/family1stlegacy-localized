@@ -1,4 +1,18 @@
-"use client";
+#!/usr/bin/env python3
+"""
+update_nextjs_navbar.py
+Updates src/components/layout/Navbar.tsx to include:
+1. Top-right Click-to-Call pill button (469) 608-1595 on mobile header.
+2. Floating mobile app bottom nav bar (#mobileAppBottomNav).
+3. Mobile Services and Menu bottom sheet modals (#mobileServicesSheet & #mobileMenuSheet).
+4. Correct updated labels: "Estate & Legacy Planning" and "Q&A".
+"""
+
+import os
+
+NAVBAR_TSX = "/Users/deepankarakasajoo/Downloads/Trace's Projects/Family First Legacy/Family1stLegacy/src/components/layout/Navbar.tsx"
+
+NEW_NAVBAR_CONTENT = """"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -222,3 +236,12 @@ export default function Navbar({ lang = "en" }: NavbarProps) {
     </>
   );
 }
+"""
+
+def update():
+    with open(NAVBAR_TSX, "w", encoding="utf-8") as f:
+        f.write(NEW_NAVBAR_CONTENT)
+    print("  ✓ Updated src/components/layout/Navbar.tsx with mobile bottom app bar & call pill button")
+
+if __name__ == "__main__":
+    update()
