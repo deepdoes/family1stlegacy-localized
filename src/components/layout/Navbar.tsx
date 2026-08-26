@@ -124,7 +124,7 @@ export default function Navbar({ lang }: NavbarProps) {
               ))}
 
               {/* 2-Language Selector Dropdown (EN & ES ONLY) */}
-              <li className="lang-switcher relative">
+              <li className="lang-switcher relative group py-2">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
@@ -142,32 +142,39 @@ export default function Navbar({ lang }: NavbarProps) {
                   <ChevronDown className={`w-3 h-3 transition-transform ${isLangOpen ? "rotate-180" : ""}`} />
                 </button>
 
-                {isLangOpen && (
-                  <div className="absolute top-full right-0 mt-2.5 w-48 bg-white border border-gray-100 rounded-2xl shadow-2xl p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                    <Link
-                      href={pathname.replace(/^\/es/, "") || "/"}
-                      className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-medium ${
-                        !isEs ? "bg-purple-50 text-purple-900 font-bold" : "text-gray-700 hover:bg-gray-50"
-                      }`}
-                      onClick={() => setIsLangOpen(false)}
-                    >
-                      <span className="bg-purple-900/10 text-purple-900 px-1.5 py-0.5 rounded font-bold text-[10px]">EN</span>
-                      <span className="flex-1 ml-2.5 text-left">English</span>
-                      {!isEs && <span className="text-purple-900 text-sm">✓</span>}
-                    </Link>
-                    <Link
-                      href={isEs ? pathname : `/es${pathname === "/" ? "" : pathname}`}
-                      className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-medium ${
-                        isEs ? "bg-purple-50 text-purple-900 font-bold" : "text-gray-700 hover:bg-gray-50"
-                      }`}
-                      onClick={() => setIsLangOpen(false)}
-                    >
-                      <span className="bg-purple-900/10 text-purple-900 px-1.5 py-0.5 rounded font-bold text-[10px]">ES</span>
-                      <span className="flex-1 ml-2.5 text-left">Español</span>
-                      {isEs && <span className="text-purple-900 text-sm">✓</span>}
-                    </Link>
-                  </div>
-                )}
+                <div
+                  className={`absolute top-full right-0 mt-0 w-48 bg-white border border-gray-100 rounded-2xl shadow-2xl p-2 z-50 transition-all duration-200 ${
+                    isLangOpen
+                      ? "opacity-100 visible pointer-events-auto translate-y-0"
+                      : "opacity-0 invisible pointer-events-none -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:pointer-events-auto group-hover:translate-y-0"
+                  }`}
+                >
+                  {/* Invisible top bridge element to keep hover active while moving cursor downward */}
+                  <div className="absolute -top-3 left-0 right-0 h-3 bg-transparent" />
+
+                  <Link
+                    href={pathname.replace(/^\/es/, "") || "/"}
+                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-medium ${
+                      !isEs ? "bg-purple-50 text-purple-900 font-bold" : "text-gray-700 hover:bg-gray-50"
+                    }`}
+                    onClick={() => setIsLangOpen(false)}
+                  >
+                    <span className="bg-purple-900/10 text-purple-900 px-1.5 py-0.5 rounded font-bold text-[10px]">EN</span>
+                    <span className="flex-1 ml-2.5 text-left">English</span>
+                    {!isEs && <span className="text-purple-900 text-sm">✓</span>}
+                  </Link>
+                  <Link
+                    href={isEs ? pathname : `/es${pathname === "/" ? "" : pathname}`}
+                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-medium ${
+                      isEs ? "bg-purple-50 text-purple-900 font-bold" : "text-gray-700 hover:bg-gray-50"
+                    }`}
+                    onClick={() => setIsLangOpen(false)}
+                  >
+                    <span className="bg-purple-900/10 text-purple-900 px-1.5 py-0.5 rounded font-bold text-[10px]">ES</span>
+                    <span className="flex-1 ml-2.5 text-left">Español</span>
+                    {isEs && <span className="text-purple-900 text-sm">✓</span>}
+                  </Link>
+                </div>
               </li>
             </ul>
 
