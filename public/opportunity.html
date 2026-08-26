@@ -2673,8 +2673,10 @@ html { scroll-behavior: smooth; }
 #nav .lang-btn svg { width: 14px !important; height: 14px !important; flex-shrink: 0 !important; }
 #nav .lang-btn .lang-chevron { width: 10px !important; height: 10px !important; transition: transform 0.2s !important; }
 #nav .lang-switcher.open .lang-chevron { transform: rotate(180deg) !important; }
+#nav .lang-switcher.open .lang-dropdown { display: block !important; }
 
 #nav .lang-dropdown {
+  display: none !important;
   position: absolute !important;
   top: calc(100% + 10px) !important;
   right: 0 !important;
@@ -9610,7 +9612,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
             <li><a href="family_protection.html" class="no-pill">Life Insurance</a></li>
             <li><a href="retirement_planning.html" class="no-pill">Retirement Planning</a></li>
             <li><a href="education_planning.html" class="no-pill">Education Planning</a></li>
-            <li><a href="estate_planning.html" class="no-pill">Estate Preservation</a></li>
+            <li><a href="estate_planning.html" class="no-pill">Estate & Legacy Planning</a></li>
             <li><a href="financial_strategy.html" class="no-pill">Financial Strategy</a></li>
             <li><a href="business_strategies.html" class="no-pill">Business Strategies</a></li>
           </ul>
@@ -9656,7 +9658,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
         <a href="family_protection.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Life Insurance</a>
         <a href="retirement_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Retirement Planning</a>
         <a href="education_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Education Planning</a>
-        <a href="estate_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Estate Preservation</a>
+        <a href="estate_planning.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Estate & Legacy Planning</a>
         <a href="financial_strategy.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Financial Strategy</a>
         <a href="business_strategies.html" onclick="this.closest('.mobile-menu').classList.remove('open')">Business Strategies</a>
       </div>
@@ -10015,7 +10017,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
         <div class="contact-trust" data-reveal data-delay="2">
           <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>Licensed &amp; Insured</span>
           <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>24hr Response</span>
-          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>100% Private</span>
+          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>Privacy Respected</span>
         </div>
 
         <div class="contact-info-list" data-reveal data-delay="3">
@@ -10097,7 +10099,7 @@ footer, footer [data-reveal], footer [data-stagger] > * {
                 <option>Life Insurance Protection</option>
                 <option>Retirement Planning</option>
                 <option>Education Planning</option>
-                <option>Estate Preservation</option>
+                <option>Estate & Legacy Planning</option>
                 <option>Business Strategies</option>
                 <option>Career Opportunity</option>
                 <option>General Financial Review</option>

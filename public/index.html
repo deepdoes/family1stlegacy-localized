@@ -2748,8 +2748,10 @@ html { scroll-behavior: smooth; }
 #nav .lang-btn svg { width: 14px !important; height: 14px !important; flex-shrink: 0 !important; }
 #nav .lang-btn .lang-chevron { width: 10px !important; height: 10px !important; transition: transform 0.2s !important; }
 #nav .lang-switcher.open .lang-chevron { transform: rotate(180deg) !important; }
+#nav .lang-switcher.open .lang-dropdown { display: block !important; }
 
 #nav .lang-dropdown {
+  display: none !important;
   position: absolute !important;
   top: calc(100% + 10px) !important;
   right: 0 !important;
