@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Estrategias para Negocios | Family First Legacy</title>
+<meta content="Protege el negocio que construiste. Desde cobertura para personas clave y planificación buy-sell hasta beneficios ejecutivos y estrategias de sucesión, ayudamos a dueños de negocios a salvaguardar su esfuerzo." name="description"/>
+<link rel="alternate" hreflang="en" href="https://family1stlegacy.com/business_strategies.html"/>
+<link rel="alternate" hreflang="es" href="https://family1stlegacy.com/business_strategies_es.html"/>
+<link rel="alternate" hreflang="x-default" href="https://family1stlegacy.com/business_strategies.html"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --bg: #F4F2F6; --white: #FFFFFF; --dark: #0A0A0F;
+  --green: #4A2D7A; --green-mid: #6B4A9C; --green-lite: #EDE6F5;
+  --amber: #8B7DA8; --amber-lt: #B5A8C9; --sand: #E6E2EC; --muted: #5C5566; --line: #D6D0DC;
+  --font-head: 'Poppins', sans-serif; --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--dark); overflow-x: hidden; font-weight: 300; }
+
+.t-h1 { font-family: var(--font-head); font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 1.05; letter-spacing: -2px; }
+.t-h2 { font-family: var(--font-head); font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; line-height: 1.15; letter-spacing: -1px; }
+.t-h3 { font-family: var(--font-head); font-size: clamp(20px, 2.2vw, 28px); font-weight: 700; line-height: 1.25; }
+.t-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+.t-body { font-size: 16px; line-height: 1.75; font-weight: 300; color: var(--muted); }
+
+/* Header / Nav */
+#nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(244,242,246,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+.nav-bar { display: flex; align-items: center; justify-content: space-between; height: 80px; max-width: 1280px; margin: 0 auto; }
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 14px; transition: color 0.2s; }
+.nav-links a:hover { color: var(--green); }
+.btn-cta { background: var(--green); color: #fff !important; padding: 10px 20px; border-radius: 20px; font-weight: 600 !important; }
+
+/* Hero */
+.page-hero { position: relative; padding: 160px 0 100px; background: linear-gradient(135deg, #1C0F30 0%, #0A0A0F 100%); color: #fff; overflow: hidden; }
+.page-hero-bg { position: absolute; inset: 0; background-image: url('images/small_business_hero_1777398700055.png'); background-size: cover; background-position: center; opacity: 0.25; }
+.hero-content { position: relative; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+/* Grid / Tiles */
+.tiles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: -40px; position: relative; z-index: 10; max-width: 1280px; margin-left: auto; margin-right: auto; padding: 0 32px; }
+.tile-card { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 32px; box-shadow: 0 12px 32px rgba(0,0,0,0.05); }
+
+/* FAQ Accordion */
+.faq-item { background: #fff; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
+.faq-question { padding: 24px; font-weight: 700; font-size: 18px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.faq-answer { padding: 0 24px 24px; font-size: 15px; line-height: 1.7; color: var(--muted); display: none; }
+.faq-item.open .faq-answer { display: block; }
+.faq-item.open .faq-icon { transform: rotate(180deg); }
+
+/* ─── Language Switcher ─── */
+.lang-switcher {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(74,45,122,0.08);
+  border: 1px solid rgba(74,45,122,0.2);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--dark);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, border-color 0.2s;
+  text-transform: uppercase;
+  font-family: var(--font-body, sans-serif);
+}
+.lang-btn:hover {
+  background: rgba(74,45,122,0.15);
+  border-color: rgba(74,45,122,0.4);
+}
+.lang-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+.lang-btn .lang-chevron { width: 10px; height: 10px; transition: transform 0.2s; }
+.lang-switcher.open .lang-chevron { transform: rotate(180deg); }
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: #fff;
+  border: 1px solid #E8E4EF;
+  border-radius: 12px;
+  padding: 6px;
+  min-width: 160px;
+  box-shadow: 0 8px 32px rgba(74,45,122,0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
+  z-index: 10000;
+}
+.lang-switcher.open .lang-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.lang-dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+.lang-dropdown a:hover { background: #F0EBF8; color: var(--green, #4A2D7A); }
+.lang-dropdown a.active { font-weight: 700; color: var(--green, #4A2D7A); }
+.lang-dropdown a .lang-check { margin-left: auto; font-size: 12px; opacity: 0; }
+.lang-dropdown a.active .lang-check { opacity: 1; }
+
+/* Mobile language switcher */
+.mobile-lang-switcher {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 20px 4px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin-top: 4px;
+}
+.mobile-lang-switcher a {
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  color: rgba(255,255,255,0.65) !important;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.mobile-lang-switcher a:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
+.mobile-lang-switcher a.active { 
+  background: rgba(74,45,122,0.6) !important; 
+  border-color: rgba(255,255,255,0.4) !important; 
+  color: #fff !important; 
+}
+
+
+/* ─── LANGUAGE SWITCHER PREMIUM UI FIXES ─── */
+#nav .lang-switcher {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+#nav .lang-btn {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  height: 36px !important;
+  padding: 0 14px !important;
+  border-radius: 20px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  cursor: pointer !important;
+  white-space: nowrap !important;
+  font-family: var(--font-body) !important;
+  transition: all 0.2s ease !important;
+}
+#nav:not(.stuck) .lang-btn {
+  background: rgba(255,255,255,0.12) !important;
+  border: 1px solid rgba(255,255,255,0.3) !important;
+  color: #FFFFFF !important;
+}
+#nav.stuck .lang-btn {
+  background: rgba(74,45,122,0.08) !important;
+  border: 1px solid rgba(74,45,122,0.2) !important;
+  color: #0A0A0F !important;
+}
+#nav .lang-btn svg { width: 14px !important; height: 14px !important; flex-shrink: 0 !important; }
+#nav .lang-btn .lang-chevron { width: 10px !important; height: 10px !important; transition: transform 0.2s !important; }
+#nav .lang-switcher.open .lang-chevron { transform: rotate(180deg) !important; }
+
+#nav .lang-dropdown {
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  right: 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4EF !important;
+  border-radius: 16px !important;
+  padding: 8px !important;
+  min-width: 195px !important;
+  box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
+  z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-8px) !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
+}
+
+#nav .lang-switcher.open .lang-dropdown {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+#nav .lang-dropdown a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  color: #222222 !important;
+  text-decoration: none !important;
+  transition: background 0.15s ease, color 0.15s ease !important;
+  white-space: nowrap !important;
+}
+#nav .lang-dropdown a span:first-child {
+  background: rgba(74,45,122,0.08) !important;
+  color: #4A2D7A !important;
+  padding: 2px 7px !important;
+  border-radius: 6px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px !important;
+  min-width: 28px !important;
+  text-align: center !important;
+}
+#nav .lang-dropdown a:hover {
+  background: #EDE6F5 !important;
+  color: #4A2D7A !important;
+}
+#nav .lang-dropdown a.active {
+  font-weight: 700 !important;
+  color: #4A2D7A !important;
+  background: rgba(74,45,122,0.05) !important;
+}
+#nav .lang-dropdown a .lang-check {
+  margin-left: auto !important;
+  font-size: 13px !important;
+  color: #4A2D7A !important;
+}
+
+/* ─── COMPREHENSIVE MOBILE RESPONSIVE OVERHAUL (max-width: 768px) ─── */
+@media (max-width: 768px) {
+  /* Layout & Container Padding */
+  body { overflow-x: hidden !important; }
+  .nav-bar { padding: 0 16px !important; height: 70px !important; }
+  .page-hero { padding: 120px 0 60px !important; }
+  .hero-content { padding: 0 20px !important; text-align: left !important; }
+  
+  /* Typography Scaling for Mobile */
+  .t-h1 { font-size: clamp(28px, 7vw, 38px) !important; letter-spacing: -1px !important; line-height: 1.15 !important; }
+  .t-h2 { font-size: clamp(22px, 6vw, 30px) !important; letter-spacing: -0.5px !important; line-height: 1.2 !important; }
+  .t-h3 { font-size: clamp(18px, 5vw, 22px) !important; }
+  .t-lead, .slide-sub, p.t-body { font-size: 15px !important; line-height: 1.6 !important; }
+  
+  /* Stack 2-Column Grids & Card Grids Vertically */
+  div[style*="grid-template-columns"], 
+  div[style*="minmax"],
+  div[style*="repeat("],
+  .tiles-grid, 
+  #rq-preview-grid,
+  .hero-content > div[style*="display:flex"],
+  div[style*="display:grid"] {
+    grid-template-columns: 1fr !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  /* Reset Card Grid Column Spans on Mobile */
+  .expect-card,
+  div[style*="grid-column:span 2"],
+  div[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+    grid-column: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 24px 20px !important;
+  }
+  
+  /* Reset Desktop Margins & Borders */
+  .tiles-grid { margin-top: 20px !important; padding: 0 20px !important; }
+  .tile-card { padding: 24px !important; width: 100% !important; box-sizing: border-box !important; }
+  
+  /* Fix Featured Cards & Q&A Interactive Component */
+  #rq-featured-box { padding: 24px !important; border-radius: 20px !important; }
+  #rq-featured-box > div { grid-template-columns: 1fr !important; gap: 24px !important; }
+  #rq-card-display { padding: 24px !important; min-height: auto !important; }
+  #rq-preview-grid { grid-template-columns: 1fr !important; }
+  
+  /* Fix Vertical Lines & Dividers Overlapping Text */
+  div[style*="border-left"], 
+  div[style*="border-right"] {
+    border-left: none !important;
+    border-right: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Section Spacing */
+  section { padding: 60px 0 !important; }
+  div[style*="padding:0 32px"], 
+  div[style*="padding: 0 32px"],
+  div[style*="padding:0 48px"] {
+    padding: 0 20px !important;
+  }
+
+  /* Buttons on Mobile */
+  .btn, .btn-cta, a[class*="btn"] {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    margin-bottom: 8px !important;
+  }
+
+  /* Mobile Header & Logo Fix */
+  .nav-logo img { height: 45px !important; width: auto !important; }
+  .mobile-menu-header { padding: 20px !important; }
+  .mobile-menu-logo { height: 40px !important; }
+}
+/* Real Questions Interactive Dashboard styles */
+.qa-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+@media (max-width: 900px) {
+  .qa-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .qa-selectors-list {
+    max-height: 320px !important;
+  }
+}
+.qa-selectors-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 520px;
+  overflow-y: auto;
+  padding: 8px 8px 8px 4px;
+}
+.qa-selectors-list::-webkit-scrollbar {
+  width: 6px;
+}
+.qa-selectors-list::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.02);
+  border-radius: 10px;
+}
+.qa-selectors-list::-webkit-scrollbar-thumb {
+  background: rgba(29, 158, 117, 0.2);
+  border-radius: 10px;
+}
+.qa-selectors-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(29, 158, 117, 0.4);
+}
+.q-card {
+  cursor: pointer;
+  padding: 20px 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.q-card:hover {
+  background: rgba(0, 0, 0, 0.01);
+  border-color: rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+.q-card.active {
+  border-color: var(--green) !important;
+  background: rgba(29, 158, 117, 0.05) !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.q-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--green);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+.q-card.active::before {
+  transform: scaleY(1);
+}
+.q-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transform: translateY(10px);
+}
+.q-slide.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+</style>
+<style>.nav-lang { display: none !important; }</style>
+
+
+
+<style id="lang-dropdown-hover-fix">
+/* ─── Language Selector Hover + Gap Bridge Fix ─── */
+#nav .lang-switcher {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  padding-bottom: 8px !important; /* Invisible hover buffer */
+  margin-bottom: -8px !important;
+}
+
+#nav .lang-dropdown {
+  position: absolute !important;
+  top: 100% !important;
+  right: 0 !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E8E4EF !important;
+  border-radius: 16px !important;
+  padding: 8px !important;
+  min-width: 195px !important;
+  box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
+  z-index: 10000 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(-4px) !important;
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease !important;
+}
+
+/* Invisible bridge so moving cursor downwards keeps hover active */
+#nav .lang-dropdown::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -14px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 14px !important;
+  background: transparent !important;
+}
+
+/* Show menu on mouseover / hover AND on click (.open) */
+#nav .lang-switcher:hover .lang-dropdown,
+#nav .lang-switcher.open .lang-dropdown,
+#nav .lang-dropdown:hover {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+}
+</style>
+<style id="lang-check-active-fix">
+/* ─── Show Checkmark ONLY on Active Language ─── */
+#nav .lang-dropdown a .lang-check,
+.lang-dropdown a .lang-check {
+  display: none !important;
+  margin-left: auto !important;
+  font-size: 13px !important;
+  color: #4A2D7A !important;
+}
+#nav .lang-dropdown a.active .lang-check,
+.lang-dropdown a.active .lang-check {
+  display: inline-block !important;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header id="nav">
+  <div style="width:100%; padding:0 32px; box-sizing:border-box;">
+    <div class="nav-bar">
+      <a href="index_es.html" class="nav-logo">
+        <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" style="height: 70px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index_es.html#about">Acerca de</a></li>
+        <li><a href="index_es.html#services">Servicios</a></li>
+        <li><a href="index_es.html#process">Cómo funciona</a></li>
+        <li><a href="opportunity_es.html">Oportunidad</a></li>
+        <li><a href="index_es.html#blog">Base de conocimientos</a></li>
+        <li><a href="index_es.html#contact" class="btn-cta">Consulta Gratuita</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="hero-content">
+    <div class="t-label" style="color:var(--amber-lt); margin-bottom:16px;">ESTRATEGIAS PARA NEGOCIOS</div>
+    <h1 class="t-h1" style="max-width:900px; margin-bottom:24px;">Si no pudieras presentarte mañana, ¿tu negocio seguiría funcionando?</h1>
+    <p class="t-body" style="color:rgba(255,255,255,0.85); font-size:18px; max-width:800px; margin-bottom:24px;">El negocio que construiste sostiene más que ingresos. Puede sostener a tu familia, tus empleados, tus clientes y años de sacrificio. Ayudamos a dueños de negocios a entender opciones de protección, estrategias de sucesión y herramientas de planificación que pueden ayudar a prepararse para lo inesperado.</p>
+    <p style="color:var(--amber-lt); font-size:17px; font-style:italic; margin-bottom:36px;">Tú construiste el negocio. Pero ¿quién lo protege si tú no puedes estar ahí?</p>
+    <div style="display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="index_es.html#contact" class="btn-cta" style="padding:14px 32px; font-size:16px; border-radius:30px;">Protege mi negocio</a>
+      <a href="index_es.html#contact" style="background:rgba(255,255,255,0.12); color:#fff; padding:14px 32px; border-radius:30px; text-decoration:none; font-weight:600; border:1px solid rgba(255,255,255,0.2);">Comienza con una conversación</a>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Tiles Section -->
+<section style="padding-bottom:80px;">
+  <div class="tiles-grid">
+    <div class="tile-card">
+      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">LAS PERSONAS CLAVE IMPORTAN</div>
+      <div style="font-weight:600; font-size:15px; color:var(--dark);">¿Podría tu negocio continuar sin las personas de las que más depende?</div>
+    </div>
+    <div class="tile-card">
+      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">LA PROPIEDAD NECESITA UN PLAN</div>
+      <div style="font-weight:600; font-size:15px; color:var(--dark);">¿Qué pasa si un dueño, socio o persona clave ya no puede continuar?</div>
+    </div>
+    <div class="tile-card">
+      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">TU FAMILIA MERECE CLARIDAD</div>
+      <div style="font-weight:600; font-size:15px; color:var(--dark);">¿Sabrían cómo manejar lo que trabajaste tanto para construir?</div>
+    </div>
+    <div class="tile-card">
+      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">PROTEGE EL VALOR QUE ESTÁS CONSTRUYENDO</div>
+      <div style="font-weight:600; font-size:15px; color:var(--dark);">Planifica para la estabilidad antes de que la vida obligue a tomar decisiones difíciles.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Preguntas que todo dueño de negocio debe responder -->
+<section style="padding:80px 0; background:#fff;">
+  <div style="max-width:1100px; margin:0 auto; padding:0 32px;">
+    <div style="text-align:center; margin-bottom:60px;">
+      <div class="t-label" style="color:var(--green); margin-bottom:12px;">PLANIFICACIÓN EMPRESARIAL</div>
+      <h2 class="t-h2">Preguntas que todo dueño de negocio debe responder</h2>
+      <p class="t-body" style="margin-top:12px;">Antes de que la vida cambie, conoce qué podría pasar con tu negocio, tu familia y las personas que dependen de ti.</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:40px;">
+      
+      <!-- 01 -->
+      <div style="background:var(--bg); border:1px solid var(--line); border-radius:24px; padding:40px; display:grid; grid-template-columns:80px 1fr; gap:24px;">
+        <div style="font-size:36px; font-weight:800; color:var(--green);">01</div>
+        <div>
+          <h3 class="t-h3" style="margin-bottom:12px;">¿Podría el negocio sobrevivir a la pérdida de una persona clave?</h3>
+          <p class="t-body">Algunos negocios dependen mucho de un dueño, socio, gerente o productor principal. Si esa persona ya no pudiera servir al negocio, el impacto financiero podría ser serio.<br><br>La cobertura para personas clave puede ayudar a proporcionar apoyo financiero mientras el negocio se ajusta, reemplaza talento, protege operaciones o maneja presión inesperada.</p>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div style="background:var(--bg); border:1px solid var(--line); border-radius:24px; padding:40px; display:grid; grid-template-columns:80px 1fr; gap:24px;">
+        <div style="font-size:36px; font-weight:800; color:var(--green);">02</div>
+        <div>
+          <h3 class="t-h3" style="margin-bottom:12px;">¿Qué pasa si la propiedad cambia de repente?</h3>
+          <p class="t-body">Si tu negocio tiene más de un dueño, todos deberían entender qué pasa si un dueño fallece, se va o ya no puede continuar.<br><br>Una estrategia buy-sell puede ayudar a crear un camino más claro para cambios de propiedad, valor del negocio y protección familiar. El seguro de vida se usa con frecuencia para ayudar a financiar estos acuerdos.</p>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div style="background:var(--bg); border:1px solid var(--line); border-radius:24px; padding:40px; display:grid; grid-template-columns:80px 1fr; gap:24px;">
+        <div style="font-size:36px; font-weight:800; color:var(--green);">03</div>
+        <div>
+          <h3 class="t-h3" style="margin-bottom:12px;">¿Tu familia tendría claridad o confusión?</h3>
+          <p class="t-body">Tu negocio puede ser una de las cosas más valiosas que has construido. Pero sin un plan, tu familia puede quedarse con preguntas en lugar de dirección.<br><br>La planificación de sucesión te ayuda a pensar quién puede continuar el negocio, cómo puede transferirse la propiedad y cómo tu familia o socios pueden recibir apoyo.</p>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div style="background:var(--bg); border:1px solid var(--line); border-radius:24px; padding:40px; display:grid; grid-template-columns:80px 1fr; gap:24px;">
+        <div style="font-size:36px; font-weight:800; color:var(--green);">04</div>
+        <div>
+          <h3 class="t-h3" style="margin-bottom:12px;">¿Estás protegiendo el valor que estás construyendo?</h3>
+          <p class="t-body">A medida que tu negocio crece, también crecen las responsabilidades relacionadas con él. Puede que necesites pensar en personas clave, cambios de propiedad, necesidades familiares y cómo continuaría el negocio si la vida cambiara inesperadamente.<br><br>Ayudamos a dueños de negocios a entender opciones que pueden apoyar la estabilidad a largo plazo y proteger el valor que están trabajando duro para construir.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Business Strategy FAQs -->
+<section style="padding:80px 0; background:var(--bg);">
+  <div style="max-width:900px; margin:0 auto; padding:0 32px;">
+    <div style="text-align:center; margin-bottom:48px;">
+      <div class="t-label" style="color:var(--green); margin-bottom:8px;">PREGUNTAS FRECUENTES</div>
+      <h2 class="t-h2">Preguntas frecuentes sobre protección empresarial</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-question">¿Los dueños de pequeños negocios realmente necesitan planificación de protección empresarial? <span class="faq-icon">▼</span></div>
+        <div class="faq-answer">Sí. Incluso un pequeño negocio puede apoyar a una familia, empleados, clientes y socios. Un plan claro puede ayudar a reducir la confusión si algo inesperado ocurre.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-question">¿Qué es el seguro para persona clave? <span class="faq-icon">▼</span></div>
+        <div class="faq-answer">El seguro para persona clave es una cobertura que un negocio puede usar para ayudar a reducir el impacto financiero de perder a un dueño, socio o empleado importante. La disponibilidad depende de la compañía, la póliza y la elegibilidad.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-question">¿Qué es un acuerdo buy-sell? <span class="faq-icon">▼</span></div>
+        <div class="faq-answer">Un acuerdo buy-sell es un plan entre dueños de negocios que explica lo que puede suceder si un dueño fallece, se va o ya no puede continuar. El seguro de vida puede usarse para ayudar a financiar el acuerdo.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-question">¿La planificación empresarial puede ayudar a mi familia? <span class="faq-icon">▼</span></div>
+        <div class="faq-answer">Puede ayudar a crear claridad. Si tu familia depende del negocio, la planificación puede ayudarles a entender la propiedad, el valor del negocio y posible apoyo financiero si algo inesperado sucede.</div>
+      </div>
+
+      <div class="faq-item" onclick="this.classList.toggle('open')">
+        <div class="faq-question">¿Ofrecen asesoría legal o fiscal? <span class="faq-icon">▼</span></div>
+        <div class="faq-answer">No. Family First Legacy no ofrece asesoría legal ni fiscal. Ayudamos a explicar estrategias de seguros y financieras, y animamos a los dueños de negocios a consultar con profesionales legales y fiscales calificados cuando sea necesario.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section style="padding:100px 0; background:linear-gradient(135deg, #3A2060 0%, #1A0D30 100%); color:#fff; text-align:center;">
+  <div style="max-width:800px; margin:0 auto; padding:0 32px;">
+    <h2 class="t-h2" style="color:#fff; margin-bottom:20px;">Tu negocio tiene una historia. Ayudemos a proteger el siguiente capítulo.</h2>
+    <p style="font-size:17px; color:rgba(255,255,255,0.85); margin-bottom:36px; line-height:1.7;">Construiste algo que importa. Antes de que la vida traiga preguntas difíciles, comencemos con una conversación sencilla sobre cómo ayudar a proteger tu negocio, tu familia y las personas que dependen de lo que creaste.</p>
+    <a href="index_es.html#contact" class="btn-cta" style="padding:16px 36px; font-size:17px; border-radius:30px; display:inline-block;">Comienza con una conversación</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="background:#0A0A0F; color:rgba(255,255,255,0.7); padding:60px 0 30px; font-size:14px;">
+  <div style="max-width:1280px; margin:0 auto; padding:0 32px; text-align:center;">
+    <p style="margin-bottom:16px;">Ayudamos a las familias a construir un futuro financiero más sólido, ayudar a proteger a sus seres queridos y crear un legado significativo para las generaciones futuras.</p>
+    <div style="display:inline-block; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); padding:6px 16px; border-radius:20px; font-size:12px; margin-bottom:24px; color:#fff;">Sirviendo a familias en todo el país</div>
+    <p style="font-size:12px; color:rgba(255,255,255,0.4); max-width:900px; margin:0 auto; line-height:1.6;">Family First Legacy es una agencia independiente de servicios financieros que sirve a familias en todo Estados Unidos. Los productos de seguros y financieros se ofrecen a través de profesionales debidamente licenciados y están sujetos a aprobación de la compañía, disponibilidad de productos, evaluación de suscripción y requisitos estatales aplicables. No ofrecemos asesoría legal ni fiscal; consulta con un profesional calificado para esos asuntos. La elegibilidad individual, disponibilidad de productos, características de la póliza y resultados pueden variar.</p>
+  </div>
+</footer>
+
+
+<script>
+function selectQuestion(idx) {
+  var slides = document.querySelectorAll('.q-slide');
+  var cards = document.querySelectorAll('.q-card');
+  if (slides.length && cards.length) {
+    slides.forEach(function(s, i) {
+      if (i === idx) {
+        s.classList.add('active');
+      } else {
+        s.classList.remove('active');
+      }
+    });
+    cards.forEach(function(c, i) {
+      if (i === idx) {
+        c.classList.add('active');
+      } else {
+        c.classList.remove('active');
+      }
+    });
+  }
+}
+var switchRqCard = selectQuestion;
+window.selectQuestion = selectQuestion;
+window.switchRqCard = selectQuestion;
+</script>
+</body>
+</html>
