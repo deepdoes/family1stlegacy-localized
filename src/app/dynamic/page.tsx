@@ -9280,6 +9280,174 @@ body.mobile-menu-active .nav-toggle {
   height: 20px !important;
   z-index: 999 !important;
 }
+
+
+/* ─── Footer Grid & Link Hover Overflow Fix ─── */
+.footer-grid { grid-template-columns: 2fr 1.1fr 1.35fr 1.1fr !important; gap: 40px !important; }
+.f-links a { white-space: nowrap !important; }
+
+
+/* ─── Read Article Action Button Touch & Hover Enhancement ─── */
+.bc-link {
+  margin-top: auto !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: #4A2D7A !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  background: rgba(74, 45, 122, 0.06) !important;
+  border: 1px solid rgba(74, 45, 122, 0.12) !important;
+  border-radius: 30px !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  width: fit-content !important;
+}
+.blog-card:hover .bc-link,
+.bc-link:hover {
+  background: #4A2D7A !important;
+  color: #ffffff !important;
+  border-color: #4A2D7A !important;
+  box-shadow: 0 4px 12px rgba(74, 45, 122, 0.25) !important;
+}
+.bc-link svg {
+  width: 13px !important;
+  height: 13px !important;
+  stroke: currentColor !important;
+  fill: none !important;
+  stroke-width: 2.5 !important;
+  transition: transform 0.3s ease !important;
+}
+.blog-card:hover .bc-link svg,
+.bc-link:hover svg {
+  transform: translateX(4px) !important;
+  stroke: #ffffff !important;
+}
+
+
+
+
+/* ─── Strict Q&A Slide Display & Mobile Polish (Prevents Text Overlapping) ─── */
+.q-slide {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.q-slide.active {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .qa-dashboard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .qa-selectors-list {
+    max-height: 240px !important;
+    overflow-y: auto !important;
+    padding-right: 6px !important;
+  }
+  .qa-display-card-stage {
+    min-height: auto !important;
+    height: auto !important;
+    overflow: hidden !important;
+    margin-bottom: 48px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06) !important;
+  }
+  .q-slide.active {
+    padding: 24px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .q-slide h3 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 14px !important;
+  }
+  .q-slide p {
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+  }
+  .q-slide .btn {
+    margin-top: 20px !important;
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+
+/* ─── Homepage Blog Carousel Enhancement ─── */
+.blog-carousel-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  margin-bottom: 36px !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+}
+.blog-nav-btn {
+  width: 48px !important;
+  height: 48px !important;
+  background: #ffffff !important;
+  border: 1.5px solid rgba(74, 45, 122, 0.14) !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+}
+.blog-nav-btn:hover {
+  background: #1D9E75 !important;
+  border-color: #1D9E75 !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 24px rgba(29, 158, 117, 0.25) !important;
+}
+.blog-nav-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke: #4A2D7A !important;
+  fill: none !important;
+  stroke-width: 2.2 !important;
+  transition: stroke 0.25s !important;
+}
+.blog-nav-btn:hover svg {
+  stroke: #ffffff !important;
+}
+.blog-slider-wrap {
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 8px 4px 24px 4px !important;
+}
+.blog-slider-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+.blog-slider-track {
+  display: flex !important;
+  gap: 28px !important;
+  width: max-content !important;
+}
+.blog-slider-track .blog-card {
+  width: 350px !important;
+  max-width: 85vw !important;
+  flex-shrink: 0 !important;
+}
 ` }} />
       <div dangerouslySetInnerHTML={{ __html: `
 
@@ -9309,7 +9477,7 @@ body.mobile-menu-active .nav-toggle {
         <li><a href="#process">How It Works</a></li>
         <li><a href="opportunity.html">Opportunity</a></li>
         <li><a href="#reviews">Q&A</a></li>
-        <li><a href="#blog">Knowledgebase</a></li>
+                    <li><a href="#blog">Knowledgebase</a></li>
         
         
         <li class="lang-switcher" id="lang-switcher-desktop">
@@ -10106,18 +10274,27 @@ body.mobile-menu-active .nav-toggle {
 </section>
 
 <!-- BLOG / INSIGHTS ─────────────────────────────────── -->
-<section id="blog" style="padding:120px 0; background:var(--bg); border-top: 1px solid rgba(74,45,122,.05);">
+<section id="blog">
   <div class="container">
-    <div class="blog-header" style="margin-bottom:56px; display:flex; justify-content:space-between; align-items:flex-end;">
+
+    <div class="blog-carousel-header">
       <div class="blog-header-left">
-        <p class="t-label" data-reveal><span class="green-dot"></span>Financial Insights</p>
+        <p class="t-label" data-reveal style="color:var(--green)"><span class="green-dot" style="background:var(--green)"></span>FINANCIAL INSIGHTS</p>
         <h2 class="t-h1" data-reveal data-delay="1">Latest Articles &<br>Strategies.</h2>
       </div>
+      <div class="blog-header-right" data-reveal data-delay="1" style="display:flex; gap:12px; align-items:center;">
+        <button class="blog-nav-btn" onclick="slideHomeBlog('left')" aria-label="Previous articles">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="blog-nav-btn" onclick="slideHomeBlog('right')" aria-label="Next articles">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
     </div>
-    
-    <div class="blog-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:32px;" data-reveal data-delay="2">
-      <!-- Card 1 -->
-      <a href="blog_family_protection.html" class="blog-card" style="flex:none;">
+
+    <div class="blog-slider-wrap" data-reveal data-delay="2">
+      <div class="blog-slider-track">
+        <a href="blog_family_protection.html" class="blog-card" style="flex:none;">
         <div class="bc-img-wrap"><img src="images/family_protection_black_1777333563521.png" alt="Family Protection" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Family Protection</div>
@@ -10126,9 +10303,7 @@ body.mobile-menu-active .nav-toggle {
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
-      
-      <!-- Card 2 -->
-      <a href="blog_retirement.html" class="blog-card" style="flex:none;">
+<a href="blog_retirement.html" class="blog-card" style="flex:none;">
         <div class="bc-img-wrap"><img src="images/retirement_planning_black_1777333576986.png" alt="Retirement Planning" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Retirement</div>
@@ -10137,9 +10312,7 @@ body.mobile-menu-active .nav-toggle {
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
-      
-      <!-- Card 3 -->
-      <a href="blog_education.html" class="blog-card" style="flex:none;">
+<a href="blog_education.html" class="blog-card" style="flex:none;">
         <div class="bc-img-wrap"><img src="images/education_planning_hispanic_1777333593369.png" alt="Education Planning" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Education</div>
@@ -10148,9 +10321,7 @@ body.mobile-menu-active .nav-toggle {
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
-
-      <!-- Card 4: Living Benefits (New 6th Article) -->
-      <a href="blog_living_benefits.html" class="blog-card" style="flex:none;">
+<a href="blog_living_benefits.html" class="blog-card" style="flex:none;">
         <div class="bc-img-wrap"><img src="images/critical_illness_diverse_1777393231898.png" alt="Living Benefits" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Living Benefits</div>
@@ -10159,9 +10330,7 @@ body.mobile-menu-active .nav-toggle {
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
-      
-      <!-- Card 5 -->
-      <a href="blog_financial_strategy.html" class="blog-card" style="flex:none;">
+<a href="blog_financial_strategy.html" class="blog-card" style="flex:none;">
         <div class="bc-img-wrap"><img src="images/financial_strategy_hispanic_1777333606672.png" alt="Financial Strategy" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Financial Strategy</div>
@@ -10170,9 +10339,7 @@ body.mobile-menu-active .nav-toggle {
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
-      
-      <!-- Card 6 -->
-      <a href="blog_legacy.html" class="blog-card" style="flex:none;">
+<a href="blog_legacy.html" class="blog-card" style="flex:none;">
         <div class="bc-img-wrap"><img src="images/wealth_transfer_diverse_1777393288351.png" alt="Legacy Building" class="bc-img"></div>
         <div class="bc-content">
           <div class="bc-cat">Estate Planning</div>
@@ -10181,7 +10348,9 @@ body.mobile-menu-active .nav-toggle {
           <div class="bc-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
         </div>
       </a>
+      </div>
     </div>
+
   </div>
 </section>
 <!-- FAQ ─────────────────────────────────────────────── -->
@@ -10327,7 +10496,7 @@ body.mobile-menu-active .nav-toggle {
             </div>
             <div class="ci-body">
               <div class="ci-label">Office Hours</div>
-              <div class="ci-val">Mon–Fri: 9am – 7pm · Sat: 10am – 4pm</div>
+              <div class="ci-val">Mon–Fri: 9am – 7pm · Sat: 2pm – 6pm</div>
             </div>
           </div>
         </div>
@@ -10504,7 +10673,8 @@ body.mobile-menu-active .nav-toggle {
           <ul class="f-links">
             <li><a href="#about">About Us</a></li>
             <li><a href="#process">How It Works</a></li>
-            <li><a href="#reviews">Q&A</a></li>
+            <li><a href="#reviews">Real Questions &amp; Guidance</a></li>
+            <li><a href="#blog">Knowledgebase &amp; Articles</a></li>
             <li><a href="opportunity.html">Opportunity</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
@@ -10535,7 +10705,7 @@ body.mobile-menu-active .nav-toggle {
       </div>
 
       <div style="text-align: left; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: rgba(255,255,255,0.4); display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 6px;">
-        <span>Website created by DFW Branding</span>
+        <span>Website created by</span>
         <a href="https://dfwbranding.com" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center;">
           <img src="https://dfwbranding.com/wp-content/uploads/2020/10/DFW-BRANDING-RED-WHITE_1.png" alt="DFW Branding" style="height: 66px; object-fit: contain; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">
         </a>
@@ -10671,6 +10841,13 @@ function selectQuestion(idx) {
       c.classList.remove('active');
     }
   });
+
+  if (window.innerWidth <= 900) {
+    const stage = document.querySelector('.qa-display-card-stage');
+    if (stage) {
+      stage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }
 }
 
 
@@ -11279,6 +11456,16 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<script>
+function slideHomeBlog(direction) {
+  const container = document.querySelector('.blog-slider-wrap');
+  if(!container) return;
+  const scrollAmount = direction === 'left' ? -375 : 375;
+  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+</script>
+
 ` }} />
     </>
   );

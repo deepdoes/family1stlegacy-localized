@@ -9338,6 +9338,174 @@ body.mobile-menu-active .nav-toggle {
   z-index: 999 !important;
 }
 </style>
+<style>
+/* ─── Footer Grid & Link Hover Overflow Fix ─── */
+.footer-grid { grid-template-columns: 2fr 1.1fr 1.35fr 1.1fr !important; gap: 40px !important; }
+.f-links a { white-space: nowrap !important; }
+</style>
+<style>
+/* ─── Read Article Action Button Touch & Hover Enhancement ─── */
+.bc-link {
+  margin-top: auto !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: #4A2D7A !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 16px !important;
+  background: rgba(74, 45, 122, 0.06) !important;
+  border: 1px solid rgba(74, 45, 122, 0.12) !important;
+  border-radius: 30px !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  width: fit-content !important;
+}
+.blog-card:hover .bc-link,
+.bc-link:hover {
+  background: #4A2D7A !important;
+  color: #ffffff !important;
+  border-color: #4A2D7A !important;
+  box-shadow: 0 4px 12px rgba(74, 45, 122, 0.25) !important;
+}
+.bc-link svg {
+  width: 13px !important;
+  height: 13px !important;
+  stroke: currentColor !important;
+  fill: none !important;
+  stroke-width: 2.5 !important;
+  transition: transform 0.3s ease !important;
+}
+.blog-card:hover .bc-link svg,
+.bc-link:hover svg {
+  transform: translateX(4px) !important;
+  stroke: #ffffff !important;
+}
+</style>
+<style>
+</style>
+<style>
+/* ─── Strict Q&A Slide Display & Mobile Polish (Prevents Text Overlapping) ─── */
+.q-slide {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+.q-slide.active {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (max-width: 900px) {
+  .qa-dashboard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  .qa-selectors-list {
+    max-height: 240px !important;
+    overflow-y: auto !important;
+    padding-right: 6px !important;
+  }
+  .qa-display-card-stage {
+    min-height: auto !important;
+    height: auto !important;
+    overflow: hidden !important;
+    margin-bottom: 48px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06) !important;
+  }
+  .q-slide.active {
+    padding: 24px 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .q-slide h3 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 14px !important;
+  }
+  .q-slide p {
+    font-size: 14.5px !important;
+    line-height: 1.65 !important;
+  }
+  .q-slide .btn {
+    margin-top: 20px !important;
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+</style>
+<style>
+/* ─── Homepage Blog Carousel Enhancement ─── */
+.blog-carousel-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-end !important;
+  margin-bottom: 36px !important;
+  gap: 24px !important;
+  flex-wrap: wrap !important;
+}
+.blog-nav-btn {
+  width: 48px !important;
+  height: 48px !important;
+  background: #ffffff !important;
+  border: 1.5px solid rgba(74, 45, 122, 0.14) !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+}
+.blog-nav-btn:hover {
+  background: #1D9E75 !important;
+  border-color: #1D9E75 !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 8px 24px rgba(29, 158, 117, 0.25) !important;
+}
+.blog-nav-btn svg {
+  width: 18px !important;
+  height: 18px !important;
+  stroke: #4A2D7A !important;
+  fill: none !important;
+  stroke-width: 2.2 !important;
+  transition: stroke 0.25s !important;
+}
+.blog-nav-btn:hover svg {
+  stroke: #ffffff !important;
+}
+.blog-slider-wrap {
+  overflow-x: auto !important;
+  scroll-behavior: smooth !important;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+  padding: 8px 4px 24px 4px !important;
+}
+.blog-slider-wrap::-webkit-scrollbar {
+  display: none !important;
+}
+.blog-slider-track {
+  display: flex !important;
+  gap: 28px !important;
+  width: max-content !important;
+}
+.blog-slider-track .blog-card {
+  width: 350px !important;
+  max-width: 85vw !important;
+  flex-shrink: 0 !important;
+}
+</style>
 </head>
 <body>
 <div id="scroll-progress"></div>
@@ -9365,7 +9533,7 @@ body.mobile-menu-active .nav-toggle {
 <li><a href="#process">Cómo funciona</a></li>
 <li><a href="#opportunity">Oportunidad</a></li>
 <li><a href="#reviews">Preguntas</a></li>
-<li><a href="#blog">Base de conocimientos</a></li>
+            <li><a href="#blog">Base de conocimientos</a></li>
 
 
         <li class="lang-switcher" id="lang-switcher-desktop">
@@ -10129,74 +10297,94 @@ function switchRqCard(idx) {
 </section>
 <!-- BLOG / INSIGHTS ─────────────────────────────────── -->
 <section id="blog">
-<div class="container">
-<div class="blog-header">
-<div class="blog-header-left">
-<p class="t-label" data-reveal=""><span class="green-dot"></span>Perspectivas financieras</p>
-<h2 class="t-h1" data-delay="1" data-reveal="">Últimos artículos y<br/>Estrategias.</h2>
-</div>
-<div class="blog-nav" data-delay="2" data-reveal="">
-<button aria-label="Previous articles" class="blog-nav-btn blog-prev" disabled="">
-<svg viewbox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"></path></svg>
-</button>
-<button aria-label="Next articles" class="blog-nav-btn blog-next">
-<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
-</button>
-</div>
-</div>
-<div class="blog-slider-wrap">
-<div class="blog-slider">
-<a class="blog-card" data-reveal="" href="blog_family_protection_es.html">
-<div class="bc-img-wrap"><img alt="Family Protection" class="bc-img" src="images/hero_life_insurance_diverse_1777335713599.png"/></div>
-<div class="bc-content">
-<div class="bc-cat">Protección familiar</div>
-<h3 class="bc-title">Por qué el 60% de las familias tienen un seguro insuficiente</h3>
-<p class="bc-excerpt">Descubra el verdadero costo de depender únicamente de los beneficios del empleador y cómo construir una red de seguridad a prueba de balas para sus seres queridos.</p>
-<div class="bc-link">Leer artículo<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
-</div>
-</a>
-<a class="blog-card" data-delay="1" data-reveal="" href="blog_retirement_es.html">
-<div class="bc-img-wrap"><img alt="Retirement Planning" class="bc-img" src="images/hero_retirement_diverse_1777335727638.png"/></div>
-<div class="bc-content">
-<div class="bc-cat">Jubilación</div>
-<h3 class="bc-title">La bomba de tiempo fiscal escondida en su 401(k)</h3>
-<p class="bc-excerpt">Las cuentas de jubilación tradicionales tienen un socio silencioso: el IRS. Aprenda cómo estructurar flujos de ingresos libres de impuestos para sus años dorados.</p>
-<div class="bc-link">Leer artículo<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
-</div>
-</a>
-<a class="blog-card" data-delay="2" data-reveal="" href="blog_education_es.html">
-<div class="bc-img-wrap"><img alt="Education Planning" class="bc-img" src="images/hero_education_diverse_1777335740128.png"/></div>
-<div class="bc-content">
-<div class="bc-cat">Educación</div>
-<h3 class="bc-title">La trampa 529: formas más inteligentes de financiar la universidad</h3>
-<p class="bc-excerpt">No sacrifique su jubilación por su matrícula. Explore alternativas flexibles y con ventajas impositivas que no perjudiquen la elegibilidad para recibir ayuda financiera.</p>
-<div class="bc-link">Leer artículo<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
-</div>
-</a>
-<a class="blog-card" data-reveal="" href="blog_financial_strategy_es.html">
-<div class="bc-img-wrap"><img alt="Financial Strategy" class="bc-img" src="images/financial_strategy_hispanic_1777333606672.png"/></div>
-<div class="bc-content">
-<div class="bc-cat">Creación de riqueza</div>
-<h3 class="bc-title">Dominar la regla del 72 para acelerar la riqueza</h3>
-<p class="bc-excerpt">La riqueza no se crea por accidente. Comprenda cómo funciona el interés compuesto y exactamente qué tasa de rendimiento necesita para alcanzar la independencia financiera.</p>
-<div class="bc-link">Leer artículo<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
-</div>
-</a>
-<a class="blog-card" data-delay="1" data-reveal="" href="blog_legacy_es.html">
-<div class="bc-img-wrap"><img alt="Legacy Building" class="bc-img" src="images/hero_estate_diverse_1777335759302.png"/></div>
-<div class="bc-content">
-<div class="bc-cat">Planificación patrimonial</div>
-<h3 class="bc-title">Evitar la trampa testamentaria: testamento versus confianza</h3>
-<p class="bc-excerpt">Asegúrese de que sus activos eviten el largo, público y costoso sistema judicial. Aprenda cómo proteger su legado para la próxima generación.</p>
-<div class="bc-link">Leer artículo<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></div>
-</div>
-</a>
-</div>
-</div>
-<div class="blog-progress" data-delay="2" data-reveal="">
-<div class="blog-progress-bar"></div>
-</div>
-</div>
+  <div class="container">
+
+    <div class="blog-carousel-header">
+      <div class="blog-header-left">
+        <p class="t-label" data-reveal style="color:var(--green)"><span class="green-dot" style="background:var(--green)"></span>PERSPECTIVAS FINANCIERAS</p>
+        <h2 class="t-h1" data-reveal data-delay="1">Últimos artículos y<br>Estrategias.</h2>
+      </div>
+      <div class="blog-header-right" data-reveal data-delay="1" style="display:flex; gap:12px; align-items:center;">
+        <button class="blog-nav-btn" onclick="slideHomeBlog('left')" aria-label="Artículos anteriores">
+          <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="blog-nav-btn" onclick="slideHomeBlog('right')" aria-label="Siguientes artículos">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="blog-slider-wrap" data-reveal data-delay="2">
+      <div class="blog-slider-track">
+        <!-- Card 1 -->
+        <a href="blog_family_protection_es.html" class="blog-card">
+          <div class="bc-img-wrap"><img src="images/family_protection_black_1777333563521.png" alt="Protección Familiar" class="bc-img"></div>
+          <div class="bc-content">
+            <div class="bc-cat">Protección Familiar</div>
+            <h3 class="bc-title">¿Confía su familia solo en beneficios laborales?</h3>
+            <p class="bc-excerpt">El seguro de vida del empleador puede ser útil, pero conozca sus límites y opciones portátiles.</p>
+            <div class="bc-link">Leer Artículo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Card 2 -->
+        <a href="blog_retirement_es.html" class="blog-card">
+          <div class="bc-img-wrap"><img src="images/retirement_planning_black_1777333576986.png" alt="Jubilación" class="bc-img"></div>
+          <div class="bc-content">
+            <div class="bc-cat">Jubilación</div>
+            <h3 class="bc-title">¿Podrían los impuestos reducir sus ingresos de jubilación?</h3>
+            <p class="bc-excerpt">Aprenda sobre los 3 cubos de impuestos y estrategias de protección contra caídas.</p>
+            <div class="bc-link">Leer Artículo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Card 3 -->
+        <a href="blog_education_es.html" class="blog-card">
+          <div class="bc-img-wrap"><img src="images/education_planning_hispanic_1777333593369.png" alt="Educación" class="bc-img"></div>
+          <div class="bc-content">
+            <div class="bc-cat">Educación</div>
+            <h3 class="bc-title">¿Qué pasa si el camino de su hijo cambia después de ahorrar?</h3>
+            <p class="bc-excerpt">Explore opciones flexibles de ahorro para la educación universitaria o profesional.</p>
+            <div class="bc-link">Leer Artículo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Card 4 -->
+        <a href="blog_living_benefits.html" class="blog-card">
+          <div class="bc-img-wrap"><img src="images/critical_illness_diverse_1777393231898.png" alt="Beneficios en Vida" class="bc-img"></div>
+          <div class="bc-content">
+            <div class="bc-cat">Beneficios en Vida</div>
+            <h3 class="bc-title">¿Qué pasa si sobrevive a la enfermedad, pero sus ingresos no?</h3>
+            <p class="bc-excerpt">Los beneficios en vida le permiten acceder a fondos durante enfermedades graves.</p>
+            <div class="bc-link">Leer Artículo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Card 5 -->
+        <a href="blog_financial_strategy_es.html" class="blog-card">
+          <div class="bc-img-wrap"><img src="images/financial_strategy_hispanic_1777333606672.png" alt="Estrategia Financiera" class="bc-img"></div>
+          <div class="bc-content">
+            <div class="bc-cat">Estrategia Financiera</div>
+            <h3 class="bc-title">Cómo las estrategias claras construyen seguridad duradera</h3>
+            <p class="bc-excerpt">Los 4 pilares de la salud financiera familiar explicados de forma sencilla.</p>
+            <div class="bc-link">Leer Artículo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <!-- Card 6 -->
+        <a href="blog_legacy_es.html" class="blog-card">
+          <div class="bc-img-wrap"><img src="images/wealth_transfer_diverse_1777393288351.png" alt="Legado y Patrimonio" class="bc-img"></div>
+          <div class="bc-content">
+            <div class="bc-cat">Legado y Patrimonio</div>
+            <h3 class="bc-title">Preservar su legado: Planificación para generaciones futuras</h3>
+            <p class="bc-excerpt">Proteja sus activos, evite demoras de sucesiones y transfiera riqueza.</p>
+            <div class="bc-link">Leer Artículo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div>
 </section>
 <!-- FAQ ─────────────────────────────────────────────── -->
 <section id="faq">
@@ -10468,8 +10656,9 @@ function switchRqCard(idx) {
 <ul class="f-links">
 <li><a href="#about">Sobre nosotros</a></li>
 <li><a href="#process">Cómo funciona</a></li>
-<li><a href="#reviews">Historias de clientes</a></li>
-<li><a href="#opportunity">Oportunidad</a></li>
+<li><a href="#reviews">Preguntas reales y orientación</a></li>
+<li><a href="#blog">Base de conocimiento y artículos</a></li>
+<li><a href="opportunity_es.html">Oportunidad</a></li>
 <li><a href="#contact">Contáctenos</a></li>
 </ul>
 </div>
@@ -10497,7 +10686,7 @@ function switchRqCard(idx) {
 
 </div>
 <div style="text-align: left; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.05); font-size: 13px; color: rgba(255,255,255,0.4); display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 6px;">
-<span>Sitio web creado por DFW Branding</span>
+<span>Sitio web creado por</span>
 <a href="https://dfwbranding.com" rel="noopener noreferrer" style="display:inline-flex; align-items:center;" target="_blank">
 <img alt="DFW Branding" onmouseout="this.style.transform=''" onmouseover="this.style.transform='translateY(-2px)'" src="https://dfwbranding.com/wp-content/uploads/2020/10/DFW-BRANDING-RED-WHITE_1.png" style="height: 66px; object-fit: contain; transition: transform 0.2s;"/>
 </a>
@@ -11271,5 +11460,15 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<script>
+function slideHomeBlog(direction) {
+  const container = document.querySelector('.blog-slider-wrap');
+  if(!container) return;
+  const scrollAmount = direction === 'left' ? -375 : 375;
+  container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+</script>
+
 </body>
 </html>
