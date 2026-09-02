@@ -10108,8 +10108,197 @@ body.mobile-menu-active .nav-toggle {
   stroke: #26D07C !important;
 }
 </style>
+<style>
+
+
+</style>
+<style>
+/* ── Article Page Header Polish & Submenu Dropdown Fix ── */
+body.article-page #nav,
+body.article-page #nav:not(.stuck),
+body.article-page #nav.stuck {
+  background: rgba(35, 18, 62, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+body.article-page #nav .nav-links > li > a:not(.nav-cta),
+body.article-page #nav .nav-links > li > .nav-dropdown-toggle {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 600 !important;
+  transition: color 0.2s ease !important;
+}
+
+body.article-page #nav .nav-links > li > a:not(.nav-cta):hover,
+body.article-page #nav .nav-links > li > .nav-dropdown-toggle:hover {
+  color: #ffffff !important;
+}
+
+/* Services Dropdown Container & Links */
+body.article-page #nav .nav-dropdown {
+  background: #ffffff !important;
+  border: 1px solid rgba(74, 45, 122, 0.12) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 14px !important;
+  padding: 8px 0 !important;
+}
+
+body.article-page #nav .nav-dropdown a {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  display: block !important;
+  transition: all 0.2s ease !important;
+}
+
+body.article-page #nav .nav-dropdown a:hover {
+  background: #F1F5F9 !important;
+  color: #1D9E75 !important;
+}
+
+/* Language Switcher Dropdown Container & Links */
+body.article-page #nav .lang-dropdown {
+  background: #ffffff !important;
+  border: 1px solid rgba(74, 45, 122, 0.12) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 14px !important;
+  padding: 8px !important;
+}
+
+body.article-page #nav .lang-dropdown a {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+body.article-page #nav .lang-dropdown a:hover {
+  background: #F1F5F9 !important;
+  color: #1D9E75 !important;
+}
+
+body.article-page #nav .lang-dropdown a.active {
+  background: #F1F5F9 !important;
+  color: #4A2D7A !important;
+}
+
+body.article-page #nav .lang-dropdown a span:first-child {
+  background: rgba(74, 45, 122, 0.1) !important;
+  color: #4A2D7A !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+}
+
+body.article-page #nav .nav-logo img {
+  filter: brightness(0) invert(1) !important;
+}
+
+body.article-page #nav .lang-btn {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.article-page #nav .lang-btn svg {
+  stroke: #ffffff !important;
+}
+
+body.article-page .article-hero-banner {
+  margin-top: 80px !important;
+}
+</style>
+<style>
+/* ── Mobile Footer Grid & Horizontal Scroll Fix ── */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px 24px !important;
+  }
+  .f-brand {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  .fb-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+</style>
+<style>
+/* ── Bulletproof Global Anti-Horizontal Overflow System ── */
+html {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  position: relative !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+.container, .article-container-wrap, .article-hero-container, .article-grid-container {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.blog-slider-wrap, .more-articles-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+@media (max-width: 768px) {
+  #nav > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  section {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}
+</style>
 </head>
-<body>
+<body class="article-page article-page article-page article-page">
 
 <div id="scroll-progress"></div>
 
@@ -10309,8 +10498,8 @@ body.mobile-menu-active .nav-toggle {
             <div style="font-size:12px; font-weight:800; color:#4A2D7A; text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Why Family First Legacy</div>
             <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; font-size:13px; color:#475569; font-weight:600;">
               <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> Licensed & Insured</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 24hr Response Guarantee</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 100% Privacy Protected</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 24hr Response</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> Your Privacy Matters</li>
             </ul>
           </div>
 

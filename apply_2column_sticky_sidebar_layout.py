@@ -221,8 +221,8 @@ def build_sidebar_html(fname, html_content):
           <div style="font-size:12px; font-weight:700; color:#4A2D7A; text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Why Family First Legacy</div>
           <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; font-size:13px; color:#475569; font-weight:600;">
             <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> Licensed & Insured</li>
-            <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 24hr Response Guarantee</li>
-            <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 100% Privacy Protected</li>
+            <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 24hr Response</li>
+            <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> Your Privacy Matters</li>
           </ul>
         </div>
 

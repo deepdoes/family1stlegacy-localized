@@ -10044,8 +10044,197 @@ body.mobile-menu-active .nav-toggle {
   stroke: #26D07C !important;
 }
 </style>
+<style>
+
+
+</style>
+<style>
+/* ── Article Page Header Polish & Submenu Dropdown Fix ── */
+body.article-page #nav,
+body.article-page #nav:not(.stuck),
+body.article-page #nav.stuck {
+  background: rgba(35, 18, 62, 0.96) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+body.article-page #nav .nav-links > li > a:not(.nav-cta),
+body.article-page #nav .nav-links > li > .nav-dropdown-toggle {
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 600 !important;
+  transition: color 0.2s ease !important;
+}
+
+body.article-page #nav .nav-links > li > a:not(.nav-cta):hover,
+body.article-page #nav .nav-links > li > .nav-dropdown-toggle:hover {
+  color: #ffffff !important;
+}
+
+/* Services Dropdown Container & Links */
+body.article-page #nav .nav-dropdown {
+  background: #ffffff !important;
+  border: 1px solid rgba(74, 45, 122, 0.12) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 14px !important;
+  padding: 8px 0 !important;
+}
+
+body.article-page #nav .nav-dropdown a {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+  padding: 10px 20px !important;
+  font-size: 14px !important;
+  display: block !important;
+  transition: all 0.2s ease !important;
+}
+
+body.article-page #nav .nav-dropdown a:hover {
+  background: #F1F5F9 !important;
+  color: #1D9E75 !important;
+}
+
+/* Language Switcher Dropdown Container & Links */
+body.article-page #nav .lang-dropdown {
+  background: #ffffff !important;
+  border: 1px solid rgba(74, 45, 122, 0.12) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 14px !important;
+  padding: 8px !important;
+}
+
+body.article-page #nav .lang-dropdown a {
+  color: #1E293B !important;
+  font-weight: 600 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 12px !important;
+  border-radius: 8px !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+body.article-page #nav .lang-dropdown a:hover {
+  background: #F1F5F9 !important;
+  color: #1D9E75 !important;
+}
+
+body.article-page #nav .lang-dropdown a.active {
+  background: #F1F5F9 !important;
+  color: #4A2D7A !important;
+}
+
+body.article-page #nav .lang-dropdown a span:first-child {
+  background: rgba(74, 45, 122, 0.1) !important;
+  color: #4A2D7A !important;
+  padding: 3px 8px !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  font-size: 11px !important;
+}
+
+body.article-page #nav .nav-logo img {
+  filter: brightness(0) invert(1) !important;
+}
+
+body.article-page #nav .lang-btn {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.article-page #nav .lang-btn svg {
+  stroke: #ffffff !important;
+}
+
+body.article-page .article-hero-banner {
+  margin-top: 80px !important;
+}
+</style>
+<style>
+/* ── Mobile Footer Grid & Horizontal Scroll Fix ── */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px 24px !important;
+  }
+  .f-brand {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  .fb-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+</style>
+<style>
+/* ── Bulletproof Global Anti-Horizontal Overflow System ── */
+html {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  position: relative !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+.container, .article-container-wrap, .article-hero-container, .article-grid-container {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.blog-slider-wrap, .more-articles-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+@media (max-width: 768px) {
+  #nav > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  section {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}
+</style>
 </head>
-<body>
+<body class="article-page article-page article-page article-page">
 <div id="scroll-progress"></div>
 <!-- NAV ─────────────────────────────────────────────── -->
 <header id="nav">
@@ -10153,13 +10342,13 @@ body.mobile-menu-active .nav-toggle {
           <ul>
             <li><strong>Legacy is more than wealth:</strong> True legacy planning encompasses financial assets, personal values, and clear instructions for your loved ones.</li>
             <li><strong>Avoiding Probate delays:</strong> Proper beneficiary designations and estate strategies help transfer assets quickly and privately without costly court delays.</li>
-            <li><strong>Generational Wealth Transfer:</strong> Using life insurance and structured products guarantees tax-free wealth transfer directly to the next generation.</li>
+            <li><strong>Generational Wealth Transfer:</strong> Life insurance can help transfer wealth directly to beneficiaries, with death benefits generally received income-tax-free, helping support the financial legacy you want to leave for the next generation.</li>
           </ul>
         </div>
 
         <h2 id="sec-1">1. Defining What Legacy Means Beyond Money</h2>
         <p>Everything you have worked for tells a story. Legacy planning is not reserved exclusively for the wealthy—it is a vital process for any family that wants to ensure their assets, home, business, and personal values pass smoothly to the next generation.</p>
-        <p>A well-crafted legacy plan eliminates family confusion, minimizes legal stress, and provides immediate financial stability for your heirs.</p>
+        <p>A well-crafted legacy plan can help reduce family confusion, minimize legal stress, and provide greater financial stability for your heirs.</p>
 
         <h2 id="sec-2">2. Estate Planning Essentials: Wills, Trusts & Beneficiaries</h2>
         <p>A legal estate plan works alongside your financial products. Primary components include:</p>
@@ -10170,7 +10359,7 @@ body.mobile-menu-active .nav-toggle {
         </ul>
 
         <h2 id="sec-3">3. Understanding the Impact of Probate Delays</h2>
-        <p>Probate is the court-supervised process of authenticating a will and distributing assets. Probate can take anywhere from several months to years, creating stress and legal expenses for surviving family members. Life insurance proceeds bypass probate completely, delivering immediate tax-free funds to beneficiaries.</p>
+        <p>Probate is the court-supervised process of authenticating a will and distributing assets. Probate can take anywhere from several months to years, creating stress and legal expenses for surviving family members. When a valid living beneficiary is properly designated, life insurance proceeds generally pass directly to the beneficiary outside of probate and are generally received income-tax-free.</p>
 
         <h2 id="sec-4">4. Using Life Insurance for Wealth Transfer</h2>
         <p>Life insurance is one of the most efficient wealth transfer tools available. Death benefit proceeds pass to beneficiaries income-tax-free, providing liquid cash to pay final expenses, estate taxes, or equalize inheritance among children.</p>
@@ -10226,8 +10415,8 @@ body.mobile-menu-active .nav-toggle {
             <div style="font-size:12px; font-weight:800; color:#4A2D7A; text-transform:uppercase; letter-spacing:1px; margin-bottom:12px;">Why Family First Legacy</div>
             <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px; font-size:13px; color:#475569; font-weight:600;">
               <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> Licensed & Insured</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 24hr Response Guarantee</li>
-              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 100% Privacy Protected</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> 24hr Response</li>
+              <li style="display:flex; align-items:center; gap:8px;"><span style="color:#1D9E75;">✓</span> Your Privacy Matters</li>
             </ul>
           </div>
 

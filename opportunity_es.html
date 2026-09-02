@@ -7046,6 +7046,86 @@ body.mobile-menu-active .nav-toggle {
   }
 }
 </style>
+<style>
+/* ── Mobile Footer Grid & Horizontal Scroll Fix ── */
+html, body {
+  overflow-x: hidden !important;
+  max-width: 100vw !important;
+}
+
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 32px 24px !important;
+  }
+  .f-brand {
+    grid-column: 1 / -1 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  .fb-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+}
+</style>
+<style>
+/* ── Bulletproof Global Anti-Horizontal Overflow System ── */
+html {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  width: 100% !important;
+  max-width: 100vw !important;
+  position: relative !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+
+.container, .article-container-wrap, .article-hero-container, .article-grid-container {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.blog-slider-wrap, .more-articles-wrap {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+@media (max-width: 768px) {
+  #nav > div {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  section {
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+}
+</style>
 </head>
 <body>
 

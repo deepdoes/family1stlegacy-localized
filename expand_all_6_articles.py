@@ -456,7 +456,7 @@ def build_legacy_html():
       <ul>
         <li><strong>Legacy is more than wealth:</strong> True legacy planning encompasses financial assets, personal values, and clear instructions for your loved ones.</li>
         <li><strong>Avoiding Probate delays:</strong> Proper beneficiary designations and estate strategies help transfer assets quickly and privately without costly court delays.</li>
-        <li><strong>Generational Wealth Transfer:</strong> Using life insurance and structured products guarantees tax-free wealth transfer directly to the next generation.</li>
+        <li><strong>Generational Wealth Transfer:</strong> Life insurance can help transfer wealth directly to beneficiaries, with death benefits generally received income-tax-free, helping support the financial legacy you want to leave for the next generation.</li>
       </ul>
     </div>
 
@@ -475,7 +475,7 @@ def build_legacy_html():
 
     <h2 id="section-1">1. Defining What Legacy Means Beyond Money</h2>
     <p>Everything you have worked for tells a story. Legacy planning is not reserved exclusively for the wealthy—it is a vital process for any family that wants to ensure their assets, home, business, and personal values pass smoothly to the next generation.</p>
-    <p>A well-crafted legacy plan eliminates family confusion, minimizes legal stress, and provides immediate financial stability for your heirs.</p>
+    <p>A well-crafted legacy plan can help reduce family confusion, minimize legal stress, and provide greater financial stability for your heirs.</p>
 
     <h2 id="section-2">2. Estate Planning Essentials: Wills, Trusts & Beneficiaries</h2>
     <p>A legal estate plan works alongside your financial products. Primary components include:</p>
@@ -486,7 +486,7 @@ def build_legacy_html():
     </ul>
 
     <h2 id="section-3">3. Understanding the Impact of Probate Delays</h2>
-    <p>Probate is the court-supervised process of authenticating a will and distributing assets. Probate can take anywhere from several months to years, creating stress and legal expenses for surviving family members. Life insurance proceeds bypass probate completely, delivering immediate tax-free funds to beneficiaries.</p>
+    <p>Probate is the court-supervised process of authenticating a will and distributing assets. Probate can take anywhere from several months to years, creating stress and legal expenses for surviving family members. When a valid living beneficiary is properly designated, life insurance proceeds generally pass directly to the beneficiary outside of probate and are generally received income-tax-free.</p>
 
     <h2 id="section-4">4. Using Life Insurance for Wealth Transfer</h2>
     <p>Life insurance is one of the most efficient wealth transfer tools available. Death benefit proceeds pass to beneficiaries income-tax-free, providing liquid cash to pay final expenses, estate taxes, or equalize inheritance among children.</p>
