@@ -9444,7 +9444,7 @@ body.mobile-menu-active .nav-toggle {
   width: max-content !important;
 }
 .blog-slider-track .blog-card {
-  width: 350px !important;
+  width: 280px !important;
   max-width: 85vw !important;
   flex-shrink: 0 !important;
 }
