@@ -10233,6 +10233,45 @@ body {
   }
 }
 </style>
+<style>
+/* ── Standardized Header Logo Polish ── */
+.nav-logo-img {
+  height: 55px !important;
+  max-height: 55px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+#nav:not(.stuck) .nav-logo-img {
+  filter: brightness(0) invert(1) !important;
+}
+
+#nav.stuck .nav-logo-img {
+  filter: none !important;
+}
+</style>
+<style>
+/* ── Standardized Header Logo Polish (Matches English Master 1:1) ── */
+.nav-logo-img {
+  height: 70px !important;
+  max-height: 70px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+  transition: height 0.3s ease, filter 0.3s ease !important;
+}
+
+#nav:not(.stuck) .nav-logo-img {
+  filter: brightness(0) invert(1) !important;
+}
+
+#nav.stuck .nav-logo-img {
+  height: 56px !important;
+  max-height: 56px !important;
+  filter: none !important;
+}
+</style>
 </head>
 <body class="article-page article-page article-page article-page">
 <div id="scroll-progress"></div>
@@ -10241,7 +10280,7 @@ body {
 <div style="width:100%; padding:0 48px; box-sizing:border-box;">
 <div class="nav-bar">
 <a class="nav-logo" href="index_es.html">
-<img alt="Family First Legacy" src="images/FamilyFirstLogo.png" style="height: 90px; width: auto; object-fit: contain; margin-top: 4px;"/>
+  <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" class="nav-logo-img">
 </a>
 <ul class="nav-links">
 <div class="nav-pill"></div>
@@ -10470,7 +10509,7 @@ body {
               <div class="bc-link">Leer Artículo <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
             </div>
           </a>
-          <a href="blog_living_benefits.html" class="blog-card">
+          <a href="blog_living_benefits_es.html" class="blog-card">
             <div class="bc-img-wrap"><img src="images/critical_illness_diverse_1777393231898.png" alt="¿Qué pasa si sobrevive a la enfermedad, pero sus ingresos no?" class="bc-img"></div>
             <div class="bc-content">
               <div class="bc-cat">Beneficios en Vida</div>
@@ -10560,8 +10599,8 @@ body {
 <div class="container">
 <div class="footer-grid">
 <div class="f-brand">
-<a class="nav-logo" href="index_es.html" style="text-decoration:none">
-<img alt="Family First Legacy" src="images/FamilyFirstLogo.png" style="height: 40px; width: auto; object-fit: contain; margin-top: 4px;"/>
+<a class="nav-logo" href="index_es.html">
+  <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" class="nav-logo-img">
 </a>
 <p>Empoderar a las familias para que creen seguridad financiera, protejan a sus seres queridos y creen un legado duradero para las generaciones venideras.</p>
 <div class="f-social">
@@ -10573,7 +10612,7 @@ body {
           <div class="f-affiliate">
             <div class="f-aff-label">Establecido</div>
 <div class="f-aff-name">Agencia Independiente<span>Licenciado a nivel nacional</span></div>
-            <div class="fb-disclosure" style="margin-top: 14px; font-size: 11px; color: rgba(255,255,255,0.4); line-height: 1.6; font-weight: 300; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; max-width: 100%;">Family First Legacy es una agencia de servicios financieros independiente. Licenciado en los 50 estados. No brindamos asesoramiento fiscal o legal; consulte a un profesional calificado para esos asuntos. Los ingresos individuales y los resultados de las políticas varían según las circunstancias.</div>
+            <div class="fb-disclosure" style="margin-top: 14px; font-size: 11px; color: rgba(255,255,255,0.4); line-height: 1.6; font-weight: 300; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 12px; max-width: 100%;">Family First Legacy es una agencia independiente de servicios financieros que atiende a familias en todo Estados Unidos. Los productos de seguros y financieros son ofrecidos por profesionales debidamente licenciados y están sujetos a la aprobación de la compañía, la disponibilidad del producto, la evaluación de suscripción y los requisitos estatales aplicables. No brindamos asesoramiento fiscal ni legal; para esos asuntos, consulta a un profesional calificado. La elegibilidad individual, la disponibilidad de productos, las características de las pólizas y los resultados pueden variar.</div>
           </div>
 </div>
 <div>

@@ -1,0 +1,1681 @@
+Family First Legacy
+
+FINAL SPANISH WEBSITE UPDATES
+
+Final English master → Spanish website
+
+Hi Dipan,Thank you very much for the beautiful work you have done on the Family First Legacy website. I truly appreciate your patience, care, and attention throughout these revisions. The completed English version looks very good, and I am grateful for everything you have done to bring the site together.I have now completed one more live comparison of the Spanish version against the finalized English site. This document contains ONLY the Spanish items that still need to be synchronized. Items that are already corrected on the live Spanish site have been removed from the general correction list so you do not have to redo completed work.
+
+The Spanish version is partially updated, but it still does not fully match the completed English master. I verified the current live Spanish pages again before preparing this handoff. The main navigation now correctly uses labels such as “Planificación Educativa,” and the main-site footer already shows “Preguntas reales y orientación,” so those completed items should NOT be changed again. The remaining items below are the ones that still need attention.
+
+HOME — full synchronization needed in several sections and FAQs.
+
+FAMILY PROTECTION — full page synchronization needed.
+
+RETIREMENT — full page synchronization needed.
+
+EDUCATION — full page synchronization needed.
+
+ESTATE & LEGACY — full page synchronization needed.
+
+FINANCIAL STRATEGY — full page synchronization needed.
+
+BUSINESS STRATEGIES — mostly current; add the legal/tax disclaimer and global shared wording.
+
+OPPORTUNITY — mostly newer, but should be synchronized to the final English structure and wording.
+
+PRIVACY + TERMS — Spanish legal pages are from an older version/date and should be replaced with translations of the current English legal pages.
+
+KNOWLEDGEBASE — all six articles must be checked; Spanish article bodies should actually be in Spanish, shared sidebar claims should be updated, and the Living Benefits Spanish link should be fixed.
+
+1. GLOBAL SHARED COMPONENTS — ALL SPANISH PAGES
+
+1.0 Page Titles, Service Labels & Small Headings
+
+Please keep the Spanish labels natural rather than translating the English word order literally. The top navigation is already using several of these correctly. Use the following forms consistently wherever the same service appears in cards, subtitles, menus, footers, or mobile navigation:
+
+FINAL ENGLISH
+
+SPANISH TO USE
+
+Life Insurance / Family Protection
+
+Seguro de Vida / Protección Familiar
+
+Retirement Planning
+
+Planificación para la Jubilación
+
+Education Planning
+
+Planificación Educativa
+
+Estate & Legacy Planning
+
+Planificación Patrimonial y de Legado
+
+Financial Strategy
+
+Estrategia Financiera
+
+Business Strategies
+
+Estrategias para Negocios
+
+Career Opportunity
+
+Oportunidad Profesional
+
+Knowledgebase
+
+Base de Conocimientos
+
+Real Questions & Guidance
+
+Preguntas reales y orientación
+
+Specific live example still needing cleanup on the Home service cards: the split label “Educación / Planificación” should read naturally as “Planificación Educativa.” Likewise, avoid literal split constructions such as “Financiero / Estrategia” or “Bienes & / Planificación heredada”; use “Estrategia Financiera” and “Planificación Patrimonial y de Legado.”
+
+1.1 Trust badges
+
+FINAL ENGLISH (MASTER):
+
+Licensed & Insured • 24hr Response • Your Privacy Matters
+
+SPANISH TO USE:
+
+Con licencia y asegurados • Respuesta en 24 horas • Tu privacidad nos importa
+
+1.2 Contact form sentence
+
+FINAL ENGLISH (MASTER):
+
+Fill out the form below, and our goal is to get back to you within 24 hours.
+
+SPANISH TO USE:
+
+Completa el formulario a continuación; nuestra meta es responderte dentro de las próximas 24 horas.
+
+1.3 Privacy sentence
+
+FINAL ENGLISH (MASTER):
+
+Your information is handled with care and kept private. We do not sell your personal information.
+
+SPANISH TO USE:
+
+Tu información se maneja con cuidado y se mantiene privada. No vendemos tu información personal.
+
+1.4 Newsletter
+
+FINAL ENGLISH (MASTER):
+
+Monthly insights on family protection, financial planning, and preparing for the future. Unsubscribe anytime.
+
+SPANISH TO USE:
+
+Información mensual sobre protección familiar, planificación financiera y preparación para el futuro. Puedes cancelar tu suscripción en cualquier momento.
+
+1.5 Main footer disclosure
+
+FINAL ENGLISH (MASTER):
+
+Family First Legacy is an independent financial services agency serving families across the United States. Insurance and financial products are offered through properly licensed professionals and are subject to carrier approval, product availability, underwriting, and applicable state requirements. We do not provide tax or legal advice; please consult a qualified professional for those matters. Individual eligibility, product availability, policy features, and results may vary.
+
+SPANISH TO USE:
+
+Family First Legacy es una agencia independiente de servicios financieros que atiende a familias en todo Estados Unidos. Los productos de seguros y financieros son ofrecidos por profesionales debidamente licenciados y están sujetos a la aprobación de la compañía, la disponibilidad del producto, la evaluación de suscripción y los requisitos estatales aplicables. No brindamos asesoramiento fiscal ni legal; para esos asuntos, consulta a un profesional calificado. La elegibilidad individual, la disponibilidad de productos, las características de las pólizas y los resultados pueden variar.
+
+1.7 Office hours
+
+FINAL ENGLISH (MASTER):
+
+Mon–Fri: 9am – 7pm · Sat: 2pm – 6pm
+
+SPANISH TO USE:
+
+Lun–Vie: 9 a. m. – 7 p. m. · Sáb: 2 p. m. – 6 p. m.
+
+Developer note: Spanish still shows Saturday 10 a.m.–4 p.m. on several older pages.
+
+2. HOME PAGE — SYNCHRONIZE TO FINAL ENGLISH
+
+2.1 Career Opportunity hero
+
+FINAL ENGLISH (MASTER):
+
+Turn your passion for helping families into a meaningful financial services career. Start part-time or grow full-time — with training, mentorship, and support along the way. Build something with purpose while helping families understand how to protect what matters most.
+
+SPANISH TO USE:
+
+Convierte tu pasión por ayudar a las familias en una carrera significativa en servicios financieros. Puedes comenzar a tiempo parcial o crecer hasta trabajar a tiempo completo, con capacitación, mentoría y apoyo durante el proceso. Construye algo con propósito mientras ayudas a las familias a entender cómo proteger lo que más les importa.
+
+Developer note: Remove the older Spanish “thousands of entrepreneurs / thriving business” language.
+
+2.2 Focus / proof section
+
+FINAL ENGLISH (MASTER):
+
+YOUR FAMILY. OUR FOCUS.100% Licensed ProfessionalsDFW & US — Serving Families Nationwide
+
+SPANISH TO USE:
+
+TU FAMILIA. NUESTRO ENFOQUE.100% Profesionales con licenciaDFW y EE. UU. — Sirviendo a familias en todo el país
+
+Developer note: Remove $1.4B+ commissions, Thousands of Families, A+ carrier statistics, 15+ years, and 50+ states/Canada claims that no longer appear in English.
+
+2.3 Guidance for Every Stage
+
+FINAL ENGLISH (MASTER):
+
+From protecting your family today to preparing for retirement and planning the legacy you want to leave behind, we’re here to help you understand your options and build a strategy that fits each chapter of your life.
+
+SPANISH TO USE:
+
+Desde proteger a tu familia hoy hasta prepararte para la jubilación y planificar el legado que deseas dejar, estamos aquí para ayudarte a comprender tus opciones y construir una estrategia que se adapte a cada etapa de tu vida.
+
+2.4 Life Insurance service card
+
+FINAL ENGLISH (MASTER):
+
+Your family depends on you every day. We help explain term, whole life, and indexed universal life in simple language, so you can choose coverage that supports the people you love, your budget, and your future goals.
+
+SPANISH TO USE:
+
+Tu familia cuenta contigo todos los días. Te explicamos de manera sencilla el seguro de vida a término, el seguro de vida entera y el seguro de vida universal indexado (IUL), para que puedas elegir una cobertura que apoye a las personas que amas, tu presupuesto y tus metas futuras.
+
+2.5 Retirement service card
+
+FINAL ENGLISH (MASTER):
+
+Retirement should not feel like a guess. Whether you’re just starting to save or reviewing a plan you already have, we help you understand your options and create a plan designed to support the future you want.
+
+SPANISH TO USE:
+
+La jubilación no debería sentirse como una incertidumbre. Ya sea que estés comenzando a ahorrar o revisando un plan que ya tienes, te ayudamos a comprender tus opciones y crear un plan pensado para apoyar el futuro que deseas.
+
+2.6 Estate & Legacy service card
+
+FINAL ENGLISH (MASTER):
+
+Your legacy is more than money — it’s the people, values, and future you care about. We help you understand ways to organize your assets and work alongside your legal and tax professionals to help create a plan focused on what matters most.
+
+SPANISH TO USE:
+
+Tu legado es más que dinero: son las personas, los valores y el futuro que te importan. Te ayudamos a comprender maneras de organizar tus bienes y a trabajar junto con tus profesionales legales y fiscales para crear un plan enfocado en lo que más importa.
+
+2.7 Education service card
+
+FINAL ENGLISH (MASTER):
+
+Every parent wants to give their child more opportunities for the future. Whether your child chooses college, trade school, or another path, we help you understand education savings options and build a plan designed to support their goals while keeping your retirement in mind.
+
+SPANISH TO USE:
+
+Todo padre desea brindar a sus hijos más oportunidades para el futuro. Ya sea que elijan la universidad, una escuela técnica u otro camino, te ayudamos a comprender las opciones de ahorro para la educación y a crear un plan que apoye sus metas sin perder de vista tu propia jubilación.
+
+2.8 Financial Strategy service card
+
+FINAL ENGLISH (MASTER):
+
+Your money should have a purpose, not just a place to sit. We help you understand ways to save, prepare for the future, and explore options designed to help reduce the impact of market downturns.
+
+SPANISH TO USE:
+
+Tu dinero debe tener un propósito, no simplemente quedarse guardado. Te ayudamos a comprender maneras de ahorrar, prepararte para el futuro y explorar opciones diseñadas para ayudar a reducir el impacto de las caídas del mercado.
+
+2.9 Business Strategies service card
+
+FINAL ENGLISH (MASTER):
+
+Your business carries your work, your income, and the people who depend on it. We help business owners understand protection options, succession strategies, and planning tools that may help support long-term stability.
+
+SPANISH TO USE:
+
+Tu negocio representa tu trabajo, tus ingresos y a las personas que dependen de él. Ayudamos a los dueños de negocios a comprender opciones de protección, estrategias de sucesión y herramientas de planificación que pueden ayudar a apoyar la estabilidad a largo plazo.
+
+2.10 How It Works — Step Two
+
+FINAL ENGLISH (MASTER):
+
+We use a Financial Needs Analysis to review your current picture and help identify where protection, savings, or retirement options may fit your needs.
+
+SPANISH TO USE:
+
+Utilizamos un Análisis de Necesidades Financieras para revisar tu situación actual y ayudarte a identificar dónde podrían encajar opciones de protección, ahorro o jubilación según tus necesidades.
+
+2.11 How It Works — Step Three
+
+FINAL ENGLISH (MASTER):
+
+We present clear options from well-established insurance and financial services companies — explained in simple language, with no pressure.
+
+SPANISH TO USE:
+
+Te presentamos opciones claras de compañías de seguros y servicios financieros bien establecidas, explicadas en un lenguaje sencillo y sin presión.
+
+2.12 How It Works — Ongoing Guidance
+
+FINAL ENGLISH (MASTER):
+
+Life changes — and your plan may need to change with it. We stay available to review your plan, answer questions, and help you adjust as your family grows.
+
+SPANISH TO USE:
+
+La vida cambia, y tu plan también puede necesitar cambios. Seguimos disponibles para revisar tu plan, responder tus preguntas y ayudarte a hacer ajustes a medida que tu familia crece.
+
+2.13 Home FAQ — replace old Spanish answers with final English equivalents
+
+EN — What exactly does Family First Legacy do?
+
+Family First Legacy helps individuals, families, and business owners understand their options for life insurance, retirement planning, education planning, and legacy planning. We explain things clearly so you can make informed decisions at your own pace.
+
+ES — ¿Qué hace exactamente Family First Legacy?
+
+Family First Legacy ayuda a personas, familias y dueños de negocios a comprender sus opciones de seguro de vida, planificación para la jubilación, planificación educativa y planificación de legado. Explicamos todo con claridad para que puedas tomar decisiones informadas a tu propio ritmo.
+
+EN — Is life insurance actually affordable?
+
+Life insurance may be more affordable than many people expect. The cost depends on age, health, coverage amount, product type, and eligibility.
+
+ES — ¿Es realmente asequible el seguro de vida?
+
+El seguro de vida puede ser más accesible de lo que muchas personas esperan. El costo depende de la edad, la salud, el monto de cobertura, el tipo de producto y la elegibilidad.
+
+EN — Do I need life insurance if I don’t have children?
+
+Life insurance is not just for parents. It may help cover final expenses, debts like a mortgage, or support people who depend on you. Some policies may also include living benefits for certain covered illnesses or conditions.
+
+ES — ¿Necesito seguro de vida si no tengo hijos?
+
+El seguro de vida no es solo para padres. Puede ayudar a cubrir gastos finales, deudas como una hipoteca o apoyar a personas que dependen de ti. Algunas pólizas también pueden incluir beneficios en vida para ciertas enfermedades o condiciones cubiertas.
+
+EN — What are Living Benefits?
+
+Living Benefits may allow qualified policyholders to access part of their policy benefits while still living if they experience certain covered illnesses or conditions. These funds may help with needs such as bills, medical costs, or lost income. Availability depends on the policy and eligibility.
+
+ES — ¿Qué son los beneficios en vida?
+
+Los beneficios en vida pueden permitir que los titulares de pólizas que califican accedan a una parte de los beneficios de su póliza mientras aún viven si enfrentan ciertas enfermedades o condiciones cubiertas. Estos fondos pueden ayudar con necesidades como facturas, gastos médicos o pérdida de ingresos. La disponibilidad depende de la póliza y de la elegibilidad.
+
+EN — Is Indexed Universal Life (IUL) a good investment?
+
+IUL is life insurance first, not a direct stock market investment. It may help protect your family while building cash value linked to a market index, depending on the policy design. Many IUL policies include a 0% floor on index interest credits, which can help reduce the impact of negative index performance. Policy charges and other terms still apply and can affect cash value.
+
+ES — ¿Es el seguro de Vida Universal Indexada (IUL) una buena inversión?
+
+El IUL es, ante todo, un seguro de vida, no una inversión directa en el mercado de valores. Dependiendo del diseño de la póliza, puede ayudar a proteger a tu familia mientras acumula valor en efectivo vinculado a un índice de mercado. Muchas pólizas IUL incluyen un piso del 0% para la acreditación de intereses vinculados al índice, lo que puede ayudar a reducir el impacto de un rendimiento negativo del índice. Los cargos de la póliza y otros términos siguen aplicando y pueden afectar el valor en efectivo.
+
+EN — Why shouldn’t I just use a 401(k) for retirement?
+
+A 401(k) can be a valuable retirement tool, but it may not cover every retirement need by itself. Traditional 401(k) withdrawals are generally taxable, and your account value can go up or down with the market. Some families also explore annuities or life insurance strategies to help add principal protection, income options, and balance to their retirement plan.
+
+ES — ¿Por qué no debería usar solamente un 401(k) para la jubilación?
+
+Un 401(k) puede ser una herramienta valiosa para la jubilación, pero por sí solo quizá no cubra todas las necesidades de retiro. Los retiros de un 401(k) tradicional generalmente están sujetos a impuestos y el valor de la cuenta puede subir o bajar con el mercado. Algunas familias también exploran anualidades o estrategias de seguro de vida para añadir opciones de protección del capital, ingresos y mayor equilibrio a su plan de jubilación.
+
+EN — How does an annuity help protect my money?
+
+Some fixed indexed annuities are designed to help protect principal from negative index performance while providing the potential for index-linked interest credits when applicable. Contract terms, caps, participation rates, surrender charges, withdrawals, and other limitations may apply. Because each product works differently, we explain the details clearly so you understand the protection, growth potential, and rules before making a decision.
+
+ES — ¿Cómo puede una anualidad ayudar a proteger mi dinero?
+
+Algunas anualidades fijas indexadas están diseñadas para ayudar a proteger el capital frente a un rendimiento negativo del índice, al mismo tiempo que ofrecen la posibilidad de recibir créditos de interés vinculados al índice cuando corresponda. Pueden aplicar términos del contrato, límites, tasas de participación, cargos por rescate, retiros y otras limitaciones. Como cada producto funciona de manera diferente, explicamos los detalles con claridad para que comprendas la protección, el potencial de crecimiento y las reglas antes de tomar una decisión.
+
+EN — What should families know about probate?
+
+Probate can delay access to certain assets when a family may need money most. Life insurance with the right named beneficiary may help provide funds directly to loved ones for bills, funeral costs, or daily needs, while other assets are still being handled. For wills, trusts, and legal estate planning, we encourage families to work with a qualified legal professional.
+
+ES — ¿Qué deben saber las familias sobre el proceso sucesorio?
+
+El proceso sucesorio puede retrasar el acceso a ciertos bienes cuando una familia más necesita dinero. Un seguro de vida con el beneficiario adecuado puede ayudar a proporcionar fondos directamente a los seres queridos para facturas, gastos funerarios o necesidades diarias mientras otros bienes todavía se gestionan. Para testamentos, fideicomisos y planificación patrimonial legal, recomendamos trabajar con un profesional legal calificado.
+
+EN — Can I use life insurance to help pay for my child’s education?
+
+Permanent life insurance that builds cash value may offer flexible access through policy loans or withdrawals for education or other future needs, depending on the policy design. Because accessing cash value can affect policy benefits, it’s important to understand how your specific policy works before using it. We can help you understand your options and how they may fit your family’s goals.
+
+ES — ¿Puedo usar un seguro de vida para ayudar a pagar la educación de mi hijo?
+
+El seguro de vida permanente que acumula valor en efectivo puede ofrecer acceso flexible mediante préstamos o retiros de la póliza para la educación u otras necesidades futuras, dependiendo del diseño de la póliza. Como acceder al valor en efectivo puede afectar los beneficios de la póliza, es importante comprender cómo funciona tu póliza específica antes de utilizarlo. Podemos ayudarte a entender tus opciones y cómo podrían ajustarse a las metas de tu familia.
+
+EN — Do you charge a fee for consultations?
+
+No. We do not charge a fee to talk with us. Your financial review is offered at no cost and with no pressure. It is simply a conversation to understand your situation, answer your questions, and help you see what options may fit your goals. There is no obligation to move forward.
+
+ES — ¿Cobran una tarifa por las consultas?
+
+No. No cobramos una tarifa por hablar con nosotros. Tu revisión financiera se ofrece sin costo y sin presión. Es simplemente una conversación para comprender tu situación, responder tus preguntas y ayudarte a ver qué opciones pueden ajustarse a tus metas. No existe obligación de continuar.
+
+2A. EXACT TITLES, SUBTITLES & CALLOUT HEADINGS — ENGLISH MASTER → SPANISH
+
+Important: This section covers the short visual copy that can easily be missed during a body-text translation: hero titles, moving/rotating titles, section headlines, card subtitles, callout labels, and emotional headings. Please replace the Spanish equivalents wherever these English-master phrases appear. These translations are intentionally natural Spanish rather than word-for-word English.
+
+HOME PAGE — IMPORTANT HEADINGS / SUBHEADINGS
+
+FINAL ENGLISH (MASTER)
+
+SPANISH TO USE
+
+Protect the People Who Matter Most
+
+Protege a las personas que más importan
+
+Your Golden Years, Planned With Care
+
+Tus años dorados, planificados con cuidado
+
+Invest in Their Brilliant Future
+
+Invierte en su brillante futuro
+
+Leave a Legacy That Can Last Generations
+
+Deja un legado que pueda perdurar por generaciones
+
+Protect the Business You Built
+
+Protege el negocio que construiste
+
+Build Your Own Financial Legacy
+
+Construye tu propio legado financiero
+
+We Put Family First. Always.
+
+Ponemos a la familia primero. Siempre.
+
+Guidance for Every Stage of Life.
+
+Orientación para cada etapa de la vida.
+
+Four Steps to Financial Clarity
+
+Cuatro pasos hacia la claridad financiera
+
+Real Questions. Clear Guidance.
+
+Preguntas reales. Orientación clara.
+
+Build a Purpose-Driven Business in Financial Services.
+
+Construye un negocio con propósito en los servicios financieros.
+
+Latest Articles & Strategies.
+
+Últimos artículos y estrategias.
+
+Frequently Asked Questions.
+
+Preguntas frecuentes.
+
+Your Legacy Starts with One Conversation.
+
+Tu legado comienza con una conversación.
+
+FAMILY PROTECTION — TITLES / SUBTITLES
+
+FINAL ENGLISH (MASTER)
+
+SPANISH TO USE
+
+Life Insurance Protection
+
+Protección con seguro de vida
+
+Protect the People Who Matter Most
+
+Protege a las personas que más importan
+
+WORK BENEFITS CAN LEAVE GAPS
+
+LOS BENEFICIOS DEL TRABAJO PUEDEN DEJAR BRECHAS
+
+Know what protects your family before life changes
+
+Conoce qué protege a tu familia antes de que la vida cambie
+
+IF INCOME STOPS
+
+SI LOS INGRESOS SE DETIENEN
+
+Could your family keep up with bills next month?
+
+¿Podría tu familia mantenerse al día con las facturas el próximo mes?
+
+PROBATE CAN DELAY MONEY
+
+EL PROCESO SUCESORIO PUEDE RETRASAR EL DINERO
+
+Plan before loved ones need it
+
+Planifica antes de que tus seres queridos lo necesiten
+
+NO-COST REVIEW
+
+REVISIÓN SIN COSTO
+
+Ask now. Decide with clarity, no pressure.
+
+Pregunta ahora. Decide con claridad y sin presión.
+
+Bills Don’t Wait for Court Paperwork.
+
+Las facturas no esperan a que termine el proceso legal.
+
+What If You Were Alive — But Your Paycheck Stopped?
+
+¿Qué pasaría si siguieras con vida, pero tu cheque de pago se detuviera?
+
+A Diagnosis Can Change the Family Budget Overnight.
+
+Un diagnóstico puede cambiar el presupuesto familiar de un día para otro.
+
+Work Coverage Can Feel Safe — Until Life Tests It.
+
+La cobertura del trabajo puede parecer segura, hasta que la vida la pone a prueba.
+
+Dive Deeper
+
+Conoce más
+
+Frequently Asked Questions.
+
+Preguntas frecuentes.
+
+RETIREMENT PLANNING — TITLES / SUBTITLES
+
+FINAL ENGLISH (MASTER)
+
+SPANISH TO USE
+
+Retirement Planning
+
+Planificación para la jubilación
+
+The rules of retirement have changed. Have you adapted?
+
+Las reglas de la jubilación han cambiado. ¿Te has adaptado?
+
+RETIREMENT INCOME
+
+INGRESOS DE JUBILACIÓN
+
+Could your savings last as long as you do?
+
+¿Podrían tus ahorros durar tanto como tú?
+
+MARKET CHANGES
+
+CAMBIOS DEL MERCADO
+
+What happens if the market drops near retirement?
+
+¿Qué sucede si el mercado baja cerca de tu jubilación?
+
+TAX-AWARE PLANNING
+
+PLANIFICACIÓN CON CONCIENCIA FISCAL
+
+Do you know what you may actually keep?
+
+¿Sabes cuánto podrías conservar realmente?
+
+NO-COST REVIEW
+
+REVISIÓN SIN COSTO
+
+Ask questions before retirement decisions begin
+
+Haz preguntas antes de tomar decisiones de jubilación
+
+What If the Market Drops Right When You Need Income?
+
+¿Qué pasa si el mercado baja justo cuando necesitas ingresos?
+
+Is the IRS Part of Your Retirement Plan?
+
+¿Forma parte el IRS de tu plan de jubilación?
+
+What If Retirement Lasts Longer Than You Expected?
+
+¿Qué pasa si la jubilación dura más de lo que esperabas?
+
+EDUCATION PLANNING — TITLES / SUBTITLES
+
+FINAL ENGLISH (MASTER)
+
+SPANISH TO USE
+
+Education Planning
+
+Planificación Educativa
+
+Give Them the World Without Sacrificing Your Retirement
+
+Dales un mundo de oportunidades sin sacrificar tu jubilación
+
+You can borrow for college, but you cannot borrow for retirement.
+
+Puedes pedir prestado para la universidad, pero no para la jubilación.
+
+RISING EDUCATION COSTS
+
+COSTOS EDUCATIVOS EN AUMENTO
+
+Are you prepared before the bill arrives?
+
+¿Estás preparado antes de que llegue la factura?
+
+FLEXIBLE PLANNING
+
+PLANIFICACIÓN FLEXIBLE
+
+What if your child’s path changes?
+
+¿Qué pasa si cambia el camino de tu hijo?
+
+STUDENT DEBT
+
+DEUDA ESTUDIANTIL
+
+Could planning reduce future borrowing?
+
+¿Podría la planificación reducir futuros préstamos?
+
+RETIREMENT BALANCE
+
+EQUILIBRIO CON LA JUBILACIÓN
+
+Can you help them without hurting your future?
+
+¿Puedes ayudarles sin perjudicar tu propio futuro?
+
+What If Your Child’s Path Changes?
+
+¿Qué pasa si cambia el camino de tu hijo?
+
+Education Planning Should Fit Real Life.
+
+La planificación educativa debe adaptarse a la vida real.
+
+Your Child’s Future Matters. So Does Your Retirement.
+
+El futuro de tu hijo importa. Tu jubilación también.
+
+ESTATE & LEGACY PLANNING — TITLES / SUBTITLES
+
+FINAL ENGLISH (MASTER)
+
+SPANISH TO USE
+
+Estate & Legacy Planning
+
+Planificación Patrimonial y de Legado
+
+Plan for a Legacy That Can Last for Generations
+
+Planifica un legado que pueda perdurar por generaciones
+
+Who will decide what happens to your life’s work?
+
+¿Quién decidirá qué sucederá con el trabajo de tu vida?
+
+YOUR WISHES MATTER
+
+TUS DESEOS IMPORTAN
+
+Make your intentions clear
+
+Deja claras tus intenciones
+
+SIMPLIFIED TRANSFERS
+
+TRANSFERENCIAS MÁS SENCILLAS
+
+Help loved ones avoid confusion
+
+Ayuda a tus seres queridos a evitar confusión
+
+TAX-AWARE PLANNING
+
+PLANIFICACIÓN CON CONCIENCIA FISCAL
+
+Plan with taxes in mind
+
+Planifica teniendo en cuenta los impuestos
+
+PEACE OF MIND
+
+TRANQUILIDAD
+
+Prepare before life changes
+
+Prepárate antes de que la vida cambie
+
+Will vs. Trust.
+
+Testamento vs. fideicomiso.
+
+Protect What You Worked Hard to Build.
+
+Protege lo que trabajaste duro para construir.
+
+Let Your Values Continue Through the People You Love.
+
+Deja que tus valores continúen a través de las personas que amas.
+
+FINANCIAL STRATEGY — TITLES / SUBTITLES
+
+FINAL ENGLISH (MASTER)
+
+SPANISH TO USE
+
+Financial Strategy
+
+Estrategia Financiera
+
+Wealth Isn’t Created by Accident. It’s Built by Design.
+
+El patrimonio no se crea por accidente. Se construye con intención.
+
+Are your financial decisions helping you move toward the future you want?
+
+¿Tus decisiones financieras te están ayudando a avanzar hacia el futuro que deseas?
+
+FINANCIAL CLARITY
+
+CLARIDAD FINANCIERA
+
+Do you know where your money is going?
+
+¿Sabes adónde va tu dinero?
+
+DEBT STRATEGY
+
+ESTRATEGIA DE DEUDA
+
+Could interest be slowing your progress?
+
+¿Podrían los intereses estar frenando tu progreso?
+
+GROWTH PRINCIPLES
+
+PRINCIPIOS DE CRECIMIENTO
+
+Is time working for your money?
+
+¿Está el tiempo trabajando a favor de tu dinero?
+
+NO-COST REVIEW
+
+REVISIÓN SIN COSTO
+
+Build a plan with clarity, no pressure.
+
+Construye un plan con claridad y sin presión.
+
+The Rule of 72. Power of Time.
+
+La Regla del 72. El poder del tiempo.
+
+Debt Management. Support Your Future.
+
+Manejo de deudas. Apoya tu futuro.
+
+Legacy Transfer. Values & Direction.
+
+Transferencia de legado. Valores y dirección.
+
+BUSINESS STRATEGIES — TITLES / SUBTITLES
+
+FINAL ENGLISH (MASTER)
+
+SPANISH TO USE
+
+Business Strategies
+
+Estrategias para Negocios
+
+If You Couldn’t Show Up Tomorrow, Would Your Business Keep Moving?
+
+Si mañana no pudieras estar presente, ¿tu negocio seguiría adelante?
+
+You built the business. But who protects it if you cannot be there?
+
+Tú construiste el negocio. Pero ¿quién lo protege si tú no puedes estar?
+
+KEY PEOPLE MATTER
+
+LAS PERSONAS CLAVE IMPORTAN
+
+Could your business continue without the people it depends on most?
+
+¿Podría tu negocio continuar sin las personas de las que más depende?
+
+OWNERSHIP NEEDS A PLAN
+
+LA PROPIEDAD NECESITA UN PLAN
+
+What happens if an owner, partner, or key person can no longer continue?
+
+¿Qué sucede si un propietario, socio o persona clave ya no puede continuar?
+
+YOUR FAMILY DESERVES CLARITY
+
+TU FAMILIA MERECE CLARIDAD
+
+Would they know how to handle what you worked so hard to build?
+
+¿Sabrían cómo manejar lo que tanto te costó construir?
+
+PROTECT THE VALUE
+
+PROTEGE EL VALOR
+
+Plan for stability before life forces difficult decisions.
+
+Planifica para la estabilidad antes de que la vida obligue a tomar decisiones difíciles.
+
+Key People Matter. Could the Business Survive?
+
+Las personas clave importan. ¿Podría sobrevivir el negocio?
+
+What Happens to the Business If Ownership Changes?
+
+¿Qué sucede con el negocio si cambia la propiedad?
+
+Family Deserves Clarity. Clarity or Confusion?
+
+Tu familia merece claridad. ¿Claridad o confusión?
+
+Protecting Value. Long-Term Stability.
+
+Protegiendo el valor. Estabilidad a largo plazo.
+
+3. FAMILY PROTECTION — FULL PAGE SYNC REQUIRED
+
+3.1 Hero
+
+FINAL ENGLISH (MASTER):
+
+Life can change in a moment. The people you love deserve a plan that helps protect them when they need it most. We help you explore coverage options from well-established carriers — designed to fit your needs, budget, and life.
+
+SPANISH TO USE:
+
+La vida puede cambiar en un momento. Las personas que amas merecen un plan que ayude a protegerlas cuando más lo necesiten. Te ayudamos a explorar opciones de cobertura de compañías bien establecidas, diseñadas para ajustarse a tus necesidades, tu presupuesto y tu vida.
+
+3.2 Four proof labels
+
+FINAL ENGLISH (MASTER):
+
+WORK BENEFITS CAN LEAVE GAPS — Know what protects your family before life changesIF INCOME STOPS — Could your family keep up with bills next month?PROBATE CAN DELAY MONEY — Plan before loved ones need itNO-COST REVIEW — Ask now. Decide with clarity, no pressure.
+
+SPANISH TO USE:
+
+LOS BENEFICIOS DEL TRABAJO PUEDEN DEJAR BRECHAS — Conoce qué protege a tu familia antes de que la vida cambieSI LOS INGRESOS SE DETIENEN — ¿Podría tu familia seguir pagando las facturas el próximo mes?EL PROCESO SUCESORIO PUEDE RETRASAR EL DINERO — Planifica antes de que tus seres queridos lo necesitenREVISIÓN SIN COSTO — Pregunta ahora. Decide con claridad y sin presión.
+
+Developer note: Remove the old 60%, 1-in-4, 9–24m and other numeric statistics.
+
+3.3 Bills Don’t Wait for Court Paperwork.
+
+FINAL ENGLISH (MASTER):
+
+After a loss, your family may need money right away — for funeral costs, rent or mortgage, food, and children’s needs. But some assets can be delayed in probate. Life insurance with the right named beneficiary may help provide funds directly to loved ones while other assets are still being handled.
+
+SPANISH TO USE:
+
+Después de una pérdida, tu familia puede necesitar dinero de inmediato para gastos funerarios, renta o hipoteca, alimentos y las necesidades de los hijos. Sin embargo, algunos bienes pueden demorarse durante el proceso sucesorio. Un seguro de vida con el beneficiario adecuado puede ayudar a proporcionar fondos directamente a tus seres queridos mientras otros bienes todavía están siendo gestionados.
+
+3.4 What If You Were Alive — But Your Paycheck Stopped?
+
+FINAL ENGLISH (MASTER):
+
+A long-term illness can affect more than your health. It can affect your ability to work, reduce or interrupt your income, and put pressure on your family’s daily life. Some life insurance policies may include accelerated or living-benefit riders that allow eligible policyholders to access a portion of the death benefit after a qualifying covered event. Availability, qualifying conditions, benefit amounts, charges, and effects on the remaining death benefit depend on the policy and rider terms.
+
+SPANISH TO USE:
+
+Una enfermedad de larga duración puede afectar más que tu salud. Puede afectar tu capacidad para trabajar, reducir o interrumpir tus ingresos y ejercer presión sobre la vida diaria de tu familia. Algunas pólizas de seguro de vida pueden incluir cláusulas de beneficios acelerados o beneficios en vida que permiten a los titulares elegibles acceder a una parte del beneficio por fallecimiento después de un evento cubierto que califique. La disponibilidad, las condiciones de elegibilidad, los montos de los beneficios, los cargos y el efecto sobre el beneficio por fallecimiento restante dependen de los términos de la póliza y de la cláusula adicional.
+
+3.5 A Diagnosis Can Change the Family Budget Overnight.
+
+FINAL ENGLISH (MASTER):
+
+A heart attack, stroke, cancer, or other serious illness can bring medical bills, time away from work, and financial pressure all at once. Certain life insurance policies with living benefits may help provide funds during a covered critical illness so your family has more room to focus on care, recovery, and daily needs.
+
+SPANISH TO USE:
+
+Un ataque cardíaco, un derrame cerebral, cáncer u otra enfermedad grave puede traer gastos médicos, tiempo sin trabajar y presión financiera al mismo tiempo. Algunas pólizas de seguro de vida con beneficios en vida pueden ayudar a proporcionar fondos durante una enfermedad crítica cubierta, dando a tu familia más espacio para concentrarse en el cuidado, la recuperación y las necesidades diarias.
+
+3.6 Work Coverage Can Feel Safe — Until Life Tests It.
+
+FINAL ENGLISH (MASTER):
+
+Many families rely on employer benefits without knowing exactly what they have, how much it covers, or what happens if the job changes. Work coverage can be a helpful start, but your family may also need protection that is more stable and not tied only to your employer. A simple review can help you understand your protection before life forces the question.
+
+SPANISH TO USE:
+
+Muchas familias dependen de los beneficios del empleador sin saber exactamente qué tienen, cuánto cubren o qué sucede si cambia el empleo. La cobertura del trabajo puede ser un buen comienzo, pero tu familia también puede necesitar una protección más estable que no dependa únicamente de tu empleador. Una revisión sencilla puede ayudarte a comprender tu protección antes de que la vida te obligue a hacerte esa pregunta.
+
+3.7 Family Protection FAQ — use final English answers
+
+EN — What is the primary purpose of Family Protection insurance?
+
+Family Protection insurance is designed to help your family continue financially if the main income provider passes away unexpectedly. It may help with living expenses, debts, and future goals so loved ones are not left carrying everything alone.
+
+ES — ¿Cuál es el objetivo principal del seguro de Protección Familiar?
+
+El seguro de Protección Familiar está diseñado para ayudar a que tu familia pueda continuar financieramente si el principal proveedor de ingresos fallece inesperadamente. Puede ayudar con gastos de vida, deudas y metas futuras para que tus seres queridos no tengan que cargar con todo solos.
+
+EN — Does my employer’s life insurance offer enough protection?
+
+Employer coverage can be a helpful start, but it may not be enough for your family’s full needs. It may also change or end when your job changes, so a review can help you understand what you really have.
+
+ES — ¿El seguro de vida de mi empleador ofrece suficiente protección?
+
+La cobertura del empleador puede ser un buen comienzo, pero quizá no sea suficiente para todas las necesidades de tu familia. También puede cambiar o terminar cuando cambia tu empleo, por lo que una revisión puede ayudarte a entender qué protección tienes realmente.
+
+EN — What are Living Benefits?
+
+Some life insurance policies may include accelerated or living-benefit riders that allow eligible policyholders to access a portion of the death benefit after a qualifying covered event. Availability, qualifying conditions, benefit amounts, charges, and effects on the remaining death benefit depend on the policy and rider terms.
+
+ES — ¿Qué son los beneficios en vida?
+
+Algunas pólizas de seguro de vida pueden incluir cláusulas de beneficios acelerados o beneficios en vida que permiten a titulares elegibles acceder a una parte del beneficio por fallecimiento después de un evento cubierto que califique. La disponibilidad, las condiciones de elegibilidad, los montos, los cargos y el efecto sobre el beneficio por fallecimiento restante dependen de los términos de la póliza y la cláusula adicional.
+
+EN — How much life insurance do I need?
+
+You do not have to guess. The right amount depends on your income, debts, family responsibilities, and future goals, and a simple review can help you understand what may fit your family.
+
+ES — ¿Cuánto seguro de vida necesito?
+
+No tienes que adivinar. La cantidad adecuada depende de tus ingresos, deudas, responsabilidades familiares y metas futuras, y una revisión sencilla puede ayudarte a entender qué podría ajustarse a tu familia.
+
+EN — What is the difference between Term and Permanent Life Insurance?
+
+Term Life provides protection for a specific period, such as 10, 20, or 30 years. Permanent Life Insurance can provide long-term coverage and may build cash value, depending on the policy.
+
+ES — ¿Cuál es la diferencia entre seguro a término y seguro permanente?
+
+El seguro a término ofrece protección durante un período específico, como 10, 20 o 30 años. El seguro de vida permanente puede ofrecer cobertura a largo plazo y puede acumular valor en efectivo, dependiendo de la póliza.
+
+EN — Can life insurance help avoid probate?
+
+When the right beneficiaries are properly named, life insurance proceeds are generally paid directly to them. This may help loved ones receive funds more directly when they need them most.
+
+ES — ¿Puede el seguro de vida ayudar a evitar el proceso sucesorio?
+
+Cuando se designan correctamente los beneficiarios adecuados, los beneficios del seguro de vida generalmente se pagan directamente a ellos. Esto puede ayudar a que los seres queridos reciban fondos de manera más directa cuando más los necesitan.
+
+EN — Are life insurance benefits taxable?
+
+In many situations, life insurance death benefits are generally paid income-tax-free to beneficiaries. Tax treatment can depend on the situation, so families should consult a qualified tax professional.
+
+ES — ¿Los beneficios del seguro de vida están sujetos a impuestos?
+
+En muchas situaciones, los beneficios por fallecimiento del seguro de vida generalmente se pagan a los beneficiarios libres del impuesto sobre la renta. El tratamiento fiscal puede depender de la situación, por lo que las familias deben consultar a un profesional fiscal calificado.
+
+EN — Can stay-at-home parents get life insurance?
+
+Yes. A stay-at-home parent provides real value through childcare, meals, transportation, and daily support. Life insurance may help the family cover those needs if that parent is no longer there, and some permanent policies may build cash value for future needs.
+
+ES — ¿Pueden los padres que se quedan en casa obtener seguro de vida?
+
+Sí. Un padre o una madre que se queda en casa aporta un valor real mediante el cuidado de los hijos, las comidas, el transporte y el apoyo diario. El seguro de vida puede ayudar a la familia a cubrir esas necesidades si esa persona ya no está, y algunas pólizas permanentes pueden acumular valor en efectivo para necesidades futuras.
+
+EN — Do I need a medical exam?
+
+Not always. Some life insurance options may be available without a medical exam, depending on the company, product, health history, and eligibility. Do not let fear of an exam stop you from asking.
+
+ES — ¿Necesito un examen médico?
+
+No siempre. Algunas opciones de seguro de vida pueden estar disponibles sin examen médico, dependiendo de la compañía, el producto, el historial de salud y la elegibilidad. No dejes que el temor a un examen te impida preguntar.
+
+EN — When is the best time to purchase life insurance?
+
+Usually before life forces the question. As time passes, age increases and health can change, which may affect cost, eligibility, and available options. Starting early may give your family more choices.
+
+ES — ¿Cuándo es el mejor momento para contratar un seguro de vida?
+
+Generalmente, antes de que la vida te obligue a hacerte la pregunta. Con el tiempo aumenta la edad y la salud puede cambiar, lo que puede afectar el costo, la elegibilidad y las opciones disponibles. Empezar antes puede darle a tu familia más opciones.
+
+4. RETIREMENT PLANNING — FULL PAGE SYNC REQUIRED
+
+4.1 Hero
+
+FINAL ENGLISH (MASTER):
+
+You worked hard to build your future. Now retirement may need more than saving money — it may need a plan for income, taxes, market changes, and the possibility of living longer than expected.Are you simply saving for retirement, or are you preparing for the life you want to live?
+
+SPANISH TO USE:
+
+Has trabajado duro para construir tu futuro. Ahora, la jubilación puede requerir más que simplemente ahorrar dinero: puede necesitar un plan para los ingresos, los impuestos, los cambios del mercado y la posibilidad de vivir más tiempo de lo esperado.¿Simplemente estás ahorrando para la jubilación, o te estás preparando para la vida que deseas vivir?
+
+4.2 Four labels
+
+FINAL ENGLISH (MASTER):
+
+RETIREMENT INCOME — Could your savings last as long as you do?MARKET CHANGES — What happens if the market drops near retirement?TAX-AWARE PLANNING — Do you know what you may actually keep?NO-COST REVIEW — Ask questions before retirement decisions begin
+
+SPANISH TO USE:
+
+INGRESOS DE JUBILACIÓN — ¿Podrían tus ahorros durar tanto como tú?CAMBIOS DEL MERCADO — ¿Qué sucede si el mercado baja cerca de tu jubilación?PLANIFICACIÓN CON CONCIENCIA FISCAL — ¿Sabes cuánto podrías conservar realmente?REVISIÓN SIN COSTO — Haz preguntas antes de tomar decisiones de jubilación
+
+Developer note: Remove old 3.5%, 20+, 15%, and “0 taxes paid on IUL growth” statistics.
+
+4.3 What If the Market Drops Right When You Need Income?
+
+FINAL ENGLISH (MASTER):
+
+Market ups and downs can affect your savings, especially when you are close to retirement or already taking withdrawals. A fixed indexed annuity is an insurance contract that may provide principal protection from negative index performance while offering potential index-linked interest credits. Crediting is subject to contract terms such as caps, participation rates or spreads, and withdrawals may be subject to surrender charges or tax consequences.
+
+SPANISH TO USE:
+
+Las subidas y bajadas del mercado pueden afectar tus ahorros, especialmente cuando estás cerca de la jubilación o ya estás realizando retiros. Una anualidad fija indexada es un contrato de seguro que puede ofrecer protección del capital frente a un rendimiento negativo del índice, junto con la posibilidad de recibir créditos de interés vinculados al índice. La acreditación está sujeta a términos del contrato, como límites, tasas de participación o márgenes, y los retiros pueden estar sujetos a cargos por rescate o consecuencias fiscales.
+
+4.4 Is the IRS Part of Your Retirement Plan?
+
+FINAL ENGLISH (MASTER):
+
+The money you see in a traditional 401(k) may not all be yours to spend. Withdrawals are generally taxable later, which means taxes can affect how much retirement income you actually keep. Tax-aware planning can help you understand your options before retirement begins.
+
+SPANISH TO USE:
+
+El dinero que ves en un 401(k) tradicional puede no estar completamente disponible para gastar. Los retiros generalmente están sujetos a impuestos más adelante, lo que significa que los impuestos pueden afectar cuánto ingreso de jubilación conservas realmente. Una planificación que tome en cuenta los impuestos puede ayudarte a comprender tus opciones antes de que comience la jubilación.
+
+4.5 What If Retirement Lasts Longer Than You Expected?
+
+FINAL ENGLISH (MASTER):
+
+Living longer is a blessing — but it also means your income may need to last longer. Planning ahead can help you think through future income, healthcare costs, and strategies designed to help support your lifestyle for as long as possible.
+
+SPANISH TO USE:
+
+Vivir más tiempo es una bendición, pero también significa que tus ingresos quizá deban durar más. Planificar con anticipación puede ayudarte a considerar los ingresos futuros, los costos de atención médica y estrategias diseñadas para apoyar tu estilo de vida durante el mayor tiempo posible.
+
+4.6 Retirement FAQ
+
+EN — Why shouldn’t I rely entirely on a 401(k) or IRA?
+
+Because retirement may need more than one bucket. A 401(k) or IRA can be helpful, but market changes and taxes can affect what you actually keep.
+
+ES — ¿Por qué no debería depender completamente de un 401(k) o una IRA?
+
+Porque la jubilación puede necesitar más de una sola fuente. Un 401(k) o una IRA pueden ser útiles, pero los cambios del mercado y los impuestos pueden afectar lo que realmente conservas.
+
+EN — What is a Fixed Indexed Annuity (FIA)?
+
+A fixed indexed annuity is an insurance contract designed to help protect your principal from negative index performance while offering the potential for index-linked interest growth. Features and terms vary by contract, and we can help you understand how it may fit your retirement goals.
+
+ES — ¿Qué es una anualidad fija indexada (FIA)?
+
+Una anualidad fija indexada es un contrato de seguro diseñado para ayudar a proteger tu capital frente a un rendimiento negativo del índice, al mismo tiempo que ofrece el potencial de crecimiento de intereses vinculados a un índice. Las características y los términos varían según el contrato, y podemos ayudarte a comprender cómo podría encajar en tus metas de jubilación.
+
+EN — Will I lose my money if the stock market crashes?
+
+It depends where your money is placed. Direct market investments can lose value, while some annuities and life insurance strategies are designed to help reduce direct market exposure.
+
+ES — ¿Perderé mi dinero si el mercado de valores cae?
+
+Depende de dónde esté colocado tu dinero. Las inversiones directas en el mercado pueden perder valor, mientras que algunas anualidades y estrategias de seguro de vida están diseñadas para ayudar a reducir la exposición directa al mercado.
+
+EN — What is the “tax surprise” in retirement planning?
+
+The balance you see may not be the amount you keep. Traditional 401(k) or IRA money is usually tax-deferred, not tax-free, so withdrawals are generally taxable later.
+
+ES — ¿Qué es la “sorpresa fiscal” en la planificación de jubilación?
+
+El saldo que ves puede no ser la cantidad que conservas. El dinero de un 401(k) tradicional o una IRA generalmente tiene impuestos diferidos, no está libre de impuestos, por lo que los retiros suelen estar sujetos a impuestos más adelante.
+
+EN — Can an annuity provide income for life?
+
+Yes — for some families, dependable retirement income is the goal. Some annuities offer income features designed to provide payments for life, depending on the contract.
+
+ES — ¿Puede una anualidad proporcionar ingresos de por vida?
+
+Sí. Para algunas familias, contar con ingresos de jubilación confiables es la meta. Algunas anualidades ofrecen características de ingresos diseñadas para proporcionar pagos de por vida, dependiendo del contrato.
+
+EN — What is the “safe withdrawal rate”?
+
+It is a guide, not a guarantee. It helps estimate how much someone may withdraw from retirement savings each year.
+
+ES — ¿Qué es la “tasa de retiro seguro”?
+
+Es una guía, no una garantía. Ayuda a estimar cuánto puede retirar una persona de sus ahorros de jubilación cada año.
+
+EN — How can Indexed Universal Life (IUL) help with retirement planning?
+
+It can add flexibility. IUL is life insurance first, but it may build cash value that can be accessed for future needs, depending on the policy design.
+
+ES — ¿Cómo puede el IUL ayudar con la planificación de jubilación?
+
+Puede añadir flexibilidad. El IUL es ante todo un seguro de vida, pero puede acumular valor en efectivo al que se puede acceder para necesidades futuras, dependiendo del diseño de la póliza.
+
+EN — Are annuities only for wealthy people?
+
+No. Some annuities can be started with more modest amounts, depending on the company and product.
+
+ES — ¿Las anualidades son solo para personas adineradas?
+
+No. Algunas anualidades pueden comenzar con cantidades más modestas, dependiendo de la compañía y del producto.
+
+EN — How do taxes impact my Social Security benefits?
+
+Social Security may not be completely tax-free. Depending on your combined income, part of your benefits may be taxable.
+
+ES — ¿Cómo afectan los impuestos a mis beneficios del Seguro Social?
+
+El Seguro Social puede no estar completamente libre de impuestos. Dependiendo de tus ingresos combinados, una parte de tus beneficios puede estar sujeta a impuestos.
+
+EN — Is it too late to start planning for retirement?
+
+No. Even if retirement is 5 or 10 years away, reviewing your options can help you protect what you have saved, understand income options, and make more informed decisions.
+
+ES — ¿Es demasiado tarde para comenzar a planificar la jubilación?
+
+No. Incluso si faltan 5 o 10 años para jubilarte, revisar tus opciones puede ayudarte a proteger lo que has ahorrado, comprender las opciones de ingresos y tomar decisiones más informadas.
+
+5. EDUCATION PLANNING — FULL PAGE SYNC REQUIRED
+
+5.1 Hero
+
+FINAL ENGLISH (MASTER):
+
+Education costs continue to rise, and student debt can become a heavy burden before the next generation even begins. You want to help your children pursue their future — college, career, business, or another path — but you also need to protect your own.You can borrow for college, but you cannot borrow for retirement.
+
+SPANISH TO USE:
+
+Los costos de educación continúan aumentando y la deuda estudiantil puede convertirse en una carga pesada antes de que la próxima generación siquiera comience. Quieres ayudar a tus hijos a seguir su futuro — universidad, carrera, negocio u otro camino — pero también necesitas proteger el tuyo.Puedes pedir prestado para la universidad, pero no para la jubilación.
+
+5.2 Four labels
+
+FINAL ENGLISH (MASTER):
+
+RISING EDUCATION COSTS — Are you prepared before the bill arrives?FLEXIBLE PLANNING — What if your child’s path changes?STUDENT DEBT — Could planning reduce future borrowing?RETIREMENT BALANCE — Can you help them without hurting your future?
+
+SPANISH TO USE:
+
+COSTOS EDUCATIVOS EN AUMENTO — ¿Estás preparado antes de que llegue la factura?PLANIFICACIÓN FLEXIBLE — ¿Qué pasa si cambia el camino de tu hijo?DEUDA ESTUDIANTIL — ¿Podría la planificación reducir futuros préstamos?EQUILIBRIO CON LA JUBILACIÓN — ¿Puedes ayudarles sin perjudicar tu propio futuro?
+
+Developer note: Remove old $100k, 5%, $1.7T and “$0 FAFSA impact with IUL” statistics.
+
+5.3 What If Your Child’s Path Changes?
+
+FINAL ENGLISH (MASTER):
+
+A 529 plan can be a valuable education savings tool, but it is designed mainly for qualified education expenses. If your child receives a scholarship, chooses a different career path, starts a business, or decides not to attend college, your family may need more flexibility. Before choosing one path, it helps to understand how each education strategy works — and what happens if life does not go exactly as planned.
+
+SPANISH TO USE:
+
+Un plan 529 puede ser una herramienta valiosa de ahorro educativo, pero está diseñado principalmente para gastos educativos calificados. Si tu hijo recibe una beca, elige un camino profesional diferente, inicia un negocio o decide no asistir a la universidad, tu familia puede necesitar más flexibilidad. Antes de elegir un solo camino, ayuda comprender cómo funciona cada estrategia educativa y qué sucede si la vida no sale exactamente como se planeó.
+
+5.4 Education Planning Should Fit Real Life.
+
+FINAL ENGLISH (MASTER):
+
+Permanent life insurance that builds cash value may offer flexible access through policy loans or withdrawals. Depending on the policy design, cash value may be used for education costs, housing, business opportunities, retirement needs, or other future goals if your child’s path changes. We help families understand how this strategy works before deciding whether it fits their goals.
+
+SPANISH TO USE:
+
+El seguro de vida permanente que acumula valor en efectivo puede ofrecer acceso flexible mediante préstamos o retiros de la póliza. Dependiendo del diseño de la póliza, el valor en efectivo puede utilizarse para gastos educativos, vivienda, oportunidades de negocio, necesidades de jubilación u otras metas futuras si cambia el camino de tu hijo. Ayudamos a las familias a comprender cómo funciona esta estrategia antes de decidir si se ajusta a sus metas.
+
+5.5 Your Child’s Future Matters. So Does Your Retirement.
+
+FINAL ENGLISH (MASTER):
+
+Many parents are willing to sacrifice for their children. That love is powerful. But helping your child should not mean putting your own retirement at risk. A thoughtful education strategy can help you support your child’s dreams while still keeping your long-term family plan in view.
+
+SPANISH TO USE:
+
+Muchos padres están dispuestos a sacrificarse por sus hijos. Ese amor es poderoso. Pero ayudar a tu hijo no debería significar poner en riesgo tu propia jubilación. Una estrategia educativa bien pensada puede ayudarte a apoyar los sueños de tu hijo sin perder de vista el plan familiar a largo plazo.
+
+5.6 Education FAQ
+
+EN — What are the limitations of a traditional 529 plan?
+
+A 529 can be helpful, but life does not always follow one plan. It is mainly designed for qualified education expenses, and non-qualified withdrawals may face taxes or penalties on earnings if your child’s plans change.
+
+ES — ¿Cuáles son las limitaciones de un plan 529 tradicional?
+
+Un plan 529 puede ser útil, pero la vida no siempre sigue un solo plan. Está diseñado principalmente para gastos educativos calificados, y los retiros no calificados pueden estar sujetos a impuestos o penalidades sobre las ganancias si cambian los planes de tu hijo.
+
+EN — How can life insurance help with education planning?
+
+Some permanent life insurance policies, such as IUL, may build cash value that can be accessed through policy loans or withdrawals for education or other future needs, depending on the policy. Accessing cash value can affect policy benefits, so it’s important to understand how your policy works. We can help you explore whether this option fits your family’s goals.
+
+ES — ¿Cómo puede ayudar el seguro de vida con la planificación educativa?
+
+Algunas pólizas de seguro de vida permanente, como el IUL, pueden acumular valor en efectivo al que se puede acceder mediante préstamos o retiros de la póliza para la educación u otras necesidades futuras, dependiendo de la póliza. Acceder al valor en efectivo puede afectar los beneficios de la póliza, por lo que es importante comprender cómo funciona. Podemos ayudarte a explorar si esta opción se ajusta a las metas de tu familia.
+
+EN — Does a 529 plan affect financial aid?
+
+Financial-aid treatment can vary based on account ownership, the type of asset, and current FAFSA rules. Families should review current federal student-aid guidance before choosing a strategy.
+
+ES — ¿Un plan 529 afecta la ayuda financiera?
+
+El tratamiento para la ayuda financiera puede variar según quién sea el propietario de la cuenta, el tipo de activo y las reglas actuales de FAFSA. Las familias deben revisar la orientación federal vigente sobre ayuda estudiantil antes de elegir una estrategia.
+
+EN — What if my child decides not to attend college?
+
+That is where flexibility matters. Depending on the policy design, cash value life insurance may help support other goals, such as business, housing, or future family needs.
+
+ES — ¿Qué pasa si mi hijo decide no asistir a la universidad?
+
+Ahí es donde la flexibilidad importa. Dependiendo del diseño de la póliza, el seguro de vida con valor en efectivo puede ayudar a apoyar otras metas, como un negocio, vivienda o futuras necesidades familiares.
+
+EN — Is cash value growth guaranteed?
+
+Some IUL policies include a 0% floor on index-linked interest crediting, which can help provide protection from negative index performance. Policy charges and terms still apply, and we can help you understand how the policy works for your goals.
+
+ES — ¿Está garantizado el crecimiento del valor en efectivo?
+
+Algunas pólizas IUL incluyen un piso del 0% en la acreditación de intereses vinculados al índice, lo que puede ayudar a brindar protección frente a un rendimiento negativo del índice. Los cargos y términos de la póliza siguen aplicando, y podemos ayudarte a comprender cómo funciona la póliza para tus metas.
+
+EN — When should I start saving for my child’s education?
+
+Earlier usually gives your family more time and more options. Starting early may give your money more time to grow and help you plan with less pressure.
+
+ES — ¿Cuándo debo comenzar a ahorrar para la educación de mi hijo?
+
+Empezar antes generalmente le da a tu familia más tiempo y más opciones. Comenzar temprano puede darle a tu dinero más tiempo para crecer y ayudarte a planificar con menos presión.
+
+EN — Can grandparents contribute?
+
+Yes. Grandparents can be part of the child’s future too. They may help fund a strategy that supports education, future opportunities, or important life milestones.
+
+ES — ¿Pueden contribuir los abuelos?
+
+Sí. Los abuelos también pueden formar parte del futuro del niño. Pueden ayudar a financiar una estrategia que apoye la educación, oportunidades futuras o etapas importantes de la vida.
+
+EN — What happens if the market drops before tuition is due?
+
+Timing can matter when money is needed for school. Market-based accounts may go down when the market drops, while some IUL policies are designed to help protect previously credited index-linked interest, depending on policy terms.
+
+ES — ¿Qué sucede si el mercado baja antes de que venza la matrícula?
+
+El momento puede importar cuando se necesita dinero para la educación. Las cuentas basadas en el mercado pueden bajar cuando cae el mercado, mientras que algunas pólizas IUL están diseñadas para ayudar a proteger intereses vinculados al índice que ya fueron acreditados, dependiendo de los términos de la póliza.
+
+EN — Can I use IUL for private K–12 schooling?
+
+In some cases, yes. Depending on the policy design, cash value may be accessed to help with private K–12 tuition or other education-related expenses.
+
+ES — ¿Puedo usar un IUL para educación privada K–12?
+
+En algunos casos, sí. Dependiendo del diseño de la póliza, se puede acceder al valor en efectivo para ayudar con la matrícula privada K–12 u otros gastos relacionados con la educación.
+
+EN — Is it complicated to set up a life insurance policy for a child?
+
+Not always. In many cases, the process can be simple, and starting early may give families more choices and future flexibility.
+
+ES — ¿Es complicado establecer una póliza de seguro de vida para un hijo?
+
+No siempre. En muchos casos, el proceso puede ser sencillo, y comenzar temprano puede dar a las familias más opciones y flexibilidad para el futuro.
+
+6. ESTATE & LEGACY PLANNING — FULL PAGE SYNC REQUIRED
+
+6.1 Hero
+
+FINAL ENGLISH (MASTER):
+
+You worked hard to build something meaningful. Estate and legacy planning can help your wishes be clearly known, your loved ones be better prepared, and the people and causes you care about benefit from what you leave behind.Who will decide what happens to your life’s work?
+
+SPANISH TO USE:
+
+Trabajaste duro para construir algo significativo. La planificación patrimonial y de legado puede ayudar a que tus deseos queden claramente expresados, a que tus seres queridos estén mejor preparados y a que las personas y causas que te importan se beneficien de lo que dejas.¿Quién decidirá qué sucederá con el trabajo de tu vida?
+
+6.2 Four labels
+
+FINAL ENGLISH (MASTER):
+
+YOUR WISHES MATTER — Make your intentions clearSIMPLIFIED TRANSFERS — Help loved ones avoid confusionTAX-AWARE PLANNING — Plan with taxes in mindPEACE OF MIND — Prepare before life changes
+
+SPANISH TO USE:
+
+TUS DESEOS IMPORTAN — Deja claras tus intencionesTRANSFERENCIAS MÁS SENCILLAS — Ayuda a tus seres queridos a evitar confusiónPLANIFICACIÓN CON CONCIENCIA FISCAL — Planifica teniendo en cuenta los impuestosTRANQUILIDAD — Prepárate antes de que la vida cambie
+
+Developer note: Remove 100% control, zero probate delays and other absolute claims.
+
+6.3 Will vs. Trust.
+
+FINAL ENGLISH (MASTER):
+
+A Will is an important estate planning tool, but some assets may still need to go through probate. A Trust, when properly structured, may help provide more privacy, clarity, and efficiency when transferring certain assets. A thoughtful estate plan can help make your wishes known and give your loved ones clearer guidance during a difficult time.Legal & Tax Disclaimer: Family First Legacy does not provide legal or tax advice. Estate documents and legal or tax strategies should be prepared or reviewed with qualified legal and tax professionals.
+
+SPANISH TO USE:
+
+Un testamento es una herramienta importante de planificación patrimonial, pero algunos bienes aún pueden tener que pasar por el proceso sucesorio. Un fideicomiso, cuando está correctamente estructurado, puede ayudar a brindar mayor privacidad, claridad y eficiencia al transferir ciertos bienes. Un plan patrimonial bien pensado puede ayudar a dejar claros tus deseos y dar a tus seres queridos una orientación más clara durante un momento difícil.Aviso legal y fiscal: Family First Legacy no brinda asesoramiento legal ni fiscal. Los documentos patrimoniales y las estrategias legales o fiscales deben prepararse o revisarse con profesionales legales y fiscales calificados.
+
+6.4 Protect What You Worked Hard to Build.
+
+FINAL ENGLISH (MASTER):
+
+You worked hard to build assets for your family. Depending on your situation, taxes, legal costs, probate delays, or lack of planning may affect how smoothly your assets pass to the people you love. We work alongside qualified legal and tax professionals to help families explore strategies that may preserve more of what they have built and pass it on with greater clarity. Life insurance and estate planning tools may also help provide liquidity and flexibility when families need it most.
+
+SPANISH TO USE:
+
+Trabajaste duro para construir bienes para tu familia. Dependiendo de tu situación, los impuestos, los costos legales, las demoras del proceso sucesorio o la falta de planificación pueden afectar la facilidad con la que tus bienes pasan a las personas que amas. Trabajamos junto con profesionales legales y fiscales calificados para ayudar a las familias a explorar estrategias que pueden preservar una mayor parte de lo que han construido y transferirlo con mayor claridad. El seguro de vida y las herramientas de planificación patrimonial también pueden ayudar a proporcionar liquidez y flexibilidad cuando las familias más lo necesitan.
+
+6.5 Let Your Values Continue Through the People You Love.
+
+FINAL ENGLISH (MASTER):
+
+Legacy planning is not only about money. It is also about values, responsibility, and the people who matter most. Whether your goal is supporting education, helping loved ones, contributing to causes you value, or planning for the care of someone with special needs, planning ahead can help your legacy reflect what matters most to you.
+
+SPANISH TO USE:
+
+La planificación de legado no se trata solamente de dinero. También se trata de valores, responsabilidad y de las personas que más importan. Ya sea que tu meta sea apoyar la educación, ayudar a seres queridos, contribuir a causas que valoras o planificar el cuidado de alguien con necesidades especiales, planificar con anticipación puede ayudar a que tu legado refleje lo que más importa para ti.
+
+6.6 Estate FAQ — synchronize all answers
+
+EN — What is the difference between a Will and a Trust?
+
+Both can help guide what happens to your assets. A Will explains how assets should be distributed after death, while a Trust can hold and transfer certain assets according to specific instructions and may help simplify the process when properly structured.
+
+ES — ¿Cuál es la diferencia entre un testamento y un fideicomiso?
+
+Ambos pueden ayudar a orientar lo que sucede con tus bienes. Un testamento explica cómo deben distribuirse los bienes después del fallecimiento, mientras que un fideicomiso puede mantener y transferir ciertos bienes según instrucciones específicas y puede ayudar a simplificar el proceso cuando está correctamente estructurado.
+
+EN — Why should I care about probate delays?
+
+Because when a family is grieving, bills and daily needs still continue. Probate can sometimes take several months or longer, and it may delay access to certain assets. Planning ahead can help your loved ones have clearer direction when they need it most.
+
+ES — ¿Por qué debería preocuparme por las demoras del proceso sucesorio?
+
+Porque cuando una familia está de duelo, las facturas y las necesidades diarias continúan. El proceso sucesorio puede tardar varios meses o más y puede retrasar el acceso a ciertos bienes. Planificar con anticipación puede ayudar a tus seres queridos a tener una dirección más clara cuando más la necesitan.
+
+EN — Does life insurance go through probate?
+
+It depends on how the beneficiary is set up. Generally, life insurance with a named living beneficiary is paid directly to that beneficiary and may avoid probate. Probate may still be involved if no beneficiary is named, the estate is named, or no backup beneficiary exists.
+
+ES — ¿El seguro de vida pasa por el proceso sucesorio?
+
+Depende de cómo esté designado el beneficiario. Generalmente, el seguro de vida con un beneficiario vivo nombrado se paga directamente a ese beneficiario y puede evitar el proceso sucesorio. El proceso sucesorio aún puede intervenir si no se nombró beneficiario, si se nombró al patrimonio o si no existe un beneficiario suplente.
+
+EN — What happens if I pass away without an estate plan?
+
+Your family may be left with confusion during an already difficult time. Important decisions about your assets and loved ones may be left to state law and the court system. A plan can help make your wishes known before a difficult moment comes.
+
+ES — ¿Qué pasa si fallezco sin un plan patrimonial?
+
+Tu familia puede quedar con confusión durante un momento que ya es difícil. Decisiones importantes sobre tus bienes y tus seres queridos pueden quedar sujetas a la ley estatal y al sistema judicial. Un plan puede ayudar a dejar claros tus deseos antes de que llegue un momento difícil.
+
+EN — Can an estate plan help protect my children’s inheritance from divorce or creditors?
+
+Many parents want what they leave behind to benefit their children. Properly structured trusts may help provide added protection in certain situations, including divorce, lawsuits, or creditor claims. These decisions should be reviewed with a qualified legal professional.
+
+ES — ¿Puede un plan patrimonial ayudar a proteger la herencia de mis hijos frente a divorcio o acreedores?
+
+Muchos padres desean que lo que dejan beneficie a sus hijos. Los fideicomisos correctamente estructurados pueden ayudar a brindar protección adicional en ciertas situaciones, incluidos divorcios, demandas o reclamaciones de acreedores. Estas decisiones deben revisarse con un profesional legal calificado.
+
+EN — What are estate taxes?
+
+Estate taxes can affect what is passed on to loved ones. They may apply when wealth is transferred after someone passes away, depending on the size of the estate, current laws, and the state involved.
+
+ES — ¿Qué son los impuestos patrimoniales?
+
+Los impuestos patrimoniales pueden afectar lo que se transmite a los seres queridos. Pueden aplicarse cuando se transfiere patrimonio después del fallecimiento de una persona, dependiendo del tamaño del patrimonio, las leyes vigentes y el estado correspondiente.
+
+EN — How can life insurance help with estate taxes or estate expenses?
+
+Some families may need cash quickly for estate-related expenses. In certain situations, life insurance may help provide liquidity, especially when coordinated with legal and tax planning.
+
+ES — ¿Cómo puede ayudar el seguro de vida con impuestos o gastos patrimoniales?
+
+Algunas familias pueden necesitar efectivo rápidamente para gastos relacionados con el patrimonio. En ciertas situaciones, el seguro de vida puede ayudar a proporcionar liquidez, especialmente cuando se coordina con planificación legal y fiscal.
+
+EN — Do I need an estate plan if I am not wealthy?
+
+Estate planning is not only for wealthy families. It can help people make their wishes known, organize important decisions, and provide clearer direction for loved ones.
+
+ES — ¿Necesito un plan patrimonial si no soy una persona adinerada?
+
+La planificación patrimonial no es solo para familias adineradas. Puede ayudar a las personas a dejar claros sus deseos, organizar decisiones importantes y brindar una dirección más clara a sus seres queridos.
+
+7. FINANCIAL STRATEGY — FULL PAGE SYNC REQUIRED
+
+7.1 Hero
+
+FINAL ENGLISH (MASTER):
+
+Strong financial progress usually comes from clear decisions, not guesswork. Families can benefit from learning how to manage debt, build savings, protect what they have worked for, and plan with the future in mind.Are your financial decisions helping you move toward the future you want?
+
+SPANISH TO USE:
+
+Un progreso financiero sólido generalmente viene de decisiones claras, no de adivinanzas. Las familias pueden beneficiarse de aprender a manejar deudas, construir ahorros, proteger lo que han trabajado por conseguir y planificar pensando en el futuro.¿Tus decisiones financieras te están ayudando a avanzar hacia el futuro que deseas?
+
+7.2 Four labels
+
+FINAL ENGLISH (MASTER):
+
+FINANCIAL CLARITY — Do you know where your money is going?DEBT STRATEGY — Could interest be slowing your progress?GROWTH PRINCIPLES — Is time working for your money?NO-COST REVIEW — Build a plan with clarity, no pressure.
+
+SPANISH TO USE:
+
+CLARIDAD FINANCIERA — ¿Sabes adónde va tu dinero?ESTRATEGIA DE DEUDA — ¿Podrían los intereses estar frenando tu progreso?PRINCIPIOS DE CRECIMIENTO — ¿Está el tiempo trabajando a favor de tu dinero?REVISIÓN SIN COSTO — Construye un plan con claridad y sin presión.
+
+Developer note: Remove 100% control, 0% market loss, 3–8% probate-fee and Day 1 claims.
+
+7.3 The Rule of 72. Power of Time.
+
+FINAL ENGLISH (MASTER):
+
+Understanding how compound interest works can help families see the power of time. The Rule of 72 is a simple way to estimate how long it may take money to double at a certain annual rate of return. When you understand how growth works, you can make better decisions about saving, investing, debt, and long-term planning.
+
+SPANISH TO USE:
+
+Comprender cómo funciona el interés compuesto puede ayudar a las familias a ver el poder del tiempo. La Regla del 72 es una manera sencilla de estimar cuánto tiempo podría tardar el dinero en duplicarse a una determinada tasa anual de rendimiento. Cuando entiendes cómo funciona el crecimiento, puedes tomar mejores decisiones sobre ahorro, inversión, deuda y planificación a largo plazo.
+
+7.4 Debt Management. Support Your Future.
+
+FINAL ENGLISH (MASTER):
+
+Not all debt is the same, but high-interest debt can quietly slow a family’s progress. A good financial strategy helps you understand what you owe, reduce unnecessary debt over time, and create room for savings and future goals. The goal is simple: help your money support your future instead of only going toward debt.
+
+SPANISH TO USE:
+
+No todas las deudas son iguales, pero la deuda con intereses altos puede frenar silenciosamente el progreso de una familia. Una buena estrategia financiera te ayuda a comprender lo que debes, reducir deudas innecesarias con el tiempo y crear espacio para el ahorro y las metas futuras. La meta es sencilla: ayudar a que tu dinero apoye tu futuro en lugar de ir únicamente al pago de deudas.
+
+7.5 Legacy Transfer. Values & Direction.
+
+FINAL ENGLISH (MASTER):
+
+A true legacy is not only about what you leave behind. It is also about the opportunities, values, and direction you create for the people you love. We help families explore strategies that may support future generations, protect what they have worked hard to build, and pass on their values with greater clarity.
+
+SPANISH TO USE:
+
+Un verdadero legado no se trata solo de lo que dejas atrás. También se trata de las oportunidades, los valores y la dirección que creas para las personas que amas. Ayudamos a las familias a explorar estrategias que pueden apoyar a futuras generaciones, proteger lo que han trabajado duro para construir y transmitir sus valores con mayor claridad.
+
+7.6 Financial Strategy FAQ
+
+EN — What is the Rule of 72?
+
+It is a simple way to estimate how long money may take to double. Divide 72 by an annual rate of return; for example, at 7%, money could double in about 10 years.
+
+ES — ¿Qué es la Regla del 72?
+
+Es una forma sencilla de estimar cuánto tiempo puede tardar el dinero en duplicarse. Divide 72 entre una tasa anual de rendimiento; por ejemplo, al 7%, el dinero podría duplicarse en aproximadamente 10 años.
+
+EN — How can you help with debt management?
+
+Debt can quietly slow progress. We help families understand their debt, improve cash flow, and explore practical steps to reduce debt over time.
+
+ES — ¿Cómo pueden ayudar con el manejo de deuda?
+
+La deuda puede frenar silenciosamente el progreso. Ayudamos a las familias a comprender sus deudas, mejorar el flujo de efectivo y explorar pasos prácticos para reducir la deuda con el tiempo.
+
+EN — What does “becoming your own bank” mean?
+
+It is a concept, not a literal bank. It usually refers to using cash value in a properly structured life insurance policy as a potential source of funds for future needs, depending on the policy design.
+
+ES — ¿Qué significa “convertirte en tu propio banco”?
+
+Es un concepto, no un banco literal. Generalmente se refiere a usar el valor en efectivo de una póliza de seguro de vida correctamente estructurada como una posible fuente de fondos para necesidades futuras, dependiendo del diseño de la póliza.
+
+EN — How can I protect my assets from market downturns?
+
+When the market drops, money invested directly in the market can lose value. Some FIAs and IUL policies are designed to help reduce exposure to direct market losses by using index-linked strategies. The goal is to help protect what you have worked hard to build while still keeping some opportunity for future growth, depending on product or policy terms.
+
+ES — ¿Cómo puedo ayudar a proteger mis activos de las caídas del mercado?
+
+Cuando el mercado baja, el dinero invertido directamente en el mercado puede perder valor. Algunas FIA y pólizas IUL están diseñadas para ayudar a reducir la exposición a pérdidas directas del mercado mediante estrategias vinculadas a índices. La meta es ayudar a proteger lo que has trabajado duro para construir, manteniendo al mismo tiempo cierta oportunidad de crecimiento futuro, dependiendo de los términos del producto o la póliza.
+
+EN — What is a tax-efficient retirement strategy?
+
+Depending on policy design and current tax law, cash value may be accessed on a tax-advantaged basis in some situations. Accessing cash value can affect policy benefits and may have tax implications. Consult a qualified tax professional.
+
+ES — ¿Qué es una estrategia de jubilación con eficiencia fiscal?
+
+Dependiendo del diseño de la póliza y de la ley fiscal vigente, en algunas situaciones se puede acceder al valor en efectivo de manera fiscalmente favorable. Acceder al valor en efectivo puede afectar los beneficios de la póliza y puede tener implicaciones fiscales. Consulta a un profesional fiscal calificado.
+
+EN — Why is compound interest important?
+
+Compound interest helps your money grow on both the original amount and the growth already earned. Over time, this can become one of the foundations of wealth building, because small consistent steps may grow into something meaningful.
+
+ES — ¿Por qué es importante el interés compuesto?
+
+El interés compuesto ayuda a que tu dinero crezca tanto sobre la cantidad original como sobre el crecimiento ya obtenido. Con el tiempo, esto puede convertirse en una de las bases para construir patrimonio, porque pequeños pasos constantes pueden crecer hasta convertirse en algo significativo.
+
+EN — Do I need a financial strategy if I am not wealthy?
+
+Yes. A financial strategy is not only for wealthy people. It can help families reduce debt, build savings, protect what they have worked for, and make more confident decisions.
+
+ES — ¿Necesito una estrategia financiera si no soy una persona adinerada?
+
+Sí. Una estrategia financiera no es solo para personas adineradas. Puede ayudar a las familias a reducir deudas, construir ahorros, proteger lo que han trabajado por conseguir y tomar decisiones con mayor confianza.
+
+EN — What is sequence of returns risk?
+
+Timing matters in retirement. Sequence of returns risk happens when market losses occur early in retirement while withdrawals have already begun, which may affect how long savings last.
+
+ES — ¿Qué es el riesgo de secuencia de rendimientos?
+
+El momento importa durante la jubilación. El riesgo de secuencia de rendimientos ocurre cuando se producen pérdidas de mercado al principio de la jubilación mientras ya han comenzado los retiros, lo que puede afectar cuánto tiempo duran los ahorros.
+
+EN — How does IUL compare to a Roth IRA?
+
+Both may offer tax advantages, but they work differently. A Roth IRA has IRS income and contribution limits. IUL is life insurance with cash value and a death benefit, and it does not follow the same Roth IRA contribution rules; instead, it follows policy and tax rules.
+
+ES — ¿Cómo se compara un IUL con una Roth IRA?
+
+Ambos pueden ofrecer ventajas fiscales, pero funcionan de manera diferente. Una Roth IRA tiene límites de ingresos y contribuciones establecidos por el IRS. Un IUL es un seguro de vida con valor en efectivo y beneficio por fallecimiento, y no sigue las mismas reglas de contribución de una Roth IRA; en cambio, sigue las reglas de la póliza y las normas fiscales aplicables.
+
+8. BUSINESS STRATEGIES — MOSTLY SYNCHRONIZED
+
+The current Spanish Business Strategies page is much closer to the final English version than the other service pages. Keep the existing Spanish content, but make the following synchronization updates:
+
+8.1 Buy-sell paragraph / legal-tax qualification
+
+FINAL ENGLISH (MASTER):
+
+Without a clear plan, an owner’s departure, death, or disability can create confusion among partners, family members, employees, and lenders. A funded buy-sell agreement can help provide a structured way for remaining owners to buy out an owner’s share at a fair price while helping protect family interests. Work with qualified legal and tax professionals when establishing agreements or determining tax treatment.
+
+SPANISH TO USE:
+
+Sin un plan claro, la salida, fallecimiento o incapacidad de un propietario puede crear confusión entre socios, familiares, empleados y prestamistas. Un acuerdo buy-sell financiado puede ayudar a proporcionar una forma estructurada para que los propietarios restantes compren la participación de un propietario a un precio justo, al mismo tiempo que ayuda a proteger los intereses de la familia. Trabaja con profesionales legales y fiscales calificados al establecer acuerdos o determinar el tratamiento fiscal.
+
+8.2 Business legal & tax disclaimer
+
+FINAL ENGLISH (MASTER):
+
+Business Legal & Tax Disclaimer: Business strategies may involve legal and tax considerations. Work with qualified legal and tax professionals when establishing agreements or determining tax treatment.
+
+SPANISH TO USE:
+
+Aviso legal y fiscal para negocios: Las estrategias empresariales pueden implicar consideraciones legales y fiscales. Trabaja con profesionales legales y fiscales calificados al establecer acuerdos o determinar el tratamiento fiscal.
+
+Also apply all GLOBAL shared-component updates from Section 1.
+
+9. OPPORTUNITY — SYNCHRONIZE TO FINAL ENGLISH STRUCTURE
+
+The dedicated Spanish Opportunity page is already substantially updated and contains good commission/licensing disclosures. However, it is not a complete structural match to the final English page. Use the final English page as the master and preserve the warm Spanish tone. The most important final wording is:
+
+9.1 Transparent opportunity statement
+
+FINAL ENGLISH (MASTER):
+
+This is a commission-based business opportunity in financial services, not a traditional salaried job. Before serving families as a licensed professional, proper state licensing is required. Growth depends on learning, consistency, effort, and the ability to serve people well. For the right person, this can be a meaningful path to personal and professional development.
+
+SPANISH TO USE:
+
+Esta es una oportunidad de negocio basada en comisiones dentro de los servicios financieros, no un empleo tradicional con salario. Antes de atender a familias como profesional con licencia, se requiere obtener la licencia estatal correspondiente. El crecimiento depende del aprendizaje, la constancia, el esfuerzo y la capacidad de servir bien a las personas. Para la persona adecuada, puede ser un camino significativo de desarrollo personal y profesional.
+
+Important: remove old HOME-page opportunity statistics and income examples. The dedicated Opportunity page should remain the transparent, commission-based version and should match all final English sections, including Support as You Build, How to Get Started, FAQ/disclosures, and the updated footer.
+
+10. PRIVACY POLICY — REPLACE SPANISH WITH CURRENT ENGLISH MASTER
+
+Spanish currently shows “Última actualización: enero de 2026” and contains older/extra wording. To match English, use the following current master translation:
+
+10.1 Privacy Policy — full legal copy
+
+FINAL ENGLISH (MASTER):
+
+Last Updated: August 2026Family First Legacy respects your privacy. This Privacy Policy explains how we collect, use, protect, and share information when you visit our website, submit a form, request a consultation, or communicate with us.By using this website, you agree to the practices described below.Information We CollectWe may collect information you choose to provide, such as: Your name; Email address; Phone number; State of residence; Service interests; Questions or messages submitted through our forms.How We Use Your InformationWe may use your information to respond to questions or consultation requests, schedule appointments or follow-ups, provide information about requested services, understand your goals and protection needs, improve our website and communication, and comply with legal, regulatory, or business requirements. We do not sell your personal information.How We Share Your InformationWe may share information only as reasonably needed to respond to your request, provide services, operate our business, or comply with the law.Website Forms and Data StorageFamily First Legacy does not intentionally use this website as a repository for sensitive personal information. Information submitted through forms may be processed or stored by the service providers we use to operate forms, email, CRM, scheduling, analytics, or website hosting.Cookies, Analytics, and Communication ToolsWe may use cookies, analytics tools, CRM software, calendar scheduling platforms, and email or SMS communication services to help operate our website, respond to consultation requests, manage appointments, and communicate with you effectively.Data SecurityWe take reasonable steps to help protect information submitted through this website. However, no website, internet transmission, email, text message, or electronic system can be guaranteed to be 100% secure.Contact UsFamily First LegacyEmail: info@family1stlegacy.comWebsite: family1stlegacy.com
+
+SPANISH TO USE:
+
+Última actualización: agosto de 2026Family First Legacy respeta tu privacidad. Esta Política de Privacidad explica cómo recopilamos, usamos, protegemos y compartimos información cuando visitas nuestro sitio web, envías un formulario, solicitas una consulta o te comunicas con nosotros.Al utilizar este sitio web, aceptas las prácticas descritas a continuación.Información que recopilamosPodemos recopilar información que tú decidas proporcionar, como: tu nombre; dirección de correo electrónico; número de teléfono; estado de residencia; servicios de interés; preguntas o mensajes enviados a través de nuestros formularios.Cómo usamos tu informaciónPodemos usar tu información para responder a tus preguntas o solicitudes de consulta, programar citas o seguimientos, proporcionar información sobre los servicios solicitados, comprender tus metas y necesidades de protección, mejorar nuestro sitio web y nuestras comunicaciones, y cumplir con requisitos legales, regulatorios o comerciales. No vendemos tu información personal.Cómo compartimos tu informaciónPodemos compartir información únicamente cuando sea razonablemente necesario para responder a tu solicitud, prestar servicios, operar nuestro negocio o cumplir con la ley.Formularios del sitio web y almacenamiento de datosFamily First Legacy no utiliza intencionalmente este sitio web como repositorio de información personal sensible. La información enviada mediante formularios puede ser procesada o almacenada por los proveedores de servicios que utilizamos para operar formularios, correo electrónico, CRM, programación de citas, análisis o alojamiento del sitio web.Cookies, análisis y herramientas de comunicaciónPodemos utilizar cookies, herramientas de análisis, software CRM, plataformas de programación de calendarios y servicios de comunicación por correo electrónico o SMS para ayudar a operar nuestro sitio web, responder a solicitudes de consulta, administrar citas y comunicarnos contigo de manera efectiva.Seguridad de los datosTomamos medidas razonables para ayudar a proteger la información enviada a través de este sitio web. Sin embargo, ningún sitio web, transmisión por internet, correo electrónico, mensaje de texto o sistema electrónico puede garantizarse como 100% seguro.ContáctanosFamily First LegacyCorreo electrónico: info@family1stlegacy.comSitio web: family1stlegacy.com
+
+11. TERMS OF SERVICE — REPLACE SPANISH WITH CURRENT ENGLISH MASTER
+
+11.1 Terms — full legal copy
+
+FINAL ENGLISH (MASTER):
+
+Last Updated: August 2026Welcome to Family First Legacy. These Terms of Service explain how you may use this website and the information provided on it. By accessing or using this website, you agree to these Terms.1. Purpose of This WebsiteFamily First Legacy provides educational information related to life insurance, family protection, retirement planning, education planning, estate and legacy planning, business protection, and related financial topics. The information on this website is provided for general educational purposes only. It should not be considered legal, tax, investment, or personalized financial advice.2. Services ProvidedFamily First Legacy may help individuals and families understand available insurance and financial options. Any insurance or financial product discussed is subject to product availability, eligibility, underwriting, carrier approval, policy terms, and applicable laws.3. No Guarantee of Coverage, Approval, Rates, or ResultsSubmitting a form, booking an appointment, requesting information, or speaking with a representative does not guarantee that you will qualify for insurance coverage, receive a specific rate, obtain a specific product, or achieve a specific financial result.4. Quotes, Illustrations, and ExamplesAny quotes, illustrations, examples, or educational scenarios shown on this website are for general educational purposes only and may not reflect your exact situation.5. Governing LawThese Terms are governed by the laws of the State of Texas.6. Contact UsFamily First LegacyEmail: info@family1stlegacy.comPhone: (469) 608-1595Location: Dallas–Fort Worth, TexasIMPORTANT WEBSITE DISCLAIMER: Information on this website is for educational purposes only and does not guarantee insurance approval, coverage, rates, or specific financial results.
+
+SPANISH TO USE:
+
+Última actualización: agosto de 2026Bienvenido a Family First Legacy. Estos Términos de Servicio explican cómo puedes utilizar este sitio web y la información que se proporciona en él. Al acceder o utilizar este sitio web, aceptas estos Términos.1. Propósito de este sitio webFamily First Legacy proporciona información educativa relacionada con seguro de vida, protección familiar, planificación para la jubilación, planificación educativa, planificación patrimonial y de legado, protección empresarial y temas financieros relacionados. La información de este sitio web se proporciona únicamente con fines educativos generales. No debe considerarse asesoramiento legal, fiscal, de inversión ni asesoramiento financiero personalizado.2. Servicios proporcionadosFamily First Legacy puede ayudar a personas y familias a comprender las opciones de seguros y financieras disponibles. Cualquier producto de seguro o financiero mencionado está sujeto a disponibilidad del producto, elegibilidad, evaluación de suscripción, aprobación de la compañía, términos de la póliza y leyes aplicables.3. No existe garantía de cobertura, aprobación, tarifas o resultadosEnviar un formulario, reservar una cita, solicitar información o hablar con un representante no garantiza que calificarás para cobertura de seguro, recibirás una tarifa específica, obtendrás un producto determinado o lograrás un resultado financiero específico.4. Cotizaciones, ilustraciones y ejemplosCualquier cotización, ilustración, ejemplo o escenario educativo mostrado en este sitio web se proporciona únicamente con fines educativos generales y puede no reflejar tu situación exacta.5. Ley aplicableEstos Términos se rigen por las leyes del Estado de Texas.6. ContáctanosFamily First LegacyCorreo electrónico: info@family1stlegacy.comTeléfono: (469) 608-1595Ubicación: Dallas–Fort Worth, TexasAVISO IMPORTANTE DEL SITIO WEB: La información de este sitio web se proporciona únicamente con fines educativos y no garantiza aprobación de seguro, cobertura, tarifas ni resultados financieros específicos.
+
+KNOWLEDGEBASE LANDING PAGE — CARDS MUST ALSO MATCH ENGLISH
+
+The Spanish Knowledgebase is not complete if only the article pages are translated. The landing-page article cards must also use the final English master as the source. Use these Spanish versions:
+
+Card 1
+
+FINAL ENGLISH CATEGORY
+
+FAMILY PROTECTION
+
+SPANISH CATEGORY
+
+PROTECCIÓN FAMILIAR
+
+FINAL ENGLISH TITLE
+
+Is Your Family Counting on Work Benefits Alone?
+
+SPANISH TITLE
+
+¿Tu familia depende solo de los beneficios del trabajo?
+
+FINAL ENGLISH DESCRIPTION:Employer life insurance can be a helpful benefit. For many working families and professionals, it may be the first type of protection they receive. Because it comes through work, it can feel simple, convenient, and easy to trust.
+
+SPANISH TO USE:El seguro de vida del empleador puede ser un beneficio útil. Para muchas familias trabajadoras y profesionales, puede ser el primer tipo de protección que reciben. Como viene a través del trabajo, puede parecer sencillo, conveniente y fácil de confiar.
+
+Button: READ ARTICLE →  →  LEER ARTÍCULO →
+
+Card 2
+
+FINAL ENGLISH CATEGORY
+
+RETIREMENT
+
+SPANISH CATEGORY
+
+JUBILACIÓN
+
+FINAL ENGLISH TITLE
+
+Could Taxes Reduce the Retirement Income You’re Counting On?
+
+SPANISH TITLE
+
+¿Podrían los impuestos reducir los ingresos de jubilación con los que cuentas?
+
+FINAL ENGLISH DESCRIPTION:A 401(k) can be a valuable retirement tool. For many working families, it is one of the first places they begin saving for the future, especially when an employer offers matching contributions.
+
+SPANISH TO USE:Un 401(k) puede ser una herramienta valiosa para la jubilación. Para muchas familias trabajadoras, es uno de los primeros lugares donde comienzan a ahorrar para el futuro, especialmente cuando el empleador ofrece aportaciones equivalentes.
+
+Button: READ ARTICLE →  →  LEER ARTÍCULO →
+
+Card 3
+
+FINAL ENGLISH CATEGORY
+
+EDUCATION
+
+SPANISH CATEGORY
+
+EDUCACIÓN
+
+FINAL ENGLISH TITLE
+
+What If Your Child’s Path Changes After You Save?
+
+SPANISH TITLE
+
+¿Qué pasa si el camino de tu hijo cambia después de haber ahorrado?
+
+FINAL ENGLISH DESCRIPTION:Every parent wants to give their child a strong start. For many families, that means saving early, reducing the need for student loans, and giving their child more choices for the future.
+
+SPANISH TO USE:Todo padre desea dar a sus hijos un buen comienzo. Para muchas familias, eso significa comenzar a ahorrar temprano, reducir la necesidad de préstamos estudiantiles y darles a sus hijos más opciones para el futuro.
+
+Button: READ ARTICLE →  →  LEER ARTÍCULO →
+
+Card 4
+
+FINAL ENGLISH CATEGORY
+
+LIVING BENEFITS
+
+SPANISH CATEGORY
+
+BENEFICIOS EN VIDA
+
+FINAL ENGLISH TITLE
+
+What If You Survive the Illness - But Your Income Does Not?
+
+SPANISH TITLE
+
+¿Qué pasa si sobrevives a la enfermedad, pero tus ingresos no?
+
+FINAL ENGLISH DESCRIPTION:Most families know life can change when someone passes away. But many are not prepared for another painful reality: sometimes a person survives the illness, but the family’s income does not survive with them.
+
+SPANISH TO USE:La mayoría de las familias saben que la vida puede cambiar cuando alguien fallece. Pero muchas no están preparadas para otra realidad dolorosa: a veces una persona sobrevive a la enfermedad, pero los ingresos de la familia no sobreviven con ella.
+
+Button: READ ARTICLE →  →  LEER ARTÍCULO →
+
+Card 5
+
+FINAL ENGLISH CATEGORY
+
+FINANCIAL STRATEGY
+
+SPANISH CATEGORY
+
+ESTRATEGIA FINANCIERA
+
+FINAL ENGLISH TITLE
+
+Is Time Working for Your Money — or Against It?
+
+SPANISH TITLE
+
+¿El tiempo está trabajando a favor de tu dinero, o en contra?
+
+FINAL ENGLISH DESCRIPTION:Most families work hard. They pay bills, care for their children, support loved ones, and try to save whatever they can. But even with good intentions, one question is often ignored:
+
+SPANISH TO USE:La mayoría de las familias trabajan duro. Pagan sus cuentas, cuidan de sus hijos, apoyan a sus seres queridos y tratan de ahorrar lo que pueden. Pero incluso con buenas intenciones, muchas veces se pasa por alto una pregunta importante:
+
+Button: READ ARTICLE →  →  LEER ARTÍCULO →
+
+Card 6
+
+FINAL ENGLISH CATEGORY
+
+ESTATE PLANNING
+
+SPANISH CATEGORY
+
+PLANIFICACIÓN PATRIMONIAL Y DE LEGADO
+
+FINAL ENGLISH TITLE
+
+Will Your Family Wait for the Money They Need?
+
+SPANISH TITLE
+
+¿Tu familia tendrá que esperar el dinero que necesita?
+
+FINAL ENGLISH DESCRIPTION:When a loved one passes away, the family faces more than grief. They may also face immediate financial needs.
+
+SPANISH TO USE:Cuando fallece un ser querido, la familia enfrenta más que el dolor de la pérdida. También puede enfrentar necesidades financieras inmediatas.
+
+Button: READ ARTICLE →  →  LEER ARTÍCULO →
+
+12. KNOWLEDGEBASE — COMPLETE SPANISH ARTICLE SYNC
+
+This is a major synchronization item. The Spanish article pages currently have Spanish navigation/chrome but several article bodies remain in English. Please translate the actual article body into Spanish. Also, the Spanish Living Benefits card/link currently opens the English Living Benefits article; please create/link the Spanish article page correctly.
+
+Please check the “Family_First_Legacy_Knowledgebase_SPANISH “ document
