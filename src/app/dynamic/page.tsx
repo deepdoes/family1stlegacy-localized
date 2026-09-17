@@ -1352,7 +1352,7 @@ p { letter-spacing:.1px; }
 .blog-progress-bar { position: absolute; top:0; left:0; height:100%; width: 20%; background: var(--green); border-radius: 100px; transition: transform .3s ease; }
 
 .blog-card {
-  flex: 0 0 calc((100% - 64px) / 3.15);
+  flex: 0 0 280px; width: 280px; max-width: 85vw;
   background: var(--white); border-radius: 24px; overflow: hidden;
   box-shadow: 0 4px 16px rgba(0,0,0,.04);
   transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease;
@@ -1368,7 +1368,7 @@ p { letter-spacing:.1px; }
 .bc-img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .blog-card:hover .bc-img { transform: scale(1.05); }
 
-.bc-content { padding: 32px; display: flex; flex-direction: column; flex: 1; }
+.bc-content { padding: 24px 24px 28px 24px; display: flex; flex-direction: column; flex: 1; }
 .bc-cat { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
 .bc-title { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--dark); line-height: 1.3; margin-bottom: 16px; transition: color .3s; }
 .blog-card:hover .bc-title { color: var(--green); }
@@ -9443,9 +9443,11 @@ body.mobile-menu-active .nav-toggle {
   gap: 28px !important;
   width: max-content !important;
 }
-.blog-slider-track .blog-card {
+.blog-slider-track .blog-card,
+.blog-slider .blog-card {
   width: 280px !important;
   max-width: 85vw !important;
+  flex: 0 0 280px !important;
   flex-shrink: 0 !important;
 }
 
@@ -9502,8 +9504,22 @@ body {
   box-sizing: border-box !important;
 }
 
-.container, .article-container-wrap, .article-hero-container, .article-grid-container {
-  max-width: 100% !important;
+.container {
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+.article-hero-container,
+.article-grid-container,
+.article-container-wrap,
+.article-faq-container {
+  width: 100% !important;
+  max-width: 1040px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   box-sizing: border-box !important;
 }
 
