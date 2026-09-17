@@ -1,0 +1,1421 @@
+Family First LegacySPANISH KNOWLEDGEBASE
+
+DEVELOPER COPY & PASTE — PAGE BY PAGE • LOCATION BY LOCATION
+
+For Dipan — simple workflow: Open the Spanish page named in each section. Work from the top of that page to the bottom. Each LOCATION label tells you exactly where the Spanish block belongs. Copy only the text under SPANISH — COPY & PASTE. 
+
+PART A — KNOWLEDGEBASE LANDING PAGE
+
+LOCATION: Spanish Knowledgebase / “Latest Articles & Strategies” card grid. Replace the text inside each matching card. Keep the same card order and design.
+
+CARD 1
+
+LOCATION
+
+Knowledgebase landing page → Card 1
+
+CATEGORY
+
+PROTECCIÓN FAMILIAR
+
+TITLE
+
+¿Tu familia depende solo de los beneficios del trabajo?
+
+DESCRIPTION
+
+El seguro de vida del empleador puede ser un beneficio útil. Para muchas familias trabajadoras y profesionales, puede ser el primer tipo de protección que reciben. Como viene a través del trabajo, puede parecer sencillo, conveniente y fácil de confiar.
+
+BUTTON
+
+LEER ARTÍCULO →
+
+CARD 2
+
+LOCATION
+
+Knowledgebase landing page → Card 2
+
+CATEGORY
+
+JUBILACIÓN
+
+TITLE
+
+¿Podrían los impuestos reducir los ingresos de jubilación con los que cuentas?
+
+DESCRIPTION
+
+Un 401(k) puede ser una herramienta valiosa para la jubilación. Para muchas familias trabajadoras, es uno de los primeros lugares donde comienzan a ahorrar para el futuro, especialmente cuando el empleador ofrece aportaciones equivalentes.
+
+BUTTON
+
+LEER ARTÍCULO →
+
+CARD 3
+
+LOCATION
+
+Knowledgebase landing page → Card 3
+
+CATEGORY
+
+EDUCACIÓN
+
+TITLE
+
+¿Qué pasa si el camino de tu hijo cambia después de haber ahorrado?
+
+DESCRIPTION
+
+Todo padre desea dar a sus hijos un buen comienzo. Para muchas familias, eso significa comenzar a ahorrar temprano, reducir la necesidad de préstamos estudiantiles y darles a sus hijos más opciones para el futuro.
+
+BUTTON
+
+LEER ARTÍCULO →
+
+CARD 4
+
+LOCATION
+
+Knowledgebase landing page → Card 4
+
+CATEGORY
+
+BENEFICIOS EN VIDA
+
+TITLE
+
+¿Qué pasa si sobrevives a la enfermedad, pero tus ingresos no?
+
+DESCRIPTION
+
+La mayoría de las familias saben que la vida puede cambiar cuando alguien fallece. Pero muchas no están preparadas para otra realidad dolorosa: a veces una persona sobrevive a la enfermedad, pero los ingresos de la familia no sobreviven con ella.
+
+BUTTON
+
+LEER ARTÍCULO →
+
+LINK CHECK: This card must open the Spanish Living Benefits article, not the English article.
+
+CARD 5
+
+LOCATION
+
+Knowledgebase landing page → Card 5
+
+CATEGORY
+
+ESTRATEGIA FINANCIERA
+
+TITLE
+
+¿El tiempo está trabajando a favor de tu dinero, o en contra?
+
+DESCRIPTION
+
+La mayoría de las familias trabajan duro. Pagan sus cuentas, cuidan de sus hijos, apoyan a sus seres queridos y tratan de ahorrar lo que pueden. Pero incluso con buenas intenciones, muchas veces se pasa por alto una pregunta importante:
+
+BUTTON
+
+LEER ARTÍCULO →
+
+CARD 6
+
+LOCATION
+
+Knowledgebase landing page → Card 6
+
+CATEGORY
+
+PLANIFICACIÓN PATRIMONIAL Y DE LEGADO
+
+TITLE
+
+¿Tu familia tendrá que esperar el dinero que necesita?
+
+DESCRIPTION
+
+Cuando fallece un ser querido, la familia enfrenta más que el dolor de la pérdida. También puede enfrentar necesidades financieras inmediatas.
+
+BUTTON
+
+LEER ARTÍCULO →
+
+PART B — SIX ARTICLE PAGES
+
+For every article below, follow the blocks in order. The first three Spanish lines after the article title belong in the Key Takeaways box. The numbered headings and paragraphs then follow in the same order as the English master.
+
+ARTÍCULO 1 — PROTECCIÓN FAMILIAR
+
+OPEN THIS PAGE: Spanish page: blog_family_protection_es.html
+
+MATCH AGAINST: English master: blog_family_protection.html
+
+LOCATION: Top of article → Main article title
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Is Your Family Counting on Work Benefits Alone?
+
+¿Tu familia depende solo de los beneficios del trabajo?
+
+¿Tu familia depende solo de los beneficios del trabajo?
+
+LOCATION: Immediately below article title → Reviewed-by line
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Reviewed by Licensed Financial Professionals • Family First Legacy Team
+
+Revisado por profesionales financieros con licencia • Equipo de Family First Legacy
+
+LOCATION: Immediately below title → ⚡ Puntos clave / Key Takeaways box
+
+⚡ Puntos clave
+
+La cobertura del empleador está vinculada al empleo: El seguro de vida ofrecido a través del trabajo suele terminar o cambiar cuando cambias de empleo, te jubilas o la empresa reduce personal.
+
+Los límites de cobertura pueden dejar brechas: Las pólizas del trabajo suelen ofrecer entre 1 y 2 veces el salario anual, lo que quizá no cubra por completo una hipoteca a largo plazo, deudas o las necesidades de reemplazo de ingresos.
+
+La cobertura individual ofrece portabilidad: Tener una póliza personal fuera del trabajo puede ayudar a que tu familia mantenga protección independientemente de tu situación laboral.
+
+LOCATION: Article body → Section 1 heading
+
+1. La comodidad y la realidad de la cobertura del empleador
+
+Para millones de profesionales y familias trabajadoras, el seguro de vida colectivo ofrecido por el empleador es su primer contacto con la protección financiera. Puede parecer sencillo, conveniente y económico. Como las primas con frecuencia se descuentan directamente de la nómina, muchas personas pueden asumir que el futuro financiero de su familia está completamente protegido.
+
+Sin embargo, aunque el seguro de vida temporal colectivo es un beneficio laboral valioso, depender de él como única red de protección financiera de la familia puede dejar brechas inesperadas. Comprender la diferencia entre los beneficios del empleador y la cobertura individual es un paso importante para construir seguridad financiera a largo plazo.
+
+LOCATION: Article body → Section 2 heading
+
+2. Por qué la cobertura del empleador puede no ser suficiente
+
+Las pólizas proporcionadas por el empleador suelen ofrecer una cobertura equivalente a una o dos veces el salario anual del empleado. Aunque esto puede ayudar con gastos finales inmediatos o costos de transición a corto plazo, podría no ser suficiente para cubrir las necesidades familiares más amplias y de largo plazo.
+
+Considera algunas de las responsabilidades financieras reales que puede enfrentar una familia:
+
+Hipoteca y vivienda: Pagar una hipoteca a 30 años o mantener estabilidad en el pago de la renta.
+
+Reemplazo de ingresos: Reemplazar entre 5 y 10 años de ingresos para ayudar a mantener el nivel de vida del hogar.
+
+Deudas: Pagar tarjetas de crédito, préstamos de automóvil, préstamos personales o préstamos estudiantiles privados.
+
+Metas futuras: Ayudar a financiar la universidad o la formación vocacional de los hijos.
+
+LOCATION: Article body → Section 3 heading
+
+3. El riesgo de portabilidad: ¿Qué ocurre cuando cambia el empleo?
+
+Una de las principales limitaciones del seguro de vida colectivo del empleador es que normalmente está ligado al empleo activo. Si una persona cambia de carrera, pierde su empleo, deja el trabajo para iniciar un negocio o se jubila, la cobertura puede terminar o cambiar.
+
+Obtener una nueva póliza individual más adelante —especialmente después de cambios importantes en la salud— puede resultar más costoso o afectar la elegibilidad. Obtener cobertura individual mientras se es más joven y se goza de buena salud puede ayudar a asegurar opciones basadas en la edad y el estado de salud al momento de la solicitud.
+
+LOCATION: Article body → Section 4 heading
+
+4. Explorando opciones de protección individual
+
+Las pólizas individuales de seguro de vida pertenecen a la persona asegurada, no al empleador. Pueden mantenerse vigentes mientras se cumplan los requisitos de la póliza, incluido el pago de las primas. Algunos tipos comunes incluyen:
+
+Seguro de vida a término: Ofrece cobertura por un período determinado, por ejemplo 10, 20 o 30 años, y puede ser útil durante años de hipoteca o crianza de hijos.
+
+Seguro de vida permanente (vida entera e IUL): Puede ofrecer protección de largo plazo junto con un componente de valor en efectivo que puede acumularse con el tiempo, según los términos de la póliza.
+
+LOCATION: Article body → Section 5 heading
+
+5. El papel de los beneficios en vida en la protección familiar
+
+Algunas pólizas modernas de seguro de vida incluyen beneficios en vida. A diferencia de las pólizas que solo pagan un beneficio al fallecer, las pólizas con cláusulas de beneficios en vida pueden permitir que los titulares que califican accedan a una parte del beneficio por fallecimiento mientras aún viven si reciben un diagnóstico cubierto de enfermedad crónica, crítica o terminal.
+
+LOCATION: Article body → Section 6 heading
+
+6. Calculando la necesidad de protección de tu familia
+
+Determinar una cantidad de cobertura adecuada implica evaluar las obligaciones financieras particulares de tu familia. Un marco común es el método DIME: Deudas, Ingresos, Hipoteca y Educación.
+
+LOCATION: Article body → Section 7 heading
+
+7. Preguntas frecuentes
+
+LOCATION: FAQ → Question
+
+¿Puedo conservar el seguro de vida de mi empleador si renuncio o pierdo mi trabajo?
+
+En muchos casos, el seguro de vida colectivo termina cuando finaliza el empleo. Algunas pólizas ofrecen opciones de conversión a una póliza individual; las condiciones y el costo dependen del plan.
+
+LOCATION: FAQ → Question
+
+¿Cuánto seguro de vida debería considerar una familia?
+
+No existe una cantidad única para todos. La necesidad depende de factores como ingresos, hipoteca, deudas, educación de los hijos, gastos finales y otras responsabilidades familiares. Una revisión individual puede ayudar a estimar una cantidad adecuada.
+
+LOCATION: FAQ → Question
+
+¿Tener un seguro de vida individual afecta mis beneficios del trabajo?
+
+Generalmente no. Una póliza individual de seguro de vida funciona por separado de la cobertura ofrecida por el empleador.
+
+LOCATION: Bottom of article body → Educational Disclosure
+
+Divulgación educativa: Este artículo se ofrece únicamente con fines educativos e informativos generales y no debe interpretarse como asesoramiento financiero, fiscal o legal personalizado. Los productos de seguros y financieros están sujetos a la aprobación de la compañía, disponibilidad del producto, evaluación de suscripción y requisitos estatales aplicables. La elegibilidad individual, las características de la póliza y los resultados pueden variar. Para recibir orientación sobre tu situación específica, consulta a un profesional financiero con licencia, un contador público certificado (CPA) o un abogado.
+
+IN THIS GUIDE — EASY ENGLISH → SPANISH MATCH
+
+LOCATION: Right sidebar → IN THIS GUIDE. Replace each English line with the Spanish line beside it.
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+1. The Comfort and Reality of Employer Coverage
+
+1. La comodidad y la realidad de la cobertura del empleador
+
+2. Why Employer Coverage May Not Be Enough
+
+2. Por qué la cobertura del empleador puede no ser suficiente
+
+3. The Portability Risk: Employment Changes
+
+3. El riesgo de portabilidad: cambios de empleo
+
+4. Exploring Individual Protection Options
+
+4. Explorando opciones de protección individual
+
+5. The Role of Living Benefits
+
+5. El papel de los beneficios en vida
+
+6. Calculating Your Family's Protection Need
+
+6. Calculando la necesidad de protección de tu familia
+
+7. Frequently Asked Questions
+
+7. Preguntas frecuentes
+
+SHARED BLOCKS ON THIS ARTICLE PAGE
+
+LOCATION
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+Right sidebar / article navigation heading
+
+📖 IN THIS GUIDE
+
+📖 EN ESTA GUÍA
+
+Consultation box label
+
+NO-COST CONSULTATION
+
+CONSULTA SIN COSTO
+
+Consultation box heading
+
+Ready for Honest Guidance?
+
+¿Listo para recibir orientación clara?
+
+Consultation box text
+
+Schedule a review with a licensed professional — no pressure, no obligation.
+
+Programa una revisión con un profesional con licencia — sin presión y sin obligación.
+
+Consultation button
+
+Schedule a Review →
+
+PROGRAMAR UNA REVISIÓN →
+
+Trust item 1
+
+Licensed & Insured
+
+Con licencia y asegurados
+
+Trust item 2
+
+24hr Response
+
+Respuesta en 24 horas
+
+Trust item 3
+
+Your Privacy Matters
+
+Tu privacidad nos importa
+
+Related articles heading
+
+MORE ARTICLES & STRATEGIES
+
+MÁS ARTÍCULOS Y ESTRATEGIAS
+
+Related articles intro
+
+Educational resources and insights to help your family plan for the future.
+
+Recursos educativos e información para ayudar a tu familia a planificar para el futuro.
+
+Article buttons
+
+READ ARTICLE →
+
+LEER ARTÍCULO →
+
+ARTÍCULO 2 — JUBILACIÓN
+
+OPEN THIS PAGE: Spanish page: blog_retirement_es.html
+
+MATCH AGAINST: English master: blog_retirement.html
+
+LOCATION: Top of article → Main article title
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Could Taxes Reduce the Retirement Income You're Counting On?
+
+¿Podrían los impuestos reducir los ingresos de jubilación con los que cuentas?
+
+¿Podrían los impuestos reducir los ingresos de jubilación con los que cuentas?
+
+LOCATION: Immediately below article title → Reviewed-by line
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Reviewed by Licensed Financial Professionals • Family First Legacy Team
+
+Revisado por profesionales financieros con licencia • Equipo de Family First Legacy
+
+LOCATION: Immediately below title → ⚡ Puntos clave / Key Takeaways box
+
+⚡ Puntos clave
+
+El tratamiento fiscal influye en los ingresos de jubilación: No se trata solo de cuánto ahorras en un 401(k) o una IRA, sino también de cuánto conservas después de impuestos durante la jubilación.
+
+Los tres grupos fiscales: Distribuir los ahorros entre cuentas sujetas a impuestos, con impuestos diferidos y con ventajas fiscales puede brindar mayor flexibilidad durante la jubilación.
+
+La protección frente a caídas del mercado importa: Estrategias como las anualidades fijas indexadas (FIA) pueden ofrecer potencial de crecimiento vinculado a un índice mientras ayudan a proteger el capital frente a un rendimiento negativo del índice.
+
+LOCATION: Article body → Section 1 heading
+
+1. Ingresos frente a lo que conservas en la jubilación
+
+Al planificar la jubilación, muchas personas se concentran principalmente en la etapa de acumulación: alcanzar un saldo determinado en un 401(k), 403(b) o una IRA tradicional. Sin embargo, estar preparado para la jubilación no depende solamente del total ahorrado, sino también de los ingresos netos disponibles después de impuestos y de los cambios del mercado.
+
+Sin una estrategia clara de distribución, aumentos inesperados en las tasas de impuestos o caídas prolongadas del mercado durante la jubilación pueden reducir el poder adquisitivo cuando más se necesita.
+
+LOCATION: Article body → Section 2 heading
+
+2. Comprendiendo los tres grupos fiscales para la jubilación
+
+Los profesionales financieros suelen agrupar los activos para la jubilación en tres categorías fiscales:
+
+1. Cuentas sujetas a impuestos: Cuentas de ahorro bancarias, certificados de depósito (CD), cuentas de corretaje y acciones individuales. Los intereses, dividendos y ganancias de capital pueden generar impuestos.
+
+2. Cuentas con impuestos diferidos: 401(k) tradicionales, 403(b) e IRA tradicionales. Las aportaciones pueden reducir los ingresos sujetos a impuestos actualmente, pero las distribuciones durante la jubilación generalmente se gravan como ingresos ordinarios.
+
+3. Cuentas o estrategias con ventajas fiscales: Roth IRA, ciertos bonos municipales y, en determinadas circunstancias, valores en efectivo de seguros de vida permanentes. El tratamiento fiscal depende del tipo de cuenta, de las reglas aplicables y de cómo se acceda a los fondos.
+
+LOCATION: Article body → Section 3 heading
+
+3. Por qué los 401(k) e IRA tradicionales son solo parte de la estrategia
+
+Los planes 401(k) patrocinados por el empleador pueden ser una herramienta valiosa de ahorro, especialmente cuando el empleador ofrece aportaciones equivalentes. Sin embargo, depender únicamente de cuentas con impuestos diferidos significa que parte de tus ingresos futuros estará sujeta a las tasas fiscales vigentes al momento de retirar los fondos.
+
+LOCATION: Article body → Section 4 heading
+
+4. Protección del capital con anualidades fijas indexadas (FIA)
+
+Una anualidad fija indexada (FIA) es un contrato emitido por una compañía de seguros diseñado para ayudar a proteger el capital frente a un rendimiento negativo del índice, al mismo tiempo que ofrece potencial de acreditación de intereses vinculada a un índice de mercado, como el S&P 500. Los términos, límites y otras condiciones dependen del contrato.
+
+LOCATION: Article body → Section 5 heading
+
+5. Manejo de la volatilidad del mercado y del riesgo de secuencia de rendimientos
+
+Jubilarse justo antes o durante una caída importante del mercado puede exponer a una persona al llamado riesgo de secuencia de rendimientos. Retirar dinero de una cartera que está perdiendo valor puede afectar la duración de los ahorros. Algunas estrategias diseñadas para proteger el capital pueden ayudar a reducir el impacto de la volatilidad durante los primeros años de jubilación.
+
+LOCATION: Article body → Section 6 heading
+
+6. Preguntas frecuentes
+
+LOCATION: FAQ → Question
+
+¿Cuál es la diferencia entre una anualidad fija y una anualidad fija indexada?
+
+Una anualidad fija tradicional acredita una tasa de interés establecida según los términos del contrato. Una anualidad fija indexada vincula la acreditación de intereses al desempeño de un índice de mercado y está diseñada para ayudar a proteger el capital frente a pérdidas del índice. Las tasas, límites, participación y demás términos varían según el contrato.
+
+LOCATION: FAQ → Question
+
+¿Los retiros de una anualidad fija indexada están sujetos a impuestos?
+
+El crecimiento de los intereses dentro de una anualidad generalmente se acumula con impuestos diferidos. Al realizar retiros, las ganancias generalmente se gravan como ingresos ordinarios. Los retiros antes de los 59½ años también pueden estar sujetos a una penalización federal del 10%, salvo que aplique una excepción.
+
+LOCATION: Bottom of article body → Educational Disclosure
+
+Divulgación educativa: Este artículo se ofrece únicamente con fines educativos e informativos generales y no debe interpretarse como asesoramiento financiero, fiscal o legal personalizado. Los productos de seguros y financieros están sujetos a la aprobación de la compañía, disponibilidad del producto, evaluación de suscripción y requisitos estatales aplicables. La elegibilidad individual, las características de la póliza y los resultados pueden variar. Para recibir orientación sobre tu situación específica, consulta a un profesional financiero con licencia, un contador público certificado (CPA) o un abogado.
+
+LOCATION
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+Right sidebar / article navigation heading
+
+📖 IN THIS GUIDE
+
+📖 EN ESTA GUÍA
+
+Consultation box label
+
+NO-COST CONSULTATION
+
+CONSULTA SIN COSTO
+
+Consultation box heading
+
+Ready for Honest Guidance?
+
+¿Listo para recibir orientación clara?
+
+Consultation box text
+
+Schedule a review with a licensed professional — no pressure, no obligation.
+
+Programa una revisión con un profesional con licencia — sin presión y sin obligación.
+
+Consultation button
+
+Schedule a Review →
+
+PROGRAMAR UNA REVISIÓN →
+
+Trust item 1
+
+Licensed & Insured
+
+Con licencia y asegurados
+
+Trust item 2
+
+24hr Response
+
+Respuesta en 24 horas
+
+Trust item 3
+
+Your Privacy Matters
+
+Tu privacidad nos importa
+
+Related articles heading
+
+MORE ARTICLES & STRATEGIES
+
+MÁS ARTÍCULOS Y ESTRATEGIAS
+
+Related articles intro
+
+Educational resources and insights to help your family plan for the future.
+
+Recursos educativos e información para ayudar a tu familia a planificar para el futuro.
+
+Article buttons
+
+READ ARTICLE →
+
+LEER ARTÍCULO →
+
+RIGHT SIDEBAR → IN THIS GUIDE — ALL 1–6
+
+LOCATION: Right sidebar → IN THIS GUIDE. Replace all six English items with the Spanish items below.
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+1. Income vs What You Keep in Retirement
+
+1. Ingresos frente a lo que conservas en la jubilación
+
+2. Understanding the Three Tax Buckets for Retirement
+
+2. Comprendiendo los tres grupos fiscales para la jubilación
+
+3. Why Traditional 401(k)s and IRAs Are Only Part of the Strategy
+
+3. Por qué los 401(k) e IRA tradicionales son solo parte de la estrategia
+
+4. Principal Protection with Fixed Indexed Annuities (FIAs)
+
+4. Protección del capital con anualidades fijas indexadas (FIA)
+
+5. Managing Market Volatility and Sequence-of-Returns Risk
+
+5. Manejo de la volatilidad del mercado y del riesgo de secuencia de rendimientos
+
+6. Frequently Asked Questions
+
+6. Preguntas frecuentes
+
+ARTÍCULO 3 — EDUCACIÓN
+
+OPEN THIS PAGE: Spanish page: blog_education_es.html
+
+MATCH AGAINST: English master: blog_education.html
+
+LOCATION: Top of article → Main article title
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+What If Your Child's Path Changes After You Save?
+
+¿Qué pasa si el camino de tu hijo cambia después de haber ahorrado?
+
+¿Qué pasa si el camino de tu hijo cambia después de haber ahorrado?
+
+LOCATION: Immediately below article title → Reviewed-by line
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Reviewed by Licensed Financial Professionals • Family First Legacy Team
+
+Revisado por profesionales financieros con licencia • Equipo de Family First Legacy
+
+LOCATION: Immediately below title → ⚡ Puntos clave / Key Takeaways box
+
+⚡ Puntos clave
+
+La flexibilidad es fundamental: Los caminos profesionales de los hijos pueden cambiar, ya sea que asistan a una universidad de cuatro años, estudien en una escuela técnica, inicien un negocio o sigan un camino diferente.
+
+Los planes 529 tienen reglas específicas: Las cuentas 529 ofrecen beneficios fiscales para gastos educativos calificados, pero los retiros no calificados pueden generar impuestos y penalizaciones sobre las ganancias.
+
+Existen estrategias complementarias: Algunas pólizas de seguro de vida permanente, como el IUL, pueden acumular valor en efectivo al que se puede acceder mediante préstamos o retiros de la póliza para educación u otras metas, sujeto a los términos de la póliza.
+
+LOCATION: Article body → Section 1 heading
+
+1. El aumento de los costos y la realidad cambiante de la educación superior
+
+Todo padre desea dar a sus hijos una buena base para perseguir sus sueños. A medida que aumentan los costos de la universidad y de otras formas de educación, comenzar a planificar con tiempo puede ayudar a reducir la dependencia de préstamos estudiantiles.
+
+Al mismo tiempo, el mundo laboral está cambiando. Hoy los jóvenes pueden elegir muchos caminos: universidades de cuatro años, colegios comunitarios, certificaciones técnicas, programas de aprendizaje, emprendimiento u otras opciones.
+
+LOCATION: Article body → Section 2 heading
+
+2. Comprendiendo los planes de ahorro educativo 529
+
+Un plan 529 es una cuenta de ahorro educativo patrocinada por un estado. Los fondos pueden crecer con impuestos diferidos y los retiros para gastos educativos calificados pueden recibir tratamiento fiscal favorable conforme a las reglas aplicables.
+
+LOCATION: Article body → Section 3 heading
+
+3. La importancia de un plan B: ¿Qué pasa si tu hijo elige otro camino?
+
+Si un hijo recibe una beca, decide no asistir a la universidad o elige un camino que no califica, retirar ganancias de un plan 529 para gastos no calificados puede generar impuestos sobre esas ganancias y, en algunos casos, una penalización federal del 10%. Pueden existir excepciones según las circunstancias.
+
+LOCATION: Article body → Section 4 heading
+
+4. Cómo el seguro de vida permanente con valor en efectivo (IUL) puede complementar el ahorro
+
+Algunas pólizas de seguro de vida permanente, como el seguro de vida universal indexado (IUL), pueden acumular valor en efectivo con el tiempo. Dependiendo de la póliza, se puede acceder a ese valor mediante préstamos o retiros para educación u otras necesidades futuras. Acceder al valor en efectivo puede afectar los beneficios y otros valores de la póliza.
+
+LOCATION: Article body → Section 5 heading
+
+5. FAFSA y el tratamiento de los activos para ayuda financiera
+
+El tratamiento para fines de ayuda financiera puede variar según quién sea el propietario de la cuenta, el tipo de activo y las reglas actuales de FAFSA. Las familias deben revisar la orientación federal vigente sobre ayuda estudiantil antes de elegir una estrategia.
+
+LOCATION: Article body → Section 6 heading
+
+6. Preguntas frecuentes
+
+LOCATION: FAQ → Question
+
+¿Se puede usar el valor en efectivo de un seguro de vida para una escuela técnica o para iniciar un negocio?
+
+Dependiendo de la póliza, se puede acceder al valor en efectivo mediante préstamos o retiros para una escuela técnica, iniciar un negocio u otras necesidades. Los préstamos y retiros pueden reducir el valor en efectivo o el beneficio por fallecimiento y pueden tener consecuencias fiscales en determinadas circunstancias.
+
+LOCATION: FAQ → Question
+
+¿Qué ocurre con un plan 529 si mi hijo recibe una beca completa?
+
+Si el beneficiario recibe una beca, las reglas federales pueden permitir retirar hasta el monto de la beca sin la penalización adicional del 10%; sin embargo, los impuestos sobre las ganancias pueden seguir aplicando.
+
+LOCATION: Bottom of article body → Educational Disclosure
+
+Divulgación educativa: Este artículo se ofrece únicamente con fines educativos e informativos generales y no debe interpretarse como asesoramiento financiero, fiscal o legal personalizado. Los productos de seguros y financieros están sujetos a la aprobación de la compañía, disponibilidad del producto, evaluación de suscripción y requisitos estatales aplicables. La elegibilidad individual, las características de la póliza y los resultados pueden variar. Para recibir orientación sobre tu situación específica, consulta a un profesional financiero con licencia, un contador público certificado (CPA) o un abogado.
+
+RIGHT SIDEBAR → IN THIS GUIDE — ALL 1–6
+
+LOCATION: Right sidebar → IN THIS GUIDE. Replace all six English items with the Spanish items below.
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+1. Rising Cost of Higher Education
+
+1. Aumento de los costos de la educación superior
+
+2. Understanding 529 Plans
+
+2. Comprendiendo los planes 529
+
+3. If Your Child Chooses Another Path
+
+3. Si tu hijo elige otro camino
+
+4. Cash Value (IUL) Complement
+
+4. El valor en efectivo (IUL) como complemento
+
+5. FAFSA & Aid Treatment
+
+5. FAFSA y tratamiento para ayuda financiera
+
+6. Frequently Asked Questions
+
+6. Preguntas frecuentes
+
+SHARED BLOCKS ON THIS ARTICLE PAGE
+
+LOCATION
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+Right sidebar / article navigation heading
+
+📖 IN THIS GUIDE
+
+📖 EN ESTA GUÍA
+
+Consultation box label
+
+NO-COST CONSULTATION
+
+CONSULTA SIN COSTO
+
+Consultation box heading
+
+Ready for Honest Guidance?
+
+¿Listo para recibir orientación clara?
+
+Consultation box text
+
+Schedule a review with a licensed professional — no pressure, no obligation.
+
+Programa una revisión con un profesional con licencia — sin presión y sin obligación.
+
+Consultation button
+
+Schedule a Review →
+
+PROGRAMAR UNA REVISIÓN →
+
+Trust item 1
+
+Licensed & Insured
+
+Con licencia y asegurados
+
+Trust item 2
+
+24hr Response
+
+Respuesta en 24 horas
+
+Trust item 3
+
+Your Privacy Matters
+
+Tu privacidad nos importa
+
+Related articles heading
+
+MORE ARTICLES & STRATEGIES
+
+MÁS ARTÍCULOS Y ESTRATEGIAS
+
+Related articles intro
+
+Educational resources and insights to help your family plan for the future.
+
+Recursos educativos e información para ayudar a tu familia a planificar para el futuro.
+
+Article buttons
+
+READ ARTICLE →
+
+LEER ARTÍCULO →
+
+ARTÍCULO 4 — BENEFICIOS EN VIDA
+
+OPEN THIS PAGE: Spanish page: CREATE/USE Spanish Living Benefits article page
+
+MATCH AGAINST: English master: blog_living_benefits.html
+
+LOCATION: Top of article → Main article title
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+What If You Survive the Illness - But Your Income Does Not?
+
+¿Qué pasa si sobrevives a la enfermedad, pero tus ingresos no?
+
+¿Qué pasa si sobrevives a la enfermedad, pero tus ingresos no?
+
+LOCATION: Immediately below article title → Reviewed-by line
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Reviewed by Licensed Financial Professionals • Family First Legacy Team
+
+Revisado por profesionales financieros con licencia • Equipo de Family First Legacy
+
+LOCATION: Immediately below title → ⚡ Puntos clave / Key Takeaways box
+
+⚡ Puntos clave
+
+El seguro no es solo para cuando alguien fallece: Algunas pólizas modernas de seguro de vida pueden ofrecer protección mientras la persona aún vive si enfrenta una enfermedad grave cubierta.
+
+Beneficios en vida: Las cláusulas de beneficios acelerados pueden permitir que los titulares que califican accedan a una parte del beneficio por fallecimiento tras un diagnóstico cubierto de enfermedad crónica, crítica o terminal.
+
+Apoyo para ingresos y gastos: Acceder a beneficios en vida puede ayudar con facturas médicas, ingresos interrumpidos u otros gastos del hogar durante la recuperación.
+
+LOCATION: Article body → Section 1 heading
+
+1. La realidad actual: sobrevivir a una enfermedad grave
+
+Gracias a los avances médicos, muchas personas sobreviven hoy a eventos graves de salud como ataques cardíacos, derrames cerebrales o diagnósticos de cáncer. Sin embargo, una recuperación prolongada puede ejercer una fuerte presión financiera sobre el hogar, especialmente cuando afecta la capacidad de trabajar o genera gastos adicionales.
+
+LOCATION: Article body → Section 2 heading
+
+2. ¿Qué son los beneficios en vida y las cláusulas de beneficios acelerados?
+
+Los beneficios en vida son características que pueden incluirse en algunas pólizas de seguro de vida mediante cláusulas de beneficios acelerados. Estas cláusulas pueden permitir que un titular elegible acceda a una parte del beneficio por fallecimiento mientras aún vive si presenta una condición médica cubierta que califica.
+
+LOCATION: Article body → Section 3 heading
+
+3. Comprendiendo las condiciones cubiertas que pueden calificar
+
+Dependiendo de los términos de la póliza y de la compañía, las condiciones cubiertas que pueden calificar suelen agruparse en categorías como:
+
+Enfermedad terminal: Una enfermedad diagnosticada que cumple con la definición de expectativa de vida limitada establecida en la póliza.
+
+Enfermedad crónica: Puede incluir la incapacidad de realizar determinadas actividades de la vida diaria sin ayuda, según la definición y los requisitos de la póliza.
+
+Enfermedad crítica: Puede incluir ciertos eventos médicos graves cubiertos, como ataque cardíaco, derrame cerebral, cáncer invasivo o trasplante de órganos, según los términos de la póliza.
+
+LOCATION: Article body → Section 4 heading
+
+4. La presión financiera de los eventos médicos graves
+
+El seguro médico puede ayudar con determinados gastos de atención médica, pero una enfermedad grave también puede afectar la hipoteca o renta, alimentos, pagos del automóvil y los ingresos del hogar. Cuando una persona califica, los beneficios en vida pueden brindar fondos que ayuden a manejar distintas necesidades durante la recuperación, sujeto a los términos de la póliza.
+
+LOCATION: Article body → Section 5 heading
+
+5. Preguntas frecuentes
+
+LOCATION: FAQ → Question
+
+¿Los beneficios en vida tienen un costo adicional en una póliza de seguro de vida?
+
+Algunas compañías incluyen ciertas cláusulas de beneficios acelerados al emitir la póliza sin un cargo inicial separado. Sin embargo, pueden aplicarse cargos administrativos, descuentos actuariales u otras condiciones cuando se acelera un beneficio. Los términos varían según la póliza y la compañía.
+
+LOCATION: FAQ → Question
+
+¿Cómo afecta al beneficio por fallecimiento el acceso a beneficios en vida?
+
+El uso de beneficios acelerados reduce el beneficio por fallecimiento restante que podría pagarse a los beneficiarios. El efecto exacto depende de los términos de la póliza y de la cantidad acelerada.
+
+LOCATION: Bottom of article body → Educational Disclosure
+
+Divulgación educativa: Este artículo se ofrece únicamente con fines educativos e informativos generales y no debe interpretarse como asesoramiento financiero, fiscal o legal personalizado. Los productos de seguros y financieros están sujetos a la aprobación de la compañía, disponibilidad del producto, evaluación de suscripción y requisitos estatales aplicables. La elegibilidad individual, las características de la póliza y los resultados pueden variar. Para recibir orientación sobre tu situación específica, consulta a un profesional financiero con licencia, un contador público certificado (CPA) o un abogado.
+
+IN THIS GUIDE — EASY ENGLISH → SPANISH MATCH
+
+LOCATION: Right sidebar → IN THIS GUIDE. Replace each English line with the Spanish line beside it.
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+1. Surviving Serious Illness Today
+
+1. Sobrevivir hoy a una enfermedad grave
+
+2. What Are Living Benefits?
+
+2. ¿Qué son los beneficios en vida?
+
+3. Covered Qualifying Conditions
+
+3. Condiciones cubiertas que pueden calificar
+
+4. Financial Pressure of Medical Events
+
+4. Presión financiera de los eventos médicos
+
+5. Frequently Asked Questions
+
+5. Preguntas frecuentes
+
+SHARED BLOCKS ON THIS ARTICLE PAGE
+
+LOCATION
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+Right sidebar / article navigation heading
+
+📖 IN THIS GUIDE
+
+📖 EN ESTA GUÍA
+
+Consultation box label
+
+NO-COST CONSULTATION
+
+CONSULTA SIN COSTO
+
+Consultation box heading
+
+Ready for Honest Guidance?
+
+¿Listo para recibir orientación clara?
+
+Consultation box text
+
+Schedule a review with a licensed professional — no pressure, no obligation.
+
+Programa una revisión con un profesional con licencia — sin presión y sin obligación.
+
+Consultation button
+
+Schedule a Review →
+
+PROGRAMAR UNA REVISIÓN →
+
+Trust item 1
+
+Licensed & Insured
+
+Con licencia y asegurados
+
+Trust item 2
+
+24hr Response
+
+Respuesta en 24 horas
+
+Trust item 3
+
+Your Privacy Matters
+
+Tu privacidad nos importa
+
+Related articles heading
+
+MORE ARTICLES & STRATEGIES
+
+MÁS ARTÍCULOS Y ESTRATEGIAS
+
+Related articles intro
+
+Educational resources and insights to help your family plan for the future.
+
+Recursos educativos e información para ayudar a tu familia a planificar para el futuro.
+
+Article buttons
+
+READ ARTICLE →
+
+LEER ARTÍCULO →
+
+ARTÍCULO 5 — ESTRATEGIA FINANCIERA
+
+OPEN THIS PAGE: Spanish page: blog_financial_strategy_es.html
+
+MATCH AGAINST: English master: blog_financial_strategy.html
+
+LOCATION: Top of article → Main article title
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+How Clear Financial Strategies Help Families Build Security
+
+Cómo las estrategias financieras claras ayudan a las familias a construir seguridad
+
+Cómo las estrategias financieras claras ayudan a las familias a construir seguridad
+
+LOCATION: Immediately below article title → Reviewed-by line
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Reviewed by Licensed Financial Professionals • Family First Legacy Team
+
+Revisado por profesionales financieros con licencia • Equipo de Family First Legacy
+
+LOCATION: Immediately below title → ⚡ Puntos clave / Key Takeaways box
+
+⚡ Puntos clave
+
+Estrategia antes que soluciones rápidas: La seguridad financiera a largo plazo se fortalece mediante hábitos estructurados y constantes, no mediante la especulación del mercado.
+
+Los cuatro pilares de la salud financiera: Flujo de efectivo, reservas de emergencia, protección frente a riesgos y acumulación de patrimonio.
+
+Orientación profesional: Trabajar con profesionales con licencia puede ayudar a comprender mejor las opciones de seguros y ahorro y a relacionarlas con tus metas reales.
+
+LOCATION: Article body → Section 1 heading
+
+1. Por qué la claridad financiera importa más que nunca
+
+En el entorno económico actual, las familias reciben opiniones financieras muy diferentes. Entre consejos en redes sociales y términos financieros complejos, es fácil sentirse abrumado o no saber qué pasos tomar.
+
+La claridad financiera no tiene que comenzar con fórmulas complicadas. Puede comenzar con una estrategia clara y personal que priorice la protección, ayude a manejar riesgos y tenga en cuenta los valores y metas de tu familia.
+
+LOCATION: Article body → Section 2 heading
+
+2. Los cuatro pilares de la salud financiera familiar
+
+Un plan financiero sólido puede apoyarse en cuatro pilares relacionados entre sí:
+
+1. Manejo del flujo de efectivo: Comprender los ingresos y gastos mensuales para crear espacio para ahorrar de manera constante.
+
+2. Reservas de emergencia: Mantener ahorros líquidos para gastos inesperados o cambios laborales. La cantidad adecuada depende de las circunstancias de cada familia.
+
+3. Protección frente a riesgos: Evaluar coberturas como seguro de vida, discapacidad y salud para ayudar a proteger los ingresos y las responsabilidades familiares.
+
+4. Acumulación de patrimonio: Explorar cuentas y estrategias apropiadas para metas de jubilación, educación y legado, teniendo en cuenta su tratamiento fiscal y sus condiciones.
+
+LOCATION: Article body → Section 3 heading
+
+3. Manejo del flujo de efectivo y creación de reservas de emergencia
+
+Antes de concentrarse en estrategias de crecimiento, es importante contar con una base financiera. Tener ahorros líquidos puede ayudar a evitar la necesidad de recurrir a deuda de alto interés o vender inversiones de largo plazo para cubrir una emergencia de corto plazo.
+
+LOCATION: Article body → Section 4 heading
+
+4. Preguntas frecuentes
+
+LOCATION: FAQ → Question
+
+¿Con qué frecuencia debería una familia revisar su estrategia financiera?
+
+Puede ser útil revisar la estrategia al menos una vez al año y también cuando ocurren cambios importantes en la vida, como matrimonio, nacimiento de un hijo, cambio de carrera o compra de una vivienda.
+
+LOCATION: Bottom of article body → Educational Disclosure
+
+Divulgación educativa: Este artículo se ofrece únicamente con fines educativos e informativos generales y no debe interpretarse como asesoramiento financiero, fiscal o legal personalizado. Los productos de seguros y financieros están sujetos a la aprobación de la compañía, disponibilidad del producto, evaluación de suscripción y requisitos estatales aplicables. La elegibilidad individual, las características de la póliza y los resultados pueden variar. Para recibir orientación sobre tu situación específica, consulta a un profesional financiero con licencia, un contador público certificado (CPA) o un abogado.
+
+IN THIS GUIDE — EASY ENGLISH → SPANISH MATCH
+
+LOCATION: Right sidebar → IN THIS GUIDE. Replace each English line with the Spanish line beside it.
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+1. Why Financial Clarity Matters
+
+1. Por qué importa la claridad financiera
+
+2. The 4 Pillars of Financial Health
+
+2. Los 4 pilares de la salud financiera
+
+3. Managing Cash Flow & Reserves
+
+3. Manejo del flujo de efectivo y las reservas
+
+4. Frequently Asked Questions
+
+4. Preguntas frecuentes
+
+SHARED BLOCKS ON THIS ARTICLE PAGE
+
+LOCATION
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+Right sidebar / article navigation heading
+
+📖 IN THIS GUIDE
+
+📖 EN ESTA GUÍA
+
+Consultation box label
+
+NO-COST CONSULTATION
+
+CONSULTA SIN COSTO
+
+Consultation box heading
+
+Ready for Honest Guidance?
+
+¿Listo para recibir orientación clara?
+
+Consultation box text
+
+Schedule a review with a licensed professional — no pressure, no obligation.
+
+Programa una revisión con un profesional con licencia — sin presión y sin obligación.
+
+Consultation button
+
+Schedule a Review →
+
+PROGRAMAR UNA REVISIÓN →
+
+Trust item 1
+
+Licensed & Insured
+
+Con licencia y asegurados
+
+Trust item 2
+
+24hr Response
+
+Respuesta en 24 horas
+
+Trust item 3
+
+Your Privacy Matters
+
+Tu privacidad nos importa
+
+Related articles heading
+
+MORE ARTICLES & STRATEGIES
+
+MÁS ARTÍCULOS Y ESTRATEGIAS
+
+Related articles intro
+
+Educational resources and insights to help your family plan for the future.
+
+Recursos educativos e información para ayudar a tu familia a planificar para el futuro.
+
+Article buttons
+
+READ ARTICLE →
+
+LEER ARTÍCULO →
+
+ARTÍCULO 6 — PLANIFICACIÓN PATRIMONIAL Y DE LEGADO
+
+OPEN THIS PAGE: Spanish page: blog_legacy_es.html
+
+MATCH AGAINST: English master: blog_legacy.html
+
+LOCATION: Top of article → Main article title
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Preserving Your Legacy: Planning for Future Generations
+
+Preservar tu legado: planificación para las futuras generaciones
+
+Preservar tu legado: planificación para las futuras generaciones
+
+LOCATION: Immediately below article title → Reviewed-by line
+
+CURRENT ENGLISH (FINAL)
+
+SPANISH — COPY & PASTE
+
+Reviewed by Licensed Financial Professionals • Family First Legacy Team
+
+Revisado por profesionales financieros con licencia • Equipo de Family First Legacy
+
+LOCATION: Immediately below title → ⚡ Puntos clave / Key Takeaways box
+
+⚡ Puntos clave
+
+El legado es más que patrimonio: Una planificación de legado puede incluir bienes financieros, valores personales e instrucciones claras para tus seres queridos.
+
+Reducir posibles demoras sucesorias: Las designaciones adecuadas de beneficiarios y una planificación patrimonial bien estructurada pueden ayudar a que ciertos bienes pasen de manera más directa y con mayor privacidad, según el tipo de activo y la situación.
+
+Transferencia de patrimonio generacional: El seguro de vida puede ayudar a transferir patrimonio directamente a los beneficiarios. Los beneficios por fallecimiento generalmente se reciben libres del impuesto sobre la renta, lo que puede ayudar a respaldar el legado financiero que deseas dejar a la próxima generación.
+
+LOCATION: Article body → Section 1 heading
+
+1. Definiendo lo que significa un legado más allá del dinero
+
+Todo por lo que has trabajado cuenta una historia. La planificación de legado no está reservada exclusivamente para las personas adineradas; es un proceso importante para cualquier familia que desea que sus bienes, hogar, negocio y valores personales pasen de manera ordenada a la próxima generación.
+
+Un plan de legado bien preparado puede ayudar a reducir la confusión familiar, disminuir el estrés legal y brindar mayor estabilidad financiera a tus herederos.
+
+LOCATION: Article body → Section 2 heading
+
+2. Elementos esenciales de la planificación patrimonial: testamentos, fideicomisos y beneficiarios
+
+Un plan patrimonial legal puede trabajar junto con tus productos financieros. Algunos componentes comunes incluyen:
+
+Testamentos: Pueden establecer cómo se distribuirán ciertos bienes y nombrar tutores para hijos menores, de acuerdo con la ley aplicable.
+
+Fideicomisos: Pueden establecer instrucciones para el manejo y la distribución de determinados bienes y, cuando están correctamente estructurados, pueden ofrecer mayor privacidad y eficiencia.
+
+Designaciones de beneficiarios: En productos como seguros de vida y anualidades, una designación válida de beneficiario generalmente determina quién recibe los beneficios del contrato y puede permitir que esos beneficios pasen fuera del proceso sucesorio.
+
+LOCATION: Article body → Section 3 heading
+
+3. Comprendiendo el impacto de las demoras del proceso sucesorio
+
+El proceso sucesorio es un procedimiento supervisado por un tribunal para validar un testamento y administrar o distribuir determinados bienes. El tiempo y los costos pueden variar según el estado, el patrimonio y las circunstancias. Cuando se designa correctamente a un beneficiario válido que está vivo, los beneficios del seguro de vida generalmente pasan directamente al beneficiario fuera del proceso sucesorio y, por lo general, se reciben libres del impuesto sobre la renta.
+
+LOCATION: Article body → Section 4 heading
+
+4. Uso del seguro de vida para la transferencia de patrimonio
+
+El seguro de vida puede ser una parte importante de una estrategia de legado al ayudar a proporcionar apoyo financiero directamente a los beneficiarios. Los beneficios por fallecimiento del seguro de vida generalmente se reciben libres del impuesto sobre la renta, aunque las circunstancias individuales pueden variar.
+
+LOCATION: Article body → Section 5 heading
+
+5. Preguntas frecuentes
+
+LOCATION: FAQ → Question
+
+¿Los beneficios del seguro de vida pasan por el proceso sucesorio?
+
+Cuando se ha designado correctamente a un beneficiario válido que está vivo, los beneficios por fallecimiento del seguro de vida generalmente pasan directamente al beneficiario nombrado fuera del proceso sucesorio. Pueden aplicarse circunstancias diferentes si el patrimonio es el beneficiario o si no sobrevive un beneficiario válido.
+
+LOCATION: FAQ → Question
+
+¿Los beneficios por fallecimiento del seguro de vida están sujetos a impuestos para los beneficiarios?
+
+Los beneficios por fallecimiento pagados a un beneficiario generalmente se reciben libres del impuesto sobre la renta. Pueden existir otras consideraciones fiscales dependiendo de las circunstancias individuales.
+
+LOCATION: Bottom of article body → Educational Disclosure
+
+Divulgación educativa: Este artículo se ofrece únicamente con fines educativos e informativos generales y no debe interpretarse como asesoramiento financiero, fiscal o legal personalizado. Los productos de seguros y financieros están sujetos a la aprobación de la compañía, disponibilidad del producto, evaluación de suscripción y requisitos estatales aplicables. La elegibilidad individual, las características de la póliza y los resultados pueden variar. Para recibir orientación sobre tu situación específica, consulta a un profesional financiero con licencia, un contador público certificado (CPA) o un abogado.
+
+IN THIS GUIDE — EASY ENGLISH → SPANISH MATCH
+
+LOCATION: Right sidebar → IN THIS GUIDE. Replace each English line with the Spanish line beside it.
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+1. Legacy Beyond Money
+
+1. El legado más allá del dinero
+
+2. Estate Planning Essentials
+
+2. Elementos esenciales de la planificación patrimonial
+
+3. Understanding Probate Delays
+
+3. Comprendiendo las demoras del proceso sucesorio
+
+4. Life Insurance for Wealth Transfer
+
+4. Seguro de vida para la transferencia de patrimonio
+
+5. Frequently Asked Questions
+
+5. Preguntas frecuentes
+
+SHARED BLOCKS ON THIS ARTICLE PAGE
+
+LOCATION
+
+CURRENT ENGLISH
+
+SPANISH — COPY & PASTE
+
+Right sidebar / article navigation heading
+
+📖 IN THIS GUIDE
+
+📖 EN ESTA GUÍA
+
+Consultation box label
+
+NO-COST CONSULTATION
+
+CONSULTA SIN COSTO
+
+Consultation box heading
+
+Ready for Honest Guidance?
+
+¿Listo para recibir orientación clara?
+
+Consultation box text
+
+Schedule a review with a licensed professional — no pressure, no obligation.
+
+Programa una revisión con un profesional con licencia — sin presión y sin obligación.
+
+Consultation button
+
+Schedule a Review →
+
+PROGRAMAR UNA REVISIÓN →
+
+Trust item 1
+
+Licensed & Insured
+
+Con licencia y asegurados
+
+Trust item 2
+
+24hr Response
+
+Respuesta en 24 horas
+
+Trust item 3
+
+Your Privacy Matters
+
+Tu privacidad nos importa
+
+Related articles heading
+
+MORE ARTICLES & STRATEGIES
+
+MÁS ARTÍCULOS Y ESTRATEGIAS
+
+Related articles intro
+
+Educational resources and insights to help your family plan for the future.
+
+Recursos educativos e información para ayudar a tu familia a planificar para el futuro.
+
+Article buttons
+
+READ ARTICLE →
+
+LEER ARTÍCULO →
+
+PART C — SHARED ARTICLE FOOTER / NEWSLETTER
+
+Apply this same Spanish shared text to all six Spanish Knowledgebase article pages.
+
+LOCATION
+
+SPANISH — COPY & PASTE
+
+Newsletter heading
+
+Mantente informado.
+
+Newsletter description
+
+Información mensual sobre protección familiar, planificación financiera y preparación para el futuro. Puedes cancelar tu suscripción en cualquier momento.
+
+Newsletter email placeholder
+
+Ingresa tu correo electrónico
+
+Newsletter button
+
+SUSCRIBIRME
+
+Footer brand statement
+
+Ayudamos a las familias a construir un futuro financiero más sólido, proteger a sus seres queridos y crear un legado significativo para las generaciones futuras.
+
+Footer agency label
+
+Agencia independiente que atiende a familias en todo el país
+
+Footer disclosure
+
+Family First Legacy es una agencia independiente de servicios financieros que atiende a familias en todo Estados Unidos. Los productos de seguros y financieros son ofrecidos por profesionales debidamente licenciados y están sujetos a la aprobación de la compañía, disponibilidad del producto, evaluación de suscripción y requisitos estatales aplicables. No brindamos asesoramiento fiscal ni legal; para esos asuntos, consulta a un profesional calificado. La elegibilidad individual, la disponibilidad de productos, las características de las pólizas y los resultados pueden variar.
+
+Footer Services label
+
+Servicios
+
+Footer Company label
+
+Compañía
+
+Footer About Us
+
+Sobre nosotros
+
+Footer How It Works
+
+Cómo funciona
+
+Footer Real Questions & Guidance
+
+Preguntas reales y orientación
+
+Footer Opportunity
+
+Oportunidad
+
+Footer Contact Us
+
+Contáctanos
+
+Footer Book a Consultation
+
+Reservar una consulta
+
+Footer Privacy Policy
+
+Política de privacidad
+
+Footer Terms
+
+Términos
+
+FINAL CHECK
+
+Each Spanish landing-page card is fully in Spanish.
+
+Each card opens the matching Spanish article.
+
+Living Benefits no longer opens the English article.
+
+Each article has Spanish Puntos clave, numbered sections, FAQs and educational disclosure.
+
+The sidebar, consultation box, trust items, related-article cards, newsletter and footer are in Spanish.
+
+No English article-body text remains on any Spanish Knowledgebase page.
