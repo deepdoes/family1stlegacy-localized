@@ -1874,7 +1874,7 @@ p { letter-spacing:.1px; }
 .cta-left { position:relative; }
 /* Content reveal on scroll-in */
 #cta-banner .cta-badge {
-  opacity:0; transform:translateY(24px);
+  opacity:1; transform:translateY(24px);
   transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
 }
 #cta-banner.cta-on .cta-badge {
@@ -1882,7 +1882,7 @@ p { letter-spacing:.1px; }
 }
 
 #cta-banner .cta-text h2 {
-  opacity:0; transform:translateY(30px);
+  opacity:1; transform:translateY(30px);
   transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1);
 }
 #cta-banner.cta-on .cta-text h2 {
@@ -1890,7 +1890,7 @@ p { letter-spacing:.1px; }
 }
 
 #cta-banner .cta-text p {
-  opacity:0; transform:translateY(20px);
+  opacity:1; transform:translateY(20px);
   transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
 }
 #cta-banner.cta-on .cta-text p {
@@ -1898,7 +1898,7 @@ p { letter-spacing:.1px; }
 }
 
 #cta-banner .cta-right {
-  opacity:0; transform:translateX(40px);
+  opacity:1; transform:translateX(40px);
   transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1);
 }
 #cta-banner.cta-on .cta-right {
@@ -9895,28 +9895,29 @@ body {
 <section class="static-hero" style="background-image:url('images/hero_education_diverse_1777335740128.png');">
 <div class="sh-content">
 <div class="sh-badge">Planificación de la educación</div>
-<h1 class="sh-title">Regálales el mundo, sin sacrificar tu jubilación.</h1>
-<p class="sh-sub">Los costos universitarios están aumentando más rápido que la inflación. La deuda por préstamos estudiantiles está paralizando a la próxima generación incluso antes de que comience. Quieres ayudar a tus hijos, pero ¿cómo?</p>
+<h1 class="sh-title">Planificación Educativa</h1>
+<p class="sh-sub">Dales un mundo de oportunidades sin sacrificar tu jubilación.<br/><br/>Puedes pedir prestado para la universidad, pero no para la jubilación.</p>
 <div class="sh-hook">Puedes pedir prestado para la universidad, pero no para la jubilación.</div>
 </div>
 <div class="sh-stats-container">
 <div class="container-full">
 <div class="numbers-grid">
 <div class="glass-card">
-<div class="glass-num">$100 mil</div>
-<div class="glass-label">Costo promedio de un título de 4 años</div>
+<div class="glass-num" style="font-size:15px; font-weight:700;">COSTOS EDUCATIVOS EN AUMENTO</div>
+<div class="glass-label">¿Estás preparado antes de que llegue la factura?</div>
 </div>
 <div class="glass-card">
-<div class="glass-num">5%</div>
-<div class="glass-label">Inflación anual de matrícula</div>
+<div class="glass-num" style="font-size:15px; font-weight:700;">PLANIFICACIÓN FLEXIBLE</div>
+<div class="glass-label">¿Qué pasa si cambia el camino de tu hijo?</div>
 </div>
 <div class="glass-card">
-<div class="glass-num">1.7T</div>
-<div class="glass-label">Deuda Estudiantil Nacional</div>
+<div class="glass-num" style="font-size:15px; font-weight:700;">DEUDA ESTUDIANTIL</div>
+<div class="glass-label">¿Podría la planificación reducir futuros préstamos?</div>
 </div>
 <div class="glass-card">
-<div class="glass-num">$0</div>
-<div class="glass-label">Impacto de la ayuda financiera con IUL</div>
+<div class="glass-num" style="font-size:15px; font-weight:700;">EQUILIBRIO CON LA JUBILACIÓN</div>
+<div class="glass-label">¿Puedes ayudarles sin perjudicar tu propio futuro?</div>
+</div>
 </div>
 </div>
 </div>
@@ -10015,9 +10016,9 @@ body {
 <h2 class="t-h1" data-delay="1" data-reveal="" style="margin-top:16px">Tu legado<br/>comienza con uno<br/>Conversación.</h2>
 <p data-delay="2" data-reveal="">Ya sea que esté buscando proteger a su familia, planificar su jubilación, explorar una carrera con nosotros o simplemente desea respuestas, estamos aquí. Sin presión, sólo orientación honesta.</p>
 <div class="contact-trust" data-delay="2" data-reveal="">
-<span class="ct-chip"><svg viewbox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Licenciado y asegurado</span>
-<span class="ct-chip"><svg viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>Respuesta las 24 horas</span>
-<span class="ct-chip"><svg viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>Privacidad Respetada</span>
+<span class="ct-chip"><svg viewbox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>Con licencia y asegurados</span>
+<span class="ct-chip"><svg viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>Respuesta en 24 horas</span>
+<span class="ct-chip"><svg viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>Tu privacidad nos importa</span>
 </div>
 <div class="contact-info-list" data-delay="3" data-reveal="">
 <a class="ci-row" href="mailto:info@family1stlegacy.com">
@@ -10110,7 +10111,7 @@ body {
 <button class="form-submit" type="submit">Enviar mi solicitud<svg viewbox="0 0 24 24"><line x1="22" x2="11" y1="2" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
 </button>
 <div class="cf-note">
-<svg viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>Su información se mantiene estrictamente confidencial. Nunca compartimos tus datos.</div>
+<svg viewbox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>Tu información se maneja con cuidado y se mantiene privada. No vendemos tu información personal.</div>
 </form>
 </div>
 </div>
@@ -10118,7 +10119,7 @@ body {
 </div>
 </section>
 <!-- CTA BANNER ──────────────────────────────────────── -->
-<section id="cta-banner">
+<section id="cta-banner" class="cta-on">
 <div class="cta-scanline"></div>
 <div class="cta-orb cta-orb-1"></div>
 <div class="cta-orb cta-orb-2"></div>
@@ -10126,19 +10127,19 @@ body {
 <div class="container">
 <div class="cta-inner">
 <div class="cta-left">
-<div class="cta-badge" data-reveal="">
+<div class="cta-badge">
 <span class="cta-badge-dot"></span>
-<span>Tomando nuevos clientes</span>
+<span>Aceptando nuevos clientes</span>
 </div>
 <div class="cta-text">
-<h2 data-delay="1" data-reveal="">Listo para asegurar su<br/>familia<em>¿Futuro?</em></h2>
-<p data-delay="2" data-reveal="">Programe una consulta gratuita hoy: sin presiones ni obligaciones, solo orientación honesta de profesionales autorizados que realmente se preocupan.</p>
+<h2>¿Listo para proteger el futuro<br>de tu familia?</h2>
+<p>Programa una consulta sin costo hoy mismo: sin presiones ni obligaciones, solo orientación honesta de profesionales con licencia que realmente se preocupan.</p>
 </div>
 </div>
-<div class="cta-right" data-delay="2" data-reveal="right">
+<div class="cta-right">
 <div class="cta-actions">
 <a class="btn-white" href="#contact">
-<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Comience gratis</a>
+<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>Comenzar gratis</a>
 <a class="btn-outline-white" href="tel:+14696081595">
 <svg viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>Llama al (469) 608-1595</a>
 </div>
@@ -10148,12 +10149,12 @@ body {
 <div class="cts-lbl">Respuesta</div>
 </div>
 <div class="cts-item">
-<div class="cts-num">100%</div>
-<div class="cts-lbl">Gratis</div>
+<div class="cts-num">Sin costo</div>
+<div class="cts-lbl">Consulta</div>
 </div>
 <div class="cts-item">
-<div class="cts-num">A+</div>
-<div class="cts-lbl">Clasificado</div>
+<div class="cts-num">100%</div>
+<div class="cts-lbl">Profesionales con licencia</div>
 </div>
 </div>
 </div>
@@ -10167,13 +10168,13 @@ body {
 <div class="container">
 <div class="fn-inner">
 <div>
-<div class="fn-heading">Manténgase informado.</div>
-<div class="fn-sub">Información mensual sobre cómo proteger y hacer crecer el patrimonio de su familia. Nada de spam, nunca.</div>
+<div class="fn-heading">Mantente informado.</div>
+<div class="fn-sub">Información mensual sobre protección familiar, planificación financiera y preparación para el futuro. Puedes cancelar tu suscripción en cualquier momento.</div>
 </div>
 <form class="fn-form" onsubmit="submitSubscribe(event)">
-<input name="Email" placeholder="Ingrese su correo electrónico" required="" type="email"/>
+<input name="Email" placeholder="Ingresa tu correo electrónico" required="" type="email"/>
 <input name="FormType" type="hidden" value="Newsletter Subscription"/>
-<button type="submit">Suscribir<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+<button type="submit">SUSCRIBIRME<svg viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
 </button>
 </form>
 </div>
@@ -10701,7 +10702,7 @@ function submitSubscribe(e) {
         ctaIO.unobserve(e.target);
       }
     });
-  }, { threshold: 0.25 });
+  }, { threshold: 0.01 });
   ctaIO.observe(cta);
 })();
 
