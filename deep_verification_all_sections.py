@@ -118,6 +118,25 @@ def verify_all():
     check(7, "7.5 Legacy Transfer", "Un verdadero legado no se trata solo de lo que dejas atrás. También se trata de las oportunidades" in fin)
     check(7, "FAQ 1 (Rule of 72)", "Es una forma sencilla de estimar cuánto tiempo puede tardar el dinero en duplicarse. Divide 72 entre una tasa anual" in fin)
 
+    # SECTION 8: BUSINESS STRATEGIES
+    bs = pages["business_strategies_es.html"]
+    check(8, "Hero H1 Spanish Master", "Si mañana no pudieras estar presente, ¿tu negocio seguiría adelante?" in bs)
+    check(8, "8.1 Buy-Sell Narrative", "Sin un plan claro, la salida, fallecimiento o incapacidad de un propietario puede crear confusión" in bs)
+    check(8, "8.2 Disclaimer", "Aviso legal y fiscal para negocios: Las estrategias empresariales pueden implicar consideraciones legales y fiscales." in bs)
+    check(8, "Card 02 Title", "¿Qué sucede con el negocio si cambia la propiedad?" in bs)
+    check(8, "Card 03 Title", "Tu familia merece claridad. ¿Claridad o confusión?" in bs)
+    check(8, "Card 04 Title", "Protegiendo el valor. Estabilidad a largo plazo." in bs)
+
+    # SECTION 9: OPPORTUNITY
+    opp = pages["opportunity_es.html"]
+    check(9, "9.1 Transparent Opportunity Statement", "Esta es una oportunidad de negocio basada en comisiones dentro de los servicios financieros" in opp)
+
+    # SECTION 10 & 11: PRIVACY & TERMS
+    priv = pages["privacy_es.html"]
+    terms = pages["terms_es.html"]
+    check(10, "Privacy Policy Date August 2026", "agosto de 2026" in priv and "enero de 2026" not in priv)
+    check(11, "Terms Date August 2026", "agosto de 2026" in terms and "enero de 2026" not in terms)
+
     # SECTION 12: KNOWLEDGEBASE LANDING & ARTICLES
     check(12, "KB Card 1 Title", "¿Tu familia depende solo de los beneficios del trabajo?" in idx)
     check(12, "KB Card 2 Title", "¿Podrían los impuestos reducir los ingresos de jubilación con los que cuentas?" in idx)
@@ -146,6 +165,8 @@ def verify_all():
         check(12, f"Article {f} Body 100% Spanish (0 English H2s)", not has_eng_h2)
         check(12, f"Article {f} Puntos Clave Present", "⚡ Puntos clave" in art_content)
         check(12, f"Article {f} Spanish Sidebar TOC", "📖 EN ESTA GUÍA" in art_content)
+        check(12, f"Article {f} Spanish Sidebar Widget 3", "Por qué Family First Legacy" in art_content and "Why Family First Legacy" not in art_content)
+        check(12, f"Article {f} Spanish More Articles Section", "MORE ARTICLES & STRATEGIES" not in art_content)
 
     all_passed = all(r[2] == "PASS ✓" for r in results)
     print("\n========================================================")
