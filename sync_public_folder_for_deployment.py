@@ -41,6 +41,32 @@ def sync():
     if os.path.exists(src_img) and not os.path.exists(dst_img):
         shutil.copytree(src_img, dst_img)
 
+    # 4. Copy all backup .html files and images into public/backup/
+    backup_src_dir = os.path.join(BASE, "backup")
+    public_backup_dir = os.path.join(PUBLIC_DIR, "backup")
+    if os.path.exists(backup_src_dir):
+        os.makedirs(public_backup_dir, exist_ok=True)
+        for fname in os.listdir(backup_src_dir):
+            s = os.path.join(backup_src_dir, fname)
+            d = os.path.join(public_backup_dir, fname)
+            if os.path.isfile(s) and fname.endswith(".html"):
+                shutil.copy2(s, d)
+            elif os.path.isdir(s) and fname == "images" and not os.path.exists(d):
+                shutil.copytree(s, d)
+        print(f"  ✓ Synced backup HTML files into public/backup/")
+
+    # 5. Copy all old .html files into public/old/
+    old_src_dir = os.path.join(BASE, "old")
+    public_old_dir = os.path.join(PUBLIC_DIR, "old")
+    if os.path.exists(old_src_dir):
+        os.makedirs(public_old_dir, exist_ok=True)
+        for fname in os.listdir(old_src_dir):
+            s = os.path.join(old_src_dir, fname)
+            d = os.path.join(public_old_dir, fname)
+            if os.path.isfile(s) and fname.endswith(".html"):
+                shutil.copy2(s, d)
+        print(f"  ✓ Synced old HTML files into public/old/")
+
 if __name__ == "__main__":
     print("=== Syncing public/ and public/v1/ for Vercel Deployment ===")
     sync()
