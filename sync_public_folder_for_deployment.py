@@ -67,7 +67,16 @@ def sync():
                 shutil.copy2(s, d)
         print(f"  ✓ Synced old HTML files into public/old/")
 
+    # 6. Copy sitemap.xml and robots.txt into public/
+    for root_file in ["sitemap.xml", "robots.txt"]:
+        src_f = os.path.join(BASE, root_file)
+        dst_f = os.path.join(PUBLIC_DIR, root_file)
+        if os.path.exists(src_f):
+            shutil.copy2(src_f, dst_f)
+            print(f"  ✓ Synced {root_file} into public/")
+
 if __name__ == "__main__":
     print("=== Syncing public/ and public/v1/ for Vercel Deployment ===")
     sync()
     print("=== Done! ===")
+
