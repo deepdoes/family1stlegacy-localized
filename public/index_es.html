@@ -624,14 +624,80 @@ p { letter-spacing:.1px; }
 .sc-line { width:18px; height:1px; background:rgba(255,255,255,.4); }
 .sc-total { font-size:13px; color:rgba(255,255,255,.5); font-weight:500; }
 
+/* ── Hero stats mobile dedicated strip (Option 1) ── */
+.hero-stats-mobile {
+  display:none;
+}
+
 @media(max-width:768px) {
-  .slide-content { padding:0 28px; padding-top:68px; }
-  .hero-stats-bar { left:28px; gap:28px; bottom:70px; }
+  .slide-content { padding:0 24px; padding-top:76px; padding-bottom:85px; }
+  .hero-stats-bar { display:none !important; }
+  .hero-stats-mobile {
+    display:block !important;
+    background:linear-gradient(135deg, #1A0F26 0%, #2A133D 100%);
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    padding:16px 0;
+    position:relative;
+    z-index:10;
+  }
+  .hsm-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr 1.15fr;
+    gap:12px;
+    align-items:stretch;
+  }
+  .hsm-item {
+    border-left:2px solid var(--amber);
+    padding-left:10px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .hsm-num {
+    font-family:var(--font-head);
+    font-size:15px;
+    font-weight:800;
+    color:#fff;
+    line-height:1.15;
+    letter-spacing:-0.2px;
+  }
+  .hsm-gold {
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:0.8px;
+    color:#fff;
+  }
+  .hsm-gold-sub {
+    font-weight:700;
+    color:var(--amber-lt) !important;
+  }
+  .hsm-label {
+    font-size:9.5px;
+    font-weight:400;
+    letter-spacing:0.2px;
+    color:rgba(255,255,255,.65);
+    margin-top:3px;
+    line-height:1.25;
+  }
+  .slide-actions {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    width:100%;
+  }
+  .slide-actions .btn {
+    width:100%;
+    justify-content:center;
+    padding:13px 20px;
+  }
   .slide-counter { display:none; }
   .slide-arrow { width:40px; height:40px; }
   .slide-arrow.prev { left:12px; }
   .slide-arrow.next { right:12px; }
-  .slide-title { letter-spacing:-1px; }
+  .slide-title { font-size:clamp(30px, 7vw, 42px); line-height:1.05; letter-spacing:-1px; margin-bottom:16px; }
+  .slide-sub { font-size:14px; line-height:1.55; margin-bottom:24px; color:rgba(255,255,255,.82); }
+  .slide-dots { bottom:28px; }
 }
 
 /* ──────────────────────────────────────────────────────
@@ -9875,6 +9941,27 @@ body {
 <div class="sc-total">06</div>
 </div>
 </section>
+
+<!-- HERO TRUST STRIP (Mobile Dedicated Bar) ───────────── -->
+<div class="hero-stats-mobile">
+  <div class="container">
+    <div class="hsm-grid">
+      <div class="hsm-item">
+        <div class="hsm-num hsm-gold">TU FAMILIA.</div>
+        <div class="hsm-label hsm-gold-sub">NUESTRO ENFOQUE.</div>
+      </div>
+      <div class="hsm-item">
+        <div class="hsm-num">100%</div>
+        <div class="hsm-label">Profesionales con licencia</div>
+      </div>
+      <div class="hsm-item">
+        <div class="hsm-num">DFW y EE. UU.</div>
+        <div class="hsm-label">Sirviendo a familias en todo el país</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- MARQUEE ─────────────────────────────────────────── -->
 <div aria-hidden="true" id="marquee">
 <div class="marquee-track">
