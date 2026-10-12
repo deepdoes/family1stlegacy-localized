@@ -122,20 +122,27 @@ def verify_all():
     bs = pages["business_strategies_es.html"]
     check(8, "Hero H1 Spanish Master", "Si mañana no pudieras estar presente, ¿tu negocio seguiría adelante?" in bs)
     check(8, "8.1 Buy-Sell Narrative", "Sin un plan claro, la salida, fallecimiento o incapacidad de un propietario puede crear confusión" in bs)
-    check(8, "8.2 Disclaimer", "Aviso legal y fiscal para negocios: Las estrategias empresariales pueden implicar consideraciones legales y fiscales." in bs)
+    check(8, "8.2 Disclaimer", "Aviso legal y fiscal para negocios:" in bs and "Las estrategias empresariales pueden implicar consideraciones legales y fiscales." in bs)
     check(8, "Card 02 Title", "¿Qué sucede con el negocio si cambia la propiedad?" in bs)
     check(8, "Card 03 Title", "Tu familia merece claridad. ¿Claridad o confusión?" in bs)
     check(8, "Card 04 Title", "Protegiendo el valor. Estabilidad a largo plazo." in bs)
+    check(8, "8.3 Shared Bottom Sections", "PROTEGE TU NEGOCIO" in bs and 'id="contact"' in bs and "Aceptando nuevos clientes" in bs and "Mantente informado." in bs)
 
     # SECTION 9: OPPORTUNITY
     opp = pages["opportunity_es.html"]
     check(9, "9.1 Transparent Opportunity Statement", "Esta es una oportunidad de negocio basada en comisiones dentro de los servicios financieros" in opp)
+    check(9, "9.2 Education First Fit Item", "Crees en educar primero" in opp and "La educación es la base de toda nuestra agencia" in opp)
+    check(9, "9.3 Support as You Build", "Apoyo mientras construyes" in opp and "Aprende mientras construyes" in opp and "Mentoría durante el camino" in opp and "Trabajo con propósito" in opp and "Crecimiento y liderazgo" in opp)
+    check(9, "9.4 Shared Bottom & Lang Switch", 'id="contact"' in opp and "Aceptando nuevos clientes" in opp and "opportunity.html" in opp and "opportunity_es.html" in opp)
+    check(9, "9.5 Hero Background Image", "images/slide6.jpg" in opp and "sh-stats-container" in opp)
 
     # SECTION 10 & 11: PRIVACY & TERMS
     priv = pages["privacy_es.html"]
     terms = pages["terms_es.html"]
     check(10, "Privacy Policy Date August 2026", "agosto de 2026" in priv and "enero de 2026" not in priv)
+    check(10, "10.2 Privacy Eyebrow & Contact Route", "ASUNTOS LEGALES Y CUMPLIMIENTO" in priv and 'href="index_es.html#contact"' in priv and 'href="#contact"' not in priv)
     check(11, "Terms Date August 2026", "agosto de 2026" in terms and "enero de 2026" not in terms)
+    check(11, "11.2 Terms Eyebrow & Contact Route", "ASUNTOS LEGALES Y CUMPLIMIENTO" in terms and 'href="index_es.html#contact"' in terms and 'href="#contact"' not in terms)
 
     # SECTION 12: KNOWLEDGEBASE LANDING & ARTICLES
     check(12, "KB Card 1 Title", "¿Tu familia depende solo de los beneficios del trabajo?" in idx)
