@@ -23,141 +23,2524 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root {
-  --bg: #F4F2F6; --white: #FFFFFF; --dark: #0A0A0F;
-  --green: #4A2D7A; --green-mid: #6B4A9C; --green-lite: #EDE6F5;
-  --amber: #8B7DA8; --amber-lt: #B5A8C9; --sand: #E6E2EC; --muted: #5C5566; --line: #D6D0DC;
-  --font-head: 'Poppins', sans-serif; --font-body: 'Plus Jakarta Sans', sans-serif;
+  /* ─── Family First Legacy — Purple / Gray / Black palette ───
+     (Variable names retained as semantic tokens for brand-primary, accent, etc.) */
+  --bg:       #F4F2F6;   /* very pale lavender-gray neutral */
+  --white:    #FFFFFF;
+  --dark:     #0A0A0F;   /* near-black with cool undertone */
+
+  /* "Green" tokens repurposed as PRIMARY purple */
+  --green:    #4A2D7A;   /* deep royal purple */
+  --green-mid:#6B4A9C;   /* mid plum-purple */
+  --green-lite:#EDE6F5;  /* pale lavender for tints/badges */
+
+  /* "Amber" tokens repurposed as ACCENT silver-violet glow */
+  --amber:    #8B7DA8;   /* muted dusty violet/gray accent */
+  --amber-lt: #B5A8C9;   /* lighter lavender-silver */
+
+  --sand:     #E6E2EC;   /* soft warm gray-lavender */
+  --muted:    #5C5566;   /* mid-gray with violet undertone */
+  --line:     #D6D0DC;   /* subtle gray-violet divider */
+
+  --font-head:'Poppins', sans-serif;
+  --font-body:'Plus Jakarta Sans', sans-serif;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: var(--font-body); background: var(--bg); color: var(--dark); overflow-x: hidden; font-weight: 300; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--dark);
+  overflow-x: hidden;
+  font-weight: 300;
+}
 
-.t-h1 { font-family: var(--font-head); font-size: clamp(38px, 5vw, 64px); font-weight: 800; line-height: 1.05; letter-spacing: -2px; }
-.t-h2 { font-family: var(--font-head); font-size: clamp(28px, 3.5vw, 44px); font-weight: 700; line-height: 1.15; letter-spacing: -1px; }
-.t-h3 { font-family: var(--font-head); font-size: clamp(20px, 2.2vw, 28px); font-weight: 700; line-height: 1.25; }
-.t-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
-.t-body { font-size: 16px; line-height: 1.75; font-weight: 300; color: var(--muted); }
+/* grain overlay */
+body::after {
+  content:''; position:fixed; inset:0; pointer-events:none; z-index:9000;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.022;
+}
 
-/* Header / Nav */
-#nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(244,242,246,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
-.nav-bar { display: flex; align-items: center; justify-content: space-between; height: 80px; max-width: 1280px; margin: 0 auto; }
-.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
-.nav-links a { text-decoration: none; color: var(--dark); font-weight: 500; font-size: 14px; transition: color 0.2s; }
-.nav-links a:hover { color: var(--green); }
-.btn-cta { background: var(--green); color: #fff !important; padding: 10px 20px; border-radius: 20px; font-weight: 600 !important; }
+/* ─── TYPE SCALE — Editorial, refined rhythm ─── */
+.t-hero   {
+  font-family:var(--font-head);
+  font-size:clamp(56px, 7.5vw, 116px);
+  font-weight:800; line-height:.92;
+  letter-spacing:-3px;
+}
+.t-h1     {
+  font-family:var(--font-head);
+  font-size:clamp(42px, 5.2vw, 76px);
+  font-weight:800; line-height:1;
+  letter-spacing:-2px;
+}
+.t-h2     {
+  font-family:var(--font-head);
+  font-size:clamp(32px, 4vw, 58px);
+  font-weight:700; line-height:1.05;
+  letter-spacing:-1.4px;
+}
+.t-h3     {
+  font-family:var(--font-head);
+  font-size:clamp(22px, 2.4vw, 32px);
+  font-weight:700; line-height:1.15;
+  letter-spacing:-.6px;
+}
+.t-label  {
+  font-family:var(--font-body);
+  font-size:12px; font-weight:700;
+  letter-spacing:3.2px;
+  text-transform:uppercase;
+}
+.t-body   {
+  font-size:17px; line-height:1.75;
+  font-weight:300; letter-spacing:.1px;
+  color:var(--muted);
+}
+.t-lead   {
+  font-size:19px; line-height:1.7;
+  font-weight:400; letter-spacing:.1px;
+  color:var(--muted);
+}
+.t-small  { font-size:14px; line-height:1.7; font-weight:400; letter-spacing:.1px; }
 
-/* Hero */
-.page-hero { position: relative; padding: 160px 0 100px; background: linear-gradient(135deg, #251442 0%, #0A0A0F 100%); color: #fff; overflow: hidden; }
-.hero-content { position: relative; max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+/* Global heading / paragraph rhythm */
+h1, h2, h3, h4 { font-family:var(--font-head); color:var(--dark); }
+p { letter-spacing:.1px; }
 
-/* Grid / Tiles */
-.tiles-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-top: -40px; position: relative; z-index: 10; max-width: 1280px; margin-left: auto; margin-right: auto; padding: 0 32px; }
-.tile-card { background: #fff; border: 1px solid var(--line); border-radius: 20px; padding: 32px; box-shadow: 0 12px 32px rgba(0,0,0,0.05); }
+/* ─── UTILS — Unified container system ─── */
+.container,
+.container-full {
+  max-width:1400px; margin:0 auto; padding:0 56px;
+}
+.green-dot { display:inline-block; width:8px; height:8px; background:var(--amber); border-radius:50%; margin-right:10px; }
 
-/* FAQ Accordion */
-.faq-item { background: #fff; border: 1px solid var(--line); border-radius: 16px; margin-bottom: 16px; overflow: hidden; }
-.faq-question { padding: 24px; font-weight: 700; font-size: 18px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
-.faq-answer { padding: 0 24px 24px; font-size: 15px; line-height: 1.7; color: var(--muted); display: none; }
-.faq-item.open .faq-answer { display: block; }
-.faq-item.open .faq-icon { transform: rotate(180deg); }
+/* ─── REVEAL ─── */
+[data-reveal] { opacity:0; transform:translateY(28px); transition: opacity .65s ease, transform .65s ease; }
+[data-reveal="left"] { transform:translateX(-28px); }
+[data-reveal="right"] { transform:translateX(28px); }
+[data-reveal].on { opacity:1; transform:none; }
+[data-delay="1"] { transition-delay:.1s; }
+[data-delay="2"] { transition-delay:.2s; }
+[data-delay="3"] { transition-delay:.3s; }
+[data-delay="4"] { transition-delay:.4s; }
+[data-delay="5"] { transition-delay:.5s; }
 
-/* ─── Language Switcher ─── */
-.lang-switcher {
+/* ──────────────────────────────────────────────────────
+   NAV — Adaptive pill system
+────────────────────────────────────────────────────── */
+#nav {
+  position:fixed; top:0; left:0; right:0; z-index:500;
+  padding:0;
+  /* Top vignette makes logo/links legible over any hero image */
+  background: linear-gradient(to bottom,
+    rgba(0,0,0,.52) 0%,
+    rgba(0,0,0,.18) 60%,
+    transparent 100%
+  );
+  transition: background .45s ease, box-shadow .45s ease;
+}
+#nav.stuck {
+  background: rgba(247,244,239,.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(0,0,0,.06), 0 4px 24px rgba(0,0,0,.06);
+}
+
+/* Logo */
+.nav-logo { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.logo-mark {
+  width:38px; height:38px; background:var(--green); border-radius:8px;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  box-shadow: 0 3px 10px rgba(74,45,122,.35);
+}
+.logo-mark svg { width:20px; height:20px; fill:none; stroke:#fff; stroke-width:1.8; }
+.logo-name {
+  font-family:var(--font-head); font-size:15px; font-weight:700;
+  line-height:1.1; transition: color .3s;
+}
+.logo-name span {
+  display:block; font-family:var(--font-body); font-size:9px; font-weight:500;
+  letter-spacing:3px; text-transform:uppercase; margin-top:1px; transition: color .3s;
+}
+/* Dark hero state */
+#nav:not(.stuck) .logo-name        { color: #fff; }
+#nav:not(.stuck) .logo-name span   { color: rgba(255,255,255,.55); }
+/* Light scroll state */
+#nav.stuck .logo-name              { color: var(--dark); }
+#nav.stuck .logo-name span         { color: var(--muted); }
+
+/* Smart Logo Filtering for Image Logos */
+#nav:not(.stuck) .nav-logo img { filter: brightness(0) invert(1); }
+#nav.stuck .nav-logo img { filter: none; }
+.f-brand .nav-logo img { filter: brightness(0) invert(1); }
+
+/* Pill links */
+.nav-links { display:flex; align-items:center; gap:2px; list-style:none; position:relative; }
+.nav-pill {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  background: var(--green);
+  border-radius: 100px;
+  z-index: 0;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), width 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease, background 0.3s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+/* When unstuck, pill is translucent white */
+#nav:not(.stuck) .nav-pill {
+  background: rgba(255,255,255,.2);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.2);
+}
+/* When stuck, pill is solid purple */
+#nav.stuck .nav-pill {
+  background: var(--green);
+}
+
+.nav-links a {
+  font-size:13px; font-weight:500; text-decoration:none;
+  padding: 8px 17px; border-radius:100px;
+  display:block; white-space:nowrap;
+  transition: color .22s ease;
   position: relative;
+  z-index: 1;
+}
+
+/* ── On dark hero (not scrolled) ── */
+#nav:not(.stuck) .nav-links a {
+  color: rgba(255,255,255,.78);
+}
+#nav:not(.stuck) .nav-links a.pill-active,
+#nav:not(.stuck) .nav-links a.nav-active {
+  color: #fff;
+  background: transparent;
+}
+
+/* ── On light background (scrolled) ── */
+#nav.stuck .nav-links a {
+  color: rgba(17,18,16,.6);
+}
+#nav.stuck .nav-links a.pill-active {
+  color: #fff;
+  background: transparent;
+  font-weight: 600;
+}
+#nav.stuck .nav-links a.nav-active:not(.pill-active) {
+  color: var(--green);
+  background: transparent;
+  font-weight: 600;
+}
+
+/* CTA pill */
+.nav-cta {
+  background: var(--green) !important;
+  color: #fff !important;
+  padding: 9px 22px !important;
+  border-radius: 100px !important;
+  font-weight: 600 !important; font-size:13px !important;
+  box-shadow: 0 3px 12px rgba(74,45,122,.35) !important;
+  transition: all .22s ease !important;
+}
+.nav-cta:hover {
+  background: var(--green-mid) !important;
+  box-shadow: 0 6px 20px rgba(74,45,122,.4) !important;
+  transform: translateY(-1px) !important;
+}
+/* CTA always opaque regardless of scroll state */
+#nav:not(.stuck) .nav-links a.nav-cta,
+#nav.stuck .nav-links a.nav-cta {
+  color: #fff !important;
+  background: var(--green) !important;
+}
+#nav:not(.stuck) .nav-links a.nav-cta:hover,
+#nav.stuck .nav-links a.nav-cta:hover {
+  background: var(--green-mid) !important;
+}
+
+/* Mobile toggle */
+.nav-toggle { display:none; cursor:pointer; background:none; border:none; padding:4px; }
+.nav-toggle span { display:block; width:22px; height:1.5px; margin:5px 0; transition: background .3s; }
+#nav:not(.stuck) .nav-toggle span { background: rgba(255,255,255,.85); }
+#nav.stuck .nav-toggle span       { background: var(--dark); }
+
+.nav-bar {
+  display:flex; align-items:center; justify-content:space-between;
+  min-height:100px;
+}
+
+/* ── Animated Language Selector ── */
+.nav-lang {
+  display:flex !important; align-items:center; gap:6px;
+  padding:4px 8px !important; margin:0 4px;
+  text-decoration:none;
+}
+.nav-lang svg { width:18px; height:18px; stroke:currentColor; stroke-width:1.8; fill:none; }
+.lang-text-cycle {
+  position:relative; height:18px; overflow:hidden;
+  font-family:var(--font-head); font-size:13px; font-weight:600;
+  min-width: 110px; text-align:left;
+}
+.lt-item {
+  position:absolute; top:0; left:0; width:100%; height:100%;
+  display:flex; align-items:center;
+  opacity:0; transform:translateY(100%);
+  animation: langCycle 15s infinite cubic-bezier(.4,0,.2,1);
+}
+.lt-item:nth-child(1) { animation-delay:0s; }
+.lt-item:nth-child(2) { animation-delay:3s; }
+.lt-item:nth-child(3) { animation-delay:6s; }
+.lt-item:nth-child(4) { animation-delay:9s; }
+.lt-item:nth-child(5) { animation-delay:12s; }
+
+@keyframes langCycle {
+  0%   { opacity:0; transform:translateY(100%); }
+  4%   { opacity:1; transform:translateY(0); }
+  16%  { opacity:1; transform:translateY(0); }
+  20%  { opacity:0; transform:translateY(-100%); }
+  100% { opacity:0; transform:translateY(-100%); }
+}
+
+/* ──────────────────────────────────────────────────────
+   HERO SLIDESHOW
+────────────────────────────────────────────────────── */
+.btn { display:inline-flex; align-items:center; gap:8px; text-decoration:none; border:none; cursor:pointer; font-family:var(--font-body); font-weight:600; font-size:14px; border-radius:4px; transition: all .25s; padding:14px 28px; }
+.btn-green { background:var(--green); color:#fff; }
+.btn-green:hover { background:var(--green-mid); transform:translateY(-1px); box-shadow:0 8px 24px rgba(74,45,122,.25); }
+.btn-ghost { background:transparent; color:var(--dark); border:1.5px solid var(--line); }
+.btn-ghost:hover { border-color:var(--dark); background:rgba(0,0,0,.04); }
+/* White ghost variant for dark/image backgrounds */
+.slide-actions .btn-ghost,
+.opp-content .btn-ghost {
+  color:#fff; border-color:rgba(255,255,255,.45);
+}
+.slide-actions .btn-ghost:hover,
+.opp-content .btn-ghost:hover { border-color:#fff; background:rgba(255,255,255,.1); }
+.btn svg { width:16px; height:16px; }
+
+#hero {
+  position:relative;
+  width:100%; height:100svh; min-height:600px;
+  overflow:hidden;
+}
+
+/* ── Slides ── */
+.slide {
+  position:absolute; inset:0;
+  opacity:0;
+  pointer-events:none;
+  z-index:1;
+  /* No default transition — we control each state explicitly */
+}
+
+/* Outgoing: stays fully solid as the "floor" — NO opacity transition */
+.slide.prev {
+  opacity:1;
+  z-index:2;
+  pointer-events:none;
+  transition: none;
+}
+
+/* Incoming: animates in ON TOP of the solid prev — no white gap possible */
+.slide.active {
+  opacity:1;
+  z-index:3;
+  pointer-events:all;
+  animation: slideReveal 1.1s cubic-bezier(.4,0,.2,1) forwards;
+}
+
+@keyframes slideReveal {
+  0%   { opacity:0; clip-path:inset(0 100% 0 0); }
+  15%  { opacity:1; }
+  100% { opacity:1; clip-path:inset(0 0% 0 0); }
+}
+
+/* Clean up prev after animation completes */
+.slide.prev-done {
+  opacity:0;
+  z-index:1;
+  transition: opacity .01s;
+}
+
+/* ── Background image with Ken Burns ── */
+.slide-bg {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  transform-origin:center;
+  will-change:transform;
+}
+.slide.active .slide-bg { animation: kenburns var(--kb-dur, 7s) ease forwards; }
+
+@keyframes kenburns     { from{transform:scale(1)              } to{transform:scale(1.08)             } }
+@keyframes kbZoomOut    { from{transform:scale(1.08)            } to{transform:scale(1)                } }
+@keyframes kbPanRight   { from{transform:scale(1.06) translateX(-1.5%)} to{transform:scale(1.1) translateX(1.5%)} }
+@keyframes kbPanLeft    { from{transform:scale(1.06) translateX(1.5%)}  to{transform:scale(1.1) translateX(-1.5%)} }
+@keyframes kbDiag       { from{transform:scale(1) translateY(0)}   to{transform:scale(1.09) translateY(-1.5%)} }
+
+/* ── Dark overlay ── */
+.slide-overlay {
+  position:absolute; inset:0;
+  background: linear-gradient(
+    105deg,
+    rgba(10,16,12,.78) 0%,
+    rgba(10,16,12,.55) 45%,
+    rgba(10,16,12,.25) 100%
+  );
+}
+/* Per-slide overlay variants */
+.slide:nth-child(2) .slide-overlay {
+  background: linear-gradient(to right, rgba(10,16,12,.82) 0%, rgba(10,16,12,.45) 55%, rgba(10,16,12,.15) 100%);
+}
+.slide:nth-child(4) .slide-overlay {
+  background: linear-gradient(to top, rgba(10,16,12,.88) 0%, rgba(10,16,12,.5) 50%, rgba(10,16,12,.2) 100%);
+}
+.slide:nth-child(6) .slide-overlay {
+  background: linear-gradient(135deg, rgba(74,45,122,.85) 0%, rgba(10,16,12,.5) 60%, rgba(10,16,12,.2) 100%);
+}
+
+/* ── Slide content ── */
+.slide-content {
+  position:absolute; inset:0;
+  display:flex; align-items:center;
+  padding: 0 80px;
+  padding-top:68px; /* nav height */
+}
+.slide-inner { max-width:720px; }
+
+.slide-eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-family:var(--font-body); font-size:11px; font-weight:600;
+  letter-spacing:3.5px; text-transform:uppercase;
+  color:rgba(255,255,255,.65);
+  margin-bottom:24px;
+  opacity:0; transform:translateY(16px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.slide-eyebrow::before {
+  content:''; display:block; width:36px; height:1.5px;
+  background:var(--amber);
+}
+.slide.active .slide-eyebrow { opacity:1; transform:translateY(0); transition-delay:.35s; }
+
+.slide-title {
+  font-family:var(--font-head); font-weight:800;
+  font-size:clamp(40px,6.5vw,90px); line-height:.95;
+  letter-spacing:-2px; color:#fff;
+  margin-bottom:24px;
+  opacity:0; transform:translateY(24px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.slide-title em { font-style:normal; color:var(--amber-lt); }
+.slide.active .slide-title { opacity:1; transform:translateY(0); transition-delay:.55s; }
+
+.slide-sub {
+  font-size:clamp(15px,1.5vw,18px); font-weight:300;
+  line-height:1.7; color:rgba(255,255,255,.72);
+  max-width:520px; margin-bottom:40px;
+  opacity:0; transform:translateY(20px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.slide.active .slide-sub { opacity:1; transform:translateY(0); transition-delay:.75s; }
+
+.slide-actions {
+  display:flex; gap:14px; flex-wrap:wrap;
+  opacity:0; transform:translateY(16px);
+  transition: opacity .55s ease, transform .55s ease;
+}
+.slide.active .slide-actions { opacity:1; transform:translateY(0); transition-delay:.95s; }
+
+/* ── Slide stats bar (bottom-left) ── */
+.hero-stats-bar {
+  position:absolute; bottom:88px; left:80px;
+  display:flex; gap:48px; z-index:10;
+  opacity:0; transform:translateY(12px);
+  transition: opacity .6s ease .4s, transform .6s ease .4s;
+}
+#hero.loaded .hero-stats-bar { opacity:1; transform:none; }
+.hsb-item { border-left:2px solid var(--amber); padding-left:16px; }
+.hsb-num {
+  font-family:var(--font-head); font-size:28px; font-weight:800;
+  color:#fff; line-height:1;
+}
+.hsb-label { font-size:11px; font-weight:400; letter-spacing:1px; color:rgba(255,255,255,.5); margin-top:4px; }
+
+/* ── Progress bar ── */
+.slide-progress {
+  position:absolute; bottom:0; left:0; right:0;
+  height:3px; background:rgba(255,255,255,.12); z-index:10;
+}
+.slide-progress-fill {
+  height:100%; background:var(--amber);
+  width:0%; transition:width linear;
+}
+
+/* ── Dot nav ── */
+.slide-dots {
+  position:absolute; bottom:32px; left:50%; transform:translateX(-50%);
+  display:flex; gap:10px; z-index:10;
+}
+.slide-dot {
+  width:28px; height:3px; background:rgba(255,255,255,.3);
+  border:none; cursor:pointer; padding:0; transition:all .3s;
+  border-radius:2px;
+}
+.slide-dot.active { background:#fff; width:48px; }
+
+/* ── Arrow nav ── */
+.slide-arrow {
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:52px; height:52px; z-index:10;
+  background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.2);
+  border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center;
+  transition:all .25s; backdrop-filter:blur(8px);
+}
+.slide-arrow:hover { background:rgba(255,255,255,.2); border-color:rgba(255,255,255,.4); }
+.slide-arrow svg { width:20px; height:20px; stroke:#fff; fill:none; stroke-width:2; }
+.slide-arrow.prev { left:28px; }
+.slide-arrow.next { right:28px; }
+
+/* ── Slide counter — moved to top-right to avoid arrow overlap ── */
+.slide-counter {
+  position:absolute; top:100px; right:32px;
+  z-index:10;
+  display:flex; align-items:center; gap:10px;
+  background:rgba(0,0,0,.3);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.15);
+  padding:8px 14px; border-radius:100px;
+}
+.sc-current {
+  font-family:var(--font-head); font-size:15px; font-weight:800;
+  color:#fff; line-height:1;
+}
+.sc-line { width:18px; height:1px; background:rgba(255,255,255,.4); }
+.sc-total { font-size:13px; color:rgba(255,255,255,.5); font-weight:500; }
+
+@media(max-width:768px) {
+  .slide-content { padding:0 28px; padding-top:68px; }
+  .hero-stats-bar { left:28px; gap:28px; bottom:70px; }
+  .slide-counter { display:none; }
+  .slide-arrow { width:40px; height:40px; }
+  .slide-arrow.prev { left:12px; }
+  .slide-arrow.next { right:12px; }
+  .slide-title { letter-spacing:-1px; }
+}
+
+/* ──────────────────────────────────────────────────────
+   MARQUEE STRIP
+────────────────────────────────────────────────────── */
+#marquee {
+  background:var(--green); overflow:hidden;
+  padding:14px 0; border-top:none;
+}
+.marquee-track {
+  display:flex; gap:0;
+  animation:marqueeScroll 30s linear infinite;
+  width:max-content;
+}
+.marquee-item {
+  display:inline-flex; align-items:center; gap:24px;
+  white-space:nowrap;
+  font-family:var(--font-body); font-size:13px; font-weight:500;
+  letter-spacing:2.5px; text-transform:uppercase;
+  color:rgba(255,255,255,.55); padding:0 36px;
+}
+.marquee-item span { color:rgba(255,255,255,.25); }
+@keyframes marqueeScroll {
+  0%   { transform:translateX(0); }
+  100% { transform:translateX(-50%); }
+}
+
+/* ──────────────────────────────────────────────────────
+   ABOUT
+────────────────────────────────────────────────────── */
+#about { padding:120px 0; overflow:hidden; background:var(--white); }
+.about-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; align-items:center; }
+.about-photo-col { position:relative; }
+.about-photo-wrap {
+  position:relative;
+  margin-left:-24px;
+  padding-bottom:8px;
+}
+.about-photo {
+  width:100%; aspect-ratio:4/5; object-fit:cover;
+  display:block;
+  border-radius:24px;
+  box-shadow:
+    0 2px 4px  rgba(0,0,0,.04),
+    0 10px 28px rgba(0,0,0,.08),
+    0 32px 72px rgba(0,0,0,.10),
+    0 64px 100px rgba(0,0,0,.06);
+}
+.about-photo-tag {
+  position:absolute; bottom:48px; right:-24px;
+  background:var(--amber); color:#fff;
+  padding:20px 26px; border-radius:18px;
+  box-shadow: 0 8px 28px rgba(139,125,168,.35);
+}
+.apt-num { font-family:var(--font-head); font-size:42px; font-weight:800; line-height:1; }
+.apt-label { font-size:11px; font-weight:500; letter-spacing:2px; text-transform:uppercase; margin-top:4px; opacity:.85; }
+
+/* floating mini badge */
+.about-badge {
+  position:absolute; top:36px; right:-16px;
+  background:var(--white); border-radius:14px; padding:14px 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,.10), 0 12px 32px rgba(0,0,0,.07);
+  display:flex; align-items:center; gap:10px;
+}
+.ab-dot { width:10px; height:10px; background:var(--green); border-radius:50%; flex-shrink:0; animation: pulse 2s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(74,45,122,.4)} 50%{box-shadow:0 0 0 6px rgba(74,45,122,0)} }
+.ab-text { font-size:12px; font-weight:600; color:var(--dark); white-space:nowrap; }
+
+.about-content { padding: 40px 0 40px 72px; }
+.about-content .t-label { color:var(--amber); margin-bottom:18px; display:flex; align-items:center; }
+.about-content .t-h1 { color:var(--dark); margin-bottom:28px; }
+.about-content .t-body {
+  color:var(--muted); margin-bottom:22px;
+  font-size:17px; line-height:1.8; font-weight:300;
+}
+.about-pull {
+  margin: 32px 0;
+  padding:32px 36px;
+  background: linear-gradient(135deg, var(--green-lite) 0%, rgba(237,230,245,.4) 100%);
+  border-left:4px solid var(--green);
+  border-radius:0 16px 16px 0;
+}
+.about-pull p {
+  font-family:var(--font-head); font-size:20px; font-weight:600;
+  color:var(--green); line-height:1.45; font-style:italic;
+  letter-spacing:-.3px;
+}
+.about-pull cite {
+  display:block; margin-top:14px;
+  font-size:11px; font-weight:700; letter-spacing:2.2px;
+  text-transform:uppercase; color:var(--green-mid);
+  font-style:normal; opacity:.75;
+}
+
+/* ──────────────────────────────────────────────────────
+   SERVICES
+────────────────────────────────────────────────────── */
+#services { padding:120px 0 100px; background:var(--bg); }
+.services-top {
+  display:grid; grid-template-columns: 1.5fr 1fr;
+  gap:80px;
+  margin-bottom:80px;
+  align-items:end;
+  padding-bottom:56px;
+  border-bottom: 1px solid rgba(74,45,122,.12);
+}
+.services-top-left { position:relative; }
+.services-top-left .t-label { margin-bottom:24px; }
+
+/* Oversized editorial title */
+.services-big-title {
+  font-family: var(--font-head);
+  font-size: clamp(52px, 7vw, 104px);
+  font-weight: 800;
+  line-height: .95;
+  letter-spacing: -3px;
+  color: var(--dark);
+  margin-bottom: 0;
+}
+.services-big-title em {
+  font-style: normal;
+  color: var(--amber);
+  position: relative;
+  display: inline-block;
+}
+/* Subtle underline flourish on "Life" */
+.services-big-title em::after {
+  content:''; position:absolute; left:0; right:5%; bottom:-4px;
+  height: 6px;
+  background: linear-gradient(90deg, var(--amber) 0%, rgba(139,125,168,.2) 100%);
+  border-radius: 3px;
+  opacity: .35;
+}
+
+/* Right panel with accent line */
+.services-top-right {
+  position:relative;
+  padding-top: 20px;
+  padding-left: 28px;
+  max-width:none;
+}
+.st-accent {
+  position:absolute; top:16px; left:0;
+  width: 3px; height: 48px;
+  background: linear-gradient(to bottom, var(--amber), rgba(139,125,168,.3));
+  border-radius: 3px;
+}
+.services-top-right p {
+  font-size:18px; line-height:1.7; color:var(--muted);
+  font-weight:300; margin-bottom:28px; letter-spacing:.1px;
+}
+.st-link {
+  display:inline-flex; align-items:center; gap:10px;
+  font-family: var(--font-body);
+  font-size: 14px; font-weight: 700;
+  color: var(--green); text-decoration: none;
+  padding: 14px 28px;
+  background: var(--white);
+  border: 1.5px solid rgba(74,45,122,.14);
+  border-radius: 100px;
+  transition: all .3s ease;
+  letter-spacing: .3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+.st-link svg { width: 16px; height: 16px; transition: transform .3s; }
+.st-link:hover {
+  background: var(--green); color: #fff; border-color: var(--green);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(74,45,122,.25);
+}
+.st-link:hover svg { transform: translateX(4px); }
+
+/* Alternating big rows as cards */
+.service-row {
+  display:grid; grid-template-columns:1fr 1fr;
+  background:var(--white); border-radius:28px; overflow:hidden;
+  margin-bottom:20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 6px 20px rgba(0,0,0,.06), 0 20px 50px rgba(0,0,0,.06);
+  transition: transform .35s ease, box-shadow .35s ease;
+  align-items:center;
+}
+.service-row:last-of-type { margin-bottom:0; }
+.service-row:hover {
+  transform:translateY(-5px);
+  box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 14px 40px rgba(0,0,0,.09), 0 40px 80px rgba(0,0,0,.08);
+}
+.service-row.flip { direction:rtl; }
+.service-row.flip > * { direction:ltr; }
+.sr-photo {
+  aspect-ratio:4/3; object-fit:cover; display:block; width:100%;
+  transition: transform .7s ease;
+}
+.service-row:hover .sr-photo { transform:scale(1.03); }
+.sr-photo-wrap {
+  overflow:hidden; border-radius:18px;
+  margin:24px 12px 24px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.07), 0 12px 28px rgba(0,0,0,.08);
+}
+.service-row.flip .sr-photo-wrap { margin:24px 24px 24px 12px; }
+.sr-content {
+  padding:48px 52px 48px 36px; display:flex; flex-direction:column; justify-content:center;
+  position:relative;
+}
+.service-row.flip .sr-content { padding:48px 36px 48px 52px; }
+.sr-num {
+  font-family:var(--font-head); font-size:clamp(90px, 9vw, 130px);
+  font-weight:800;
+  color:rgba(237,230,245,.75); line-height:1;
+  position:absolute; top:18px; right:28px; z-index:0;
+  pointer-events:none;
+  letter-spacing:-3px;
+}
+.service-row.flip .sr-num { right:auto; left:28px; }
+.sr-title {
+  font-family:var(--font-head); font-size:clamp(30px, 2.8vw, 42px);
+  font-weight:800;
+  color:var(--dark); margin-bottom:18px; line-height:1;
+  letter-spacing:-1.5px; position:relative; z-index:1;
+}
+.sr-body {
+  font-size:17px; line-height:1.75; color:var(--muted);
+  font-weight:300; margin-bottom:30px; position:relative; z-index:1;
+  max-width:420px; letter-spacing:.1px;
+}
+.sr-link {
+  display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600;
+  color:#fff; text-decoration:none; letter-spacing:.3px;
+  transition: gap .25s, background .2s; position:relative; z-index:1;
+  padding:11px 20px; background:var(--green); border-radius:100px; width:fit-content;
+}
+.sr-link:hover { gap:14px; background:var(--green-mid); }
+.sr-link svg { width:15px; height:15px; stroke:var(--green); fill:none; stroke-width:2.5; }
+
+/* Mini service CARDS — Premium polished */
+.services-mini {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:24px; margin-top:24px;
+}
+.sm-item {
+  background:var(--white); padding:44px 36px 40px;
+  display:flex; flex-direction:column;
+  border-radius:24px; position:relative; overflow:hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.06), 0 18px 40px rgba(0,0,0,.05);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease, border-color .3s;
+  border: 1px solid transparent;
+  isolation: isolate;
+}
+/* Corner gradient blob behind the card that glows on hover */
+.sm-item::before {
+  content:''; position:absolute; top:-80px; right:-80px;
+  width:200px; height:200px; border-radius:50%;
+  background: radial-gradient(circle, rgba(139,125,168,.14) 0%, transparent 70%);
+  transition: opacity .5s ease, transform .5s ease;
+  z-index:-1; opacity:0;
+}
+.sm-item::after {
+  content:''; position:absolute; top:0; left:0; right:0; height:4px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--amber) 100%);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .5s ease;
+}
+.sm-item:hover {
+  transform: translateY(-8px);
+  border-color: rgba(74,45,122,.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 16px 40px rgba(0,0,0,.10), 0 40px 80px rgba(74,45,122,.08);
+}
+.sm-item:hover::before { opacity:1; transform: scale(1.15); }
+.sm-item:hover::after  { transform: scaleX(1); }
+
+/* Icon with depth */
+.sm-icon {
+  width:60px; height:60px; flex-shrink:0;
+  background: linear-gradient(135deg, var(--green-lite) 0%, #DCD0EA 100%);
+  border-radius:16px;
+  display:flex; align-items:center; justify-content:center;
+  margin-bottom:24px;
+  position:relative;
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+  box-shadow:
+    inset 0 1px 2px rgba(255,255,255,.8),
+    0 4px 12px rgba(74,45,122,.12);
+}
+.sm-item:hover .sm-icon {
+  transform: rotate(-4deg) scale(1.06);
+}
+.sm-icon svg { width:26px; height:26px; stroke:var(--green); fill:none; stroke-width:1.8; transition: transform .4s; }
+
+/* small badge/label above title */
+.sm-badge {
+  display:inline-flex; align-items:center;
+  font-size:10.5px; font-weight:700; letter-spacing:2.2px; text-transform:uppercase;
+  color:var(--amber); margin-bottom:10px;
+}
+.sm-title {
+  font-family:var(--font-head); font-size:22px; font-weight:800;
+  color:var(--dark); margin-bottom:14px;
+  letter-spacing:-.6px; line-height:1.15;
+}
+.sm-body {
+  font-size:15px; color:var(--muted); line-height:1.75; font-weight:300;
+  margin-bottom:28px; letter-spacing:.1px;
+}
+.sm-link {
+  display:inline-flex; align-items:center; gap:6px;
+  font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase;
+  color:var(--green); text-decoration:none;
+  transition: gap .3s, color .2s;
+  margin-top:auto; padding-top:20px;
+  border-top: 1px solid var(--line);
+}
+.sm-link svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.2; transition: transform .3s; }
+.sm-link:hover { gap:12px; color:var(--amber); }
+.sm-link:hover svg { transform: translateX(2px); }
+
+/* ──────────────────────────────────────────────────────
+   NUMBERS BAND
+────────────────────────────────────────────────────── */
+#numbers {
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 60%, #1a4a35 100%);
+  padding:80px 0;
+}
+.numbers-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.number-item {
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:24px; padding:44px 32px; text-align:center;
+  backdrop-filter:blur(10px);
+  transition: background .3s, transform .3s;
+  position:relative; overflow:hidden;
+}
+.number-item::after {
+  content:''; position:absolute; bottom:0; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, transparent, rgba(139,125,168,.6), transparent);
+}
+.number-item:hover { background:rgba(255,255,255,.12); transform:translateY(-5px); }
+.ni-num {
+  font-family:var(--font-head); font-size:clamp(48px, 5.2vw, 76px);
+  font-weight:800; color:#fff; line-height:1; letter-spacing:-1.5px;
+}
+.ni-num sup { font-size:.45em; vertical-align:top; margin-top:.15em; }
+.ni-label { font-size:12px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,.55); margin-top:16px; }
+
+/* ──────────────────────────────────────────────────────
+   HOW IT WORKS — Premium photo cards
+────────────────────────────────────────────────────── */
+#process { padding:120px 0; background:var(--bg); position:relative; overflow:hidden; }
+#process::before {
+  content:''; position:absolute; top:-200px; right:-200px;
+  width:500px; height:500px;
+  background: radial-gradient(circle, rgba(74,45,122,.05), transparent 70%);
+  border-radius:50%;
+}
+.process-header { text-align:center; margin-bottom:80px; position:relative; z-index:1; }
+.process-header .t-h1 { margin-bottom:20px; max-width:720px; margin-left:auto; margin-right:auto; }
+.process-header p {
+  font-size:17px; color:var(--muted); max-width:520px; margin:0 auto;
+  line-height:1.7; font-weight:300; letter-spacing:.1px;
+}
+.process-steps {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:24px; position:relative; align-items:stretch;
+}
+/* Dashed connector line between cards */
+.process-steps::before {
+  content:''; position:absolute;
+  top:100px; left:calc(12.5% + 32px); right:calc(12.5% + 32px);
+  height:2px; z-index:0;
+  background-image: linear-gradient(to right, var(--green) 50%, transparent 50%);
+  background-size: 14px 2px;
+  background-repeat: repeat-x;
+  opacity: .35;
+}
+.ps {
+  background:var(--white); border-radius:24px;
+  position:relative; z-index:1;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06), 0 18px 40px rgba(0,0,0,.05);
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), box-shadow .5s;
+  display:flex; flex-direction:column;
+}
+.ps:hover {
+  transform:translateY(-10px);
+  box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 16px 48px rgba(0,0,0,.12), 0 40px 80px rgba(0,0,0,.08);
+}
+
+/* Photo header with number badge */
+.ps-photo-wrap {
+  position:relative;
+  height: 180px;
+  overflow:hidden;
+  border-radius:24px 24px 0 0;
+}
+.ps-photo {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  transition: transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.ps:hover .ps-photo { transform: scale(1.08); }
+.ps-photo-wrap::after {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(11,14,10,.55) 0%, rgba(11,14,10,.15) 50%, transparent 100%);
+}
+/* Number badge — positioned on parent .ps so it can overflow photo-wrap */
+.ps-num {
+  position:absolute; top: 158px; left:28px;
+  width:56px; height:56px; border-radius:50%;
+  background: linear-gradient(135deg, var(--green), var(--green-mid));
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-head); font-size:16px; font-weight:800; color:#fff;
+  letter-spacing:-.3px; z-index:5;
+  box-shadow: 0 4px 16px rgba(74,45,122,.4), 0 0 0 4px var(--white);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1);
+}
+.ps:hover .ps-num {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+/* Content below photo */
+.ps-content {
+  padding: 40px 28px 32px;
+  display:flex; flex-direction:column; flex:1;
+}
+.ps-step-label {
+  font-size:10.5px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--amber); margin-bottom:10px;
+}
+.ps-title {
+  font-family:var(--font-head); font-size:22px; font-weight:800;
+  color:var(--dark); margin-bottom:14px; letter-spacing:-.6px; line-height:1.15;
+}
+.ps-body {
+  font-size:14.5px; color:var(--muted); line-height:1.75;
+  font-weight:300; letter-spacing:.1px; margin-bottom:20px; flex:1;
+}
+.ps-duration {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:8px 14px; background:var(--green-lite); border-radius:100px;
+  font-size:12px; font-weight:600; color:var(--green);
+  width:fit-content;
+}
+.ps-duration svg { width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:2; }
+
+/* ──────────────────────────────────────────────────────
+   TESTIMONIAL SLIDESHOW — Captivating carousel
+────────────────────────────────────────────────────── */
+#testimonial {
+  position:relative; overflow:hidden;
+  padding: 120px 0 100px;
+  background: linear-gradient(135deg, #1A0F26 0%, var(--green) 50%, var(--green-mid) 100%);
+}
+#testimonial::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    radial-gradient(circle at 15% 30%, rgba(139,125,168,.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(255,255,255,.04) 0%, transparent 50%);
+  pointer-events:none;
+}
+.tst-orb {
+  position:absolute; border-radius:50%;
+  pointer-events:none; filter:blur(50px); will-change: transform; z-index:1;
+}
+.tst-orb-1 {
+  width:400px; height:400px;
+  background: radial-gradient(circle, rgba(139,125,168,.25), transparent 70%);
+  top:-100px; right:-80px;
+  animation: tstOrbFloat1 16s ease-in-out infinite;
+}
+.tst-orb-2 {
+  width:300px; height:300px;
+  background: radial-gradient(circle, rgba(237,230,245,.12), transparent 70%);
+  bottom:-80px; left:-60px;
+  animation: tstOrbFloat2 14s ease-in-out infinite;
+}
+@keyframes tstOrbFloat1 {
+  0%,100% { transform: translate(0,0) scale(1); opacity:.7; }
+  50%     { transform: translate(-80px,60px) scale(1.1); opacity:1; }
+}
+@keyframes tstOrbFloat2 {
+  0%,100% { transform: translate(0,0) scale(1); opacity:.5; }
+  50%     { transform: translate(100px,-40px) scale(1.15); opacity:.8; }
+}
+
+.tst-header { position:relative; z-index:2; margin-bottom:48px; }
+.tst-header .t-label { color: var(--amber-lt); margin-bottom:20px; display:flex; align-items:center; }
+.tst-header .t-label .green-dot { background: var(--amber); }
+.tst-header-row {
+  display:flex; justify-content:space-between; align-items:flex-end;
+  gap:40px; flex-wrap:wrap;
+}
+.tst-header .t-h1 { color:#fff; margin:0; }
+.tst-header .t-h1 em { font-style:normal; color: var(--amber-lt); }
+
+.tst-nav-wrap { display:flex; align-items:center; gap:20px; padding-bottom:6px; }
+.tst-nav-btn {
+  width:52px; height:52px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 50%;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  transition: all .3s cubic-bezier(.2,.8,.2,1);
+  backdrop-filter: blur(10px);
+}
+.tst-nav-btn:hover {
+  background: var(--amber); border-color: var(--amber);
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(139,125,168,.4);
+}
+.tst-nav-btn svg { width:18px; height:18px; stroke:#fff; fill:none; stroke-width:2.2; }
+.tst-pager {
+  font-family: var(--font-head); color: rgba(255,255,255,.7);
+  display:flex; align-items:center; gap:8px;
+  min-width: 72px; justify-content:center;
+}
+.tst-pager-current { color:#fff; font-weight:800; font-size:22px; letter-spacing:-.5px; }
+.tst-pager-sep { opacity:.3; font-size:16px; }
+.tst-pager-total { font-size:14px; font-weight:600; }
+
+.tst-stage {
+  position:relative; z-index:2;
+  overflow: visible;
+  min-height: 560px;
+}
+.tst-track { position:relative; display:block; height: 560px; }
+
+.tst-slide {
+  position: absolute; inset:0;
+  display:grid; grid-template-columns: 380px 1fr; gap:60px;
+  align-items:center;
+  opacity: 0; visibility: hidden;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+.tst-slide.active {
+  opacity: 1; visibility: visible;
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.tst-slide .t-photo-card {
+  position:relative;
+  border-radius:24px; overflow:hidden;
+  aspect-ratio: 4/5;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35), 0 40px 100px rgba(0,0,0,.25);
+  transform: scale(.94) translateX(-40px);
+  opacity: 0;
+  transition: transform 1s cubic-bezier(.2,.8,.2,1), opacity .9s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-photo-card {
+  transform: none; opacity: 1;
+  transition-delay: .15s;
+}
+.tst-slide .t-photo-card img {
+  width:100%; height:100%; object-fit:cover;
+  display:block;
+  transform: scale(1);
+  transition: transform 8s linear;
+}
+.tst-slide.active .t-photo-card img { transform: scale(1.12); }
+.tst-slide .t-photo-card::after {
+  content:''; position:absolute; inset:0;
+  background: linear-gradient(to top, rgba(15,26,20,.5) 0%, transparent 45%);
+}
+
+.tst-slide .t-photo-badge {
+  position:absolute; bottom:24px; left:24px; right:24px;
+  display:flex; align-items:center; gap:12px;
+  background:rgba(255,255,255,.95); backdrop-filter:blur(10px);
+  padding:14px 18px; border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  transform: translateY(120%);
+  transition: transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-photo-badge {
+  transform: translateY(0);
+  transition-delay: .9s;
+}
+.t-pb-avatar {
+  width:40px; height:40px; border-radius:50%;
+  background: var(--amber);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-head); font-size:14px; font-weight:800; color:#fff;
+  flex-shrink:0;
+}
+.t-pb-name { font-size:13px; font-weight:700; color:var(--dark); line-height:1.2; }
+.t-pb-role { font-size:11px; color:var(--muted); margin-top:2px; letter-spacing:.3px; }
+
+.tst-slide .t-quote-wrap {
+  position:relative;
+  opacity:0; transform: translateX(30px);
+  transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-quote-wrap {
+  opacity:1; transform:none;
+  transition-delay: .3s;
+}
+
+.tst-slide .t-big-quote {
+  position:absolute; top:-70px; left:-24px;
+  font-family:var(--font-head); font-size:240px; font-weight:800;
+  color:rgba(139,125,168,.14); line-height:.8;
+  pointer-events:none; z-index:0;
+  transform: scale(.6) rotate(-8deg);
+  opacity: 0;
+  transition: transform 1.1s cubic-bezier(.2,.8,.2,1), opacity 1.1s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-big-quote {
+  transform: scale(1) rotate(0deg); opacity: 1;
+  transition-delay: .4s;
+}
+
+.tst-slide .t-label-sticker {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase;
+  color:var(--amber-lt); margin-bottom:24px;
+  opacity:0; transform:translateY(12px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-label-sticker {
+  opacity:1; transform:none;
+  transition-delay: .45s;
+}
+.tst-slide .t-label-sticker::before {
+  content:''; width:30px; height:1.5px; background:var(--amber);
+}
+
+.tst-slide .t-stars {
+  display:flex; gap:4px; margin-bottom:22px; align-items:center;
+  opacity:0;
+  transition: opacity .3s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-stars {
+  opacity:1;
+  transition-delay: .55s;
+}
+.tst-slide .t-stars span {
+  color:var(--amber); font-size:18px;
+  display:inline-block;
+  transform: scale(0) rotate(-90deg);
+  transition: transform .5s cubic-bezier(.5,1.7,.5,1);
+}
+.tst-slide.active .t-stars span { transform: scale(1) rotate(0deg); }
+.tst-slide.active .t-stars span:nth-child(1) { transition-delay: .6s; }
+.tst-slide.active .t-stars span:nth-child(2) { transition-delay: .7s; }
+.tst-slide.active .t-stars span:nth-child(3) { transition-delay: .8s; }
+.tst-slide.active .t-stars span:nth-child(4) { transition-delay: .9s; }
+.tst-slide.active .t-stars span:nth-child(5) { transition-delay: 1.0s; }
+.tst-slide .t-stars em {
+  font-style:normal; color:rgba(255,255,255,.5);
+  font-size:12px; margin-left:10px; letter-spacing:2px;
+}
+
+.tst-slide .t-quote {
+  position:relative; z-index:1;
+  font-family:var(--font-head);
+  font-size:clamp(22px, 2.2vw, 30px);
+  font-weight:500; color:#fff; line-height:1.45;
+  margin-bottom:34px;
+  letter-spacing:-.4px;
+  opacity:0; transform:translateY(18px);
+  transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-quote {
+  opacity:1; transform:none;
+  transition-delay: .65s;
+}
+.tst-slide .t-quote span {
+  color: var(--amber-lt); font-weight:700;
+  background: linear-gradient(120deg, var(--amber-lt) 0%, var(--amber) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tst-slide .t-foot {
+  display:flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:20px;
+  padding-top:28px;
+  border-top: 1px solid rgba(255,255,255,.1);
+  opacity:0; transform:translateY(16px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+}
+.tst-slide.active .t-foot {
+  opacity:1; transform:none;
+  transition-delay: .8s;
+}
+.tst-slide .t-name { font-size:15px; font-weight:600; color:#fff; }
+.tst-slide .t-role { font-size:12px; color:rgba(255,255,255,.5); letter-spacing:.5px; margin-top:3px; }
+.tst-slide .t-result-chip {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(139,125,168,.15); border:1px solid rgba(139,125,168,.3);
+  padding:10px 16px; border-radius:100px;
+  font-size:12px; font-weight:600; color:var(--amber-lt); letter-spacing:.3px;
+}
+.tst-slide .t-result-chip svg { width:14px; height:14px; fill:none; stroke:currentColor; stroke-width:2.2; }
+
+.tst-footer {
+  position:relative; z-index:2;
+  display:flex; align-items:center; gap:40px;
+  margin-top:56px;
+}
+.tst-dots { display:flex; gap:8px; flex-shrink:0; }
+.tst-dot {
+  width:36px; height:4px;
+  background: rgba(255,255,255,.2);
+  border: none; padding: 0; cursor:pointer;
+  border-radius: 100px;
+  transition: all .4s cubic-bezier(.2,.8,.2,1);
+}
+.tst-dot.active {
+  background: var(--amber); width:72px;
+  box-shadow: 0 0 16px rgba(139,125,168,.5);
+}
+.tst-dot:hover:not(.active) { background: rgba(255,255,255,.4); }
+.tst-progress {
+  flex: 1; height: 2px;
+  background: rgba(255,255,255,.1);
+  border-radius: 100px; overflow: hidden;
+}
+.tst-progress-fill {
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--amber) 0%, var(--amber-lt) 100%);
+  border-radius: 100px;
+  box-shadow: 0 0 8px rgba(139,125,168,.5);
+}
+
+/* ──────────────────────────────────────────────────────
+   FAQ SECTION
+────────────────────────────────────────────────────── */
+#faq { padding:120px 0; background:var(--white); }
+.faq-header { text-align:center; margin-bottom:60px; }
+.faq-header .t-label { color:var(--amber); margin-bottom:18px; display:inline-flex; align-items:center; }
+.faq-header .t-h1 em { font-style:normal; color:var(--amber); }
+
+.faq-list { max-width:800px; margin:0 auto; display:flex; flex-direction:column; gap:16px; }
+.faq-item {
+  background: var(--bg);
+  border: 1px solid rgba(74,45,122,.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+.faq-item.active {
+  background: var(--white);
+  border-color: var(--amber);
+  box-shadow: 0 10px 30px rgba(139,125,168,.15);
+}
+.faq-q {
+  width: 100%; text-align: left; background: none; border: none; cursor: pointer;
+  padding: 24px 32px; display: flex; justify-content: space-between; align-items: center;
+  font-family: var(--font-head); font-size: 18px; font-weight: 600; color: var(--dark);
+  transition: color .3s;
+}
+.faq-item.active .faq-q { color: var(--green); }
+.faq-icon {
+  width: 24px; height: 24px; flex-shrink: 0; position: relative;
+}
+.faq-icon::before, .faq-icon::after {
+  content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background: var(--green); transition: transform .3s ease;
+}
+.faq-icon::before { width: 14px; height: 2px; }
+.faq-icon::after { width: 2px; height: 14px; }
+.faq-item.active .faq-icon::after { transform: translate(-50%, -50%) rotate(90deg); opacity: 0; }
+.faq-item.active .faq-icon::before { background: var(--amber); }
+
+.faq-a {
+  padding: 0 32px; max-height: 0; overflow: hidden;
+  transition: max-height .4s cubic-bezier(.2,.8,.2,1), padding .4s ease;
+}
+.faq-item.active .faq-a { max-height: 400px; padding: 0 32px 32px; }
+.faq-a p { font-size: 16px; line-height: 1.7; color: var(--muted); font-weight: 300; }
+
+/* ──────────────────────────────────────────────────────
+   BLOG / LATEST INSIGHTS SECTION
+────────────────────────────────────────────────────── */
+#blog { padding:120px 0; background:var(--bg); border-top: 1px solid rgba(74,45,122,.05); }
+.blog-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:56px; }
+.blog-header-left .t-label { color:var(--amber); margin-bottom:18px; display:inline-flex; align-items:center; }
+
+.blog-nav { display:flex; gap:12px; align-items:center; }
+.blog-nav-btn {
+  width:48px; height:48px; background:var(--white); border:1.5px solid rgba(74,45,122,.14);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition: all .3s cubic-bezier(.2,.8,.2,1);
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.blog-nav-btn:hover { background: var(--green); border-color: var(--green); transform: translateY(-2px) scale(1.05); box-shadow: 0 8px 24px rgba(74,45,122,.25); }
+.blog-nav-btn:hover svg { stroke: #fff; }
+.blog-nav-btn svg { width:18px; height:18px; stroke:var(--dark); fill:none; stroke-width:2.2; transition: stroke .25s; }
+.blog-nav-btn:disabled { opacity:.35; cursor:not-allowed; }
+.blog-nav-btn:disabled:hover { background:var(--white); transform:none; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+.blog-nav-btn:disabled:hover svg { stroke:var(--dark); }
+
+.blog-slider-wrap { position:relative; overflow:hidden; padding: 20px 4px 40px; margin: -20px -4px -40px; }
+.blog-slider { display:flex; gap:32px; transition: transform .8s cubic-bezier(.2,.8,.2,1); will-change: transform; }
+
+.blog-progress { height: 3px; background: rgba(74,45,122,.1); border-radius: 100px; margin-top: 16px; position: relative; overflow: hidden; }
+.blog-progress-bar { position: absolute; top:0; left:0; height:100%; width: 20%; background: var(--green); border-radius: 100px; transition: transform .3s ease; }
+
+.blog-card {
+  flex: 0 0 calc((100% - 64px) / 3.15);
+  background: var(--white); border-radius: 24px; overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,.04);
+  transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease;
+  display: flex; flex-direction: column; text-decoration: none;
+}
+@media(max-width:1024px) { .blog-card { flex: 0 0 calc((100% - 32px) / 2.2); } }
+@media(max-width:700px) { .blog-card { flex: 0 0 calc(100% - 16px); } }
+.blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.08);
+}
+.bc-img-wrap { width: 100%; aspect-ratio: 16/10; overflow: hidden; position: relative; }
+.bc-img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.blog-card:hover .bc-img { transform: scale(1.05); }
+
+.bc-content { padding: 32px; display: flex; flex-direction: column; flex: 1; }
+.bc-cat { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--amber); margin-bottom: 12px; }
+.bc-title { font-family: var(--font-head); font-size: 22px; font-weight: 700; color: var(--dark); line-height: 1.3; margin-bottom: 16px; transition: color .3s; }
+.blog-card:hover .bc-title { color: var(--green); }
+.bc-excerpt { font-size: 15px; line-height: 1.6; color: var(--muted); font-weight: 300; margin-bottom: 24px; }
+.bc-link { margin-top: auto; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--green); display: flex; align-items: center; gap: 8px; }
+.bc-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2.2; transition: transform .3s; }
+.blog-card:hover .bc-link svg { transform: translateX(4px); color: var(--amber); }
+
+/* ──────────────────────────────────────────────────────
+   MORE REVIEWS — Horizontal slider
+────────────────────────────────────────────────────── */
+#reviews { padding:120px 0; background:var(--bg); overflow:hidden; }
+.reviews-header {
+  display:flex; justify-content:space-between; align-items:flex-end;
+  gap:40px; margin-bottom:56px;
+  padding-bottom:40px;
+  border-bottom: 1px solid rgba(74,45,122,.1);
+  flex-wrap:wrap;
+}
+.reviews-header-left .t-label { margin-bottom:18px; color:var(--amber); display:inline-flex; align-items:center; }
+.reviews-header-left .t-h1 em { font-style:normal; color:var(--amber); }
+
+.reviews-nav {
+  display:flex; align-items:center; gap:14px;
+  padding-bottom:8px;
+}
+.reviews-count {
+  display:flex; align-items:baseline; gap:8px;
+  font-family:var(--font-head);
+  margin-right:10px;
+}
+.rvn-current { font-size:24px; font-weight:800; color:var(--dark); letter-spacing:-.5px; }
+.rvn-sep { color:var(--muted); opacity:.5; font-size:14px; }
+.rvn-total { font-size:14px; font-weight:600; color:var(--muted); }
+
+.reviews-nav-btn {
+  width:48px; height:48px;
+  background:var(--white); border:1.5px solid rgba(74,45,122,.14);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer;
+  transition: all .3s cubic-bezier(.2,.8,.2,1);
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+.reviews-nav-btn:hover {
+  background: var(--green); border-color: var(--green);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(74,45,122,.25);
+}
+.reviews-nav-btn:hover svg { stroke: #fff; }
+.reviews-nav-btn svg { width:18px; height:18px; stroke:var(--dark); fill:none; stroke-width:2.2; transition: stroke .25s; }
+.reviews-nav-btn:disabled { opacity:.35; cursor:not-allowed; }
+.reviews-nav-btn:disabled:hover { background:var(--white); transform:none; box-shadow:0 2px 8px rgba(0,0,0,.04); }
+.reviews-nav-btn:disabled:hover svg { stroke:var(--dark); }
+
+/* Slider wrapper — no overflow clip so shadows show; inner track clips */
+.reviews-slider-wrap {
+  position:relative;
+  overflow:hidden;
+  padding: 20px 4px 40px;
+  margin: -20px -4px -40px;
+}
+.reviews-slider {
+  display:flex; gap:24px;
+  transition: transform .8s cubic-bezier(.2,.8,.2,1);
+  will-change: transform;
+}
+.rv-card {
+  flex: 0 0 calc((100% - 48px) / 3);
+  background:var(--white);
+  border-radius:24px;
+  padding:40px 36px;
+  position:relative; overflow:hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04), 0 6px 18px rgba(0,0,0,.06), 0 20px 44px rgba(0,0,0,.05);
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, opacity .4s;
+  display:flex; flex-direction:column;
+}
+.rv-card:hover {
+  transform:translateY(-8px);
+  box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 14px 36px rgba(0,0,0,.09), 0 40px 72px rgba(0,0,0,.08);
+}
+.rv-card::before {
+  content:'"';
+  position:absolute; top:20px; right:28px;
+  font-family:var(--font-head); font-size:100px; font-weight:800;
+  color:var(--green-lite); line-height:1;
+  pointer-events:none; z-index:0;
+}
+.rv-stars { display:flex; gap:4px; margin-bottom:22px; position:relative; z-index:1; }
+.rv-stars span {
+  color:var(--amber); font-size:16px;
+  filter: drop-shadow(0 0 4px rgba(139,125,168,.25));
+}
+.rv-text {
+  font-size:16px; line-height:1.75; color:var(--dark);
+  font-style:italic; margin-bottom:auto; padding-bottom:24px;
+  font-weight:300; letter-spacing:.1px;
+  position:relative; z-index:1;
+}
+.rv-author {
+  display:flex; align-items:center; gap:12px;
+  padding-top:20px; border-top:1px solid var(--line);
+  margin-top:auto; position:relative; z-index:1;
+}
+.rv-avatar-init {
+  width:44px; height:44px; border-radius:50%;
+  background:var(--green); display:flex; align-items:center; justify-content:center;
+  font-family:var(--font-head); font-size:14px; font-weight:800; color:#fff;
+  flex-shrink:0;
+  box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+.rv-name { font-size:14px; font-weight:600; color:var(--dark); }
+.rv-loc  { font-size:12px; color:var(--muted); margin-top:2px; }
+
+/* Progress bar */
+.reviews-progress {
+  height: 3px;
+  background: rgba(74,45,122,.08);
+  border-radius: 100px; overflow: hidden;
+  margin-top: 40px;
+}
+.reviews-progress-fill {
+  height: 100%; width: 50%;
+  background: linear-gradient(90deg, var(--green) 0%, var(--amber) 100%);
+  border-radius: 100px;
+  transition: width .8s cubic-bezier(.2,.8,.2,1);
+  box-shadow: 0 0 8px rgba(139,125,168,.3);
+}
+
+/* ──────────────────────────────────────────────────────
+   OPPORTUNITY
+────────────────────────────────────────────────────── */
+#opportunity { overflow:hidden; }
+.opp-grid { display:grid; grid-template-columns:1fr 1fr; min-height:660px; }
+.opp-photo-col { position:relative; overflow:hidden; }
+.opp-photo { width:100%; height:100%; object-fit:cover; display:block; }
+.opp-photo-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(to top, rgba(17,18,16,.7) 0%, transparent 50%);
+}
+.opp-photo-label {
+  position:absolute; bottom:36px; left:36px;
+  font-family:var(--font-head); font-size:clamp(28px,3vw,48px);
+  font-weight:800; color:#fff; line-height:1.05;
+}
+.opp-photo-label em { font-style:normal; color:var(--amber-lt); }
+.opp-content { background:var(--dark); padding:80px 72px; display:flex; flex-direction:column; justify-content:center; }
+.opp-content .t-label { color:var(--amber); margin-bottom:24px; }
+.opp-content .t-h2 { color:#fff; margin-bottom:24px; }
+.opp-content p {
+  font-size:17px; line-height:1.75; color:rgba(255,255,255,.65);
+  margin-bottom:28px; font-weight:300; letter-spacing:.1px;
+}
+.income-list { margin:28px 0; display:flex; flex-direction:column; gap:12px; }
+.il-row {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px 24px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;
+  transition: background .25s, transform .25s;
+}
+.il-row:hover { background:rgba(255,255,255,.1); transform:translateX(4px); }
+.il-left { display:flex; flex-direction:column; gap:3px; }
+.il-tier { font-size:11px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.4); }
+.il-years { font-size:12px; color:rgba(255,255,255,.3); }
+.il-amount { font-family:var(--font-head); font-size:26px; font-weight:800; color:var(--amber-lt); }
+.opp-note { font-size:11px !important; color:rgba(255,255,255,.2) !important; line-height:1.6 !important; }
+
+/* ──────────────────────────────────────────────────────
+   CONTACT — Premium finish
+────────────────────────────────────────────────────── */
+#contact {
+  padding:120px 0;
+  background: var(--bg);
+  position:relative; overflow:hidden;
+}
+/* Soft atmospheric blobs */
+#contact::before {
+  content:''; position:absolute;
+  top:-200px; right:-200px;
+  width:600px; height:600px;
+  background: radial-gradient(circle, rgba(74,45,122,.08) 0%, transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+#contact::after {
+  content:''; position:absolute;
+  bottom:-150px; left:-150px;
+  width:500px; height:500px;
+  background: radial-gradient(circle, rgba(139,125,168,.06) 0%, transparent 70%);
+  border-radius:50%;
+  pointer-events:none;
+}
+
+.contact-grid {
+  display:grid; grid-template-columns:1fr 1.05fr; gap:56px;
+  align-items:stretch; position:relative; z-index:1;
+}
+.contact-left {
+  display:flex; flex-direction:column;
+}
+.contact-left .t-label { color:var(--amber); margin-bottom:22px; }
+.contact-left .t-h1 { margin-bottom:26px; }
+.contact-left > p {
+  font-size:17px; color:var(--muted); line-height:1.75;
+  margin-bottom:36px; font-weight:300; letter-spacing:.1px;
+  max-width:520px;
+}
+
+/* Trust micro-badges */
+.contact-trust {
+  display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px;
+}
+.ct-chip {
+  display:inline-flex; align-items:center; gap:8px;
+  background:rgba(74,45,122,.06); border:1px solid rgba(74,45,122,.12);
+  padding:8px 14px; border-radius:100px;
+  font-size:12px; font-weight:600; color:var(--green);
+}
+.ct-chip svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.2; }
+
+/* Info list grows to fill available height — distributing rows evenly */
+.contact-info-list {
+  display:flex; flex-direction:column; gap:14px;
+  flex: 1;  /* fills remaining vertical space */
+}
+.contact-info-list .ci-row { flex: 1; }
+.ci-row {
+  display:flex; align-items:center; gap:16px;
+  background:var(--white); border-radius:16px; padding:20px 24px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 4px 14px rgba(0,0,0,.05), 0 14px 32px rgba(0,0,0,.04);
+  transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s;
+  position:relative; overflow:hidden;
+  text-decoration:none; color:inherit;
+}
+.ci-row::before {
+  content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background: linear-gradient(to bottom, var(--green), var(--amber));
+  opacity:0; transition: opacity .3s;
+}
+.ci-row:hover {
+  transform:translateX(6px);
+  box-shadow: 0 2px 4px rgba(0,0,0,.05), 0 10px 28px rgba(0,0,0,.09), 0 24px 56px rgba(0,0,0,.06);
+}
+.ci-row:hover::before { opacity:1; }
+.ci-icon {
+  width:48px; height:48px; flex-shrink:0;
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+  border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 14px rgba(74,45,122,.3), inset 0 1px 0 rgba(255,255,255,.15);
+  transition: transform .3s;
+}
+.ci-row:hover .ci-icon { transform: rotate(-6deg) scale(1.05); }
+.ci-icon svg { width:20px; height:20px; stroke:#fff; fill:none; stroke-width:1.8; }
+.ci-body { flex:1; }
+.ci-label { font-size:10px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+.ci-val { font-size:15px; color:var(--dark); font-weight:500; line-height:1.4; }
+.ci-val a { color:var(--dark); text-decoration:none; }
+.ci-val a:hover { color:var(--green); }
+.ci-arrow {
+  color:var(--muted); opacity:.35;
+  transition: opacity .3s, transform .3s;
+  flex-shrink:0;
+}
+.ci-row:hover .ci-arrow { opacity:1; transform:translateX(3px); color:var(--green); }
+.ci-arrow svg { width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2.2; }
+
+/* Form card — elevated and premium */
+.contact-right {
+  display:flex; flex-direction:column;
+  height: 100%;
+}
+.contact-form {
+  background:var(--white); padding:52px 48px;
+  border-radius:28px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,.04),
+    0 12px 32px rgba(0,0,0,.07),
+    0 40px 80px rgba(0,0,0,.08);
+  position:relative;
+  border: 1px solid rgba(255,255,255,.9);
+  height: 100%;
+  display:flex; flex-direction:column;
+}
+.contact-form form { display:flex; flex-direction:column; flex: 1; }
+.contact-form .fg:last-of-type { flex: 1; display:flex; flex-direction:column; }
+.contact-form .fg:last-of-type textarea { flex: 1; min-height: 100px; }
+/* Top tab/tag on form */
+.cf-tag {
+  position:absolute; top:-14px; right:40px;
+  background: linear-gradient(135deg, var(--amber) 0%, var(--amber-lt) 100%);
+  color:#fff; padding:6px 16px; border-radius:100px;
+  font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+  box-shadow: 0 8px 20px rgba(139,125,168,.35);
+}
+.cf-heading {
+  font-family:var(--font-head); font-size:30px; font-weight:800;
+  letter-spacing:-.8px; margin-bottom:10px; color:var(--dark);
+  line-height:1.15;
+}
+.cf-sub {
+  font-size:15px; color:var(--muted); margin-bottom:34px;
+  font-weight:400; line-height:1.6; letter-spacing:.1px;
+}
+.form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.fg { margin-bottom:18px; position:relative; }
+.fg label {
+  display:block; font-size:11px; font-weight:700; letter-spacing:1.5px;
+  text-transform:uppercase; color:var(--dark); margin-bottom:8px;
+}
+.fg input, .fg select, .fg textarea {
+  width:100%; padding:14px 18px;
+  background:var(--bg); border:1.5px solid transparent;
+  font-family:var(--font-body); font-size:14px; font-weight:400; color:var(--dark);
+  outline:none; transition:border-color .25s, box-shadow .25s, background .25s;
+  appearance:none; border-radius:12px;
+}
+.fg input::placeholder, .fg textarea::placeholder { color:#B0A898; font-weight:300; }
+.fg select { color:var(--muted); }
+.fg input:focus, .fg select:focus, .fg textarea:focus {
+  border-color:var(--green); background:var(--white);
+  box-shadow:0 0 0 4px rgba(74,45,122,.1);
+}
+.fg textarea { resize:vertical; min-height:110px; }
+.fg select option { color:var(--dark); }
+
+/* Form submit — premium with subtle shine */
+.form-submit {
+  width:100%; padding:18px;
+  background: linear-gradient(135deg, var(--green) 0%, var(--green-mid) 100%);
+  color:#fff; border:none; cursor:pointer;
+  font-family:var(--font-body); font-size:14px; font-weight:700;
+  letter-spacing:.8px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  transition: transform .2s, box-shadow .3s;
+  box-shadow: 0 6px 20px rgba(74,45,122,.35), inset 0 1px 0 rgba(255,255,255,.15);
+  position:relative; overflow:hidden;
+}
+.form-submit::before {
+  content:''; position:absolute; top:0; left:-100%;
+  width:100%; height:100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.15), transparent);
+  transition: left .6s ease;
+}
+.form-submit:hover {
+  transform:translateY(-2px);
+  box-shadow: 0 10px 30px rgba(74,45,122,.45), inset 0 1px 0 rgba(255,255,255,.2);
+}
+.form-submit:hover::before { left:100%; }
+.form-submit svg { width:16px; height:16px; stroke:#fff; fill:none; stroke-width:2.2; }
+
+/* Privacy note under submit */
+.cf-note {
+  font-size:12px; color:var(--muted); text-align:center;
+  margin-top:16px; line-height:1.6;
+}
+.cf-note svg { width:12px; height:12px; display:inline-block; vertical-align:-2px; margin-right:4px; stroke:currentColor; fill:none; stroke-width:2; }
+
+/* ──────────────────────────────────────────────────────
+   CTA Banner — Showstopper with scroll reveal
+────────────────────────────────────────────────────── */
+#cta-banner {
+  background: linear-gradient(135deg, #1A0F26 0%, var(--green) 45%, var(--green-mid) 100%);
+  padding:120px 0; position:relative; overflow:hidden;
+}
+/* Initial state — background starts collapsed / dim */
+#cta-banner::before {
+  content:''; position:absolute; inset:0;
+  background-image:
+    radial-gradient(circle at 85% 30%, rgba(139,125,168,.2) 0%, transparent 50%),
+    radial-gradient(circle at 15% 70%, rgba(255,255,255,.05) 0%, transparent 50%);
+  pointer-events:none;
+  opacity: 0;
+  transform: scale(.6);
+  transition: opacity 1.4s cubic-bezier(.2,.8,.2,1), transform 1.8s cubic-bezier(.2,.8,.2,1);
+}
+#cta-banner.cta-on::before {
+  opacity: 1; transform: scale(1);
+}
+/* Grid pattern draws in from center */
+#cta-banner::after {
+  content:''; position:absolute; inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events:none;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 0%, transparent 0%);
+  mask-image: radial-gradient(ellipse at center, black 0%, transparent 0%);
+  transition: -webkit-mask-image 2s ease, mask-image 2s ease;
+}
+#cta-banner.cta-on::after {
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 100%);
+}
+
+/* Scroll-in scan-line sweep effect */
+.cta-scanline {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(139,125,168,.12) 48%,
+    rgba(181,168,201,.18) 50%,
+    rgba(139,125,168,.12) 52%,
+    transparent 70%,
+    transparent 100%
+  );
+  transform: translateY(-100%);
+  pointer-events: none;
+  z-index: 1;
+}
+#cta-banner.cta-on .cta-scanline {
+  animation: ctaScanSweep 1.8s cubic-bezier(.2,.8,.2,1) forwards;
+}
+@keyframes ctaScanSweep {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Orbs scale up from nothing */
+#cta-banner .cta-orb { opacity: 0; transform: scale(.3); transition: opacity 1.2s ease, transform 1.6s cubic-bezier(.2,.8,.2,1); }
+#cta-banner.cta-on .cta-orb-1 { opacity: .4; transform: none; transition-delay: .15s; }
+#cta-banner.cta-on .cta-orb-2 { opacity: .2; transform: none; transition-delay: .3s; }
+#cta-banner.cta-on .cta-orb-3 { opacity: .15; transform: none; transition-delay: .45s; }
+
+.cta-inner {
+  position:relative; z-index:2;
+  display:grid; grid-template-columns: 1.4fr 1fr; gap:60px; align-items:center;
+}
+.cta-left { position:relative; }
+/* Content reveal on scroll-in */
+#cta-banner .cta-badge {
+  opacity:1; transform:translateY(24px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+}
+#cta-banner.cta-on .cta-badge {
+  opacity:1; transform:none; transition-delay:.35s;
+}
+
+#cta-banner .cta-text h2 {
+  opacity:1; transform:translateY(30px);
+  transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1);
+}
+#cta-banner.cta-on .cta-text h2 {
+  opacity:1; transform:none; transition-delay:.5s;
+}
+
+#cta-banner .cta-text p {
+  opacity:1; transform:translateY(20px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1);
+}
+#cta-banner.cta-on .cta-text p {
+  opacity:1; transform:none; transition-delay:.7s;
+}
+
+#cta-banner .cta-right {
+  opacity:1; transform:translateX(40px);
+  transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1);
+}
+#cta-banner.cta-on .cta-right {
+  opacity:1; transform:none; transition-delay:.6s;
+}
+
+/* Accent mark */
+.cta-badge {
+  display:inline-flex; align-items:center; gap:10px;
+  background: rgba(139,125,168,.15);
+  border: 1px solid rgba(139,125,168,.35);
+  color:var(--amber-lt); padding:8px 16px; border-radius:100px;
+  font-size:11px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
+  margin-bottom:24px;
+}
+.cta-badge-dot {
+  width:8px; height:8px; background:var(--amber); border-radius:50%;
+  box-shadow: 0 0 0 3px rgba(139,125,168,.3);
+  animation: pulse 2s ease-in-out infinite;
+}
+.cta-text h2 {
+  font-family:var(--font-head); font-size:clamp(36px, 4.2vw, 60px);
+  font-weight:800; color:#fff; line-height:1; margin-bottom:20px;
+  letter-spacing:-2px;
+}
+.cta-text h2 em { font-style:normal; color:var(--amber-lt); }
+.cta-text p {
+  font-size:17px; color:rgba(255,255,255,.7); font-weight:300;
+  line-height:1.7; max-width:500px; letter-spacing:.1px;
+}
+.cta-right {
+  display:flex; flex-direction:column; gap:20px; align-items:stretch;
+}
+/* Primary + secondary */
+.cta-actions { display:flex; flex-direction:column; gap:12px; }
+.btn-white {
+  background:#fff; color:var(--green);
+  padding:18px 28px; border-radius:100px;
+  font-family:var(--font-body); font-size:14px; font-weight:700; letter-spacing:.3px;
+  text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  transition: transform .25s, box-shadow .25s;
+  box-shadow:0 8px 24px rgba(0,0,0,.3);
+  position:relative; overflow:hidden;
+}
+.btn-white::before {
+  content:''; position:absolute; top:0; left:-100%;
+  width:100%; height:100%;
+  background: linear-gradient(90deg, transparent, rgba(74,45,122,.08), transparent);
+  transition: left .6s ease;
+}
+.btn-white:hover { transform:translateY(-3px); box-shadow:0 14px 36px rgba(0,0,0,.4); }
+.btn-white:hover::before { left:100%; }
+.btn-white svg { width:18px; height:18px; stroke:currentColor; fill:none; stroke-width:2.2; }
+
+.btn-outline-white {
+  background:transparent; color:#fff;
+  padding:17px 28px; border-radius:100px;
+  border: 1.5px solid rgba(255,255,255,.3);
+  font-family:var(--font-body); font-size:14px; font-weight:600; letter-spacing:.3px;
+  text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  transition: all .25s;
+}
+.btn-outline-white:hover { background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.5); }
+.btn-outline-white svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2; }
+
+/* Quick stats strip inline */
+.cta-stats {
+  display:flex; gap:0; padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.12);
+  margin-top:4px;
+}
+.cts-item { flex:1; text-align:center; padding:0 12px; border-right:1px solid rgba(255,255,255,.08); }
+.cts-item:last-child { border-right:none; }
+.cts-num { font-family:var(--font-head); font-size:22px; font-weight:800; color:#fff; line-height:1; }
+.cts-lbl { font-size:10px; color:rgba(255,255,255,.45); letter-spacing:1px; margin-top:6px; text-transform:uppercase; }
+
+/* ──────────────────────────────────────────────────────
+   FOOTER — Premium
+────────────────────────────────────────────────────── */
+footer {
+  background: linear-gradient(180deg, #0D0A12 0%, var(--dark) 100%);
+  padding:0; position:relative;
+}
+/* Amber divider strip above footer */
+.footer-divider {
+  height: 4px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--amber) 50%, var(--green) 100%);
+}
+/* Newsletter band */
+.footer-newsletter {
+  padding: 60px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  position:relative; overflow:hidden;
+}
+.footer-newsletter::before {
+  content:''; position:absolute; inset:0;
+  background: radial-gradient(ellipse at 20% 50%, rgba(74,45,122,.2) 0%, transparent 60%);
+  pointer-events:none;
+}
+.fn-inner {
+  display:grid; grid-template-columns: 1fr auto; gap:40px; align-items:center;
+  position:relative; z-index:1;
+}
+.fn-heading {
+  font-family:var(--font-head); font-size:32px; font-weight:800; color:#fff;
+  line-height:1.1; letter-spacing:-.8px; margin-bottom:8px;
+}
+.fn-sub { font-size:15px; color:rgba(255,255,255,.55); font-weight:300; letter-spacing:.1px; }
+.fn-form {
+  display:flex; gap:8px;
+  background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+  padding:6px; border-radius:100px;
+  min-width: 420px;
+}
+.fn-form input {
+  flex:1; background:transparent; border:none; outline:none;
+  padding:12px 20px; color:#fff;
+  font-family:var(--font-body); font-size:14px; font-weight:300;
+}
+.fn-form input::placeholder { color:rgba(255,255,255,.35); }
+.fn-form button {
+  background: var(--amber); color:#fff;
+  padding:12px 24px; border:none; border-radius:100px; cursor:pointer;
+  font-family:var(--font-body); font-size:13px; font-weight:700; letter-spacing:.3px;
+  display:inline-flex; align-items:center; gap:6px;
+  transition: background .2s, transform .2s;
+  box-shadow:0 4px 14px rgba(139,125,168,.35);
+}
+.fn-form button:hover { background:var(--amber-lt); transform:translateY(-1px); }
+.fn-form button svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.2; }
+
+/* Main footer */
+.footer-main { padding: 72px 0 48px; }
+.footer-grid { display:grid; grid-template-columns:2.2fr 1fr 1fr 1.2fr; gap:56px; margin-bottom:56px; }
+.f-brand .nav-logo { margin-bottom: 20px; }
+.f-brand .logo-mark { background: var(--green-mid); box-shadow: 0 3px 10px rgba(0,0,0,.3); }
+.f-brand p {
+  font-size:15px; line-height:1.75; color:rgba(255,255,255,.55);
+  max-width:340px; font-weight:300; letter-spacing:.1px;
+}
+.f-social { display:flex; gap:10px; margin-top:28px; }
+.f-soc {
+  width:40px; height:40px; border:1px solid rgba(255,255,255,.1);
+  border-radius:12px; display:flex; align-items:center; justify-content:center;
+  text-decoration:none; transition: all .25s ease;
+  background:rgba(255,255,255,.03);
+}
+.f-soc:hover {
+  border-color:var(--amber);
+  background:rgba(139,125,168,.12);
+  transform:translateY(-3px);
+  box-shadow: 0 8px 20px rgba(139,125,168,.2);
+}
+.f-soc svg { width:15px; height:15px; stroke:rgba(255,255,255,.45); fill:none; stroke-width:1.8; transition:stroke .25s; }
+.f-soc:hover svg { stroke:var(--amber-lt); }
+.f-col-head {
+  font-size:10px; font-weight:700; letter-spacing:3px;
+  text-transform:uppercase; color:var(--amber-lt); margin-bottom:24px;
+  display:flex; align-items:center; gap:10px;
+}
+.f-col-head::after {
+  content:''; flex:1; height:1px; background:rgba(255,255,255,.08);
+}
+.f-links { display:flex; flex-direction:column; gap:12px; list-style:none; }
+.f-links a {
+  font-size:14.5px; color:rgba(255,255,255,.55); text-decoration:none;
+  transition: color .2s, padding-left .2s;
+  font-weight:400; letter-spacing:.1px;
+  position:relative;
+  display:inline-flex; align-items:center; gap:8px;
+}
+.f-links a::before {
+  content:''; width:0; height:1px; background: var(--amber);
+  transition: width .25s ease;
+}
+.f-links a:hover { color:#fff; }
+.f-links a:hover::before { width:12px; }
+
+/* Affiliated block */
+.f-affiliate {
+  margin-top:32px; padding:18px 20px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+}
+.f-aff-label { font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.35); margin-bottom:6px; }
+.f-aff-name { font-size:13px; font-weight:600; color:rgba(255,255,255,.85); line-height:1.5; }
+.f-aff-name span { display:block; color:rgba(255,255,255,.4); font-weight:300; font-size:12px; }
+
+/* Footer bottom */
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,.07);
+  padding: 28px 0;
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:24px; flex-wrap:wrap;
+}
+.fb-left {
+  font-size:12px; color:rgba(255,255,255,.35); font-weight:300;
+  display:flex; align-items:center; gap:12px; flex-wrap:wrap;
+}
+.fb-left a { color:rgba(255,255,255,.5); text-decoration:none; }
+.fb-left a:hover { color:#fff; }
+.fb-sep { color:rgba(255,255,255,.15); }
+.fb-disclosure {
+  font-size:11px; color:rgba(255,255,255,.25); max-width:560px;
+  line-height:1.7; font-weight:300;
+}
+
+/* ──────────────────────────────────────────────────────
+   SCROLL TOP
+────────────────────────────────────────────────────── */
+#scrolltop {
+  position:fixed; bottom:32px; right:32px; z-index:400;
+  width:44px; height:44px; background:var(--green);
+  border:none; border-radius:50%; cursor:pointer;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition: opacity .3s, transform .3s;
+}
+#scrolltop.show { opacity:1; transform:none; pointer-events:all; }
+#scrolltop:hover { background:var(--green-mid); }
+#scrolltop svg { width:18px; height:18px; stroke:#fff; fill:none; stroke-width:2; }
+
+/* ──────────────────────────────────────────────────────
+   ADVANCED ANIMATIONS & MICRO-INTERACTIONS
+────────────────────────────────────────────────────── */
+
+/* Enhanced scroll reveal variants */
+[data-reveal="fade-up"] { opacity:0; transform:translateY(40px); transition: opacity .9s cubic-bezier(.2,.8,.2,1), transform .9s cubic-bezier(.2,.8,.2,1); }
+[data-reveal="fade-up"].on { opacity:1; transform:none; }
+[data-reveal="scale-in"] { opacity:0; transform:scale(.92); transition: opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1); }
+[data-reveal="scale-in"].on { opacity:1; transform:none; }
+[data-reveal="blur-in"] { opacity:0; filter:blur(8px); transform:translateY(16px); transition: opacity .8s ease, filter .8s ease, transform .8s ease; }
+[data-reveal="blur-in"].on { opacity:1; filter:blur(0); transform:none; }
+
+/* Stagger children animation */
+[data-stagger] > * { opacity:0; transform:translateY(24px); transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
+[data-stagger].on > *:nth-child(1) { opacity:1; transform:none; transition-delay:0s; }
+[data-stagger].on > *:nth-child(2) { opacity:1; transform:none; transition-delay:.08s; }
+[data-stagger].on > *:nth-child(3) { opacity:1; transform:none; transition-delay:.16s; }
+[data-stagger].on > *:nth-child(4) { opacity:1; transform:none; transition-delay:.24s; }
+[data-stagger].on > *:nth-child(5) { opacity:1; transform:none; transition-delay:.32s; }
+[data-stagger].on > *:nth-child(6) { opacity:1; transform:none; transition-delay:.4s; }
+
+/* Counter number animation (applied via JS class) */
+.count-up { display:inline-block; }
+.count-up.counting { animation: countBounce .6s ease; }
+@keyframes countBounce {
+  0% { transform:scale(1); }
+  50% { transform:scale(1.06); }
+  100% { transform:scale(1); }
+}
+
+/* Parallax on images */
+.parallax-img { transition: transform .15s linear; will-change: transform; }
+
+/* Magnetic hover effect on primary buttons */
+.btn-green, .btn-white, .form-submit, .nav-cta {
+  position:relative; overflow:hidden;
+}
+.btn-green::after, .btn-white::after, .form-submit::after {
+  content:''; position:absolute; top:50%; left:50%;
+  width:0; height:0; border-radius:50%;
+  background: rgba(255,255,255,.3);
+  transform: translate(-50%,-50%);
+  transition: width .6s ease, height .6s ease;
+  pointer-events:none;
+}
+.btn-green:active::after,
+.btn-white:active::after,
+.form-submit:active::after {
+  width:300px; height:300px;
+  transition: 0s;
+}
+
+/* CTA BANNER — Captivating animated background */
+#cta-banner {
+  background: linear-gradient(135deg, #1A0F26 0%, var(--green) 45%, var(--green-mid) 100%);
+  overflow:hidden;
+}
+#cta-banner::before {
+  animation: ctaGlowPulse 8s ease-in-out infinite;
+}
+@keyframes ctaGlowPulse {
+  0%, 100% {
+    background-image:
+      radial-gradient(circle at 85% 30%, rgba(139,125,168,.2) 0%, transparent 50%),
+      radial-gradient(circle at 15% 70%, rgba(255,255,255,.05) 0%, transparent 50%);
+  }
+  50% {
+    background-image:
+      radial-gradient(circle at 75% 50%, rgba(139,125,168,.3) 0%, transparent 55%),
+      radial-gradient(circle at 25% 40%, rgba(255,255,255,.08) 0%, transparent 55%);
+  }
+}
+
+/* Floating orbs in CTA */
+.cta-orb {
+  position:absolute; border-radius:50%;
+  pointer-events:none; z-index:1;
+  filter: blur(40px);
+  opacity: .4;
+  will-change: transform;
+}
+.cta-orb-1 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, var(--amber), transparent 70%);
+  top: -100px; right: 10%;
+  animation: orbFloat1 14s ease-in-out infinite;
+}
+.cta-orb-2 {
+  width: 240px; height: 240px;
+  background: radial-gradient(circle, var(--green-lite), transparent 70%);
+  bottom: -80px; left: 15%;
+  animation: orbFloat2 11s ease-in-out infinite;
+  opacity: .2;
+}
+.cta-orb-3 {
+  width: 180px; height: 180px;
+  background: radial-gradient(circle, var(--amber-lt), transparent 70%);
+  top: 40%; left: 40%;
+  animation: orbFloat3 18s ease-in-out infinite;
+  opacity: .15;
+}
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33%     { transform: translate(-60px, 40px) scale(1.15); }
+  66%     { transform: translate(30px, 80px) scale(.9); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  50%     { transform: translate(80px, -50px) scale(1.2); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  25%     { transform: translate(-100px, -40px) scale(1.3); }
+  75%     { transform: translate(80px, 60px) scale(.85); }
+}
+
+/* Shimmer on CTA badge dot */
+.cta-badge-dot {
+  animation: pulse 2s ease-in-out infinite, shimmerDot 3s ease-in-out infinite;
+}
+@keyframes shimmerDot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(139,125,168,.3), 0 0 20px rgba(139,125,168,.5); }
+  50%      { box-shadow: 0 0 0 5px rgba(139,125,168,.2), 0 0 32px rgba(139,125,168,.8); }
+}
+
+/* Animated arrow on CTA buttons */
+.btn-white svg, .btn-outline-white svg { transition: transform .3s cubic-bezier(.2,.8,.2,1); }
+.btn-white:hover svg, .btn-outline-white:hover svg { transform: translateX(4px); }
+
+/* Service card — reveal slide up */
+.service-row {
+  opacity:0; transform:translateY(60px);
+  transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease;
+}
+.service-row.on { opacity:1; transform:none; }
+
+/* Mini service cards — stagger from bottom */
+.services-mini .sm-item {
+  opacity:0; transform:translateY(30px) scale(.96);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1), box-shadow .35s, border-color .3s;
+}
+.services-mini .sm-item.on { opacity:1; transform:none; }
+
+/* Numbers band — animated on scroll */
+.number-item {
+  opacity:0; transform:translateY(30px) scale(.94);
+  transition: opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1), background .3s;
+}
+.number-item.on { opacity:1; transform:none; }
+
+/* Process cards — reveal with rotation */
+.ps {
+  opacity:0; transform:translateY(40px) rotate(-1deg);
+  transition: opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1), box-shadow .5s;
+}
+.ps.on { opacity:1; transform:none; }
+
+/* Testimonial — different reveals per column */
+.t-photo-card {
+  transition: opacity 1s cubic-bezier(.2,.8,.2,1), transform 1s cubic-bezier(.2,.8,.2,1);
+}
+.t-photo-card:hover { transform: scale(1.01); box-shadow: 0 30px 80px rgba(0,0,0,.45), 0 50px 120px rgba(0,0,0,.3); }
+
+/* Hover lift on info rows (subtle 3d effect) */
+.ci-row { will-change: transform; }
+
+/* Reviews card entrance */
+.rv-card {
+  opacity:0; transform:translateY(30px);
+  transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1), box-shadow .35s, transform .3s;
+}
+.rv-card.on { opacity:1; transform:none; }
+.rv-card:hover { transform:translateY(-5px) !important; }
+
+/* Smooth image load fade */
+img { transition: opacity .4s ease; }
+img[loading="lazy"] { opacity:0; }
+img[loading="lazy"].loaded { opacity:1; }
+
+/* Hero content blur-in on slide change (intensifies the cinematic feel) */
+.slide.active .slide-title {
+  animation: titleSlideIn 1s cubic-bezier(.2,.8,.2,1) forwards;
+}
+@keyframes titleSlideIn {
+  0% { opacity:0; transform:translateY(28px); filter: blur(6px); }
+  100% { opacity:1; transform:none; filter: blur(0); }
+}
+
+/* Smooth scrollbar styling */
+html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--green), var(--green-mid));
+  border-radius: 100px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--green-mid); }
+
+/* Scroll progress indicator at top */
+#scroll-progress {
+  position: fixed; top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green) 0%, var(--amber) 100%);
+  z-index: 1000;
+  width: 0%;
+  box-shadow: 0 0 12px rgba(139,125,168,.5);
+  transition: width .08s linear;
+}
+
+/* Hover lift effect for all interactive cards */
+.about-pillar, .opp-card, .wsg-card {
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, background .3s, border-color .3s;
+}
+
+/* Subtle infinite breathe on primary accent amber dot */
+.green-dot, .cta-badge-dot { will-change: transform; }
+
+/* Heading characters reveal (sliced) — for the big headlines */
+.char-reveal { display: inline-block; overflow: hidden; vertical-align: top; }
+.char-reveal > span {
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform .8s cubic-bezier(.2,.8,.2,1);
+}
+.char-reveal.on > span { transform: translateY(0); }
+.char-reveal.on > span:nth-child(2) { transition-delay: .05s; }
+.char-reveal.on > span:nth-child(3) { transition-delay: .1s; }
+
+/* Image tilt on hover (subtle 3D) */
+.sr-photo-wrap, .t-photo-card {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .15s !important;
+  }
+  .cta-orb, .hero-orb { display: none !important; }
+}
+
+/* ──────────────────────────────────────────────────────
+   RESPONSIVE
+────────────────────────────────────────────────────── */
+@media(max-width:1024px) {
+  .about-grid, .contact-grid, .opp-grid { grid-template-columns:1fr; }
+  .about-photo-wrap { margin-left:0; }
+  .about-badge { right:8px; }
+  .about-content { padding:40px 0; }
+  .services-top { grid-template-columns:1fr; gap:32px; }
+  .services-top-right { padding-left:0; padding-top:0; }
+  .st-accent { display:none; }
+  .service-row { grid-template-columns:1fr; }
+  .service-row.flip { direction:ltr; }
+  .sr-photo-wrap, .service-row.flip .sr-photo-wrap { margin:24px 24px 0; }
+  .sr-content, .service-row.flip .sr-content { padding:32px 32px 40px; }
+  .sr-num { display:none; }
+  .services-mini { grid-template-columns:1fr 1fr; }
+  .numbers-grid { grid-template-columns:repeat(2,1fr); }
+  .process-steps { grid-template-columns:1fr 1fr; }
+  .process-steps::before { display:none; }
+  .ps-photo-wrap { height: 160px; }
+  .reviews-grid { grid-template-columns:1fr 1fr; }
+  .reviews-header { flex-direction:column; align-items:flex-start; gap:24px; }
+  .rv-card { flex: 0 0 calc((100% - 24px) / 2); }
+  .footer-grid { grid-template-columns:2fr 1fr 1fr; gap:40px; }
+  .f-brand { grid-column: 1 / -1; }
+  .opp-photo-col { min-height:380px; }
+  .opp-content { padding:60px 40px; }
+  /* Testimonial */
+  .tst-slide { grid-template-columns: 1fr; gap:40px; }
+  .tst-slide .t-photo-card { max-width:380px; margin:0 auto; }
+  .tst-slide .t-big-quote { font-size:150px; top:-40px; }
+  .tst-stage, .tst-track { min-height: auto; height: auto; }
+  .tst-slide { position: relative; inset: auto; }
+  .tst-slide:not(.active) { display:none; }
+  .tst-header-row { flex-direction:column; align-items:flex-start; }
+  /* CTA */
+  .cta-inner { grid-template-columns:1fr; gap:40px; }
+  /* Newsletter */
+  .fn-inner { grid-template-columns:1fr; gap:24px; }
+  .fn-form { min-width:0; width:100%; }
+}
+@media(max-width:768px) {
+  .container, .container-full { padding:0 24px; }
+  .nav-toggle { display:block; }
+  .nav-links { display:none !important; }
+  #nav > div { padding:0 24px !important; }
+  #hero { min-height:auto; padding-top:140px !important; }
+  .hero-actions { flex-direction:column; }
+  .hero-stats { gap:24px; flex-wrap:wrap; }
+  .services-mini { grid-template-columns:1fr; }
+  .reviews-grid { grid-template-columns:1fr; }
+  .rv-card { flex: 0 0 100%; }
+  .footer-grid { grid-template-columns:1fr; gap:32px; }
+  .footer-bottom { flex-direction:column; }
+  .process-steps { grid-template-columns:1fr; }
+  .form-row { grid-template-columns:1fr; }
+  .contact-form { padding:36px 28px; }
+  .sr-content { padding:40px 32px; }
+  .t-foot { flex-direction:column; align-items:flex-start; }
+  .fn-form { flex-direction:column; border-radius:20px; padding:10px; }
+  .fn-form input { padding:14px 16px; text-align:center; }
+  .fn-form button { padding:14px; justify-content:center; }
+  .contact-trust { justify-content:flex-start; }
+  .cta-stats .cts-num { font-size:18px; }
+}
+
+/* mobile menu */
+.mobile-menu {
+  display:none; position:fixed; inset:0; z-index:900;
+  background: linear-gradient(135deg, rgba(30,15,50,0.98) 0%, rgba(10,16,12,0.99) 100%);
+  backdrop-filter: blur(15px);
+  flex-direction:column;
+  align-items:stretch;
+  justify-content:flex-start;
+  padding: 80px 32px 40px 32px;
+  overflow-y: auto;
+}
+.mobile-menu.open { display:flex; }
+.mobile-menu nav { display:flex; flex-direction:column; gap:20px; }
+
+/* header inside menu */
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 20px;
+}
+.mobile-menu-logo { height: 65px !important; filter: brightness(0) invert(1) !important; object-fit: contain !important; }
+
+/* links */
+.mobile-menu a, .mobile-menu-summary {
+  font-family:var(--font-head); font-size:22px; font-weight:700;
+  color:#fff; text-decoration:none; transition:all .25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-menu a:hover, .mobile-menu-summary:hover { color:var(--amber); }
+
+/* details and summary styling */
+.mobile-menu-details {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.mobile-menu-summary {
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+}
+.mobile-menu-summary::-webkit-details-marker {
+  display: none;
+}
+.summary-arrow {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+  color: rgba(255,255,255,0.5);
+}
+.mobile-menu-details[open] .summary-arrow {
+  transform: rotate(180deg);
+  color: var(--amber);
+}
+.mobile-menu-sublinks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-left: 20px;
+  margin-top: 12px;
+  border-left: 2px solid rgba(255,255,255,0.1);
+}
+.mobile-menu-sublinks a {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  padding: 4px 0;
+}
+.mobile-menu-sublinks a:hover {
+  color: var(--amber);
+  padding-left: 4px;
+}
+
+/* close button */
+.mobile-close {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+.mobile-close:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* contact section at bottom */
+.mobile-menu-footer {
+  margin-top: auto;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mm-contact-link {
+  font-family: var(--font-body) !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  color: rgba(255,255,255,0.6) !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+}
+.mm-contact-link svg {
+  width: 16px;
+  height: 16px;
+  stroke: var(--amber);
+  fill: none;
+  stroke-width: 2;
+}
+
+/* Opportunity page visual updates */
+.expect-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+  border-color: var(--green) !important;
+}
+.expect-card-dark:hover {
+  transform: translateY(-8px);
+  border-color: var(--amber) !important;
+  background: rgba(255,255,255,0.05) !important;
+}
+
+/* Navigation Dropdown styling */
+.nav-dropdown-wrap {
+  position: relative;
+}
+.nav-dropdown-toggle {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
 }
-.lang-btn {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(74,45,122,0.08);
-  border: 1px solid rgba(74,45,122,0.2);
-  border-radius: 20px;
-  padding: 5px 12px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: var(--dark);
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background 0.2s, border-color 0.2s;
-  text-transform: uppercase;
-  font-family: var(--font-body, sans-serif);
+.nav-dropdown-toggle svg.chevron {
+  width: 10px;
+  height: 10px;
+  stroke: currentColor;
+  stroke-width: 3px;
+  fill: none;
+  transition: transform 0.25s ease;
+  display: inline-block;
+  margin-top: 1px;
 }
-.lang-btn:hover {
-  background: rgba(74,45,122,0.15);
-  border-color: rgba(74,45,122,0.4);
+.nav-dropdown-wrap:hover .nav-dropdown-toggle svg.chevron {
+  transform: rotate(180deg);
 }
-.lang-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
-.lang-btn .lang-chevron { width: 10px; height: 10px; transition: transform 0.2s; }
-.lang-switcher.open .lang-chevron { transform: rotate(180deg); }
-.lang-dropdown {
+.nav-dropdown {
   position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  background: #fff;
-  border: 1px solid #E8E4EF;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 220px;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(74, 45, 122, 0.08);
   border-radius: 12px;
-  padding: 6px;
-  min-width: 160px;
-  box-shadow: 0 8px 32px rgba(74,45,122,0.15);
+  box-shadow: 0 10px 30px rgba(74, 45, 122, 0.08);
+  padding: 8px 0;
+  list-style: none;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-6px);
-  transition: opacity 0.18s, transform 0.18s, visibility 0.18s;
-  z-index: 10000;
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 1000;
+  margin: 0;
 }
-.lang-switcher.open .lang-dropdown {
+.nav-dropdown-wrap:hover .nav-dropdown {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateX(-50%) translateY(0);
 }
-.lang-dropdown a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
+.nav-dropdown li {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.nav-dropdown a {
+  display: block;
+  padding: 8px 20px !important;
+  color: var(--dark) !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
   text-decoration: none;
-  transition: background 0.15s;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 0 !important;
+  text-align: left;
 }
-.lang-dropdown a:hover { background: #F0EBF8; color: var(--green, #4A2D7A); }
-.lang-dropdown a.active { font-weight: 700; color: var(--green, #4A2D7A); }
-.lang-dropdown a .lang-check { margin-left: auto; font-size: 12px; opacity: 0; }
-.lang-dropdown a.active .lang-check { opacity: 1; }
-
-/* Mobile language switcher */
-.mobile-lang-switcher {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding: 12px 20px 4px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  margin-top: 4px;
+.nav-dropdown a:hover {
+  background: rgba(74, 45, 122, 0.04) !important;
+  color: var(--purple) !important;
 }
-.mobile-lang-switcher a {
-  font-size: 11px !important;
-  font-weight: 700 !important;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  padding: 4px 10px !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(255,255,255,0.2) !important;
-  color: rgba(255,255,255,0.65) !important;
-  text-decoration: none;
-  transition: all 0.2s;
+#nav.stuck .nav-dropdown {
+  background: rgba(255, 255, 255, 0.98);
 }
-.mobile-lang-switcher a:hover { background: rgba(255,255,255,0.1) !important; color: #fff !important; }
-.mobile-lang-switcher a.active { 
-  background: rgba(74,45,122,0.6) !important; 
-  border-color: rgba(255,255,255,0.4) !important; 
-  color: #fff !important; 
-}
-
 
 /* ─── LANGUAGE SWITCHER PREMIUM UI FIXES ─── */
 #nav .lang-switcher {
@@ -431,75 +2814,6 @@ body { font-family: var(--font-body); background: var(--bg); color: var(--dark);
   visibility: visible;
   transform: translateY(0);
 }
-
-/* Navigation Dropdown styling */
-.nav-dropdown-wrap {
-  position: relative;
-}
-.nav-dropdown-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.nav-dropdown-toggle svg.chevron {
-  width: 10px !important;
-  height: 10px !important;
-  stroke: currentColor;
-  stroke-width: 3px;
-  fill: none;
-  transition: transform 0.25s ease;
-  display: inline-block;
-  margin-top: 1px;
-}
-.nav-dropdown-wrap:hover .nav-dropdown-toggle svg.chevron {
-  transform: rotate(180deg);
-}
-.nav-dropdown {
-  position: absolute !important;
-  top: 100% !important;
-  left: 50% !important;
-  transform: translateX(-50%) translateY(10px) !important;
-  width: 260px !important;
-  background: rgba(255, 255, 255, 0.98) !important;
-  backdrop-filter: blur(16px) !important;
-  -webkit-backdrop-filter: blur(16px) !important;
-  border: 1px solid rgba(74, 45, 122, 0.08) !important;
-  border-radius: 12px !important;
-  box-shadow: 0 10px 30px rgba(74, 45, 122, 0.12) !important;
-  padding: 8px 0 !important;
-  list-style: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s !important;
-  z-index: 1000 !important;
-  margin: 0 !important;
-}
-.nav-dropdown-wrap:hover .nav-dropdown {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateX(-50%) translateY(0) !important;
-}
-.nav-dropdown li {
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-.nav-dropdown a {
-  display: block !important;
-  padding: 8px 20px !important;
-  color: var(--dark) !important;
-  font-size: 14px !important;
-  font-weight: 500 !important;
-  text-decoration: none !important;
-  transition: background 0.2s, color 0.2s !important;
-  border-radius: 0 !important;
-  text-align: left !important;
-}
-.nav-dropdown a:hover {
-  background: rgba(74, 45, 122, 0.04) !important;
-  color: var(--purple) !important;
-}
-
 
 /* Navigation Dropdown styling — Spacious Responsive Width */
 .nav-dropdown-wrap {
@@ -6828,378 +9142,17 @@ body.mobile-menu-active .nav-toggle {
 }
 
 </style>
-<style>.nav-lang { display: none !important; }</style>
-
-
-
-<style id="lang-dropdown-hover-fix">
-/* ─── Language Selector Hover + Gap Bridge Fix ─── */
-#nav .lang-switcher {
-  position: relative !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  padding-bottom: 8px !important; /* Invisible hover buffer */
-  margin-bottom: -8px !important;
-}
-
-#nav .lang-dropdown {
-  position: absolute !important;
-  top: 100% !important;
-  right: 0 !important;
-  background: #FFFFFF !important;
-  border: 1px solid #E8E4EF !important;
-  border-radius: 16px !important;
-  padding: 8px !important;
-  min-width: 195px !important;
-  box-shadow: 0 16px 40px rgba(32,18,56,0.18) !important;
-  z-index: 10000 !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transform: translateY(-4px) !important;
-  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease !important;
-}
-
-/* Invisible bridge so moving cursor downwards keeps hover active */
-#nav .lang-dropdown::before {
-  content: '' !important;
-  position: absolute !important;
-  top: -14px !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 14px !important;
-  background: transparent !important;
-}
-
-/* Show menu on mouseover / hover AND on click (.open) */
-#nav .lang-switcher:hover .lang-dropdown,
-#nav .lang-switcher.open .lang-dropdown,
-#nav .lang-dropdown:hover {
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  transform: translateY(0) !important;
-}
-</style>
-<style id="lang-check-active-fix">
-/* ─── Show Checkmark ONLY on Active Language ─── */
-#nav .lang-dropdown a .lang-check,
-.lang-dropdown a .lang-check {
-  display: none !important;
-  margin-left: auto !important;
-  font-size: 13px !important;
-  color: #4A2D7A !important;
-}
-#nav .lang-dropdown a.active .lang-check,
-.lang-dropdown a.active .lang-check {
-  display: inline-block !important;
-}
-</style>
-<style>
-/* ─── Seamless Language Selector Mouseover (Hover) & Bridge ─── */
-#nav .lang-switcher {
-  position: relative !important;
-}
-#nav .lang-switcher:hover .lang-dropdown,
-#nav .lang-switcher.open .lang-dropdown {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  transform: translateY(0) !important;
-}
-#nav .lang-dropdown {
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease !important;
-}
-/* Invisible gap bridge to keep mouseover active during cursor movement */
-#nav .lang-dropdown::before {
-  content: "" !important;
-  position: absolute !important;
-  top: -12px !important;
-  left: 0 !important;
-  right: 0 !important;
-  height: 14px !important;
-  background: transparent !important;
-}
-</style>
-<style>
-/* ─── Services Navigation Touch & Mouseover Dropdown ─── */
-.nav-dropdown-wrap {
-  position: relative !important;
-}
-.nav-dropdown-wrap:hover .nav-dropdown,
-.nav-dropdown-wrap.open .nav-dropdown {
-  display: block !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  transform: translateX(-50%) translateY(0) !important;
-}
-.nav-dropdown-wrap:hover .nav-dropdown-toggle svg.chevron,
-.nav-dropdown-wrap.open .nav-dropdown-toggle svg.chevron {
-  transform: rotate(180deg) !important;
-}
-.nav-dropdown-wrap::before {
-  content: "" !important;
-  position: absolute !important;
-  top: 100% !important;
-  left: -20px !important;
-  right: -20px !important;
-  height: 20px !important;
-  z-index: 999 !important;
-}
-</style>
-<style>
-/* ─── Footer Grid & Link Hover Overflow Fix ─── */
-.footer-grid { grid-template-columns: 2fr 1.1fr 1.35fr 1.1fr !important; gap: 40px !important; }
-.f-links a { white-space: nowrap !important; }
-</style>
-<style>
-/* ─── Read Article Action Button Touch & Hover Enhancement ─── */
-.bc-link {
-  margin-top: auto !important;
-  font-size: 12px !important;
-  font-weight: 700 !important;
-  letter-spacing: 1px !important;
-  text-transform: uppercase !important;
-  color: #4A2D7A !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  padding: 8px 16px !important;
-  background: rgba(74, 45, 122, 0.06) !important;
-  border: 1px solid rgba(74, 45, 122, 0.12) !important;
-  border-radius: 30px !important;
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  width: fit-content !important;
-}
-.blog-card:hover .bc-link,
-.bc-link:hover {
-  background: #4A2D7A !important;
-  color: #ffffff !important;
-  border-color: #4A2D7A !important;
-  box-shadow: 0 4px 12px rgba(74, 45, 122, 0.25) !important;
-}
-.bc-link svg {
-  width: 13px !important;
-  height: 13px !important;
-  stroke: currentColor !important;
-  fill: none !important;
-  stroke-width: 2.5 !important;
-  transition: transform 0.3s ease !important;
-}
-.blog-card:hover .bc-link svg,
-.bc-link:hover svg {
-  transform: translateX(4px) !important;
-  stroke: #ffffff !important;
-}
-</style>
-<style>
-</style>
-<style>
-/* ─── Strict Q&A Slide Display & Mobile Polish (Prevents Text Overlapping) ─── */
-.q-slide {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-}
-.q-slide.active {
-  display: flex !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-  position: relative !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-@media (max-width: 900px) {
-  .qa-dashboard-grid {
-    grid-template-columns: 1fr !important;
-    gap: 24px !important;
-  }
-  .qa-selectors-list {
-    max-height: 240px !important;
-    overflow-y: auto !important;
-    padding-right: 6px !important;
-  }
-  .qa-display-card-stage {
-    min-height: auto !important;
-    height: auto !important;
-    overflow: hidden !important;
-    margin-bottom: 48px !important;
-    border-radius: 20px !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.06) !important;
-  }
-  .q-slide.active {
-    padding: 24px 20px !important;
-    height: auto !important;
-    min-height: auto !important;
-  }
-  .q-slide h3 {
-    font-size: 20px !important;
-    line-height: 1.4 !important;
-    margin-bottom: 14px !important;
-  }
-  .q-slide p {
-    font-size: 14.5px !important;
-    line-height: 1.65 !important;
-  }
-  .q-slide .btn {
-    margin-top: 20px !important;
-    width: 100% !important;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-}
-</style>
-<style>
-/* ── Mobile Footer Grid & Horizontal Scroll Fix ── */
-html, body {
-  overflow-x: hidden !important;
-  max-width: 100vw !important;
-}
-
-@media (max-width: 900px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 32px 24px !important;
-  }
-  .f-brand {
-    grid-column: 1 / -1 !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .footer-grid {
-    grid-template-columns: 1fr !important;
-    gap: 28px !important;
-  }
-  .footer-bottom {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 16px !important;
-  }
-  .fb-left {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
-  }
-}
-</style>
-<style>
-/* ── Bulletproof Global Anti-Horizontal Overflow System ── */
-html {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-}
-
-body {
-  overflow-x: hidden !important;
-  width: 100% !important;
-  max-width: 100vw !important;
-  position: relative !important;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box !important;
-}
-
-.container {
-  width: 100% !important;
-  max-width: 1200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box !important;
-}
-
-.article-hero-container,
-.article-grid-container,
-.article-container-wrap,
-.article-faq-container {
-  width: 100% !important;
-  max-width: 1040px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  box-sizing: border-box !important;
-}
-
-.blog-slider-wrap, .more-articles-wrap {
-  width: 100% !important;
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch !important;
-}
-
-@media (max-width: 768px) {
-  #nav > div {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-  .container {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
-  section {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-}
-</style>
-<style>
-/* ── Standardized Header Logo Polish ── */
-.nav-logo-img {
-  height: 55px !important;
-  max-height: 55px !important;
-  width: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
-#nav:not(.stuck) .nav-logo-img {
-  filter: brightness(0) invert(1) !important;
-}
-
-#nav.stuck .nav-logo-img {
-  filter: none !important;
-}
-</style>
-<style>
-/* ── Standardized Header Logo Polish (Matches English Master 1:1) ── */
-.nav-logo-img {
-  height: 70px !important;
-  max-height: 70px !important;
-  width: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-  transition: height 0.3s ease, filter 0.3s ease !important;
-}
-
-#nav:not(.stuck) .nav-logo-img {
-  filter: brightness(0) invert(1) !important;
-}
-
-#nav.stuck .nav-logo-img {
-  height: 56px !important;
-  max-height: 56px !important;
-  filter: none !important;
-}
-</style>
 </head>
 <body>
 
-<!-- Header -->
 <header id="nav">
-  <div style="width:100%; padding:0 32px; box-sizing:border-box;">
+  <div style="width:100%; padding:0 48px; box-sizing:border-box;">
     <div class="nav-bar">
       <a class="nav-logo" href="index_es.html">
-  <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" class="nav-logo-img">
-</a>
+        <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" class="nav-logo-img">
+      </a>
       <ul class="nav-links">
+        <div class="nav-pill"></div>
         <li><a href="index_es.html#about">Acerca de</a></li>
         <li class="nav-dropdown-wrap" style="position:relative;">
           <a href="javascript:void(0)" class="nav-dropdown-toggle" onclick="event.preventDefault(); event.stopPropagation(); this.parentElement.classList.toggle('open');">Servicios <svg class="chevron" viewBox="0 0 24 24" style="width:10px; height:10px; min-width:10px; min-height:10px; stroke:currentColor; fill:none; stroke-width:2.5px; display:inline-block; vertical-align:middle; margin-left:4px;"><path d="M6 9l6 6 6-6"/></svg></a>
@@ -7207,201 +9160,644 @@ body {
             <li><a href="family_protection_es.html" class="no-pill">Seguro de Vida</a></li>
             <li><a href="retirement_planning_es.html" class="no-pill">Planificación de Jubilación</a></li>
             <li><a href="education_planning_es.html" class="no-pill">Planificación Educativa</a></li>
-            <li><a href="estate_planning_es.html" class="no-pill">Planificación del Patrimonio y Legado</a></li>
+            <li><a href="estate_planning_es.html" class="no-pill">Planificación Patrimonial y de Legado</a></li>
             <li><a href="financial_strategy_es.html" class="no-pill">Estrategia Financiera</a></li>
             <li><a href="business_strategies_es.html" class="no-pill">Estrategias para Negocios</a></li>
           </ul>
         </li>
         <li><a href="index_es.html#process">Cómo funciona</a></li>
-        <li><a href="opportunity_es.html" style="color:var(--green); font-weight:700;">Oportunidad</a></li>
+        <li><a href="opportunity_es.html" class="active" style="color:var(--green); font-weight:700;">Oportunidad</a></li>
+        <li><a href="index_es.html#reviews">Preguntas</a></li>
         <li><a href="index_es.html#blog">Base de conocimientos</a></li>
-        <li><a href="index_es.html#contact" class="btn-cta">Consulta Gratuita</a></li>
+        <li class="lang-switcher" id="lang-switcher-desktop">
+          <button class="lang-btn" aria-label="Select language">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            ES
+            <svg class="lang-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="lang-dropdown">
+            <a href="opportunity.html" class="no-pill"><span>EN</span> English<span class="lang-check">✓</span></a>
+            <a href="opportunity_es.html" class="no-pill active"><span>ES</span> Español<span class="lang-check">✓</span></a>
+          </div>
+        </li>
+        <li><a class="nav-cta" href="#contact">Consulta Gratuita</a></li>
       </ul>
+      <button aria-label="Open menu" class="nav-toggle" onclick="document.querySelector('.mobile-menu').classList.add('open')">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="page-hero">
-  <div class="hero-content">
-    <div class="t-label" style="color:var(--amber-lt); margin-bottom:16px;">LA OPORTUNIDAD</div>
-    <h1 class="t-h1" style="max-width:900px; margin-bottom:24px;">Construye un negocio con propósito en servicios financieros</h1>
-    <p class="t-body" style="color:rgba(255,255,255,0.85); font-size:18px; max-width:850px; margin-bottom:24px;">En Family First Legacy, creemos que la educación financiera puede ayudar a las familias a tomar mejores decisiones y sentirse más preparadas para el futuro. Si tienes un corazón para ayudar a las personas, ofrecemos capacitación, mentoría y apoyo para ayudarte a aprender el negocio de servicios financieros con confianza.</p>
-    <p style="color:var(--amber-lt); font-size:17px; font-style:italic; margin-bottom:36px; max-width:800px;">Ahora mismo, alguien en tu vida puede necesitar tomar una decisión financiera importante; simplemente aún no sabe por dónde empezar. ¿Podrías convertirte en la persona que se presenta con orientación, educación y cuidado?</p>
-    <div style="display:flex; gap:16px; flex-wrap:wrap;">
-      <a href="index_es.html#contact" class="btn-cta" style="padding:14px 32px; font-size:16px; border-radius:30px;">Programa una sesión informativa</a>
-      <a href="index_es.html#contact" style="background:rgba(255,255,255,0.12); color:#fff; padding:14px 32px; border-radius:30px; text-decoration:none; font-weight:600; border:1px solid rgba(255,255,255,0.2);">Comienza con una conversación</a>
+<div class="mobile-menu">
+  <button class="mobile-close" onclick="this.parentElement.classList.remove('open')">✕</button>
+  <nav>
+    <a href="index_es.html#about" onclick="this.closest('.mobile-menu').classList.remove('open')">Acerca de</a>
+    <a href="index_es.html#services" onclick="this.closest('.mobile-menu').classList.remove('open')">Servicios</a>
+    <a href="index_es.html#process" onclick="this.closest('.mobile-menu').classList.remove('open')">Cómo funciona</a>
+    <a href="opportunity_es.html" onclick="this.closest('.mobile-menu').classList.remove('open')" style="color:var(--green); font-weight:700;">Oportunidad</a>
+    <a href="index_es.html#reviews" onclick="this.closest('.mobile-menu').classList.remove('open')">Preguntas</a>
+    <a href="index_es.html#blog" onclick="this.closest('.mobile-menu').classList.remove('open')">Base de conocimientos</a>
+    <div class="mobile-lang-switcher">
+      <a href="opportunity.html">EN</a>
+      <a href="opportunity_es.html" class="active">ES</a>
+    </div>
+    <a href="#contact" onclick="this.closest('.mobile-menu').classList.remove('open')" style="color:var(--green)">Consulta Gratuita →</a>
+  </nav>
+</div>
+
+<!-- HERO HEADER ───────────────────── -->
+<section class="static-hero" style="background-image:url('images/slide6.jpg'); background-position: center 30%;">
+  <div class="static-hero-overlay" style="background: radial-gradient(circle at center, rgba(10, 10, 20, 0.45) 0%, rgba(10, 10, 20, 0.85) 100%), linear-gradient(to bottom, rgba(10, 10, 15, 0.6) 0%, rgba(10, 10, 15, 0.95) 100%);"></div>
+  <div class="sh-content" style="max-width:880px; background: rgba(15, 12, 28, 0.78); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.25); border-radius: 28px; padding: 44px 36px; margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.9);">
+    <div class="sh-badge" style="background:rgba(29,158,117,0.45); border-color:rgba(255,255,255,0.3);">LA OPORTUNIDAD DE CARRERA</div>
+    <h1 class="sh-title" style="font-size: clamp(32px, 4.5vw, 50px); text-shadow: 0 4px 16px rgba(0,0,0,0.9);">Construye un negocio con propósito<br>en <em style="color:var(--amber-lt); font-style:italic;">servicios financieros</em></h1>
+    <p class="sh-sub" style="color: rgba(255,255,255,0.92); font-size: clamp(15.5px, 1.8vw, 18.5px); line-height: 1.65; max-width: 760px; margin: 0 auto 24px; text-shadow: 0 2px 8px rgba(0,0,0,0.9);">En Family First Legacy, creemos que la educación financiera puede ayudar a las familias a tomar mejores decisiones y sentirse más preparadas para el futuro. Si tienes un corazón para ayudar a las personas, ofrecemos capacitación, mentoría y apoyo para ayudarte a aprender el negocio de servicios financieros con confianza.</p>
+    <div class="sh-hook" style="margin-bottom:28px; background: rgba(255,255,255,0.06); padding: 16px 22px; border-radius: 16px; border-left: 3px solid var(--amber); color: #F0E8FF; font-size: 16.5px; font-style: italic; text-align: left;">
+      "Ahora mismo, alguien en tu vida puede necesitar tomar una decisión financiera importante; simplemente aún no sabe por dónde empezar. ¿Podrías convertirte en la persona que se presenta con orientación, educación y cuidado?"
+    </div>
+    <div class="slide-actions" style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+      <a href="#contact" class="btn btn-green">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Programa una sesión informativa
+      </a>
+      <a href="#contact" class="btn btn-ghost" style="color:#fff; border-color:rgba(255,255,255,0.4);">Comienza con una conversación</a>
+    </div>
+  </div>
+
+  <div class="sh-stats-container" style="margin-top:50px;">
+    <div class="numbers-grid">
+      <div class="glass-card">
+        <div class="glass-num">TRABAJO CON PROPÓSITO</div>
+        <div class="glass-label">Ayuda a las familias a entender decisiones que pueden afectar generaciones.</div>
+      </div>
+      <div class="glass-card">
+        <div class="glass-num">CAPACITACIÓN Y MENTORÍA</div>
+        <div class="glass-label">Aprende con orientación, apoyo y herramientas prácticas.</div>
+      </div>
+      <div class="glass-card">
+        <div class="glass-num">INICIO FLEXIBLE</div>
+        <div class="glass-label">Comienza a tiempo parcial o crece según tus metas y tu horario lo permitan.</div>
+      </div>
+      <div class="glass-card">
+        <div class="glass-num">CONSTRUYE TU PROPIO NEGOCIO</div>
+        <div class="glass-label">Crece mediante aprendizaje, constancia, servicio y esfuerzo personal.</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Bottom Tiles Section -->
-<section style="padding-bottom:80px;">
-  <div class="tiles-grid">
-    <div class="tile-card">
-      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">TRABAJO CON PROPÓSITO</div>
-      <div style="font-weight:600; font-size:15px; color:var(--dark);">Ayuda a las familias a entender decisiones que pueden afectar generaciones.</div>
-    </div>
-    <div class="tile-card">
-      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">CAPACITACIÓN Y MENTORÍA</div>
-      <div style="font-weight:600; font-size:15px; color:var(--dark);">Aprende con orientación, apoyo y herramientas prácticas.</div>
-    </div>
-    <div class="tile-card">
-      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">INICIO FLEXIBLE</div>
-      <div style="font-weight:600; font-size:15px; color:var(--dark);">Comienza a tiempo parcial o crece según tus metas y tu horario lo permitan.</div>
-    </div>
-    <div class="tile-card">
-      <div style="color:var(--green); font-size:12px; font-weight:700; letter-spacing:2px; margin-bottom:8px;">CONSTRUYE TU PROPIO NEGOCIO</div>
-      <div style="font-weight:600; font-size:15px; color:var(--dark);">Crece mediante aprendizaje, constancia, servicio y esfuerzo personal.</div>
+<!-- MAIN OPPORTUNITY CONTENT ─────────────────────── -->
+<section id="services" style="padding:0; background:var(--white);">
+  
+  <!-- Section 1: Intro Grid (Why This Matters & Grow/Serve) -->
+  <div style="padding:120px 0 80px;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1.2fr 1fr; gap:60px; align-items:start;">
+        <div data-reveal>
+          <p class="t-label"><span class="green-dot"></span>POR QUÉ IMPORTA ESTA OPORTUNIDAD</p>
+          <h2 class="t-h1" style="margin-top:16px; margin-bottom:24px;">Más que un negocio.<br><em>Una misión para educar a las familias.</em></h2>
+          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-bottom:20px;">
+            Muchas familias desean tomar mejores decisiones financieras, pero no siempre saben por dónde empezar. Pueden tener preguntas sobre seguro de vida, planificación para la jubilación, planificación educativa, protección de ingresos o cómo dejar un legado.
+          </p>
+          <p style="color:var(--muted); font-size:17px; line-height:1.8; margin-bottom:20px;">
+            Ahí es donde la persona correcta puede marcar la diferencia. En Family First Legacy, buscamos personas que se preocupen por las familias, estén dispuestas a aprender y quieran ser parte de una misión construida sobre educación, confianza y servicio.
+          </p>
+        </div>
+        
+        <div style="background:var(--cream); border-left:4px solid var(--green); padding:40px; border-radius:0 20px 20px 0; box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="2">
+          <p class="t-label" style="color:var(--green); margin-bottom:12px;"><span class="green-dot" style="background:var(--green);"></span>CRECE Y SIRVE</p>
+          <h3 style="font-family:var(--font-head); font-size:22px; color:var(--dark); margin-bottom:16px; font-weight:700;">Una oportunidad real para crecer y servir</h3>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:16px;">
+            Esta oportunidad es para personas que desean construir en servicios financieros mientras ayudan a las familias a tomar decisiones informadas. No es un empleo tradicional con salario; es una oportunidad de negocio basada en comisiones. Antes de servir a las familias como profesional con licencia, se requiere la licencia adecuada.
+          </p>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:16px;">
+            El crecimiento depende del aprendizaje, la constancia, el esfuerzo y la capacidad de servir bien a las personas. Para la persona adecuada, esto puede ser un camino significativo hacia el desarrollo personal y profesional.
+          </p>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">
+            Los resultados no están garantizados y pueden variar según el esfuerzo individual, la capacitación, la constancia, el tiempo dedicado, las necesidades de los clientes, la disponibilidad de productos, la aprobación de la compañía y otros factores comerciales.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- Por qué importa esta oportunidad -->
-<section style="padding:80px 0; background:#fff;">
-  <div style="max-width:1100px; margin:0 auto; padding:0 32px;">
+  <!-- Section 2: Who This May Be For (Premium Grid) -->
+  <div style="background:rgba(247,244,239,0.5); padding:100px 0;">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:60px;" data-reveal>
+        <p class="t-label" style="justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>PARA QUIÉN PUEDE SER</p>
+        <h2 class="t-h1" style="margin-top:16px;">¿Esta oportunidad es para ti?</h2>
+        <p style="color:var(--muted); margin-top:8px;">Buscamos alineación en valores, dedicación y cuidado.</p>
+      </div>
+      
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:32px;">
+        
+        <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal>
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Te importa ayudar a las familias</h3>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">Disfrutas escuchar, animar a los demás y ayudar a las personas a entender decisiones importantes que afectan su futuro.</p>
+        </div>
+
+        <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="1">
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Quieres construir tu propio negocio</h3>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">Entiendes que el crecimiento requiere esfuerzo, paciencia, constancia y una disposición continua para aprender y mejorar.</p>
+        </div>
+
+        <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="2">
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Enfoque sin presiones</h3>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">Crees que las familias merecen ser educadas y guiadas, no presionadas. Servir a las familias de la manera correcta genera confianza a largo plazo.</p>
+        </div>
+
+        <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal>
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Necesitas flexibilidad</h3>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">Deseas la opción de comenzar a tiempo parcial mientras equilibras tu trabajo actual, familia, estudios u otros compromisos diarios.</p>
+        </div>
+
+        <div class="expect-card" style="background:#fff; padding:40px 32px; border-radius:20px; border:1px solid rgba(0,0,0,0.06); box-shadow:0 10px 30px rgba(0,0,0,0.03); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1); grid-column:span 2;" data-reveal data-delay="1">
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:var(--dark); margin-bottom:12px;">Crees en educar primero</h3>
+          <p style="color:var(--muted); font-size:15px; line-height:1.7; margin-bottom:0;">Quieres que las personas comprendan bien cómo funcionan sus opciones antes de tomar decisiones. La educación es la base de toda nuestra agencia.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: What You Can Expect (Cohesive Dark Section with Ambient Glow) -->
+  <div style="background:#0b090a; padding:120px 0; position:relative; overflow:hidden; color:#fff;">
+    <div class="tst-orb tst-orb-1" style="background: radial-gradient(circle, rgba(29,158,117,0.12), transparent 70%);"></div>
+    <div class="tst-orb tst-orb-2" style="background: radial-gradient(circle, rgba(74,45,122,0.12), transparent 70%);"></div>
     
-    <div style="margin-bottom:60px;">
-      <div class="t-label" style="color:var(--green); margin-bottom:12px;">POR QUÉ IMPORTA ESTA OPORTUNIDAD</div>
-      <h2 class="t-h2" style="margin-bottom:20px;">Más que un negocio. Una misión para educar a las familias.</h2>
-      <p class="t-body" style="font-size:17px; margin-bottom:16px;">Muchas familias desean tomar mejores decisiones financieras, pero no siempre saben por dónde empezar. Pueden tener preguntas sobre seguro de vida, planificación para la jubilación, planificación educativa, protección de ingresos o cómo dejar un legado.</p>
-      <p class="t-body" style="font-size:17px; margin-bottom:16px;">Ahí es donde la persona correcta puede marcar la diferencia.</p>
-      <p class="t-body" style="font-size:17px;">En Family First Legacy, buscamos personas que se preocupen por las familias, estén dispuestas a aprender y quieran ser parte de una misión construida sobre educación, confianza y servicio.</p>
-    </div>
+    <div class="container" style="position:relative; z-index:2;">
+      <div style="text-align:center; margin-bottom:70px;" data-reveal>
+        <p class="t-label" style="color:var(--amber); justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>QUÉ PUEDES ESPERAR</p>
+        <h2 class="t-h1" style="color:#fff; margin-top:16px;">Apoyo mientras construyes</h2>
+        <p style="color:rgba(255,255,255,0.6); margin-top:8px;">Te equipamos con capacitación, sistemas y mentoría.</p>
+      </div>
 
-    <!-- Para quién puede ser -->
-    <div style="background:var(--bg); border:1px solid var(--line); border-radius:28px; padding:48px; margin-bottom:60px;">
-      <div class="t-label" style="color:var(--green); margin-bottom:12px;">PARA QUIÉN PUEDE SER</div>
-      <h3 class="t-h3" style="margin-bottom:24px;">Esta oportunidad puede ser una buena opción si tú:</h3>
-      
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-        <div>
-          <h4 style="font-size:16px; font-weight:700; color:var(--dark); margin-bottom:8px;">Te importa ayudar a las familias</h4>
-          <p class="t-body" style="font-size:14px;">Disfrutas escuchar, animar a los demás y ayudar a las personas a entender decisiones importantes.</p>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:32px;">
+        
+        <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal>
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Aprende mientras construyes</h3>
+          <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">No tienes que saberlo todo antes de comenzar. Ofrecemos orientación estructurada para aprender los fundamentos de los servicios financieros y cómo atender a los clientes con profesionalismo.</p>
         </div>
-        <div>
-          <h4 style="font-size:16px; font-weight:700; color:var(--dark); margin-bottom:8px;">Quieres construir algo propio</h4>
-          <p class="t-body" style="font-size:14px;">Entiendes que el crecimiento requiere esfuerzo, paciencia, constancia y disposición para aprender.</p>
+
+        <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="1">
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Mentoría durante el camino</h3>
+          <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">Accede a sesiones de capacitación, mentoría de profesionales con experiencia y recursos para apoyar tus próximos pasos.</p>
         </div>
-        <div>
-          <h4 style="font-size:16px; font-weight:700; color:var(--dark); margin-bottom:8px;">No quieres presionar a las personas</h4>
-          <p class="t-body" style="font-size:14px;">Crees que las familias merecen ser educadas, respetadas y guiadas, no presionadas. Cuando te enfocas en servir correctamente, el negocio crece de forma natural mediante confianza y cuidado.</p>
+
+        <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="2">
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Trabajo con propósito</h3>
+          <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">Ayuda a las familias a hacer mejores preguntas, comprender sus opciones y prepararse para el futuro.</p>
         </div>
-        <div>
-          <h4 style="font-size:16px; font-weight:700; color:var(--dark); margin-bottom:8px;">Necesitas flexibilidad</h4>
-          <p class="t-body" style="font-size:14px;">Puedes comenzar a tiempo parcial mientras equilibras trabajo, familia, estudios u otras responsabilidades.</p>
+
+        <div class="expect-card-dark" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.08); padding:40px 32px; border-radius:20px; backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); transition:all 0.4s cubic-bezier(0.16, 1, 0.3, 1);" data-reveal data-delay="3">
+          <h3 style="font-family:var(--font-head); font-size:20px; font-weight:700; color:#fff; margin-bottom:12px;">Crecimiento y liderazgo</h3>
+          <p style="color:rgba(255,255,255,0.7); font-size:14.5px; line-height:1.7; margin-bottom:0;">A medida que desarrolles tus habilidades, podrías tener oportunidades de formar un equipo, apoyar a otros y hacer crecer tu negocio. Los resultados dependen de tu esfuerzo y compromiso.</p>
         </div>
-      </div>
-    </div>
 
-    <!-- Una oportunidad real para crecer y servir -->
-    <div style="margin-bottom:60px;">
-      <div class="t-label" style="color:var(--green); margin-bottom:12px;">DIVULGACIÓN TRANSPARENTE</div>
-      <h2 class="t-h2" style="margin-bottom:20px;">Una oportunidad real para crecer y servir</h2>
-      <p class="t-body" style="font-size:16px; margin-bottom:16px;">Esta oportunidad es para personas que desean construir en servicios financieros mientras ayudan a las familias a tomar decisiones informadas. No es un empleo tradicional con salario; es una oportunidad de negocio basada en comisiones. Antes de servir a las familias como profesional con licencia, se requiere la licencia adecuada. El crecimiento depende del aprendizaje, la constancia, el esfuerzo y la capacidad de servir bien a las personas.</p>
-      <p class="t-body" style="font-size:16px; margin-bottom:16px;">Para la persona adecuada, esto puede ser un camino significativo hacia el crecimiento personal, el desarrollo profesional y una oportunidad de ingresos. Los resultados no están garantizados y pueden variar según el esfuerzo individual, la capacitación, la constancia, el tiempo dedicado, las necesidades de los clientes, la disponibilidad de productos, la aprobación de la compañía y otros factores comerciales.</p>
-      <p class="t-body" style="font-size:16px;">Lo más importante es que este trabajo se trata de personas. Hay una verdadera satisfacción en ayudar a las familias a entender sus opciones, proteger lo que más importa y sentirse más preparadas para el futuro.</p>
-    </div>
-
-    <!-- Nuestro proceso simple de inicio -->
-    <div style="background:var(--green-lite); border:1px solid var(--green); border-radius:28px; padding:48px;">
-      <div class="t-label" style="color:var(--green); margin-bottom:12px;">NUESTRO PROCESO SIMPLE DE INICIO</div>
-      <h2 class="t-h2" style="color:var(--green); margin-bottom:32px;">4 pasos para comenzar</h2>
-      
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:24px;">
-        <div>
-          <div style="font-size:24px; font-weight:800; color:var(--green); margin-bottom:8px;">01 — Sesión informativa</div>
-          <p class="t-body" style="font-size:14px;">Comenzamos con una conversación sencilla para que puedas aprender qué es la oportunidad, cómo funciona el negocio, cómo funciona la compensación y si puede ajustarse a tus metas.</p>
-        </div>
-        <div>
-          <div style="font-size:24px; font-weight:800; color:var(--green); margin-bottom:8px;">02 — Orientación para la licencia</div>
-          <p class="t-body" style="font-size:14px;">Antes de poder recomendar opciones de seguro de vida o ayudar a las familias a solicitar cobertura, debes tener la licencia adecuada. Te ayudamos a entender claramente los pasos para obtener la licencia.</p>
-        </div>
-        <div>
-          <div style="font-size:24px; font-weight:800; color:var(--green); margin-bottom:8px;">03 — Capacitación y mentoría</div>
-          <p class="t-body" style="font-size:14px;">Comienzas a aprender cómo hablar con las familias, entender conceptos financieros básicos y servir a las personas con cuidado y profesionalismo.</p>
-        </div>
-        <div>
-          <div style="font-size:24px; font-weight:800; color:var(--green); margin-bottom:8px;">04 — Construye con apoyo</div>
-          <p class="t-body" style="font-size:14px;">A medida que creces, recibes orientación continua, herramientas y apoyo para ayudarte a desarrollar tus habilidades y confianza.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Opportunity FAQs -->
-<section style="padding:80px 0; background:var(--bg);">
-  <div style="max-width:900px; margin:0 auto; padding:0 32px;">
-    <div style="text-align:center; margin-bottom:48px;">
-      <div class="t-label" style="color:var(--green); margin-bottom:8px;">PREGUNTAS FRECUENTES</div>
-      <h2 class="t-h2">Preguntas frecuentes sobre la oportunidad</h2>
-    </div>
-
-    <div class="faq-list">
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Esto es un empleo o una oportunidad de negocio? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">Esta es una oportunidad de negocio basada en comisiones dentro de los servicios financieros, no un empleo tradicional con salario. Antes de atender a familias como profesional con licencia, se requiere obtener la licencia estatal correspondiente. El crecimiento depende del aprendizaje, la constancia, el esfuerzo y la capacidad de servir bien a las personas. Para la persona adecuada, puede ser un camino significativo de desarrollo personal y profesional.</div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Qué pasa si no soy bueno vendiendo o convenciendo a las personas? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">Está bien. No buscamos vendedores insistentes. Buscamos personas que se preocupen, escuchen, aprendan y quieran ayudar a las familias a entender sus opciones. Esta oportunidad está construida alrededor de la educación, no de la presión. Aprenderás a hacer buenas preguntas, explicar conceptos financieros con claridad y ayudar a las familias a tomar decisiones informadas a su propio ritmo.</div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Necesito una licencia? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">Sí. Para recomendar opciones de seguro de vida o ayudar a las familias a solicitar cobertura, debes tener la licencia adecuada. Te guiamos en los pasos para obtener la licencia para que entiendas lo que se requiere antes de servir a las familias como profesional con licencia.</div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Necesito experiencia en servicios financieros? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">No. Muchas personas comienzan sin experiencia previa en servicios financieros. Lo más importante es tu disposición para aprender, seguir el proceso y servir a las familias con honestidad y cuidado.</div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Puedo comenzar a tiempo parcial? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">Sí. Muchas personas comienzan a tiempo parcial mientras equilibran trabajo, familia, estudios u otras responsabilidades.</div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Recibiré capacitación? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">Sí. La capacitación, mentoría y apoyo continuo son parte del proceso.</div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Los ingresos están garantizados? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">No. Esta es una oportunidad de negocio basada en comisiones dentro de los servicios financieros, no un empleo tradicional con salario. Antes de atender a familias como profesional con licencia, se requiere obtener la licencia estatal correspondiente. El crecimiento depende del aprendizaje, la constancia, el esfuerzo y la capacidad de servir bien a las personas. Para la persona adecuada, puede ser un camino significativo de desarrollo personal y profesional.</div>
-      </div>
-
-      <div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">¿Quién puede ser una buena opción para esta oportunidad? <span class="faq-icon">▼</span></div>
-        <div class="faq-answer">Alguien que se preocupa por ayudar a las familias, acepta orientación, se comunica bien, entiende que los resultados requieren esfuerzo y está dispuesto a aprender a servir a las personas con profesionalismo e integridad.</div>
       </div>
     </div>
   </div>
-</section>
 
-<!-- Final CTA Section -->
-<section style="padding:100px 0; background:linear-gradient(135deg, #3A2060 0%, #1A0D30 100%); color:#fff; text-align:center;">
-  <div style="max-width:800px; margin:0 auto; padding:0 32px;">
-    <h2 class="t-h2" style="color:#fff; margin-bottom:20px;">¿Listo para aprender más?</h2>
-    <p style="font-size:17px; color:rgba(255,255,255,0.85); margin-bottom:36px; line-height:1.7;">Si buscas una oportunidad significativa, crecimiento personal y una forma de construir en servicios financieros mientras ayudas a las familias a tomar decisiones informadas, nos encantaría hablar contigo.</p>
-    <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-      <a href="index_es.html#contact" class="btn-cta" style="padding:16px 36px; font-size:17px; border-radius:30px; display:inline-block;">Programa una sesión informativa</a>
-      <a href="index_es.html#contact" style="background:rgba(255,255,255,0.12); color:#fff; padding:16px 36px; border-radius:30px; text-decoration:none; font-weight:600; border:1px solid rgba(255,255,255,0.2);">Comienza con una conversación</a>
+  <!-- Section 4: Our Simple Starting Process -->
+  <div style="padding:120px 0; background:var(--white);">
+    <div class="container">
+      <div style="text-align:center; margin-bottom:75px;" data-reveal>
+        <p class="t-label" style="justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>NUESTRO PROCESO SIMPLE DE INICIO</p>
+        <h2 class="t-h1" style="margin-top:16px;">4 pasos para comenzar</h2>
+        <p style="color:var(--muted); margin-top:8px;">Cuatro sencillos pasos para unirte a nuestra agencia y comenzar a aprender.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:32px;">
+        
+        <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal>
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">01</div>
+          <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Sesión informativa</h3>
+          <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">Comenzamos con una conversación sencilla para que puedas aprender qué es la oportunidad, cómo funciona el negocio, cómo funciona la compensación y si puede ajustarse a tus metas.</p>
+        </div>
+
+        <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="1">
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">02</div>
+          <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Orientación para la licencia</h3>
+          <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">Antes de poder recomendar opciones de seguro de vida o ayudar a las familias a solicitar cobertura, debes tener la licencia adecuada. Te ayudamos a entender claramente los pasos para obtener la licencia.</p>
+        </div>
+
+        <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="2">
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">03</div>
+          <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Capacitación y mentoría</h3>
+          <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">Comienzas a aprender cómo hablar con las familias, entender conceptos financieros básicos y servir a las personas con cuidado y profesionalismo.</p>
+        </div>
+
+        <div style="background:var(--cream); padding:40px 32px; border-radius:20px; border-top:4px solid var(--green); box-shadow:0 10px 30px rgba(0,0,0,0.02);" data-reveal data-delay="3">
+          <div style="font-family:var(--font-head); font-size:36px; font-weight:800; color:var(--green); margin-bottom:16px; line-height:1;">04</div>
+          <h3 style="font-family:var(--font-head); font-size:19px; font-weight:700; color:var(--dark); margin-bottom:12px;">Construye con apoyo</h3>
+          <p style="color:var(--muted); font-size:14px; line-height:1.6; margin-bottom:0;">A medida que creces, recibes orientación continua, herramientas y apoyo para ayudarte a desarrollar tus habilidades y confianza.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 5: FAQ Accordion -->
+  <div style="background:rgba(247,244,239,0.5); padding:100px 0;">
+    <div class="container" style="max-width:900px;">
+      <div style="text-align:center; margin-bottom:60px;" data-reveal>
+        <p class="t-label" style="justify-content:center; display:flex; align-items:center; gap:8px;"><span class="green-dot"></span>PREGUNTAS FRECUENTES</p>
+        <h2 class="t-h1" style="margin-top:16px;">Preguntas frecuentes sobre la oportunidad</h2>
+      </div>
+
+      <div class="faq-list">
+        
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Esto es un empleo o una oportunidad de negocio?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>Esta es una oportunidad de negocio basada en comisiones dentro de los servicios financieros, no un empleo tradicional con salario. Antes de atender a familias como profesional con licencia, se requiere obtener la licencia estatal correspondiente. El crecimiento depende del aprendizaje, la constancia, el esfuerzo y la capacidad de servir bien a las personas. Para la persona adecuada, puede ser un camino significativo de desarrollo personal y profesional.</p></div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Qué pasa si no soy bueno vendiendo o convenciendo a las personas?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>Está bien. No buscamos vendedores insistentes. Buscamos personas que se preocupen, escuchen, aprendan y quieran ayudar a las familias a entender sus opciones. Esta oportunidad está construida alrededor de la educación, no de la presión. Aprenderás a hacer buenas preguntas, explicar conceptos financieros con claridad y ayudar a las familias a tomar decisiones informadas a su propio ritmo.</p></div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Necesito una licencia?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>Sí. Para recomendar opciones de seguro de vida o ayudar a las familias a solicitar cobertura, debes tener la licencia adecuada. Te guiamos en los pasos para obtener la licencia para que entiendas lo que se requiere antes de servir a las familias como profesional con licencia.</p></div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Necesito experiencia en servicios financieros?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>No. Muchas personas comienzan sin experiencia previa en servicios financieros. Lo más importante es tu disposición para aprender, seguir el proceso y servir a las familias con honestidad y cuidado.</p></div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Puedo comenzar a tiempo parcial?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>Sí. Muchas personas comienzan a tiempo parcial mientras equilibran trabajo, familia, estudios u otras responsabilidades.</p></div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Recibiré capacitación?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>Sí. La capacitación, mentoría y apoyo continuo son parte del proceso.</p></div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Los ingresos están garantizados?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>No. Esta es una oportunidad de negocio basada en comisiones dentro de los servicios financieros, no un empleo tradicional con salario. Antes de atender a familias como profesional con licencia, se requiere obtener la licencia estatal correspondiente. El crecimiento depende del aprendizaje, la constancia, el esfuerzo y la capacidad de servir bien a las personas. Para la persona adecuada, puede ser un camino significativo de desarrollo personal y profesional.</p></div>
+        </div>
+
+        <div class="faq-item" data-reveal>
+          <button class="faq-q" onclick="this.parentElement.classList.toggle('active')">
+            ¿Quién puede ser una buena opción para esta oportunidad?
+            <div class="faq-icon"></div>
+          </button>
+          <div class="faq-a"><p>Alguien que se preocupa por ayudar a las familias, acepta orientación, se comunica bien, entiende que los resultados requieren esfuerzo y está dispuesto a aprender a servir a las personas con profesionalismo e integridad.</p></div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer style="background:#0A0A0F; color:rgba(255,255,255,0.7); padding:60px 0 30px; font-size:14px;">
-  <div style="max-width:1280px; margin:0 auto; padding:0 32px; text-align:center;">
-    <p style="margin-bottom:16px;">Ayudamos a las familias a construir un futuro financiero más sólido, ayudar a proteger a sus seres queridos y crear un legado significativo para las generaciones futuras.</p>
-    <div style="display:inline-block; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15); padding:6px 16px; border-radius:20px; font-size:12px; margin-bottom:24px; color:#fff;">Sirviendo a familias en todo el país</div>
-    <p style="font-size:12px; color:rgba(255,255,255,0.4); max-width:900px; margin:0 auto; line-height:1.6;">Family First Legacy es una agencia independiente de servicios financieros que atiende a familias en todo Estados Unidos. Los productos de seguros y financieros son ofrecidos por profesionales debidamente licenciados y están sujetos a la aprobación de la compañía, la disponibilidad del producto, la evaluación de suscripción y los requisitos estatales aplicables. No brindamos asesoramiento fiscal ni legal; para esos asuntos, consulta a un profesional calificado. La elegibilidad individual, la disponibilidad de productos, las características de las pólizas y los resultados pueden variar.</div>
+<!-- CTA BANNER (OPPORTUNITY HIGHLIGHT) ───────────────── -->
+<section id="cta-banner" style="margin-top: 0;">
+  <div class="cta-scanline"></div>
+  <div class="cta-orb cta-orb-1"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  <div class="cta-orb cta-orb-3"></div>
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-left">
+        <div class="cta-badge" data-reveal>
+          <span class="cta-badge-dot"></span>
+          <span>Construye tu propio legado</span>
+        </div>
+        <div class="cta-text">
+          <h2 data-reveal data-delay="1">¿Listo para aprender<br>más?</h2>
+          <p data-reveal data-delay="2">Si buscas una oportunidad significativa, desarrollo personal y una forma de construir en servicios financieros mientras ayudas a las familias a tomar decisiones informadas, nos encantaría conversar contigo.</p>
+        </div>
+      </div>
+      <div class="cta-right" data-reveal="right" data-delay="2">
+        <div class="cta-actions">
+          <a href="#contact" class="btn-white">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Programa una sesión informativa
+          </a>
+          <a href="tel:+14696081595" class="btn-outline-white">
+            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Llama al (469) 608-1595
+          </a>
+        </div>
+        <div class="cta-stats">
+          <div class="cts-item">
+            <div class="cts-num">1 a 1</div>
+            <div class="cts-lbl">Mentoría y apoyo</div>
+          </div>
+          <div class="cts-item">
+            <div class="cts-num">Flexible</div>
+            <div class="cts-lbl">Tiempo parcial o completo</div>
+          </div>
+          <div class="cts-item">
+            <div class="cts-num">Nacional</div>
+            <div class="cts-lbl">Plataforma de capacitación</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT ─────────────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="t-label" data-reveal><span class="green-dot"></span>Ponte en contacto</p>
+        <h2 class="t-h1" data-reveal data-delay="1" style="margin-top:16px">Tu legado comienza<br>con una conversación.</h2>
+        <p data-reveal data-delay="2">Ya sea que estés buscando una oportunidad de carrera, explorando cómo construir un negocio o simplemente tengas preguntas sobre cómo trabajamos, estamos aquí. Sin presión, solo orientación honesta.</p>
+
+        <div class="contact-trust" data-reveal data-delay="2">
+          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>Con licencia y asegurados</span>
+          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>Respuesta en 24 horas</span>
+          <span class="ct-chip"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>Tu privacidad importa</span>
+        </div>
+
+        <div class="contact-info-list" data-reveal data-delay="3">
+          <a href="mailto:info@family1stlegacy.com" class="ci-row">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Envíanos un correo</div>
+              <div class="ci-val">info@family1stlegacy.com</div>
+            </div>
+            <div class="ci-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </a>
+          <a href="tel:+14696081595" class="ci-row">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Llama o envía un mensaje</div>
+              <div class="ci-val">(469) 608-1595</div>
+            </div>
+            <div class="ci-arrow"><svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </a>
+          <div class="ci-row" style="cursor:default">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Área de servicio</div>
+              <div class="ci-val">Dallas-Fort Worth Metro, TX y a nivel nacional</div>
+            </div>
+          </div>
+          <div class="ci-row" style="cursor:default">
+            <div class="ci-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="ci-body">
+              <div class="ci-label">Horario de atención</div>
+              <div class="ci-val">Lun–Vie: 9am – 7pm · Sáb: 2pm – 6pm</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-right" data-reveal data-delay="2">
+        <div class="contact-form">
+          <div class="cf-tag">Gratis · Sin compromiso</div>
+          <div class="cf-heading">Solicitar una consulta</div>
+          <div class="cf-sub">Completa el siguiente formulario y nos pondremos en contacto contigo en menos de 24 horas.</div>
+          <form onsubmit="submitForm(event)">
+            <div class="form-row">
+              <div class="fg">
+                <label>Nombre</label>
+                <input type="text" name="FirstName" placeholder="Juan" required>
+              </div>
+              <div class="fg">
+                <label>Apellido</label>
+                <input type="text" name="LastName" placeholder="Pérez" required>
+              </div>
+            </div>
+            <div class="fg">
+              <label>Correo electrónico</label>
+              <input type="email" name="Email" placeholder="juan@correo.com" required>
+            </div>
+            <div class="form-row">
+              <div class="fg">
+                <label>Teléfono</label>
+                <input type="tel" name="Phone" placeholder="(214) 000-0000">
+              </div>
+              <div class="fg">
+                <label>Estado</label>
+                <input type="text" name="State" placeholder="Texas">
+              </div>
+            </div>
+            <div class="fg">
+              <label>Me interesa</label>
+              <select name="Service" required>
+                <option value="Oportunidad de Carrera" selected>Oportunidad de Carrera</option>
+                <option>Seguro de Vida</option>
+                <option>Planificación de Jubilación</option>
+                <option>Planificación Educativa</option>
+                <option>Planificación Patrimonial y de Legado</option>
+                <option>Estrategia Financiera</option>
+                <option>Estrategias para Negocios</option>
+                <option>Revisión Financiera General</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label>Mensaje (Opcional)</label>
+              <textarea name="Message" placeholder="Cuéntanos sobre tus metas o preguntas…"></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              Enviar mi solicitud
+              <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="cf-note">
+              <svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+              Tu información se maneja con cuidado y se mantiene privada. No vendemos tu información personal.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER (COMMON BOTTOM) ──────────────────────── -->
+<section id="cta-banner">
+  <div class="cta-scanline"></div>
+  <div class="cta-orb cta-orb-1"></div>
+  <div class="cta-orb cta-orb-2"></div>
+  <div class="cta-orb cta-orb-3"></div>
+  <div class="container">
+    <div class="cta-inner">
+      <div class="cta-left">
+        <div class="cta-badge" data-reveal>
+          <span class="cta-badge-dot"></span>
+          <span>Aceptando nuevos clientes</span>
+        </div>
+        <div class="cta-text">
+          <h2 data-reveal data-delay="1">¿Listo para ayudar a proteger el<br>futuro de tu <em>familia?</em></h2>
+          <p data-reveal data-delay="2">Programa una consulta sin costo hoy mismo: sin presión ni compromisos, solo orientación honesta de profesionales licenciados que realmente se preocupan.</p>
+        </div>
+      </div>
+      <div class="cta-right" data-reveal="right" data-delay="2">
+        <div class="cta-actions">
+          <a href="#contact" class="btn-white">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Comenzar gratis
+          </a>
+          <a href="tel:+14696081595" class="btn-outline-white">
+            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Llama al (469) 608-1595
+          </a>
+        </div>
+        <div class="cta-stats">
+          <div class="cts-item">
+            <div class="cts-num">24 horas</div>
+            <div class="cts-lbl">Tiempo de respuesta</div>
+          </div>
+          <div class="cts-item">
+            <div class="cts-num">Sin costo</div>
+            <div class="cts-lbl">Consulta gratuita</div>
+          </div>
+          <div class="cts-item">
+            <div class="cts-num">100%</div>
+            <div class="cts-lbl">Profesionales con licencia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER ──────────────────────────────────────────── -->
+<footer>
+  <div class="footer-divider"></div>
+
+  <div class="footer-newsletter">
+    <div class="container">
+      <div class="fn-inner">
+        <div>
+          <div class="fn-heading">Mantente informado.</div>
+          <div class="fn-sub">Perspectivas mensuales sobre la protección familiar, la planificación financiera y la preparación para el futuro. Cancela tu suscripción en cualquier momento.</div>
+        </div>
+        <form class="fn-form" onsubmit="submitSubscribe(event)">
+          <input type="email" name="Email" placeholder="Ingresa tu correo electrónico" required>
+          <input type="hidden" name="FormType" value="Newsletter Subscription">
+          <button type="submit">
+            Suscribirse
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="container">
+      <div class="fm-grid">
+        <div class="fm-brand">
+          <a class="nav-logo" href="index_es.html">
+            <img src="images/FamilyFirstLogo.png" alt="Family First Legacy" class="nav-logo-img">
+          </a>
+          <p>Ayudamos a las familias a construir un futuro financiero más sólido, proteger a sus seres queridos y crear un legado significativo para las generaciones venideras.</p>
+          <span class="f-badge">Sirviendo a familias en todo el país</span>
+          <div class="f-contact-strip">
+            <a href="tel:+14696081595"><svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(469) 608-1595</a>
+            <a href="mailto:info@family1stlegacy.com"><svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>info@family1stlegacy.com</a>
+          </div>
+        </div>
+
+        <div class="fm-col">
+          <div class="f-title">Servicios</div>
+          <div class="f-links">
+            <a href="family_protection_es.html">Seguro de Vida</a>
+            <a href="retirement_planning_es.html">Planificación de Jubilación</a>
+            <a href="education_planning_es.html">Planificación Educativa</a>
+            <a href="estate_planning_es.html">Planificación Patrimonial y de Legado</a>
+            <a href="financial_strategy_es.html">Estrategia Financiera</a>
+            <a href="business_strategies_es.html">Estrategias para Negocios</a>
+          </div>
+        </div>
+
+        <div class="fm-col">
+          <div class="f-title">Compañía</div>
+          <div class="f-links">
+            <a href="index_es.html#about">Acerca de nosotros</a>
+            <a href="index_es.html#process">Cómo funciona</a>
+            <a href="opportunity_es.html">Oportunidad de carrera</a>
+            <a href="index_es.html#reviews">Preguntas frecuentes</a>
+            <a href="index_es.html#blog">Base de conocimientos</a>
+          </div>
+        </div>
+
+        <div class="fm-col">
+          <div class="f-title">Ponte en contacto</div>
+          <div class="f-contact-items">
+            <div class="f-ci">
+              <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span>Dallas-Fort Worth Metro, TX &amp; a nivel nacional</span>
+            </div>
+            <div class="f-ci">
+              <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span>(469) 608-1595</span>
+            </div>
+            <div class="f-ci">
+              <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>info@family1stlegacy.com</span>
+            </div>
+            <div class="f-ci">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Lun–Vie: 9am – 7pm · Sáb: 2pm – 6pm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-disclaimer">
+        <p>Family First Legacy es una agencia independiente de servicios financieros que atiende a familias en todo Estados Unidos. Los productos de seguros y financieros son ofrecidos por profesionales debidamente licenciados y están sujetos a la aprobación de la compañía, la disponibilidad del producto, la evaluación de suscripción y los requisitos estatales aplicables. No brindamos asesoramiento fiscal ni legal; para esos asuntos, consulta a un profesional calificado. La elegibilidad individual, la disponibilidad de productos, las características de las pólizas y los resultados pueden variar.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Family First Legacy. Todos los derechos reservados.</span>
+        <div class="fb-links">
+          <a href="privacy_es.html">Política de privacidad</a>
+          <a href="terms_es.html">Términos de servicio</a>
+          <a href="index_es.html#about">Seguridad</a>
+          <a href="index_es.html#about">Accesibilidad</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<button aria-label="Back to top" id="scrolltop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<svg viewbox="0 0 24 24"><path d="M5 15l7-7 7 7"></path></svg>
+</button>
+
 
 
 <script>
@@ -7464,8 +9860,8 @@ window.switchRqCard = selectQuestion;
     <a href="javascript:void(0)" onclick="handleMbnClick(event, 'reviews', 'index_es.html')">Preguntas</a>
     <a href="javascript:void(0)" onclick="handleMbnClick(event, 'blog', 'index_es.html')">Base de conocimientos</a>
     <div class="mms-lang">
-      <a href="index.html">EN</a>
-      <a href="index_es.html" class="active">ES</a>
+      <a href="opportunity.html">EN</a>
+      <a href="opportunity_es.html" class="active">ES</a>
     </div>
     <a href="javascript:void(0)" class="mms-cta-btn" onclick="handleMbnClick(event, 'contact', 'index_es.html')">Consulta Gratuita</a>
   </nav>
@@ -7578,3 +9974,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body>
 </html>
+
